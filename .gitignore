@@ -1,0 +1,45 @@
+# OS / Editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+
+# Node
+node_modules/
+.pnpm-store/
+
+# Build artifacts
+dist/
+build/
+*.log
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Big temporary
+tmp/
+temp/
+*.tmp
+*.bak
+
+# Local state
+.cache/
+*.pid
+
+# AcadIA-specific: keep canonical assets but ignore scratch
+/AcademIA/producao/scratch/
+/AcademIA/producao/quality/.working/
+*.local.md
+*.draft.md
