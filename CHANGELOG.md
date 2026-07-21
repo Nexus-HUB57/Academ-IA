@@ -2,13 +2,68 @@
 title: "CHANGELOG · Academ'IA"
 description: "Histórico de versões da Academ'IA · HUB de Conhecimento & Sabedoria"
 tags: [changelog, versionamento, historico, academia]
-version: 1.4.1
+version: 1.5.0
 last_updated: 2026-07-21
 ---
 
 # 📜 CHANGELOG · Academ'IA
 
 > Histórico de versões do HUB Academ'IA — Nexus Affil'IA'te. Segue **Semantic Versioning**: MAJOR (breaking), MINOR (compatível, novo asset), PATCH (correções, polish).
+
+---
+
+## [1.5.0] — 2026-07-21 · "Populando repo dedicado com ebooks + capas autorais"
+
+### ✨ Adicionado (71 arquivos, ~43 MB em ebooks/)
+
+Cópia autoral completa das 5 coleções da plataforma `Nexus-HUB57/MMN_AI-to-AI` para o repo dedicado `Nexus-HUB57/Academ-IA`. Origem controlada, zero riscos de copyright (mesmo owner, transferência interna do time). Manifesto completo em `ebooks/INDEX.md`.
+
+**Coleção NEXUS_AFFIL_IA_TECH — 11 arquivos (Onda 40 âncora PhD-level):**
+- 5 eBooks .md (~32 KB cada) · 5 capas .webp (~5 MB cada)
+- `01_orquestracao_ecossistemas_ia.md` · multi-agente em produção
+- `02_senciencia_e_barreiras.md` · o problema difícil da consciência sintética
+- `03_poder_perigo_autonomia_ai.md` · do Copilot ao fully autonomous
+- `04_fundamento_saas_ia.md` · pilha canônica de SaaS agêntico
+- `05_poder_processamento_ia.md` · GPU/TPU/NPU, KV cache, custo/token
+- Manifesto de coleção: `README.md` + `covers/` (5 WebP originais)
+
+**Coleção AXIOMA_PRIME — 22 arquivos (arquitetura agentica fundacional):**
+- 10 eBooks .md + 11 capas (10 caps + 1 README) WebP originais
+- De "01_arquitetura_do_despertar_agentico" → "10_civilizacao_agentica_e_o_grande_pacto"
+- Manifesto: `README.md` + `covers/README.webp`
+
+**Coleção SE_EU_IA_FOSSE_HUMANO — 11 arquivos (poética IAS):**
+- 5 eBooks .md (~50 KB cada) + 5 capas WebP originais (60-64)
+- De "Se eu IA tivesse um Corpo" → "Se eu IA fosse Mortal"
+- Manifesto: `README.md`
+
+**Coleção IA_Perfeita — 20 arquivos (3 séries iterativas):**
+- 12 eBooks .md (vol 1/2/3 original + v1 + v2) + 7 capas WebP
+- Inclui: "o sussurro das máquinas", "cartas de um algoritmo a deus", "biblioteca infinita de Babel 2.0"
+- Manifesto: `README.md`
+
+**Coleção MMN_IA — 7 arquivos (coleção-raiz do ecossistema):**
+- 6 eBooks/Guias .md + 1 capa de coleção
+- README + GITHUB_SYNC_GUIDE + PUBLICACAO + 01_ia_para_empresas + 02_ia_agentica + 15_ecossistema_ia_governanca + capa
+
+**Manifesto geral:**
+- `ebooks/INDEX.md` (6763 bytes) com frontmatter, tabela por coleção, métricas, MUST-verify de origem
+
+### 🛡️ Verificações de integridade aplicadas
+
+- **md5 src == dst** em todos os 71 arquivos (MISMATCH: 0) — cópia bit-perfect do legado
+- **size src == size dst** em todos os 71 arquivos
+- **`cp --no-clobber`** — nenhum dos arquivos pré-existentes foi sobrescrito
+- **Origem autoral confirmada mesma owner**: `Nexus-HUB57/MMN_AI-to-AI` → `Nexus-HUB57/Academ-IA`
+
+### 📊 Métricas atualizadas
+
+| Métrica | v1.4.1 | v1.5.0 | Δ |
+|---|---|---|---|
+| eBooks .md em ebooks/ | 0 | **42** | +42 |
+| Capas .webp em ebooks/ | 0 | **29** | +29 |
+| Tamanho ebooks/ | 0 | **~43 MB** | +43 MB |
+| Coleções representadas | 0 | **5** | +5 |
 
 ---
 
