@@ -12,6 +12,17 @@ last_updated: 2026-07-21
 
 ---
 
+## [v1.4.2] — 2026-07-21
+
+### Adicionado
+- **Apostila 34**: Análise Técnica AI_Doctor (migrada de `Nexus-HUB57/AI_Doctor`)
+- **Lib-Nexus/knowledge-base/08-oncologia-rag-knowledge.md**: Base de conhecimento RAG de oncologia (imunoterapia, DIMHEX, nanotecnologia, algoritmo de predição)
+- **Tutoriais ARQ-01 e ARQ-02**: Arquitetura completa v2.0 e Resumo de desenvolvimento (migração)
+- INDEX.md atualizado com nova trilha "AI_Doctor · Plataforma Clínica"
+
+### Migrado de
+- `Nexus-HUB57/AI_Doctor` (preservado, sem exclusões) — apenas cópia didática
+
 ## [1.5.0] — 2026-07-21 · "Populando repo dedicado com ebooks + capas autorais"
 
 ### ✨ Adicionado (71 arquivos, ~43 MB em ebooks/)

@@ -147,6 +147,12 @@ thumbnails 2K. Cada volume trata o tema com profundidade técnica PhD-level, 10 
 32. Pricing IA 2026 · pricing dinâmico, unit economics e unit cost em escala
 33. Data Stack Agentes IA · lakehouse, feature store, vector DB e observabilidade de modelos
 
+### AI_Doctor · Plataforma Clínica (migração do repo Nexus-HUB57/AI_Doctor)
+34. Análise Técnica AI_Doctor · arquitetura, stack e fases da plataforma de oncologia de precisão
+- `Lib-Nexus/knowledge-base/08-oncologia-rag-knowledge.md` — base RAG (imunoterapia, DIMHEX, nanotecnologia)
+- `tutoriais/ARQ-01-arquitetura-completa-ai-doctor.md` — arquitetura completa v2.0
+- `tutoriais/ARQ-02-desenvolvimento-resumo.md` — resumo de desenvolvimento e changelog
+
 > Formatos: `apostilas/32-pricing-ia-2026.md` · `apostilas/33-data-stack-agentes-ia.md` · `html/apostilas/*.html` · `pdfs/*.pdf`
 
 ## 🎬 Cursos slides (roteiros-âncora) — sincronizados do legado
