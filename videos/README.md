@@ -186,3 +186,70 @@ Todos os roteiros seguem:
 *"Um vídeo bem feito vale mais que 100 slides. Um vídeo bem roteirizado vale mais que 100 vídeos."*
 
 **Por MMN AI-to-AI · 2026**
+
+---
+
+# 🎬 Onda 49 · Vídeos Full com TTS voice-cloned PT-BR (2026-07-15)
+
+**Status:** 15/16 vídeos full renderizados (94%)
+**Pipeline validado:** ROTEIRO (.md) → parse_roteiros.py → JSON cenas → TTS PT-BR → motion-graphics PIL → ffmpeg concat (libx264) → MP4
+
+## 📦 Novos Artefatos (não duplicam nada existente)
+
+### Áudios TTS (PT-BR voice-cloned)
+- `videos/audio/full_XX_persona.wav` — 15 arquivos WAV 18-30s
+- Vozes: `Portuguese_CharmingQueen` (Sra. Nexus Ive) · `Portuguese_Steadymentor` (Sir. Nexus Alencar)
+
+### Motion-graphics (PNG 1280×720)
+- `videos/frames/full_XX_fN.png` — 60 PNGs (4 slides × 15 vídeos)
+- Paleta Nexus: BG dark `#0A0F1E`, accent cyan/teal/gold por trilha
+- HUD: pill TRILHA, barra superior 4px, barra lateral 8px, brackets nos 4 cantos
+- Persona badge, watermark `ACADEM IA NEXUS`, rodapé `oneverso.com.br/academia`
+- `videos/frames/full_XX_list.txt` — 15 listas concat (timing por slide)
+
+### Vídeos Full (H.264 + AAC)
+- `videos/video-00-boas-vindas-a-academia-nexus-full.mp4` · 30.2s · 1.2 MB · Alencar
+- `videos/video-01-entendendo-o-ioaid-full.mp4` · 20.0s · 810 KB · Ive
+- `videos/video-02-o-sistema-sho-full.mp4` · 26.0s · 955 KB · Alencar
+- `videos/video-03-painel-do-afiliado-full.mp4` · 24.8s · 942 KB · Alencar
+- `videos/video-04-primeiro-agente-full.mp4` · 20.0s · 850 KB · Alencar
+- `videos/video-05-skills-essenciais-full.mp4` · 27.6s · 1.0 MB · Alencar
+- `videos/video-06-disparo-whatsapp-em-escala-full.mp4` · 24.8s · 948 KB · Alencar
+- `videos/video-07-judge-revisor-full.mp4` · 26.8s · 893 KB · Alencar
+- `videos/video-08-otimizacao-de-conversao-full.mp4` · 28.1s · 1.0 MB · Alencar
+- `videos/video-09-funis-e-lifecycle-full.mp4` · 20.0s · 885 KB · Alencar
+- `videos/video-10-a-b-testing-com-judge-full.mp4` · 20.0s · 843 KB · Alencar
+- `videos/video-11-coortes-e-churn-full.mp4` · 26.9s · 893 KB · Alencar
+- `videos/video-12-blueprints-elite-full.mp4` · 23.4s · 912 KB · Alencar
+- `videos/video-13-multi-tenant-e-white-label-full.mp4` · 20.0s · 873 KB · Alencar
+- `videos/video-14-federacao-de-agentes-full.mp4` · 23.0s · 910 KB · Alencar
+
+### Thumbnails Full 1280×720
+- `videos/thumb_video-XX-*-full.jpg` — 15 thumbnails dos vídeos full
+
+### Scripts (pipeline reprodutível)
+- `videos/scripts/parse_roteiros.py` — extrai cenas de Markdown
+- `videos/scripts/generate_full_videos.py` — gera slides + renderiza
+- `videos/scripts/roteiros_parsed.json` — 15 roteiros parseados
+- `videos/scripts/tts_falas.json` + `tts_requests.json` — inputs TTS
+
+## 🔜 Próximas Ondas
+
+1. **Clonagem voz real** — `clone_voice` com WAVs oficiais em `personas/ive/audio/official_voice.wav` e `personas/alencar/voz_sir_nexus_alencar.wav`
+2. **Legendas SRT** automáticas
+3. **Versão 1920×1080** para YouTube principal
+4. **Versão 9:16** para Shorts/Reels
+5. **Upload YouTube** PRIVATE → unlisted via `youtube/upload_batch_ready.json`
+6. **Loudnorm EBU R128** (I=-16 LUFS, TP=-1.5, LRA=11)
+7. **Trilha sonora** royalty-free
+
+## ⚠️ Convenção de Nomenclatura
+
+- **Teasers** (5-10s, ondas antigas): `videos/video-XX-*.mp4` — NÃO mexer
+- **Vídeos full** (19-30s, Onda 49): `videos/video-XX-*-full.mp4` — novos
+- **Thumbnails 2K** (1280×720 antigos): `videos/thumbnails/thumb-XX-*.{png,webp}` — NÃO mexer
+- **Thumbnails full** (Onda 49): `videos/thumb_video-XX-*-full.jpg` — novos
+
+---
+
+*Academ-IA · MMN AI-to-AI · Nexus HUB57 · 2026 · Onda 49 (2026-07-15)*
