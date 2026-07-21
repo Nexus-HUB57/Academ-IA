@@ -2,13 +2,105 @@
 title: "CHANGELOG · Academ'IA"
 description: "Histórico de versões da Academ'IA · HUB de Conhecimento & Sabedoria"
 tags: [changelog, versionamento, historico, academia]
-version: 1.2.5
-last_updated: 2026-07-07
+version: 1.4.1
+last_updated: 2026-07-21
 ---
 
 # 📜 CHANGELOG · Academ'IA
 
 > Histórico de versões do HUB Academ'IA — Nexus Affil'IA'te. Segue **Semantic Versioning**: MAJOR (breaking), MINOR (compatível, novo asset), PATCH (correções, polish).
+
+---
+
+## [1.4.1] — 2026-07-21 · "Sync repo dedicado Academ-IA + 30 materiais do legado"
+
+### ✨ Adicionado (30 arquivos, +9964 linhas)
+
+Migração dos 30 arquivos que estavam em `MMN_AI-to-AI/repo/AcademIA/` mas **ausentes** do repo dedicado `Nexus-HUB57/Academ-IA`. Commit `23d2500` no Academ-IA preservando intactos os 685 arquivos pré-existentes (zero deleções).
+
+**Apostilas .md (2 novas):**
+- `apostilas/32-pricing-ia-2026.md` — Pricing IA 2026: pricing dinâmico, unit economics, unit cost em escala
+- `apostilas/33-data-stack-agentes-ia.md` — Data Stack Agentes IA: lakehouse, feature store, vector DB, observabilidade de modelos
+
+**Cursos slides .md (3 novos):**
+- `cursos/agente/00-primeiro-agente-slides.md` — Slides do primeiro agente
+- `cursos/elite/00-blueprints-elite-slides.md` — Slides Blueprints Elite
+- `cursos/master/00-otimizacao-conversao-slides.md` — Slides Otimização de Conversão
+
+**Hubs HTML (4 novos):**
+- `hubs/cursos.html` — índice interativo das trilhas
+- `hubs/landing.html` — landing page pública da Academia
+- `hubs/player.html` — player para vídeo/áudio
+- `hubs/trilhas.html` — seletor de trilhas com profiles
+
+**Apostilas HTML (2 novas):**
+- `html/apostilas/32-pricing-ia-2026.html` — renderização HTML da apostila 32
+- `html/apostilas/33-data-stack-agentes-ia.html` — renderização HTML da apostila 33
+
+**Webinars HTML (4 novos):**
+- `html/webinars/WB-2026-08-financeiro-ia.html`
+- `html/webinars/WB-2026-12-ia-to-ia-federation.html`
+- `html/webinars/WB-2026-14-pricing-ia-tempo-real.html`
+- `html/webinars/WB-2026-15-data-stack-ia.html`
+
+**Webinars .md (2 novos):**
+- `webinars/WB-2026-14-pricing-ia-tempo-real.md`
+- `webinars/WB-2026-15-data-stack-ia.md`
+
+**PDFs (6 novos):**
+- `pdfs/32-pricing-ia-2026.pdf`
+- `pdfs/33-data-stack-agentes-ia.pdf`
+- `pdfs/webinar-WB-2026-08-financeiro-ia.pdf`
+- `pdfs/webinar-WB-2026-12-ia-to-ia-federation.pdf`
+- `pdfs/webinar-WB-2026-14-pricing-ia-tempo-real.pdf`
+- `pdfs/webinar-WB-2026-15-data-stack-ia.pdf`
+
+**Personas · assets PNG (5 novos):**
+- `personas/alencar/assets/alencar_meeting_v1.png` (~4 MB)
+- `personas/alencar/assets/alencar_nexus_ref_1.png` (~4 MB)
+- `personas/ive/assets/ive_nexus_ref_1.png` (~4 MB)
+- `personas/ive/assets/ive_reference.png` (~4 MB)
+- `personas/ive/assets/ive_training_v1.png` (~4 MB)
+
+**Produção (1 novo):**
+- `producao/INCIDENT-RESPONSE-RUNBOOK.md` — runbook TI 1 página (SEV-1/2/3, contatos, RCA, comunicação)
+
+**Vídeo PoC (1 novo):**
+- `videos/video-00-boas-vindas-poc.mp4` (~2 MB) — boas-vindas PoC trilha Fundamental
+
+### 🛡️ Verificações de integridade aplicadas
+
+- **md5 src == md5 dst** em todos os 30 arquivos (MISMATCH: 0) — cópia bit-perfect do legado
+- **size src == size dst** em todos os 30 arquivos
+- **`cp --no-clobber`** — nenhum dos 685 arquivos pré-existentes foi sobrescrito
+- **Re-diff encoding-aware** pós-cópia → 0 missing restantes, 15 target-only preservados
+- **GitHub API stats**: `+9964 / −0` (zero deleção confirmada)
+
+### 📊 Métricas atualizadas
+
+| Métrica | v1.4.0 | v1.4.1 | Δ |
+|---|---|---|---|
+| Apostilas | 31 | **33** | +2 |
+| Webinars | 13 | **15** | +2 |
+| Hubs HTML | 0 | **4** | +4 |
+| Cursos slides | 14 | **17** | +3 |
+| PDFs apostila | 6 | **8** | +2 |
+| PDFs webinar | 13 | **17** | +4 |
+| Personas assets | 6 | **11** | +5 |
+| Runbooks produção | 0 | **1** | +1 |
+| Vídeos PoC | 0 | **1** | +1 |
+| Arquivos totais | 685 | **715** | +30 |
+| Linhas totais (md) | ~15k | **~16k** | +1k |
+
+### 🎯 Arquivos target-only preservados (NÃO foram tocados)
+
+- `tutoriais/12-federação-2-nos.md` (encoding NFD já no Academ-IA)
+- `tutoriais/13-federação-3-nos-mtls-pinned.md` (encoding NFD já no Academ-IA)
+- `personas/alencar/Estes_são_os_personas_Ive_Nexu.mp4`
+- `pdfs/webinar-WB-2026-08-ia-to-ia-federation.pdf` (federação, distinto do financeiro)
+- `videos/roteiros/15-19-*.md` (roteiros-âncora TECH)
+- `videos/thumbnails/thumb-15-19-*.webp` (thumbnails 2K TECH)
+- `videos/video-00-boas-vindas-renderizado.mp4` (versão final, distinta do PoC)
 
 ---
 

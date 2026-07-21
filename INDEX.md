@@ -1,8 +1,8 @@
 # 📚 AcademIA Nexus Affil'IA'te · INDEX Master
 
-**Última atualização**: 2026-07-21 · Mavis + contribuidor paralelo
-**Total**: 31 apostilas · 17 roteiros · 20 thumbnails · 13 webinars · 6 PDFs apostila · 13 PDFs webinar · 44 HTMLs · 30+ capas AcademIA
-**Versão**: 1.4.0 (Onda 40) — NEXUS AFFIL'IA'TE TECH
+**Última atualização**: 2026-07-21 · Mavis + contribuidor paralelo + sync legado (Academ-IA repo)
+**Total**: 33 apostilas · 17 roteiros · 20 thumbnails · 13 webinars (+4 webinars TECH 14-15) · 8 PDFs apostila · 17 PDFs webinar · 48 HTMLs (+4 hubs) · 30+ capas AcademIA
+**Versão**: 1.4.1 (Onda 40) — NEXUS AFFIL'IA'TE TECH + sync repo dedicado
 
 > 🌊 **Onda 40** — integração com a nova coletânea técnica NEXUS AFFIL'IA'TE TECH
 > (5 ebooks PhD-level espelhados como 5 roteiros-âncora: 15-19).
@@ -143,7 +143,28 @@ thumbnails 2K. Cada volume trata o tema com profundidade técnica PhD-level, 10 
 ### Cursos Práticos & Avançados (23-31)
 23. Curso RAG Prático · 24. Curso Agents LangGraph · 25. Curso Prompt Engineering · 26. Curso Vector DB · 27. Curso Voice AI · 28. Curso Multimodal RAG · 29. AI-to-AI Protocol (A2A) · 30. Federação Zero-Trust · 31. Fábrica de Conteúdo com IA
 
-## 🎥 Catálogo de Webinars (13)
+### Trilha Pricing & Data — Onda TECH (32-33)
+32. Pricing IA 2026 · pricing dinâmico, unit economics e unit cost em escala
+33. Data Stack Agentes IA · lakehouse, feature store, vector DB e observabilidade de modelos
+
+> Formatos: `apostilas/32-pricing-ia-2026.md` · `apostilas/33-data-stack-agentes-ia.md` · `html/apostilas/*.html` · `pdfs/*.pdf`
+
+## 🎬 Cursos slides (roteiros-âncora) — sincronizados do legado
+
+| Trilha | Arquivo slides | Status |
+|---|---|---|
+| Agente (00) | `cursos/agente/00-primeiro-agente-slides.md` | ✅ |
+| Elite (00) | `cursos/elite/00-blueprints-elite-slides.md` | ✅ |
+| Master (00) | `cursos/master/00-otimizacao-conversao-slides.md` | ✅ |
+
+## 🌐 Hubs HTML (4)
+
+- `hubs/cursos.html` — índice das trilhas
+- `hubs/landing.html` — landing page pública
+- `hubs/player.html` — player de vídeo/áudio
+- `hubs/trilhas.html` — seletor de trilhas com profiles
+
+## 🎥 Catálogo de Webinars (15)
 - WB-01 Lançamento IOAID · WB-02 SHO em Produção · WB-03 Open House
 - WB-04 Skills em Produção · WB-05 Multi-Tenant · WB-06 A/B Test Estatístico · WB-07 LGPD & IA
 - WB-08 CFO/AI Otto · Unit Economics
@@ -151,3 +172,20 @@ thumbnails 2K. Cada volume trata o tema com profundidade técnica PhD-level, 10 
 - WB-10 SEO vs IA Generativa · WB-11 Burnout em Affiliates
 - WB-12 IA-to-IA Federation
 - WB-13 Criação de Conteúdo com IA
+- **WB-2026-08 Financeiro IA** · `webinars/WB-2026-08-financeiro-ia.md` + HTML + PDF
+- **WB-2026-12 IA-to-IA Federation** · HTML + PDF
+- **WB-2026-14 Pricing IA em tempo real** · `webinars/WB-2026-14-pricing-ia-tempo-real.md` + HTML + PDF
+- **WB-2026-15 Data Stack IA** · `webinars/WB-2026-15-data-stack-ia.md` + HTML + PDF
+
+## 🛠️ Producao · Incident Response (TI)
+
+- `producao/INCIDENT-RESPONSE-RUNBOOK.md` — runbook 1 página: severidades (SEV-1/2/3), contatos, RCA template, comunicação pública, lições aprendidas.
+
+## 🖼️ Personas · Assets de referência (5)
+
+- **Alencar**: `alencar_meeting_v1.png`, `alencar_nexus_ref_1.png` (~4 MB cada)
+- **Ive**: `ive_nexus_ref_1.png`, `ive_reference.png`, `ive_training_v1.png` (~4 MB cada)
+
+## 🎥 Vídeo PoC (1)
+
+- `videos/video-00-boas-vindas-poc.mp4` (~2 MB) — boas-vindas PoC para a trilha Fundamental.
