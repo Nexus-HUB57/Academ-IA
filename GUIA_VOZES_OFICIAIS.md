@@ -1,178 +1,141 @@
 ---
-title: "Guia das Vozes Oficiais · AcademIA"
-description: "Referência obrigatória para TTS, vídeos, audiobooks e narrações da AcademIA"
-tags: [vozes, tts, audio, personas, alencar, ive, narração, voice-cloning]
+title: "Guia Rápido das Vozes Oficiais · AcademIA"
+description: "Ponto de entrada rápido para uso das vozes oficiais. Detalhes em personas/voice_registry/"
+tags: [vozes, tts, audio, personas, alencar, ive, narração, voice-cloning, guia]
 last_updated: 2026-07-22
 ---
 
-# 🎙️ Guia das Vozes Oficiais · AcademIA
+# 🎙️ Guia Rápido das Vozes Oficiais · AcademIA
 
-> **Documento canônico.** Toda narração em áudio da AcademIA **DEVE** usar exclusivamente estas duas vozes oficiais. Qualquer TTS, voice-clone, audiobook ou vídeo-aula deve referenciar os arquivos abaixo.
+> ⚠️ **DOCUMENTO SECUNDÁRIO** — A fonte canônica é `personas/voice_registry/OFFICIAL_VOICES_REGISTRY.md`. Este guia é um **resumo de uso rápido** para devs que só precisam saber qual arquivo usar.
 
 ---
 
-## 👥 Os Dois Personas Oficiais
+## 👥 As Duas Vozes Oficiais
 
 ### 1. **Sir Nexus Alencar** — Mentor Técnico
 
-| Atributo | Detalhe |
-|---|---|
-| **Papel** | Mentor técnico e rosto da marca |
-| **Arquétipo** | Sábio, sereno, autoridade intelectual, acolhedor |
-| **Visual** | Homem de meia-idade, traços judaicos, Kippah, olhos azuis, barba grisalha, social azul |
-| **Voz** | Madura, serena, acolhedora |
-| **Áudio oficial** | `personas/alencar/audio/official_voice.wav` |
-| **Sotaque** | Português brasileiro neutro com leve erudição |
-| **Cadência** | Controlada, pausada, explicativa |
-| **Uso em roteiros** | Explicações técnicas profundas, exemplos práticos, demonstrações de código |
-| **Personas complementares** | Atua em dupla com Sra. Ive |
-
-**Fonte no repositório:**
-- Áudio: https://github.com/Nexus-HUB57/Academ-IA/tree/main/personas/alencar/audio
-- Identidade completa: `personas/alencar/identity.md`
-- Diretrizes visuais: `personas/alencar/assets/`
-
----
+- 📁 **Arquivo canônico**: `personas/alencar/audio/official_voice.wav`
+- 🌐 **URL**: https://github.com/Nexus-HUB57/Academ-IA/tree/main/personas/alencar/audio
+- 🎭 **Papel**: Sábio, sereno, autoridade intelectual
+- 🗣️ **Voz**: Madura, controlada, didática
+- 📚 **Quando usar**: Aulas técnicas, código, arquitetura, exemplos práticos
+- 📋 **Detalhes**: `personas/alencar/identity.md`
 
 ### 2. **Lady Nexus Ive** — Estrategista de Marca
 
-| Atributo | Detalhe |
-|---|---|
-| **Papel** | Estrategista de marca, anfitriã, instrutora principal |
-| **Arquétipo** | Acolhedora, empoderadora, serena, sensual sutil |
-| **Visual** | Mulher, sorriso marcante, presença sofisticada |
-| **Voz** | Leve rouquidão, suave, sotaque sulista sutil |
-| **Áudio oficial** | `personas/ive/audio/official_voice.wav` |
-| **Sotaque** | Português brasileiro com sotaque sulista elegante (R marcado, vogais abertas) |
-| **Cadência** | Controlada mas envolvente, "magnetismo" |
-| **Uso em roteiros** | Abertura/encerramento, calls-to-action, visão estratégica |
-| **Personas complementares** | Atua em dupla com Sr. Alencar |
-
-**Fonte no repositório:**
-- Áudio: https://github.com/Nexus-HUB57/Academ-IA/tree/main/personas/ive/audio
-- Identidade completa: `personas/ive/identity.md`
-- Diretrizes de voz: `personas/ive/voice_guidelines.md`
-- Assets visuais: `personas/ive/assets/`
+- 📁 **Arquivo canônico**: `personas/ive/audio/official_voice.wav`
+- 🌐 **URL**: https://github.com/Nexus-HUB57/Academ-IA/tree/main/personas/ive/audio
+- 🎭 **Papel**: Acolhedora, empoderadora, envolvente
+- 🗣️ **Voz**: Leve rouquidão, sotaque sulista elegante
+- 📚 **Quando usar**: Aulas estratégicas, aberturas, enceramentos, calls-to-action
+- 📋 **Detalhes**: `personas/ive/identity.md` + `personas/ive/voice_guidelines.md`
 
 ---
 
-## 🎬 Onde Usar Cada Voz
+## 🎯 Mapa de Uso Rápido
 
-| Material | Voz Preferencial | Por quê |
+| Material | Voz | Arquivo |
 |---|---|---|
-| **Aulas técnicas** (código, arquitetura) | **Alencar** | Tom sério, didático |
-| **Aulas estratégicas** (negócios, vendas) | **Ive** | Empoderamento,CTA |
-| **Aberturas de curso** (intro do módulo) | **Ive** | Acolhimento, contexto |
-| **Encerramentos** (conclusão do módulo) | **Alencar** | Síntese, firmeza |
-| **Treinamentos/workshops** (WS-*) | **Ambos alternados** | Dupla didática |
-| **Webinars** (WB-*) | **Ive (mestre) + Alencar (técnico)** | Dinâmica de palco |
-| **Playbooks de crise** (PB-CRISES-*) | **Alencar** | Comando assertivo |
-| **Apostilas narradas** (audiobook) | **Ive** | Leitura envolvente |
-| **Alertas / notificações curtas** | **Alencar** | Autoridade rápida |
-| **Onboarding novos afiliados** | **Ive** | Acolhimento, bem-vinda |
+| Curso técnico (código, RAG, deploy) | **Alencar** | `personas/alencar/audio/official_voice.wav` |
+| Curso estratégico (vendas, marketing) | **Ive** | `personas/ive/audio/official_voice.wav` |
+| Abertura de curso | **Ive** | `personas/ive/audio/official_voice.wav` |
+| Encerramento de curso | **Alencar** | `personas/alencar/audio/official_voice.wav` |
+| Treinamento (WS) — bloco técnico | **Alencar** | `personas/alencar/audio/official_voice.wav` |
+| Treinamento (WS) — bloco estratégico | **Ive** | `personas/ive/audio/official_voice.wav` |
+| Webinar — abertura/mestrado | **Ive** | `personas/ive/audio/official_voice.wav` |
+| Webinar — técnico | **Alencar** | `personas/alencar/audio/official_voice.wav` |
+| Playbook de crise | **Alencar** | `personas/alencar/audio/official_voice.wav` |
+| Onboarding | **Ive** | `personas/ive/audio/official_voice.wav` |
+| Alerta/notificação curta | **Alencar** | `personas/alencar/audio/official_voice.wav` |
 
 ---
 
-## 🛠️ Como Usar os Áudios Oficiais
+## 🛠️ Como Usar em Código
 
-### 1. Voice Cloning (ElevenLabs / OpenAI Voice Engine)
+### Voice Cloning (ElevenLabs)
 
 ```python
-# ElevenLabs exemplo
 from elevenlabs.client import ElevenLabs
 
 client = ElevenLabs(api_key="...")
 
-# Para Alencar (voz masculina madura)
-audio_alencar = client.clone(
+# Alencar
+audio = client.clone(
     name="Sir Nexus Alencar - Official",
     files=["personas/alencar/audio/official_voice.wav"],
-    description="Voz masculina PT-BR, meia-idade, erudição sutil, didática"
+    description="Voz PT-BR masculina, meia-idade, erudição sutil"
 )
 
-# Para Ive (voz feminina acolhedora)
-audio_ive = client.clone(
+# Ive
+audio = client.clone(
     name="Lady Nexus Ive - Official",
     files=["personas/ive/audio/official_voice.wav"],
-    description="Voz feminina PT-BR, sotaque sulista, envolvente"
+    description="Voz PT-BR feminina, sotaque sulista elegante"
 )
 ```
 
-### 2. OpenAI TTS com Voice Embedding
+### OpenAI TTS (sem clone)
 
 ```python
 from openai import OpenAI
 
 client = OpenAI()
 
-# OpenAI TTS-1-HD (não clona, mas gera voz PT-BR de alta qualidade)
+# Para Alencar (voz grave madura)
 speech = client.audio.speech.create(
     model="tts-1-hd",
-    voice="onyx",  # voz masculina grave (similar a Alencar)
-    input="Bem-vindo à AcademIA. Eu sou Sir Nexus Alencar, seu mentor técnico.",
-    language="pt-BR",
+    voice="onyx",
+    input="Bem-vindo à AcademIA. Eu sou Sir Nexus Alencar.",
 )
-speech.stream_to_file("audio_alencar.mp3")
 ```
 
-### 3. Edge TTS (gratuito, sem clonagem)
+### Voice Resolver (oficial no projeto)
 
 ```python
-import edge_tts
+# Script oficial: personas/voice_registry/voice_resolver.py
+from voice_resolver import resolve_voice
 
-# Voz masculina PT-BR mais próxima de Alencar
-communicate = edge_tts.Communicate(
-    text="Bem-vindo à AcademIA. Eu sou Sir Nexus Alencar.",
-    voice="pt-BR-AntonioNeural",  # masculina, meia-idade
-)
-communicate.save("alencar_edge.mp3")
+audio_alencar = resolve_voice("alencar")
+audio_ive = resolve_voice("ive")
 ```
 
 ---
 
-## 🎯 Regras de Ouro (NÃO QUEBRAR)
+## 🚨 Regras de Ouro
 
-1. **NUNCA** use voz genérica de TTS em produto final — sempre clonar das oficiais
-2. **NUNCA** misture as duas vozes em uma mesma frase (cada persona fala a vez dele)
-3. **NUNCA** altere tom de voz sem aprovação (afeta identidade da marca)
-4. **SEMPRE** referencie `GUIA_VOZES_OFICIAIS.md` antes de criar áudio
-5. **SEMPRE** use os arquivos `.wav` da pasta `audio/` (nunca regrave ou edite)
-6. **SEMPRE** mantenha a proporção 60% Alencar (técnico) / 40% Ive (estratégico) em materiais longos
-7. **SEMPRE** atualize este guia se novas vozes oficiais forem adicionadas
-
----
-
-## 📋 Checklist de Áudio (TTS/Clone)
-
-Antes de publicar qualquer áudio:
-
-- [ ] Voz é Alencar ou Ive (nenhuma outra)
-- [ ] Arquivo fonte é `personas/{alencar,ive}/audio/official_voice.wav`
-- [ ] Sotaque preservado (Alencar: neutro-erudito / Ive: sulista-elegante)
-- [ ] Cadência compatível (Alencar: pausada / Ive: envolvente)
-- [ ] Metadata do arquivo inclui: `voice="Sir Nexus Alencar" ou "Lady Nexus Ive"`
-- [ ] Frontmatter do roteiro indica qual persona narra
-- [ ] Não há mistura de vozes na mesma faixa
-- [ ] Volume normalizado (-3dB padrão)
-- [ ] Sample rate 48kHz (padrão vídeo) ou 24kHz (padrão podcast)
+1. **NUNCA** use voz genérica de TTS em produto final — sempre clone dos arquivos `.wav` oficiais
+2. **NUNCA** misture as duas vozes na mesma frase (cada persona fala a sua vez)
+3. **NUNCA** use voice IDs genéricos do ElevenLabs (`Portuguese_CharmingQueen`, etc.) em produção
+4. **NUNCA** edite, normalize ou regrave os arquivos `.wav` originais
+5. **SEMPRE** referencie o **registro canônico** em `personas/voice_registry/OFFICIAL_VOICES_REGISTRY.md`
+6. **SEMPRE** use proporção 60% Alencar (técnico) / 40% Ive (estratégico) em materiais longos
+7. **SEMPRE** mantenha 24kHz, mono, 16-bit PCM, sem ruído de fundo
 
 ---
 
-## 📚 Documentação Complementar
+## 📚 Documentação Completa
 
-- `personas/alencar/identity.md` — Identidade visual + textual do Alencar
-- `personas/alencar/roteiro-aula01.md` — Roteiro de exemplo com Alencar
-- `personas/ive/identity.md` — Identidade visual + textual da Ive
-- `personas/ive/voice_guidelines.md` — Diretrizes detalhadas de voz
-- `personas/dupla/interaction_guidelines.md` — Como Alencar e Ive interagem
+| Documento | Propósito |
+|---|---|
+| `personas/voice_registry/OFFICIAL_VOICES_REGISTRY.md` | **REGISTRO CANÔNICO** — referência oficial completa |
+| `personas/voice_registry/voice_resolver.py` | Script oficial de resolução de voz |
+| `personas/alencar/identity.md` | Identidade visual + textual do Alencar |
+| `personas/ive/identity.md` | Identidade visual + textual da Ive |
+| `personas/ive/voice_guidelines.md` | Diretrizes detalhadas de voz da Ive |
+| `personas/dupla/interaction_guidelines.md` | Como Alencar e Ive interagem |
+| `personas/dupla/guia-dupla-nexus.md` | Guia completo da dupla |
+| `producao/PADRAO_VIDEOS_ACADEMIA.md` | Padrão de produção de vídeos |
+| `producao/catalog/CATALOGO_MODULOS.md` | Catálogo de módulos |
 
 ---
 
-## 🔗 Links Úteis
+## 🔗 Links Externos
 
-- Repositório: https://github.com/Nexus-HUB57/Academ-IA
-- Áudio Alencar: https://github.com/Nexus-HUB57/Academ-IA/tree/main/personas/alencar/audio
-- Áudio Ive: https://github.com/Nexus-HUB57/Academ-IA/tree/main/personas/ive/audio
+- 📁 Repositório: https://github.com/Nexus-HUB57/Academ-IA
+- 🎙️ Vozes Alencar: https://github.com/Nexus-HUB57/Academ-IA/tree/main/personas/alencar/audio
+- 🎙️ Vozes Ive: https://github.com/Nexus-HUB57/Academ-IA/tree/main/personas/ive/audio
+- 📜 Registro canônico: https://github.com/Nexus-HUB57/Academ-IA/blob/main/personas/voice_registry/OFFICIAL_VOICES_REGISTRY.md
 
 ---
 
