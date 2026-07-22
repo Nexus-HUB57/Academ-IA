@@ -34,8 +34,8 @@ AcademIA/
 ├── tutoriais/            ← Tutoriais rápidos
 ├── playbooks/            ← Manuais operacionais
 ├── certificacoes/        ← Certificações emitidas
-├── personas/             ← Ive, Alencar, Helena, Ravi, Otto (138 MB)
-├── marca/                ← Brand kit (17 MB)
+├── marca/                ← Brand kit + personas unificadas (Ive, Alencar, Dupla)
+│   └── personas/         ← Personas consolidadas (migrado de personas/ em 2026-07-21)
 ├── Lab-Nexus/            ← Laboratório de prompts
 ├── Lib-Nexus/            ← Biblioteca de referência
 ├── producao/             ← Pipeline de produção
