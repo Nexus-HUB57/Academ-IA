@@ -1,0 +1,6 @@
+file '/home/user/academ_ia/videos/aulas-onda-49/piloto/aula-15/clips/cena-01.mp4'
+file '/home/user/academ_ia/videos/aulas-onda-49/piloto/aula-15/clips/cena-02.mp4'
+file '/home/user/academ_ia/videos/aulas-onda-49/piloto/aula-15/clips/cena-03.mp4'
+file '/home/user/academ_ia/videos/aulas-onda-49/piloto/aula-15/clips/cena-04.mp4'
+file '/home/user/academ_ia/videos/aulas-onda-49/piloto/aula-15/clips/cena-05.mp4'
+file '/home/user/academ_ia/videos/aulas-onda-49/piloto/aula-15/clips/cena-06.mp4'
