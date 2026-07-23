@@ -39,12 +39,23 @@ FONT_BOLD = '/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf'
 FONT_REG = '/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf'
 FONT_SERIF = '/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf'
 
-# Persona voice mapping
-VOICES = {
-    'ive': 'Portuguese_CharmingQueen',
-    'alencar': 'Portuguese_Steadymentor',
-    'dupla': ['Portuguese_CharmingQueen', 'Portuguese_Steadymentor'],
-}
+# Persona voice mapping (resolvido pelo registry oficial)
+import sys
+sys.path.insert(0, str(Path(__file__).parent.parent.parent / 'personas' / 'voice_registry'))
+try:
+    from voice_resolver import get_voice_id, describe_voices
+    VOICES = {
+        'ive': get_voice_id('ive', allow_fallback=True),
+        'alencar': get_voice_id('alencar', allow_fallback=True),
+        'dupla': 'mixed',  # marcador; resolved per-scene
+    }
+except Exception as e:
+    # Fallback hardcoded se registry indisponível
+    VOICES = {
+        'ive': 'Portuguese_CharmingQueen',
+        'alencar': 'Portuguese_Steadymentor',
+        'dupla': ['Portuguese_CharmingQueen', 'Portuguese_Steadymentor'],
+    }
 
 
 def get_font(size: int, bold: bool = False) -> ImageFont.FreeTypeFont:

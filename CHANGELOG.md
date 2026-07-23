@@ -2,13 +2,60 @@
 title: "CHANGELOG · Academ'IA"
 description: "Histórico de versões da Academ'IA · HUB de Conhecimento & Sabedoria"
 tags: [changelog, versionamento, historico, academia]
-version: 1.5.0
+version: 1.6.0
 last_updated: 2026-07-21
 ---
 
 # 📜 CHANGELOG · Academ'IA
 
 > Histórico de versões do HUB Academ'IA — Nexus Affil'IA'te. Segue **Semantic Versioning**: MAJOR (breaking), MINOR (compatível, novo asset), PATCH (correções, polish).
+
+---
+
+## [1.6.0] — 2026-07-21 · "Sprint 1 migrado: 6 tutoriais + 3 cursos + 3 bancos de questões"
+
+### 🆕 Adicionado (12 arquivos, ~3.500 linhas)
+
+Migração dos materiais criados durante o Sprint 1 do `MMN_AI-to-AI` para o repo dedicado `Academ-IA`. Nenhum arquivo existente foi sobrescrito; apenas adições em diretórios padronizados.
+
+**Sprint 1.1 — 6 Tutoriais Técnicos (GAP-02 do Roadmap)**
+- `tutoriais/16-pipeline-rag-end-to-end.md` (60min): RAG completo com LangChain + Chroma + RAGAS
+- `tutoriais/17-rag-hybrid-search-bm25.md` (40min): Hybrid search BM25 + embeddings + reranking
+- `tutoriais/18-whisper-transcricao-audio.md` (30min): Speech-to-text + tradução + diarização
+- `tutoriais/19-prompt-engineering-metodo-ctr.md` (25min): Método CTR com 5 exemplos
+- `tutoriais/20-fine-tuning-openai-api.md` (50min): Pipeline completo fine-tuning + custos
+- `tutoriais/21-deploy-api-ia-producao.md` (75min): FastAPI + Docker + Fly.io + observabilidade
+
+**Sprint 1.2 — 3 Cursos Novos (GAP-03 do Roadmap)**
+- `cursos/master/04-rag-em-producao.md` (120min): RAG end-to-end, hybrid search, RAGAS
+- `cursos/master/05-deploy-em-producao.md` (110min): FastAPI, cache, LiteLLM, Langfuse, K8s
+- `cursos/master/06-seguranca-jailbreaks-lgpd.md` (100min): 5 camadas defesa + LGPD + EU AI Act
+
+**Sprint 1.3 — 3 Bancos de Questões (GAP-01 do Roadmap)**
+- `certificacoes/banco-questoes-con.md`: 50 questões (IOAID/SHO/Skills/LGPD/Métricas)
+- `certificacoes/banco-questoes-cen.md`: 60 questões (Funis/A-B test/Coortes/LTV/Judge)
+- `certificacoes/banco-questoes-cen-plus.md`: 70 questões (Federação/Multi-tenant/Segurança)
+
+### 📊 Métricas Atualizadas
+
+| Recurso | v1.5.0 | v1.6.0 | Delta |
+|---|---|---|---|
+| Tutoriais numerados | 22 | 28 | +6 |
+| Cursos Master | 4 | 7 | +3 |
+| Bancos de questões | 0 | 3 | +180 questões |
+| Linhas de conteúdo técnico | ~12.000 | ~15.500 | +3.500 |
+
+### 🎯 Gaps Fechados
+
+- ✅ GAP-01: 3 bancos de questões (CON/CEN/CEN+)
+- ✅ GAP-02: 6 tutoriais #16-21 (stack IA 2026)
+- ✅ GAP-03: 3 cursos Master (RAG/Deploy/Segurança)
+
+### 📋 Próximo (Sprint 2)
+
+- GAP-04: Roteiros de vídeo para 8 cursos prioritários
+- GAP-05: Landing page pública + busca visual
+- GAP-09: Simulados interativos para 3 certificações
 
 ---
 
