@@ -1,15 +1,24 @@
 # 📚 AcademIA Nexus Affil'IA'te · INDEX Master
 
-**Última atualização**: 2026-07-23 · Mavis ✓ Opus · pós-ONDA-50 · push a71f2bc → b1c4d27
+**Última atualização**: 2026-07-23 · Helena Nexus · revisão pós-split Academ'IA/Marketplace · push dcd8ae8 → em progresso
 **Total**: 36 apostilas · 22 roteiros full · 23 vídeos MP4 (ONDA-47) + 9 renders 720p (ONDA-49) · 19 capas YouTube ONDA-50 · 95 slides PNG + 95 wrappers HTML · 19 webinars · 36 tutoriais · 14 playbooks · 9 treinamentos · 11 hubs · 15 TTS full · 75 frames
 **Versão**: **2.0-on-50** — NEXUS AFFIL'IA'TE TECH + ONDA-49/50 (95 slides PNG, 95 HTML wraps, 19 capas, 9 renders 720p)
 
 > 🌊 **Estado do Z pipeline** (verificado via `MASTER-PIPELINE-E2E.json`): ingest ✅ render ✅ capas ✅ HTML ✅, resta **renderar 10 MP4s ONDA-49 restantes** + **apagar 4 TODOs** das apostilas 17/18/32/33.
+>
+> 🧭 **Governança de split ativa**: `Academ-IA` passa a ser o repositório canônico de conteúdo pedagógico/interno da Nexus Affil'IA'te, enquanto `Marketplace-Nexus-` passa a ser o repositório canônico dos ebooks completos, HTML+MD comerciais e capas originais de produtos.
 
 > 🌊 **Onda 40** — integração com a nova coletânea técnica NEXUS AFFIL'IA'TE TECH
 > (5 ebooks PhD-level espelhados como 5 roteiros-âncora: 15-19).
 
 > 🌊 **Onda 49/50** — `aulas-onda-49` com 19 aulas completas (roteiro + slides PNG + HTML wrappers + capa + render), e `aulas-onda-50` com índice cross-refs + INDEX-PERSONAS + SHORTS-SPEC.
+## 🧭 Regra de Classificação de Conteúdo
+
+- **Academ-IA**: cursos, trilhas, apostilas, tutoriais, webinars, certificações, vídeos, roteiros, governança, Lab-Nexus, Lib-Nexus e pipeline audiovisual.
+- **Marketplace-Nexus-**: ebooks comerciais completos, arquivos HTML+MD de venda, capas originais e ativos de monetização pública.
+- Quando um conteúdo da Academ'IA referenciar um material comercial, a regra é **linkar e derivar**, não duplicar o arquivo-fonte integral.
+- Documento operacional de apoio: `docs/REPO_SPLIT_GOVERNANCA_2026-07-23.md`.
+
 ## 🎯 Estrutura Oficial (Fonte da Verdade)
 
 ```
@@ -210,7 +219,8 @@ thumbnails 2K. Cada volume trata o tema com profundidade técnica PhD-level, 10 
 1. **Renderar 10 MP4s 720p** faltantes do ONDA-49 (aulas 15, 16, 18, 19, 20, 21, 22, 23, 24, 25).
 2. **Resolver 4 STUBs** em apostilas 17, 18, 32, 33 (zerar TODOs).
 3. **Gerar PDFs** das 19 apostilas ONDA-49 (pandoc/xelatex ausentes → rota com `wkhtmltopdf` ou via `pdfs/` herdado).
-4. **Criar scripts/generate_apostilas_pdf.py** para converssão MD→PDF em lote (template HUB57).
+4. **Criar `scripts/generate_apostilas_pdf.py`** para conversão MD→PDF em lote (template HUB57).
+5. **Aplicar governança do split** em novos conteúdos para evitar duplicação entre Academ'IA e Marketplace Nexus.
 
 ## 🛠️ Producao · Incident Response (TI)
 
