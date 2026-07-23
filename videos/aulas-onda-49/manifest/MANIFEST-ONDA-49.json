@@ -1,0 +1,380 @@
+{
+  "onda": 49,
+  "data": "2026-07-23",
+  "titulo": "Videoaulas 15-33 · Slides B2 + Renders MP4",
+  "hub": "MMN AI-to-AI",
+  "total_aulas": 19,
+  "total_roteiros": 19,
+  "total_slides": 95,
+  "total_renders": 9,
+  "design_system": {
+    "paleta": {
+      "navy": "#0A1628",
+      "gold": "#D4AF37",
+      "cyan": "#22D3EE"
+    },
+    "fontes": [
+      "Inter 900/800/600/400",
+      "JetBrains Mono 700"
+    ],
+    "resolucao_slide": "1920x1080",
+    "resolucao_video": "1280x720",
+    "video_codec": "H.264 (libx264 crf24) + AAC 96k",
+    "layouts_por_aula": [
+      "hero",
+      "stats",
+      "cards",
+      "pyramid",
+      "cta"
+    ]
+  },
+  "aulas": [
+    {
+      "numero": "15",
+      "slug": "metricas-roi-ecossistema",
+      "titulo": "Métricas & ROI do Ecossistema",
+      "trilha": "Fundamental",
+      "persona": "dupla",
+      "roteiro": "aula-15-metricas-roi-ecossistema.md",
+      "slides": [
+        "aula-15-metricas-roi-ecossistema/cena-01-hero.png",
+        "aula-15-metricas-roi-ecossistema/cena-02-stats.png",
+        "aula-15-metricas-roi-ecossistema/cena-03-cards.png",
+        "aula-15-metricas-roi-ecossistema/cena-04-pyramid.png",
+        "aula-15-metricas-roi-ecossistema/cena-05-cta.png"
+      ],
+      "render_mp4": null,
+      "apostila": "apostilas/15-metricas-roi-ecossistema.md",
+      "status_render": "aguarda_audio_tts"
+    },
+    {
+      "numero": "16",
+      "slug": "trilha-fundamental-ia",
+      "titulo": "Trilha Fundamental IA",
+      "trilha": "Fundamental",
+      "persona": "dupla",
+      "roteiro": "aula-16-trilha-fundamental-ia.md",
+      "slides": [
+        "aula-16-trilha-fundamental-ia/cena-01-hero.png",
+        "aula-16-trilha-fundamental-ia/cena-02-stats.png",
+        "aula-16-trilha-fundamental-ia/cena-03-cards.png",
+        "aula-16-trilha-fundamental-ia/cena-04-pyramid.png",
+        "aula-16-trilha-fundamental-ia/cena-05-cta.png"
+      ],
+      "render_mp4": null,
+      "apostila": "apostilas/16-trilha-fundamental-ia.md",
+      "status_render": "aguarda_audio_tts"
+    },
+    {
+      "numero": "17",
+      "slug": "seo-marketing-conteudo-ia",
+      "titulo": "SEO & Marketing de Conteúdo para IA",
+      "trilha": "Master",
+      "persona": "dupla",
+      "roteiro": "aula-17-seo-marketing-conteudo-ia.md",
+      "slides": [
+        "aula-17-seo-marketing-conteudo-ia/cena-01-hero.png",
+        "aula-17-seo-marketing-conteudo-ia/cena-02-stats.png",
+        "aula-17-seo-marketing-conteudo-ia/cena-03-cards.png",
+        "aula-17-seo-marketing-conteudo-ia/cena-04-pyramid.png",
+        "aula-17-seo-marketing-conteudo-ia/cena-05-cta.png"
+      ],
+      "render_mp4": "aula-17-seo-marketing-conteudo-ia-720p.mp4",
+      "apostila": "apostilas/17-seo-marketing-conteudo-ia.md",
+      "status_render": "renderizado"
+    },
+    {
+      "numero": "18",
+      "slug": "seguranca-ofensiva-pentest",
+      "titulo": "Segurança Ofensiva & Pentest de Agentes IA",
+      "trilha": "Elite",
+      "persona": "dupla",
+      "roteiro": "aula-18-seguranca-ofensiva-pentest.md",
+      "slides": [
+        "aula-18-seguranca-ofensiva-pentest/cena-01-hero.png",
+        "aula-18-seguranca-ofensiva-pentest/cena-02-stats.png",
+        "aula-18-seguranca-ofensiva-pentest/cena-03-cards.png",
+        "aula-18-seguranca-ofensiva-pentest/cena-04-pyramid.png",
+        "aula-18-seguranca-ofensiva-pentest/cena-05-cta.png"
+      ],
+      "render_mp4": null,
+      "apostila": "apostilas/18-seguranca-ofensiva-pentest-agentes-ia.md",
+      "status_render": "aguarda_audio_tts"
+    },
+    {
+      "numero": "19",
+      "slug": "monetizacao-avancada-escala",
+      "titulo": "Monetização Avançada em Escala",
+      "trilha": "Master",
+      "persona": "dupla",
+      "roteiro": "aula-19-monetizacao-avancada-escala.md",
+      "slides": [
+        "aula-19-monetizacao-avancada-escala/cena-01-hero.png",
+        "aula-19-monetizacao-avancada-escala/cena-02-stats.png",
+        "aula-19-monetizacao-avancada-escala/cena-03-cards.png",
+        "aula-19-monetizacao-avancada-escala/cena-04-pyramid.png",
+        "aula-19-monetizacao-avancada-escala/cena-05-cta.png"
+      ],
+      "render_mp4": null,
+      "apostila": "apostilas/19-monetizacao-avancada-escala.md",
+      "status_render": "aguarda_audio_tts"
+    },
+    {
+      "numero": "20",
+      "slug": "trilha-elite-engenharia",
+      "titulo": "Trilha Elite Engenharia",
+      "trilha": "Elite",
+      "persona": "dupla",
+      "roteiro": "aula-20-trilha-elite-engenharia.md",
+      "slides": [
+        "aula-20-trilha-elite-engenharia/cena-01-hero.png",
+        "aula-20-trilha-elite-engenharia/cena-02-stats.png",
+        "aula-20-trilha-elite-engenharia/cena-03-cards.png",
+        "aula-20-trilha-elite-engenharia/cena-04-pyramid.png",
+        "aula-20-trilha-elite-engenharia/cena-05-cta.png"
+      ],
+      "render_mp4": null,
+      "apostila": "apostilas/20-trilha-elite-engenharia.md",
+      "status_render": "aguarda_audio_tts"
+    },
+    {
+      "numero": "21",
+      "slug": "trilha-master-arquitetura",
+      "titulo": "Trilha Master Arquitetura",
+      "trilha": "Master",
+      "persona": "dupla",
+      "roteiro": "aula-21-trilha-master-arquitetura.md",
+      "slides": [
+        "aula-21-trilha-master-arquitetura/cena-01-hero.png",
+        "aula-21-trilha-master-arquitetura/cena-02-stats.png",
+        "aula-21-trilha-master-arquitetura/cena-03-cards.png",
+        "aula-21-trilha-master-arquitetura/cena-04-pyramid.png",
+        "aula-21-trilha-master-arquitetura/cena-05-cta.png"
+      ],
+      "render_mp4": null,
+      "apostila": "apostilas/21-trilha-master-arquitetura.md",
+      "status_render": "aguarda_audio_tts"
+    },
+    {
+      "numero": "22",
+      "slug": "trilha-master-mentoria",
+      "titulo": "Trilha Master Mentoria",
+      "trilha": "Master",
+      "persona": "dupla",
+      "roteiro": "aula-22-trilha-master-mentoria.md",
+      "slides": [
+        "aula-22-trilha-master-mentoria/cena-01-hero.png",
+        "aula-22-trilha-master-mentoria/cena-02-stats.png",
+        "aula-22-trilha-master-mentoria/cena-03-cards.png",
+        "aula-22-trilha-master-mentoria/cena-04-pyramid.png",
+        "aula-22-trilha-master-mentoria/cena-05-cta.png"
+      ],
+      "render_mp4": null,
+      "apostila": "apostilas/22-trilha-master-mentoria.md",
+      "status_render": "aguarda_audio_tts"
+    },
+    {
+      "numero": "23",
+      "slug": "curso-rag-pratico",
+      "titulo": "Curso RAG Prático",
+      "trilha": "Curso",
+      "persona": "dupla",
+      "roteiro": "aula-23-curso-rag-pratico.md",
+      "slides": [
+        "aula-23-curso-rag-pratico/cena-01-hero.png",
+        "aula-23-curso-rag-pratico/cena-02-stats.png",
+        "aula-23-curso-rag-pratico/cena-03-cards.png",
+        "aula-23-curso-rag-pratico/cena-04-pyramid.png",
+        "aula-23-curso-rag-pratico/cena-05-cta.png"
+      ],
+      "render_mp4": null,
+      "apostila": "apostilas/23-curso-rag-pratico.md",
+      "status_render": "aguarda_audio_tts"
+    },
+    {
+      "numero": "24",
+      "slug": "curso-agents-langgraph",
+      "titulo": "Curso Agents LangGraph",
+      "trilha": "Curso",
+      "persona": "dupla",
+      "roteiro": "aula-24-curso-agents-langgraph.md",
+      "slides": [
+        "aula-24-curso-agents-langgraph/cena-01-hero.png",
+        "aula-24-curso-agents-langgraph/cena-02-stats.png",
+        "aula-24-curso-agents-langgraph/cena-03-cards.png",
+        "aula-24-curso-agents-langgraph/cena-04-pyramid.png",
+        "aula-24-curso-agents-langgraph/cena-05-cta.png"
+      ],
+      "render_mp4": null,
+      "apostila": "apostilas/24-curso-agents-langgraph.md",
+      "status_render": "aguarda_audio_tts"
+    },
+    {
+      "numero": "25",
+      "slug": "curso-prompt-engineering",
+      "titulo": "Curso Prompt Engineering",
+      "trilha": "Curso",
+      "persona": "dupla",
+      "roteiro": "aula-25-curso-prompt-engineering.md",
+      "slides": [
+        "aula-25-curso-prompt-engineering/cena-01-hero.png",
+        "aula-25-curso-prompt-engineering/cena-02-stats.png",
+        "aula-25-curso-prompt-engineering/cena-03-cards.png",
+        "aula-25-curso-prompt-engineering/cena-04-pyramid.png",
+        "aula-25-curso-prompt-engineering/cena-05-cta.png"
+      ],
+      "render_mp4": null,
+      "apostila": "apostilas/25-curso-prompt-engineering.md",
+      "status_render": "aguarda_audio_tts"
+    },
+    {
+      "numero": "26",
+      "slug": "curso-vector-db",
+      "titulo": "Curso Vector Database",
+      "trilha": "Curso",
+      "persona": "dupla",
+      "roteiro": "aula-26-curso-vector-db.md",
+      "slides": [
+        "aula-26-curso-vector-db/cena-01-hero.png",
+        "aula-26-curso-vector-db/cena-02-stats.png",
+        "aula-26-curso-vector-db/cena-03-cards.png",
+        "aula-26-curso-vector-db/cena-04-pyramid.png",
+        "aula-26-curso-vector-db/cena-05-cta.png"
+      ],
+      "render_mp4": "aula-26-curso-vector-db-720p.mp4",
+      "apostila": "apostilas/26-curso-vector-db.md",
+      "status_render": "renderizado"
+    },
+    {
+      "numero": "27",
+      "slug": "curso-voice-ai",
+      "titulo": "Curso Voice AI",
+      "trilha": "Curso",
+      "persona": "dupla",
+      "roteiro": "aula-27-curso-voice-ai.md",
+      "slides": [
+        "aula-27-curso-voice-ai/cena-01-hero.png",
+        "aula-27-curso-voice-ai/cena-02-stats.png",
+        "aula-27-curso-voice-ai/cena-03-cards.png",
+        "aula-27-curso-voice-ai/cena-04-pyramid.png",
+        "aula-27-curso-voice-ai/cena-05-cta.png"
+      ],
+      "render_mp4": "aula-27-curso-voice-ai-720p.mp4",
+      "apostila": "apostilas/27-curso-voice-ai.md",
+      "status_render": "renderizado"
+    },
+    {
+      "numero": "28",
+      "slug": "curso-multimodal-rag",
+      "titulo": "Curso Multimodal RAG",
+      "trilha": "Curso",
+      "persona": "dupla",
+      "roteiro": "aula-28-curso-multimodal-rag.md",
+      "slides": [
+        "aula-28-curso-multimodal-rag/cena-01-hero.png",
+        "aula-28-curso-multimodal-rag/cena-02-stats.png",
+        "aula-28-curso-multimodal-rag/cena-03-cards.png",
+        "aula-28-curso-multimodal-rag/cena-04-pyramid.png",
+        "aula-28-curso-multimodal-rag/cena-05-cta.png"
+      ],
+      "render_mp4": "aula-28-curso-multimodal-rag-720p.mp4",
+      "apostila": "apostilas/28-curso-multimodal-rag.md",
+      "status_render": "renderizado"
+    },
+    {
+      "numero": "29",
+      "slug": "ai-to-ai-protocol",
+      "titulo": "AI-to-AI Protocol",
+      "trilha": "Fundamental",
+      "persona": "dupla",
+      "roteiro": "aula-29-ai-to-ai-protocol.md",
+      "slides": [
+        "aula-29-ai-to-ai-protocol/cena-01-hero.png",
+        "aula-29-ai-to-ai-protocol/cena-02-stats.png",
+        "aula-29-ai-to-ai-protocol/cena-03-cards.png",
+        "aula-29-ai-to-ai-protocol/cena-04-pyramid.png",
+        "aula-29-ai-to-ai-protocol/cena-05-cta.png"
+      ],
+      "render_mp4": "aula-29-ai-to-ai-protocol-720p.mp4",
+      "apostila": "apostilas/29-ai-to-ai-protocol.md",
+      "status_render": "renderizado"
+    },
+    {
+      "numero": "30",
+      "slug": "federacao-zero-trust",
+      "titulo": "Federação Zero-Trust",
+      "trilha": "Fundamental",
+      "persona": "dupla",
+      "roteiro": "aula-30-federacao-zero-trust.md",
+      "slides": [
+        "aula-30-federacao-zero-trust/cena-01-hero.png",
+        "aula-30-federacao-zero-trust/cena-02-stats.png",
+        "aula-30-federacao-zero-trust/cena-03-cards.png",
+        "aula-30-federacao-zero-trust/cena-04-pyramid.png",
+        "aula-30-federacao-zero-trust/cena-05-cta.png"
+      ],
+      "render_mp4": "aula-30-federacao-zero-trust-720p.mp4",
+      "apostila": "apostilas/30-federacao-zero-trust.md",
+      "status_render": "renderizado"
+    },
+    {
+      "numero": "31",
+      "slug": "fabrica-conteudo-ia",
+      "titulo": "Fábrica de Conteúdo IA",
+      "trilha": "Elite",
+      "persona": "dupla",
+      "roteiro": "aula-31-fabrica-conteudo-ia.md",
+      "slides": [
+        "aula-31-fabrica-conteudo-ia/cena-01-hero.png",
+        "aula-31-fabrica-conteudo-ia/cena-02-stats.png",
+        "aula-31-fabrica-conteudo-ia/cena-03-cards.png",
+        "aula-31-fabrica-conteudo-ia/cena-04-pyramid.png",
+        "aula-31-fabrica-conteudo-ia/cena-05-cta.png"
+      ],
+      "render_mp4": "aula-31-fabrica-conteudo-ia-720p.mp4",
+      "apostila": "apostilas/31-fabrica-conteudo-ia.md",
+      "status_render": "renderizado"
+    },
+    {
+      "numero": "32",
+      "slug": "pricing-ia-2026",
+      "titulo": "Pricing IA 2026",
+      "trilha": "Elite",
+      "persona": "dupla",
+      "roteiro": "aula-32-pricing-ia-2026.md",
+      "slides": [
+        "aula-32-pricing-ia-2026/cena-01-hero.png",
+        "aula-32-pricing-ia-2026/cena-02-stats.png",
+        "aula-32-pricing-ia-2026/cena-03-cards.png",
+        "aula-32-pricing-ia-2026/cena-04-pyramid.png",
+        "aula-32-pricing-ia-2026/cena-05-cta.png"
+      ],
+      "render_mp4": "aula-32-pricing-ia-2026-720p.mp4",
+      "apostila": "apostilas/32-pricing-ia-2026.md",
+      "status_render": "renderizado"
+    },
+    {
+      "numero": "33",
+      "slug": "data-stack-agentes-ia",
+      "titulo": "Data Stack de Agentes IA",
+      "trilha": "Elite",
+      "persona": "dupla",
+      "roteiro": "aula-33-data-stack-agentes-ia.md",
+      "slides": [
+        "aula-33-data-stack-agentes-ia/cena-01-hero.png",
+        "aula-33-data-stack-agentes-ia/cena-02-stats.png",
+        "aula-33-data-stack-agentes-ia/cena-03-cards.png",
+        "aula-33-data-stack-agentes-ia/cena-04-pyramid.png",
+        "aula-33-data-stack-agentes-ia/cena-05-cta.png"
+      ],
+      "render_mp4": "aula-33-data-stack-agentes-ia-720p.mp4",
+      "apostila": "apostilas/33-data-stack-agentes-ia.md",
+      "status_render": "renderizado"
+    }
+  ],
+  "pendencias_onda_50": [
+    "10 renders MP4 restantes (aulas 15-16, 18-25) — aguarda áudio TTS voice-clone",
+    "Capas YouTube 16:9 personalizadas (thumbs) — geração via image_generation",
+    "Regenerar chunks Ive pitch-shifted com voice-clone (samples oficiais)"
+  ]
+}
