@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marketplace de Skills — Como Vender e Comprar no Ecossistema Nexus - AcademIA Nexus</title>
+  <link rel="stylesheet" href="../html/acad-style.css">
+</head>
+<body class="dark-theme">
+  <article class="ebook">
+    <header class="cover">
+      <div class="series-tag">AcademIA - Apostila #13</div>
+      <h1>Marketplace de Skills — Como Vender e Comprar no Ecossistema Nexus</h1>
+      <h2>O Guia Definitivo para Autores, Compradores e Operadores de Skills</h2>
+      <img class="cover-image" src="docs/ebooks/ACAD-apostila-13-marketplace-skills.webp" alt="Capa - Marketplace de Skills — Como Vender e Comprar no Ecossistema Nexus">
+      <div class="author"><strong>MMN_IA Collective</strong><br>PHD nivel Harvard do Universo AI</div>
+      <div class="meta">Apostila 13 - Nivel Master - v1.0.0 - 2026</div>
+    </header>
+    <section class="page toc-page">
+      <h2>Sumario</h2>
+      <ul><li>(conteudo detalhado no corpo)</li></ul>
+      <div class="info-box success">
+        <strong>Sobre esta apostila:</strong> parte da colecao AcademIA - Nexus HUB57. Conteudo hands-on, baseado em producao real.
+      </div>
+    </section>
+    <section class="page">
+      <h2>Conteudo</h2>
+      <p><strong>Marketplace de Skills — Como Vender e Comprar no Ecossistema Nexus</strong></p>
+<p><em>O Guia Definitivo para Autores, Compradores e Operadores de Skills</em></p>
+<p><strong>Por MMN_IA Collective · Academ'IA</strong></p>
+<p>Nexus Affil'IA'te · 2026</p>
+<p><strong>Sobre este documento</strong></p>
+<p>O Marketplace de Skills é onde a <strong>economia real</strong> do ecossistema Nexus acontece. Afiliados compram skills prontas (copy, follow-up, análise de coorte), autores vendem, e a plataforma fica com uma fração. Em maio de 2026, o marketplace movimentou USD 4.2M em 30 dias. Este documento é o manual completo para os três papéis: autor (quem cria), comprador (quem usa), operador (quem mantém a plataforma saudável). Se você quer monetizar com skills, comprar com segurança, ou entender a economia do ecossistema, comece aqui.</p>
+<p><strong>Sumário</strong></p>
+<blockquote>
+<p><strong>•</strong> 1. O que é o Marketplace de Skills
+<strong>•</strong> 2. Os três papéis: autor, comprador, operador
+<strong>•</strong> 3. Anatomia de uma skill vendável
+<strong>•</strong> 4. SKILL.md — o manifesto (já visto na Apostila 07, aprofundado aqui)
+<strong>•</strong> 5. Sistema de preços: free, freemium, paid, enterprise
+<strong>•</strong> 6. Como autor: passo a passo para publicar
+<strong>•</strong> 7. Validação técnica antes de publicar (CI/CD obrigatório)
+<strong>•</strong> 8. Sistema de reputação e reviews
+<strong>•</strong> 9. Como comprador: como escolher bem
+<strong>•</strong> 10. Garantias e política de reembolso
+<strong>•</strong> 11. Casos: skills que vendem mais em 2026
+<strong>•</strong> 12. Top 10 erros de autores iniciantes
+<strong>•</strong> 13. Como o Marketplace gera renda para a plataforma
+<strong>•</strong> 14. Compliance e LGPD no marketplace
+<strong>•</strong> 15. Roadmap do marketplace 2026-2027
+<strong>•</strong> 16. Glossário</p>
+</blockquote>
+<hr />
+<p><strong>1. O que é o Marketplace de Skills</strong></p>
+<p>O Marketplace é o <strong>marketplace de capacidades de IA</strong> dentro do ecossistema Nexus. Modelos (LLMs) são commoditizados — a diferenciação está nas <strong>skills</strong> que envolvem esses modelos para resolver problemas específicos.</p>
+<p><strong>Estrutura:</strong></p>
+<div class="codehilite"><pre><span></span><code>Marketplace Nexus
+├── Skills gratuitas (250+)
+├── Skills freemium (80+)      [basic free, pro paid]
+├── Skills pagas (320+)
+├── Skills enterprise (40+)    [custom, contrato]
+└── Skills internas (Nexus)    [não vendáveis, mantidas pelo time]
+</code></pre></div>
+
+<p>Em junho de 2026, são <strong>690+ skills ativas</strong>, escritas por <strong>140+ autores</strong>, usadas por <strong>12.000+ afiliados</strong>.</p>
+<p><strong>Por que isso importa?</strong></p>
+<p>Porque sem skills prontas, cada afiliado precisaria construir do zero. Com o marketplace, <strong>um afiliado consegue ser produtivo em 7 dias</strong>, não em 7 meses. A plataforma cresce mais rápido, e os autores ganham renda recorrente.</p>
+<p><strong>2. Os três papéis: autor, comprador, operador</strong></p>
+<p><strong>Autor</strong> — publica skills. Ganha % de cada venda.
+- Pode ser afiliado avançado, agência, ou terceiro.
+- Paga nada para publicar (taxa só sobre venda).
+- Mantém SKILL.md, testes, e suporte.</p>
+<p><strong>Comprador</strong> — consome skills.
+- Pode ser afiliado, agência, white-label.
+- Paga por uso, por mês, ou por execução.
+- Tem direito a reembolso se skill não entregar.</p>
+<p><strong>Operador</strong> (Nexus) — mantém o marketplace saudável.
+- Valida skills antes de publicar.
+- Modera reviews.
+- Resolve disputas.
+- Garante compliance.</p>
+<p><strong>3. Anatomia de uma skill vendável</strong></p>
+<p>Uma skill que vende bem tem:</p>
+<ol>
+<li><strong>Problema claro</strong> — "copies para WhatsApp de e-commerce" é melhor que "skill de texto".</li>
+<li><strong>Output consistente</strong> — mesma skill, mesmo input, mesmo nível de output.</li>
+<li><strong>Documentação impecável</strong> — SKILL.md + exemplos + troubleshooting.</li>
+<li><strong>Testes automatizados</strong> — CI que roda antes de cada release.</li>
+<li><strong>Suporte responsivo</strong> — autor responde em &lt;48h.</li>
+<li><strong>Pricing justo</strong> — proporcional ao valor entregue.</li>
+<li><strong>Reputação inicial</strong> — primeiros 10 reviews com 4.5+ estrelas.</li>
+</ol>
+<p><strong>4. SKILL.md — o manifesto</strong></p>
+<p>Aprofundando o que vimos na Apostila 07:</p>
+<div class="codehilite"><pre><span></span><code><span class="gh"># Skill: whatsapp_copy_v2</span>
+
+<span class="gs">**Versão:**</span> 2.1.0
+<span class="gs">**Autor:**</span> Maria Silva (maria@agencia.com.br)
+<span class="gs">**Tags:**</span> whatsapp, copywriting, ecommerce, conversão
+<span class="gs">**Dependências:**</span> nenhuma
+
+<span class="gu">## Descrição</span>
+Gera copies persuasivas para campanhas de WhatsApp
+em e-commerce, com foco em conversão D+1.
+
+<span class="gu">## Inputs</span>
+<span class="k">-</span><span class="w"> </span>produto_nome: str
+<span class="k">-</span><span class="w"> </span>publico_alvo: str (ex: &quot;mães 30-45 SP&quot;)
+<span class="k">-</span><span class="w"> </span>objetivo: enum [venda, lead, recompra]
+<span class="k">-</span><span class="w"> </span>tom: enum [urgente, acolhedor, direto]
+
+<span class="gu">## Outputs</span>
+<span class="k">-</span><span class="w"> </span>copy_principal: str (max 500 chars)
+<span class="k">-</span><span class="w"> </span>variacoes: list[str] (3 variantes A/B)
+<span class="k">-</span><span class="w"> </span>horario_sugerido: time
+<span class="k">-</span><span class="w"> </span>disclaimer_lgpd: str
+
+<span class="gu">## Exemplo</span>
+Input: {produto: &quot;vestido floral&quot;, publico: &quot;mulheres 25-35&quot;, objetivo: &quot;venda&quot;}
+Output: {
+  copy_principal: &quot;🌸 Vestido floral que combina com seu lifestyle...&quot;,
+  variacoes: [&quot;...&quot;],
+  horario_sugerido: &quot;19:00-21:00&quot;,
+  disclaimer_lgpd: &quot;Você está recebendo porque se inscreveu...&quot;
+}
+
+<span class="gu">## Política</span>
+<span class="k">-</span><span class="w"> </span>Limite: 1000 gerações/dia
+<span class="k">-</span><span class="w"> </span>Bloqueio se produto for: [tabaco, armas]
+<span class="k">-</span><span class="w"> </span>Requer aprovação se: &quot;milagre&quot; ou &quot;garantido&quot; no copy
+
+<span class="gu">## Testes</span>
+<span class="k">-</span><span class="w"> </span>test_basic_copy
+<span class="k">-</span><span class="w"> </span>test_variations
+<span class="k">-</span><span class="w"> </span>test_policy_blocking
+<span class="k">-</span><span class="w"> </span>test_lgpd_disclaimer
+
+<span class="gu">## Suporte</span>
+maria@agencia.com.br · response &lt;48h
+</code></pre></div>
+
+<p><strong>5. Sistema de preços: free, freemium, paid, enterprise</strong></p>
+<p><strong>Free:</strong>
+- Preço: R$0.
+- Visibilidade: alta (boost no ranking).
+- Limitação: até 100 execuções/mês por tenant.
+- Bom para: construir reputação inicial.</p>
+<p><strong>Freemium:</strong>
+- Preço: R$0 básico + R$29-99/mês pro.
+- Features pro: mais execuções, melhor modelo, suporte prioritário.
+- Bom para: capturar tanto curiosos quanto pagantes.</p>
+<p><strong>Paid:</strong>
+- Preço: R$49-499/mês OU R$0.05-0.50 por execução.
+- Visibilidade: depende de reviews e conversão.
+- Bom para: skill com track record comprovado.</p>
+<p><strong>Enterprise:</strong>
+- Preço: contrato, começa em R$2.000/mês.
+- Customização: total (branding, integração dedicada).
+- SLA: garantido contratualmente.
+- Bom para: grandes operadores que precisam de exclusividade.</p>
+<p><strong>6. Como autor: passo a passo para publicar</strong></p>
+<ol>
+<li><strong>Criar SKILL.md</strong> completo (vide template acima).</li>
+<li><strong>Implementar código</strong> em pasta <code>skill_name/</code>.</li>
+<li><strong>Escrever testes</strong> com cobertura &gt;80%.</li>
+<li><strong>Configurar CI</strong> (GitHub Actions ou similar) que roda testes em cada push.</li>
+<li><strong>Submeter para review</strong> via <code>nexus skill submit</code>.</li>
+<li><strong>Aguardar validação</strong> (geralmente 2-5 dias úteis).</li>
+<li><strong>Publicar</strong> com preço e categoria.</li>
+<li><strong>Divulgar</strong> — compartilhar em comunidade, fazer demo no Discord, etc.</li>
+</ol>
+<p><strong>7. Validação técnica antes de publicar</strong></p>
+<p>A Nexus valida:</p>
+<ul>
+<li><strong>Funcionalidade</strong> — testes passam em CI.</li>
+<li><strong>Segurança</strong> — não tem prompt injection óbvia.</li>
+<li><strong>Compliance</strong> — não viola LGPD nem termos.</li>
+<li><strong>Documentação</strong> — SKILL.md está completo.</li>
+<li><strong>Performance</strong> — p99 latência &lt;3s para 95% das chamadas.</li>
+<li><strong>Custo</strong> — execução custa &lt;R$0.10 (caso contrário, exige aprovação).</li>
+</ul>
+<p><strong>Skills reprovadas</strong> recebem relatório com o que ajustar. Re-submissão gratuita.</p>
+<p><strong>8. Sistema de reputação e reviews</strong></p>
+<p>Cada skill tem:</p>
+<ul>
+<li><strong>Estrelas</strong> (1-5, média ponderada).</li>
+<li><strong>Reviews escritas</strong> (até 2000 chars).</li>
+<li><strong>Uso</strong> (total de execuções).</li>
+<li><strong>Retenção</strong> (% de compradores que continuam usando após 30 dias).</li>
+</ul>
+<p><strong>Reviews falsas</strong> são detectadas automaticamente e removidas. Autores podem responder publicamente.</p>
+<p><strong>Score de reputação:</strong>
+- 4.5+ estrelas + 50+ reviews = "Top Rated" badge.
+- 4.0-4.5 = normal.
+- &lt;4.0 = flagged para revisão.</p>
+<p><strong>9. Como comprador: como escolher bem</strong></p>
+<p>Critérios práticos:</p>
+<ol>
+<li><strong>Tem SKILL.md completo?</strong> Se não, desconfie.</li>
+<li><strong>Tem testes automatizados?</strong> Sinal de maturidade.</li>
+<li><strong>Quantas reviews tem?</strong> &lt;10 = ainda experimental.</li>
+<li><strong>Qual a taxa de retenção?</strong> &gt;80% = boa.</li>
+<li><strong>Qual o SLA do autor?</strong> Sem SLA documentado = risco.</li>
+<li><strong>Tem free trial?</strong> Use antes de pagar.</li>
+<li><strong>Suporta seu caso?</strong> Veja os exemplos de output.</li>
+</ol>
+<p><strong>10. Garantias e política de reembolso</strong></p>
+<ul>
+<li><strong>7 dias</strong> para reembolso integral se skill não entregar o que promete.</li>
+<li><strong>30 dias</strong> se skill ficar indisponível por mais de 50% do tempo.</li>
+<li><strong>Reembolso automático</strong> se skill for despublicada por violação de compliance.</li>
+</ul>
+<p>Disputas são resolvidas pelo <strong>Operador</strong> em até 5 dias úteis.</p>
+<p><strong>11. Casos: skills que vendem mais em 2026</strong></p>
+<p><strong>Top 5 por receita (junho 2026):</strong></p>
+<ol>
+<li><strong>whatsapp_copy_premium_v3</strong> — R$420k/mês. 8.000 usuários ativos.</li>
+<li><strong>cohort_analyzer_v2</strong> — R$280k/mês. 3.500 usuários. Analytics preditivo.</li>
+<li><strong>funnel_lifecycle_v4</strong> — R$240k/mês. 2.800 usuários. Automação completa.</li>
+<li><strong>instagram_reels_script_v2</strong> — R$190k/mês. 4.200 usuários. Script viral.</li>
+<li><strong>lead_scoring_v3</strong> — R$170k/mês. 2.100 usuários. Score automático.</li>
+</ol>
+<p><strong>Insight:</strong> skills de <strong>analytics</strong> e <strong>copywriting</strong> dominam. Skills técnicas (infra, DevOps) vendem menos em volume mas têm ticket médio maior.</p>
+<p><strong>12. Top 10 erros de autores iniciantes</strong></p>
+<ol>
+<li>SKILL.md incompleto.</li>
+<li>Sem testes (ou testes que não rodam).</li>
+<li>Pricing muito alto no lançamento.</li>
+<li>Sem suporte documentado.</li>
+<li>Documentação só em inglês (90% do público fala PT-BR).</li>
+<li>Skill que depende de outros serviços sem aviso.</li>
+<li>Output sem disclaimer de LGPD.</li>
+<li>Sem changelog.</li>
+<li>Sem exemplos de output real.</li>
+<li>Não promover a skill após publicar.</li>
+</ol>
+<p><strong>13. Como o Marketplace gera renda para a plataforma</strong></p>
+<p>A Nexus fica com <strong>20% de cada transação</strong> (autor fica com 80%). Em junho de 2026:</p>
+<ul>
+<li>Volume transacionado: R$4.2M.</li>
+<li>Receita da plataforma (20%): R$840k.</li>
+<li>Margem após custos (LLM, infra, suporte): ~65%.</li>
+</ul>
+<p>Esse fluxo é reinvestido em:</p>
+<ul>
+<li>Manutenção do IOAID.</li>
+<li>Equipe de validação.</li>
+<li>Marketing do marketplace.</li>
+<li>Programa de bolsas para autores emergentes.</li>
+</ul>
+<p><strong>14. Compliance e LGPD no marketplace</strong></p>
+<p>Toda skill publicada deve:</p>
+<ul>
+<li>Ter <strong>disclaimer LGPD</strong> quando aplicável.</li>
+<li>Não persistir PII sem consentimento.</li>
+<li>Não compartilhar dados entre tenants.</li>
+<li>Ser auditável (logs de execução por 90 dias).</li>
+</ul>
+<p><strong>Skills que violam</strong> entram em quarentena e podem ser despublicadas. Autores podem recorrer.</p>
+<p><strong>DPO</strong> do marketplace: <code>dpo@nexus.io</code>.</p>
+<p><strong>15. Roadmap do marketplace 2026-2027</strong></p>
+<p><strong>Q3 2026:</strong>
+- Launch de <strong>Skill Bundles</strong> (pacotes temáticos com desconto).
+- <strong>Marketplace de Agentes</strong> (não só skills — agentes inteiros).
+- <strong>Skill marketplace API</strong> para integrações externas.</p>
+<p><strong>Q4 2026:</strong>
+- <strong>Skill Marketplace Mobile</strong> (comprar/instalar pelo app).
+- <strong>Live demos</strong> no Discord toda semana.
+- <strong>Programa de afiliados do marketplace</strong> (indique skills, ganhe).</p>
+<p><strong>Q1 2027:</strong>
+- <strong>Skill versioning pago</strong> (quem tem v1 free, v2 paga).
+- <strong>Skill Academy</strong> — cursos para autores aprenderem a criar.
+- <strong>Global expansion</strong> (espanhol, inglês, mandarim).</p>
+<p><strong>16. Glossário</strong></p>
+<table>
+<thead>
+<tr>
+<th>Termo</th>
+<th>Definição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Skill</strong></td>
+<td>Pacote vendável de capacidade de IA</td>
+</tr>
+<tr>
+<td><strong>SKILL.md</strong></td>
+<td>Manifesto técnico de uma skill</td>
+</tr>
+<tr>
+<td><strong>Marketplace</strong></td>
+<td>Local onde skills são compradas/vendidas</td>
+</tr>
+<tr>
+<td><strong>Freemium</strong></td>
+<td>Modelo free + pago</td>
+</tr>
+<tr>
+<td><strong>Reputação</strong></td>
+<td>Score agregado de uma skill</td>
+</tr>
+<tr>
+<td><strong>Top Rated</strong></td>
+<td>Badge para skills 4.5+ estrelas</td>
+</tr>
+<tr>
+<td><strong>Quarentena</strong></td>
+<td>Isolamento temporário de skill com problema</td>
+</tr>
+<tr>
+<td><strong>DPO</strong></td>
+<td>Data Protection Officer</td>
+</tr>
+<tr>
+<td><strong>Bundle</strong></td>
+<td>Pacote de skills com desconto</td>
+</tr>
+<tr>
+<td><strong>Skill Versioning</strong></td>
+<td>Política de cobrar por novas versões</td>
+</tr>
+<tr>
+<td><strong>CI/CD</strong></td>
+<td>Continuous Integration/Deployment</td>
+</tr>
+<tr>
+<td><strong>Coorte</strong></td>
+<td>Grupo de usuários com característica comum</td>
+</tr>
+<tr>
+<td><strong>Lead Scoring</strong></td>
+<td>Score atribuído a leads</td>
+</tr>
+<tr>
+<td><strong>Reembolso</strong></td>
+<td>Devolução do valor pago</td>
+</tr>
+<tr>
+<td><strong>LGPD</strong></td>
+<td>Lei Geral de Proteção de Dados</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><em>© 2026 Nexus HUB57 · Academ'IA · Todos os direitos reservados</em>
+<em>Versão 1.0.0 · Junho 2026 · Apostila Academ'IA #13 — Marketplace de Skills</em></p>
+      <hr/>
+      <p style="text-align:center;color:var(--fg-muted);margin-top:2rem;">
+        <em>Fim da Apostila #13 2026 - Licenca CC BY-NC-SA 4.0 - MMN_IA Collective - Nexus HUB57</em>
+      </p>
+    </section>
+  </article>
+</body>
+</html>
