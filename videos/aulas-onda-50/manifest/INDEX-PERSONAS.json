@@ -1,0 +1,153 @@
+{
+  "schema_version": "1.0",
+  "gerado_em": "2026-07-23",
+  "gerado_por": "Nexus AI Pipeline",
+  "onda": "50",
+  "total_capas_youtube": 19,
+  "distribuicao_por_persona": {
+    "alencar": 8,
+    "ive": 4,
+    "dupla": 7
+  },
+  "distribuicao_por_trilha": {
+    "Master": 9,
+    "Fundamental": 2,
+    "Agente": 2,
+    "Elite": 6
+  },
+  "detalhe_por_aula": [
+    {
+      "aula": 15,
+      "titulo": "Métricas ROI Ecossistema",
+      "trilha": "Master",
+      "persona": "alencar",
+      "capa_filename": "capa-15-metricas-roi-alencar.png"
+    },
+    {
+      "aula": 16,
+      "titulo": "Trilha Fundamental de IA",
+      "trilha": "Fundamental",
+      "persona": "alencar",
+      "capa_filename": "capa-16-trilha-fundamental-alencar.png"
+    },
+    {
+      "aula": 17,
+      "titulo": "SEO & Marketing de Conteúdo IA",
+      "trilha": "Master",
+      "persona": "dupla",
+      "capa_filename": "capa-17-seo-marketing-dupla.png"
+    },
+    {
+      "aula": 18,
+      "titulo": "Segurança Ofensiva · Pentest de Agentes",
+      "trilha": "Agente",
+      "persona": "alencar",
+      "capa_filename": "capa-18-seguranca-pentest-alencar.png"
+    },
+    {
+      "aula": 19,
+      "titulo": "Monetização Avançada em Escala",
+      "trilha": "Master",
+      "persona": "dupla",
+      "capa_filename": "capa-19-monetizacao-escala-dupla.png"
+    },
+    {
+      "aula": 20,
+      "titulo": "Trilha Elite · Engenharia",
+      "trilha": "Elite",
+      "persona": "alencar",
+      "capa_filename": "capa-20-elite-engenharia-alencar.png"
+    },
+    {
+      "aula": 21,
+      "titulo": "Trilha Master · Arquitetura",
+      "trilha": "Master",
+      "persona": "dupla",
+      "capa_filename": "capa-21-master-arquitetura-dupla.png"
+    },
+    {
+      "aula": 22,
+      "titulo": "Trilha Master · Mentoria",
+      "trilha": "Master",
+      "persona": "ive",
+      "capa_filename": "capa-22-master-mentoria-ive.png"
+    },
+    {
+      "aula": 23,
+      "titulo": "Curso · RAG Prático",
+      "trilha": "Elite",
+      "persona": "alencar",
+      "capa_filename": "capa-23-curso-rag-alencar.png"
+    },
+    {
+      "aula": 24,
+      "titulo": "Curso · Agents com LangGraph",
+      "trilha": "Elite",
+      "persona": "alencar",
+      "capa_filename": "capa-24-curso-agents-langgraph-alencar.png"
+    },
+    {
+      "aula": 25,
+      "titulo": "Curso · Prompt Engineering",
+      "trilha": "Fundamental",
+      "persona": "ive",
+      "capa_filename": "capa-25-curso-prompt-engineering-ive.png"
+    },
+    {
+      "aula": 26,
+      "titulo": "Curso · Vector DB",
+      "trilha": "Elite",
+      "persona": "alencar",
+      "capa_filename": "capa-26-curso-vector-db-alencar.png"
+    },
+    {
+      "aula": 27,
+      "titulo": "Curso · Voice AI",
+      "trilha": "Agente",
+      "persona": "ive",
+      "capa_filename": "capa-27-curso-voice-ai-ive.png"
+    },
+    {
+      "aula": 28,
+      "titulo": "Curso · Multimodal RAG",
+      "trilha": "Elite",
+      "persona": "dupla",
+      "capa_filename": "capa-28-curso-multimodal-rag-dupla.png"
+    },
+    {
+      "aula": 29,
+      "titulo": "Protocolo AI ↔ AI",
+      "trilha": "Master",
+      "persona": "dupla",
+      "capa_filename": "capa-29-ai-to-ai-protocol-dupla.png"
+    },
+    {
+      "aula": 30,
+      "titulo": "Federação Zero Trust",
+      "trilha": "Master",
+      "persona": "dupla",
+      "capa_filename": "capa-30-federacao-zero-trust-dupla.png"
+    },
+    {
+      "aula": 31,
+      "titulo": "Fábrica de Conteúdo com IA",
+      "trilha": "Master",
+      "persona": "ive",
+      "capa_filename": "capa-31-fabrica-conteudo-ive.png"
+    },
+    {
+      "aula": 32,
+      "titulo": "Pricing de IA em 2026",
+      "trilha": "Master",
+      "persona": "dupla",
+      "capa_filename": "capa-32-pricing-ia-2026-dupla.png"
+    },
+    {
+      "aula": 33,
+      "titulo": "Data Stack para Agentes IA",
+      "trilha": "Elite",
+      "persona": "alencar",
+      "capa_filename": "capa-33-data-stack-agentes-alencar.png"
+    }
+  ]
+}
