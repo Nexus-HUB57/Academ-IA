@@ -1,0 +1,216 @@
+{
+  "applied_tail_tolerance": 1.0,
+  "threshold_db": -35.0,
+  "min_silence_dur": 0.5,
+  "items": [
+    {
+      "stem": "aula-15-metricas-roi-ecossistema",
+      "src": "/home/user/academ_ia/videos/aulas-onda-49/renders/aula-15-metricas-roi-ecossistema-narrated.mp4",
+      "dst": "/home/user/academ_ia/videos/aulas-onda-49/renders/aula-15-metricas-roi-ecossistema-narrated-v2.mp4",
+      "orig_dur": 160.0,
+      "last_speech": 23.415792,
+      "cut_at": 24.415792,
+      "actual_v2_dur": 24.433333,
+      "saving_s": 135.566667,
+      "silence_segments_detected": 12
+    },
+    {
+      "stem": "aula-16-trilha-fundamental-ia",
+      "src": "/home/user/academ_ia/videos/aulas-onda-49/renders/aula-16-trilha-fundamental-ia-narrated.mp4",
+      "dst": "/home/user/academ_ia/videos/aulas-onda-49/renders/aula-16-trilha-fundamental-ia-narrated-v2.mp4",
+      "orig_dur": 160.0,
+      "last_speech": 13.613562,
+      "cut_at": 14.613562,
+      "actual_v2_dur": 14.633333,
+      "saving_s": 145.366667,
+      "silence_segments_detected": 8
+    },
+    {
+      "stem": "aula-17-seo-marketing-conteudo-ia",
+      "src": "/home/user/academ_ia/videos/aulas-onda-49/renders/aula-17-seo-marketing-conteudo-ia-narrated.mp4",
+      "dst": "/home/user/academ_ia/videos/aulas-onda-49/renders/aula-17-seo-marketing-conteudo-ia-narrated-v2.mp4",
+      "orig_dur": 159.233333,
+      "last_speech": 17.610896,
+      "cut_at": 18.610896,
+      "actual_v2_dur": 18.633333,
+      "saving_s": 140.6,
+      "silence_segments_detected": 9
+    },
+    {
+      "stem": "aula-18-seguranca-ofensiva-pentest",
+      "src": "/home/user/academ_ia/videos/aulas-onda-49/renders/aula-18-seguranca-ofensiva-pentest-narrated.mp4",
+      "dst": "/home/user/academ_ia/videos/aulas-onda-49/renders/aula-18-seguranca-ofensiva-pentest-narrated-v2.mp4",
+      "orig_dur": 160.0,
+      "last_speech": 14.905437,
+      "cut_at": 15.905437,
+      "actual_v2_dur": 15.933333,
+      "saving_s": 144.066667,
+      "silence_segments_detected": 9
+    },
+    {
+      "stem": "aula-19-monetizacao-avancada-escala",
+      "src": "/home/user/academ_ia/videos/aulas-onda-49/renders/aula-19-monetizacao-avancada-escala-narrated.mp4",
+      "dst": "/home/user/academ_ia/videos/aulas-onda-49/renders/aula-19-monetizacao-avancada-escala-narrated-v2.mp4",
+      "orig_dur": 160.0,
+      "last_speech": 29.213687,
+      "cut_at": 30.213687,
+      "actual_v2_dur": 30.233333,
+      "saving_s": 129.766667,
+      "silence_segments_detected": 13
+    },
+    {
+      "stem": "aula-20-trilha-elite-engenharia",
+      "src": "/home/user/academ_ia/videos/aulas-onda-49/renders/aula-20-trilha-elite-engenharia-narrated.mp4",
+      "dst": "/home/user/academ_ia/videos/aulas-onda-49/renders/aula-20-trilha-elite-engenharia-narrated-v2.mp4",
+      "orig_dur": 160.0,
+      "last_speech": 13.613521,
+      "cut_at": 14.613521,
+      "actual_v2_dur": 14.633333,
+      "saving_s": 145.366667,
+      "silence_segments_detected": 8
+    },
+    {
+      "stem": "aula-21-trilha-master-arquitetura",
+      "src": "/home/user/academ_ia/videos/aulas-onda-49/renders/aula-21-trilha-master-arquitetura-narrated.mp4",
+      "dst": "/home/user/academ_ia/videos/aulas-onda-49/renders/aula-21-trilha-master-arquitetura-narrated-v2.mp4",
+      "orig_dur": 160.0,
+      "last_speech": 13.613521,
+      "cut_at": 14.613521,
+      "actual_v2_dur": 14.633333,
+      "saving_s": 145.366667,
+      "silence_segments_detected": 8
+    },
+    {
+      "stem": "aula-22-trilha-master-mentoria",
+      "src": "/home/user/academ_ia/videos/aulas-onda-49/renders/aula-22-trilha-master-mentoria-narrated.mp4",
+      "dst": "/home/user/academ_ia/videos/aulas-onda-49/renders/aula-22-trilha-master-mentoria-narrated-v2.mp4",
+      "orig_dur": 160.0,
+      "last_speech": 13.613542,
+      "cut_at": 14.613542,
+      "actual_v2_dur": 14.633333,
+      "saving_s": 145.366667,
+      "silence_segments_detected": 8
+    },
+    {
+      "stem": "aula-23-curso-rag-pratico",
+      "src": "/home/user/academ_ia/videos/aulas-onda-49/renders/aula-23-curso-rag-pratico-narrated.mp4",
+      "dst": "/home/user/academ_ia/videos/aulas-onda-49/renders/aula-23-curso-rag-pratico-narrated-v2.mp4",
+      "orig_dur": 160.0,
+      "last_speech": 13.613521,
+      "cut_at": 14.613521,
+      "actual_v2_dur": 14.633333,
+      "saving_s": 145.366667,
+      "silence_segments_detected": 8
+    },
+    {
+      "stem": "aula-24-curso-agents-langgraph",
+      "src": "/home/user/academ_ia/videos/aulas-onda-49/renders/aula-24-curso-agents-langgraph-narrated.mp4",
+      "dst": "/home/user/academ_ia/videos/aulas-onda-49/renders/aula-24-curso-agents-langgraph-narrated-v2.mp4",
+      "orig_dur": 160.0,
+      "last_speech": 13.613521,
+      "cut_at": 14.613521,
+      "actual_v2_dur": 14.633333,
+      "saving_s": 145.366667,
+      "silence_segments_detected": 8
+    },
+    {
+      "stem": "aula-25-curso-prompt-engineering",
+      "src": "/home/user/academ_ia/videos/aulas-onda-49/renders/aula-25-curso-prompt-engineering-narrated.mp4",
+      "dst": "/home/user/academ_ia/videos/aulas-onda-49/renders/aula-25-curso-prompt-engineering-narrated-v2.mp4",
+      "orig_dur": 160.0,
+      "last_speech": 13.613521,
+      "cut_at": 14.613521,
+      "actual_v2_dur": 14.633333,
+      "saving_s": 145.366667,
+      "silence_segments_detected": 8
+    },
+    {
+      "stem": "aula-26-curso-vector-db",
+      "src": "/home/user/academ_ia/videos/aulas-onda-49/renders/aula-26-curso-vector-db-narrated.mp4",
+      "dst": "/home/user/academ_ia/videos/aulas-onda-49/renders/aula-26-curso-vector-db-narrated-v2.mp4",
+      "orig_dur": 288.48,
+      "last_speech": 13.613542,
+      "cut_at": 14.613542,
+      "actual_v2_dur": 14.64,
+      "saving_s": 273.84000000000003,
+      "silence_segments_detected": 8
+    },
+    {
+      "stem": "aula-27-curso-voice-ai",
+      "src": "/home/user/academ_ia/videos/aulas-onda-49/renders/aula-27-curso-voice-ai-narrated.mp4",
+      "dst": "/home/user/academ_ia/videos/aulas-onda-49/renders/aula-27-curso-voice-ai-narrated-v2.mp4",
+      "orig_dur": 233.92,
+      "last_speech": 13.613521,
+      "cut_at": 14.613521,
+      "actual_v2_dur": 14.64,
+      "saving_s": 219.27999999999997,
+      "silence_segments_detected": 8
+    },
+    {
+      "stem": "aula-28-curso-multimodal-rag",
+      "src": "/home/user/academ_ia/videos/aulas-onda-49/renders/aula-28-curso-multimodal-rag-narrated.mp4",
+      "dst": "/home/user/academ_ia/videos/aulas-onda-49/renders/aula-28-curso-multimodal-rag-narrated-v2.mp4",
+      "orig_dur": 247.1,
+      "last_speech": 15.403042,
+      "cut_at": 16.403042,
+      "actual_v2_dur": 16.433333,
+      "saving_s": 230.666667,
+      "silence_segments_detected": 9
+    },
+    {
+      "stem": "aula-29-ai-to-ai-protocol",
+      "src": "/home/user/academ_ia/videos/aulas-onda-49/renders/aula-29-ai-to-ai-protocol-narrated.mp4",
+      "dst": "/home/user/academ_ia/videos/aulas-onda-49/renders/aula-29-ai-to-ai-protocol-narrated-v2.mp4",
+      "orig_dur": 299.7,
+      "last_speech": 16.892437,
+      "cut_at": 17.892437,
+      "actual_v2_dur": 17.9,
+      "saving_s": 281.8,
+      "silence_segments_detected": 9
+    },
+    {
+      "stem": "aula-30-federacao-zero-trust",
+      "src": "/home/user/academ_ia/videos/aulas-onda-49/renders/aula-30-federacao-zero-trust-narrated.mp4",
+      "dst": "/home/user/academ_ia/videos/aulas-onda-49/renders/aula-30-federacao-zero-trust-narrated-v2.mp4",
+      "orig_dur": 285.766667,
+      "last_speech": 21.393729,
+      "cut_at": 22.393729,
+      "actual_v2_dur": 22.4,
+      "saving_s": 263.366667,
+      "silence_segments_detected": 12
+    },
+    {
+      "stem": "aula-31-fabrica-conteudo-ia",
+      "src": "/home/user/academ_ia/videos/aulas-onda-49/renders/aula-31-fabrica-conteudo-ia-narrated.mp4",
+      "dst": "/home/user/academ_ia/videos/aulas-onda-49/renders/aula-31-fabrica-conteudo-ia-narrated-v2.mp4",
+      "orig_dur": 314.48,
+      "last_speech": 15.598354,
+      "cut_at": 16.598354,
+      "actual_v2_dur": 16.6,
+      "saving_s": 297.88,
+      "silence_segments_detected": 9
+    },
+    {
+      "stem": "aula-32-pricing-ia-2026",
+      "src": "/home/user/academ_ia/videos/aulas-onda-49/renders/aula-32-pricing-ia-2026-narrated.mp4",
+      "dst": "/home/user/academ_ia/videos/aulas-onda-49/renders/aula-32-pricing-ia-2026-narrated-v2.mp4",
+      "orig_dur": 171.72,
+      "last_speech": 32.699729,
+      "cut_at": 33.699729,
+      "actual_v2_dur": 33.72,
+      "saving_s": 138.0,
+      "silence_segments_detected": 16
+    },
+    {
+      "stem": "aula-33-data-stack-agentes-ia",
+      "src": "/home/user/academ_ia/videos/aulas-onda-49/renders/aula-33-data-stack-agentes-ia-narrated.mp4",
+      "dst": "/home/user/academ_ia/videos/aulas-onda-49/renders/aula-33-data-stack-agentes-ia-narrated-v2.mp4",
+      "orig_dur": 241.566667,
+      "last_speech": 15.915229,
+      "cut_at": 16.915229,
+      "actual_v2_dur": 16.933333,
+      "saving_s": 224.633334,
+      "silence_segments_detected": 10
+    }
+  ]
+}
