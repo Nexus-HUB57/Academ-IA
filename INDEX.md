@@ -1,12 +1,15 @@
 # 📚 AcademIA Nexus Affil'IA'te · INDEX Master
 
-**Última atualização**: 2026-07-21 · Mavis + contribuidor paralelo + sync legado (Academ-IA repo)
-**Total**: 33 apostilas · 17 roteiros · 20 thumbnails · 13 webinars (+4 webinars TECH 14-15) · 8 PDFs apostila · 17 PDFs webinar · 48 HTMLs (+4 hubs) · 30+ capas AcademIA
-**Versão**: 1.4.1 (Onda 40) — NEXUS AFFIL'IA'TE TECH + sync repo dedicado
+**Última atualização**: 2026-07-23 · Mavis ✓ Opus · pós-ONDA-50 · push a71f2bc → b1c4d27
+**Total**: 36 apostilas · 22 roteiros full · 23 vídeos MP4 (ONDA-47) + 9 renders 720p (ONDA-49) · 19 capas YouTube ONDA-50 · 95 slides PNG + 95 wrappers HTML · 19 webinars · 36 tutoriais · 14 playbooks · 9 treinamentos · 11 hubs · 15 TTS full · 75 frames
+**Versão**: **2.0-on-50** — NEXUS AFFIL'IA'TE TECH + ONDA-49/50 (95 slides PNG, 95 HTML wraps, 19 capas, 9 renders 720p)
+
+> 🌊 **Estado do Z pipeline** (verificado via `MASTER-PIPELINE-E2E.json`): ingest ✅ render ✅ capas ✅ HTML ✅, resta **renderar 10 MP4s ONDA-49 restantes** + **apagar 4 TODOs** das apostilas 17/18/32/33.
 
 > 🌊 **Onda 40** — integração com a nova coletânea técnica NEXUS AFFIL'IA'TE TECH
 > (5 ebooks PhD-level espelhados como 5 roteiros-âncora: 15-19).
 
+> 🌊 **Onda 49/50** — `aulas-onda-49` com 19 aulas completas (roteiro + slides PNG + HTML wrappers + capa + render), e `aulas-onda-50` com índice cross-refs + INDEX-PERSONAS + SHORTS-SPEC.
 ## 🎯 Estrutura Oficial (Fonte da Verdade)
 
 ```
@@ -107,17 +110,29 @@ AcademIA/
 - Video CDN: https://oneverso.com.br/academia/videos/*.mp4
 - PDF CDN: https://oneverso.com.br/academia/pdf/*.pdf
 
-## 📊 Métricas (v1.4.0)
+## 📊 Métricas (v2.0-on-50) — verificado `videos/aulas-onda-49/manifest/MASTER-PIPELINE-E2E.json`
 
-- 855+ arquivos Markdown (documentação)
-- 41 PDFs apostilas/webinars + 10 PDFs cursos históricos
-- 6 vídeos MP4 (aulas) + 20 thumbnails
-- 17 roteiros de vídeo (5 âncoras TECH novos)
-- 41 HTMLs (renderizações com enhance.js)
-- 6 JSONs (manifestos e sync)
-- 30+ capas AcademIA (1-15 + 16, 20-28 + 5 TECH 15-19)
-- **Total**: ~566 MB no repo (migração para repo dedicado `Nexus-HUB57/Academ-IA`)
-- **Total servido publicamente**: ~68 MB
+| Categoria | Quantidade (real hoje) |
+|---|---:|
+| Apostilas (Markdown) | **36** (01-33 · 4 STUB com TODO: 17, 18, 32, 33) |
+| Roteiros full de vídeo | **22** (00-14 + 5 âncoras TECH 15-19 + 3 misc) |
+| Vídeos MP4 (ONDA-47) | **23** `videos/video-*-full.mp4` + 2 PoC |
+| TS full voz PT-BR | **15** `videos/audio/full_*.wav` |
+| Frames | **75** PNG motion-graphics |
+| Capas 2K (ONDA-47) | **26** (PNG+WebP, 1280×720 / 2K) |
+| Capas YouTube (ONDA-50) | **19** 1280×720 |
+| Slides PNG (ONDA-49) | **95** (19 aulas × 5 cenas motion B2) |
+| HTML wrappers (ONDA-50) | **95** (metadata + `<img>` + metadata persona/cena/narrative) |
+| Renders 720p MP4 (ONDA-49) | **9** (aulas 17, 26-33) — **faltam 10** (15, 16, 18, 19, 20, 21, 22, 23, 24, 25) |
+| Webinars (Markdown) | **19** (WB-01..17 + 2 debates) |
+| Tutoriais (Markdown) | **36** (não 14 — INDEX legado desatualizado) |
+| Playbooks | **14** (3 crises + 4 ops + federation + financeiro + LGPD + email + lançamento) |
+| Treinamentos/Workshops | **9** (WS-01..06 + 3 ancilares) |
+| Hubs HTML | **11** (index, landing, player, trilhas, cursos, lab, lib, apostilas, playbooks, tutoriais, webinars) |
+| Apostilas HTML/PDF | 34 HTML + 23 PDF em `apostilas/` |
+| Manifest canônicos | 4 (ONDA-49 MANIFEST, THUMBNAILS-ONDA-50, MASTER-ONDA-49-50, **MASTER-PIPELINE-E2E**) |
+- **Tamanho total do repo**: ~700 MB
+- **Head SHA**: `a71f2bc22aa3c5d85f456bcb6ff17e16858df039` (`feat(academia): ONDA-50 ...`)
 
 ### 🌊 Coletânea NEXUS AFFIL'IA'TE TECH (5 volumes PhD-level — Onda 40)
 
@@ -176,6 +191,26 @@ thumbnails 2K. Cada volume trata o tema com profundidade técnica PhD-level, 10 
 - **WB-2026-12 IA-to-IA Federation** · HTML + PDF
 - **WB-2026-14 Pricing IA em tempo real** · `webinars/WB-2026-14-pricing-ia-tempo-real.md` + HTML + PDF
 - **WB-2026-15 Data Stack IA** · `webinars/WB-2026-15-data-stack-ia.md` + HTML + PDF
+
+## 🌊 Estado Onda-49/50 (visíveis em `videos/aulas-onda-49/`)
+
+> 19 aulas canônicas completas (15-33) — cada uma com: roteiro MD + 5 slides PNG motion-B2 + 5 wrappers HTML + capa YouTube + render MP4 (parcial).
+
+### Por trilha:
+
+| Trilha | Aulas | Capas | Slides PNG | HTML wraps | Render 720p |
+|---|---:|---:|---:|---:|---:|
+| Fundamental | 2 (15-16) | 2 ✅ | 10 ✅ | 10 ✅ | 0 ❌ (pendente 15, 16) |
+| Master | 13 (17, 19, 21-22, 23-28, 31-32) | 13 ✅ | 65 ✅ | 65 ✅ | 7 ✅ (faltam 19, 21-25) |
+| Elite | 4 (18, 20, 29-30) | 4 ✅ | 20 ✅ | 20 ✅ | 1 ✅ (faltam 18, 20) |
+| Dupla | (varia) | 7 ✅ | (ver MASTER-PIPELINE-E2E.json) | | |
+
+### Gaps do pipeline (próximas ações):
+
+1. **Renderar 10 MP4s 720p** faltantes do ONDA-49 (aulas 15, 16, 18, 19, 20, 21, 22, 23, 24, 25).
+2. **Resolver 4 STUBs** em apostilas 17, 18, 32, 33 (zerar TODOs).
+3. **Gerar PDFs** das 19 apostilas ONDA-49 (pandoc/xelatex ausentes → rota com `wkhtmltopdf` ou via `pdfs/` herdado).
+4. **Criar scripts/generate_apostilas_pdf.py** para converssão MD→PDF em lote (template HUB57).
 
 ## 🛠️ Producao · Incident Response (TI)
 
