@@ -5,13 +5,13 @@
   "hub": "MMN AI-to-AI",
   "repo": "Nexus-HUB57/Academ-IA",
   "branch": "main",
-  "head_sha_before": "a71f2bc22aa3c5d85f456bcb6ff17e16858df039",
-  "onda_atual": "Onda-50",
+  "head_sha_before": "71355d1",
+  "onda_atual": "Onda-50 (renders 19/19)",
   "stats": {
     "videos_full_mp4": 23,
-    "renders_onda_49_720p": 9,
+    "renders_onda_49_720p": 19,
     "capas_youtube_onda_50": 19,
-    "slides_png_onda_49": 95,
+    "slides_png_onda_49": 0,
     "wrappers_html_onda_50": 95,
     "roteiros_full": 22,
     "apostilas_total": 36,
@@ -483,7 +483,17 @@
     }
   ],
   "renders_onda_49_720p": [
+    "aula-15-metricas-roi-ecossistema-720p.mp4",
+    "aula-16-trilha-fundamental-ia-720p.mp4",
     "aula-17-seo-marketing-conteudo-ia-720p.mp4",
+    "aula-18-seguranca-ofensiva-pentest-720p.mp4",
+    "aula-19-monetizacao-avancada-escala-720p.mp4",
+    "aula-20-trilha-elite-engenharia-720p.mp4",
+    "aula-21-trilha-master-arquitetura-720p.mp4",
+    "aula-22-trilha-master-mentoria-720p.mp4",
+    "aula-23-curso-rag-pratico-720p.mp4",
+    "aula-24-curso-agents-langgraph-720p.mp4",
+    "aula-25-curso-prompt-engineering-720p.mp4",
     "aula-26-curso-vector-db-720p.mp4",
     "aula-27-curso-voice-ai-720p.mp4",
     "aula-28-curso-multimodal-rag-720p.mp4",
@@ -1057,16 +1067,16 @@
       "path_md": "apostilas/33-data-stack-agentes-ia.md"
     }
   ],
-  "renders_onda_49_missing": [
-    "aula-15-*-720p.mp4",
-    "aula-16-*-720p.mp4",
-    "aula-18-*-720p.mp4",
-    "aula-19-*-720p.mp4",
-    "aula-20-*-720p.mp4",
-    "aula-21-*-720p.mp4",
-    "aula-22-*-720p.mp4",
-    "aula-23-*-720p.mp4",
-    "aula-24-*-720p.mp4",
-    "aula-25-*-720p.mp4"
+  "renders_onda_49_missing": [],
+  "commits_this_turn": [
+    {
+      "sha_pending": "TBD",
+      "msg": "feat(academia): ONDA-49 — 10 MP4s 720p + render script",
+      "files": [
+        "renders/aula-15..25-720p.mp4",
+        "scripts/render_missing_onda49.sh",
+        "manifest/MASTER-PIPELINE-E2E.json"
+      ]
+    }
   ]
 }
