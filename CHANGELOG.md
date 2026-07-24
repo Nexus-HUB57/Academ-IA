@@ -2,13 +2,40 @@
 title: "CHANGELOG · Academ'IA"
 description: "Histórico de versões da Academ'IA · HUB de Conhecimento & Sabedoria"
 tags: [changelog, versionamento, historico, academia]
-version: 1.6.0
-last_updated: 2026-07-21
+version: 1.6.1
+last_updated: 2026-07-24
 ---
 
 # 📜 CHANGELOG · Academ'IA
 
 > Histórico de versões do HUB Academ'IA — Nexus Affil'IA'te. Segue **Semantic Versioning**: MAJOR (breaking), MINOR (compatível, novo asset), PATCH (correções, polish).
+
+---
+
+## [1.6.1] — 2026-07-24 · "Versões estendidas Mavis para cursos Master 04/05/06"
+
+### 🆕 Adicionado (6 arquivos, ~93KB)
+
+Após merge do commit d208624 (genspark_dev) que criou slides+roteiros canônicos para os módulos 04 (RAG), 05 (Deploy) e 06 (Segurança), esta versão adiciona **versões estendidas complementares** (sufixo `-mavis-detalhado`) sem sobrescrever os arquivos existentes.
+
+**Convenção de coexistência**:
+- Padrão canônico (genspark_dev): 5 cenas, ~4KB, videoaulas regulares
+- Versão estendida (Mavis): 11-12 cenas, ~6-29KB, videoaulas longas/workshops/mentorias
+
+**Arquivos criados** (todos sufixo `-mavis-detalhado`):
+- `cursos/master/04-rag-em-producao-roteiro-mavis-detalhado.md` (12 cenas, 21KB)
+- `cursos/master/04-rag-em-producao-slides-mavis-detalhado.md` (12 slides, 8KB)
+- `cursos/master/05-deploy-em-producao-roteiro-mavis-detalhado.md` (11 cenas, 22KB)
+- `cursos/master/05-deploy-em-producao-slides-mavis-detalhado.md` (11 slides, 6KB)
+- `cursos/master/06-seguranca-jailbreaks-lgpd-roteiro-mavis-detalhado.md` (11 cenas, 29KB)
+- `cursos/master/06-seguranca-jailbreaks-lgpd-slides-mavis-detalhado.md` (11 slides, 6KB)
+- `cursos/master/README.md` (documenta estrutura da trilha e coexistência de versões)
+
+**Coordenação multi-dev**:
+- ✅ Nenhum arquivo pré-existente foi sobrescrito
+- ✅ Convenção de nomenclatura clara para evitar duplicidade conflitante
+- ✅ Cada arquivo `-mavis-detalhado` referencia o canônico no frontmatter
+- ✅ Time de produção decide oficialização via PR de consolidação
 
 ---
 
