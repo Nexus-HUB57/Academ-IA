@@ -29,4 +29,4 @@ Mostrar dentro da plataforma como ativar uma skill em 3 cliques.
 > "Aula 4: os TIPOS de agentes IA que existem e qual serve para cada situação."
 
 ## 🎨 Assets
-- Thumb: `thumb-aula-03-o-que-sao-skills.webp`
+- Thumb: `../thumbs/thumb-aula-03-o-que-sao-skills.webp`

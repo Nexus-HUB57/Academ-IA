@@ -14,7 +14,7 @@ AcademIA · Apostila T4
 
 ## De Senior Engineer a CTO: Liderando Times de IA
 
-![Capa](../../docs/ebooks/ACAD-apostila-22-trilha-master-mentoria.webp)
+![Capa](../docs/ebooks/ACAD-apostila-22-trilha-master-mentoria.webp)
 
 **Shakespeare da Atualidade** PHD nível Harvard do Universo AI
 

@@ -1,9 +1,13 @@
 # 🎓 AcademIA Nexus — Plataforma Educacional da Ecossistema MMN AI-to-AI
 
-> **Repositório canônico de desenvolvimento da plataforma AcademIA.**
+> **Repositório canônico de desenvolvimento da plataforma Academ'IA.**
 > Este repo é o sucessor canônico de `Nexus-HUB57/MMN_AI-to-AI` (subdiretório `AcademIA/`).
 > A partir da **Onda 40 (v1.4.0)**, todo o desenvolvimento audiovisual, pedagógico e editorial
-> da AcademIA passa a viver aqui.
+> da Academ'IA passa a viver aqui.
+>
+> **Governança vigente de split (2026-07-23):**
+> - `Nexus-HUB57/Academ-IA` = conteúdos internos, pedagógicos e exclusivos da plataforma Nexus Affil'IA'te
+> - `Nexus-HUB57/Marketplace-Nexus-` = ebooks completos, HTML+MD comerciais e capas originais voltadas à monetização pública
 
 ---
 
@@ -48,6 +52,24 @@ AcademIA/
 └── sync/                       ← scripts de sincronização
 ```
 
+## 🧭 Modelo Canônico de Repositórios
+
+### Academ'IA (`Nexus-HUB57/Academ-IA`)
+- cursos, trilhas, apostilas, tutoriais, webinars, certificações;
+- vídeos, roteiros, slides, thumbnails e pipeline audiovisual;
+- Lab-Nexus, Lib-Nexus, governança, sync e documentação pedagógica.
+
+### Marketplace Nexus (`Nexus-HUB57/Marketplace-Nexus-`)
+- ebooks comerciais completos;
+- arquivos HTML+MD de venda;
+- capas originais e ativos orientados à comercialização pública.
+
+### Regra editorial
+Se o arquivo for de **capacitação interna/exclusiva**, ele pertence à Academ'IA.
+Se o arquivo for um **ativo comercial canônico**, ele pertence ao Marketplace Nexus.
+
+Consulte também: `docs/REPO_SPLIT_GOVERNANCA_2026-07-23.md`.
+
 ## 🚀 Onda 40 (v1.4.0) — em produção
 
 A Onda 40 integra a nova **Coletânea NEXUS AFFIL'IA'TE TECH** (5 ebooks técnicos PhD-level)
@@ -85,6 +107,8 @@ python3 scripts/youtube/upload_academia_youtube.py --limit 5
 - **Acadêmica pública:** https://oneverso.com.br/academia
 - **Admin:** https://oneverso.com.br/admin/academia
 - **YouTube:** @NexusAffilIAte-w9p
+- **Repo canônico Academ'IA:** https://github.com/Nexus-HUB57/Academ-IA
+- **Repo canônico Marketplace Nexus:** https://github.com/Nexus-HUB57/Marketplace-Nexus-
 - **Repo origem (legado):** https://github.com/Nexus-HUB57/MMN_AI-to-AI (subdiretório `AcademIA/`)
 
 ---

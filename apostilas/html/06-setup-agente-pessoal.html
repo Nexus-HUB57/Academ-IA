@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Setup Completo do Agente Pessoal - AcademIA Nexus</title>
+  <link rel="stylesheet" href="../html/acad-style.css">
+</head>
+<body class="dark-theme">
+  <article class="ebook">
+    <header class="cover">
+      <div class="series-tag">AcademIA - Apostila #06</div>
+      <h1>Setup Completo do Agente Pessoal</h1>
+      <h2>Do Zero ao Primeiro Agente Operacional em 90 Minutos</h2>
+      <img class="cover-image" src="docs/ebooks/ACAD-apostila-06-setup-agente-pessoal.webp" alt="Capa - Setup Completo do Agente Pessoal">
+      <div class="author"><strong>MMN_IA Collective</strong><br>PHD nivel Harvard do Universo AI</div>
+      <div class="meta">Apostila 06 - Nivel Master - v1.0.0 - 2026</div>
+    </header>
+    <section class="page toc-page">
+      <h2>Sumario</h2>
+      <ul><li>(conteudo detalhado no corpo)</li></ul>
+      <div class="info-box success">
+        <strong>Sobre esta apostila:</strong> parte da colecao AcademIA - Nexus HUB57. Conteudo hands-on, baseado em producao real.
+      </div>
+    </section>
+    <section class="page">
+      <h2>Conteudo</h2>
+      <p><strong>Setup Completo do Agente Pessoal</strong></p>
+<p><em>Do Zero ao Primeiro Agente Operacional em 90 Minutos</em></p>
+<p><strong>Por MMN_IA Collective · Academ'IA</strong></p>
+<p>Nexus Affil'IA'te · 2026</p>
+<p><strong>Sobre este documento</strong></p>
+<p>Este é o tutorial definitivo de setup do seu primeiro agente. Se você seguir cada passo, em 90 minutos terá um agente rodando, com 3 skills, Judge calibrado, base segmentada, e 1 campanha de teste aprovada. O documento é longo propositalmente: cada decisão tem contexto. Leia inteiro antes de começar, ou use o sumário para pular direto ao passo que travou. Se você é iniciante total, siga linearmente. Se você já tem agente, use como referência de boas práticas.</p>
+<p><strong>Sumário</strong></p>
+<blockquote>
+<p><strong>•</strong> 1. Antes de começar: o que você precisa ter
+<strong>•</strong> 2. Passo 1 — Criar o agente (5 min)
+<strong>•</strong> 3. Passo 2 — Instalar e configurar as 3 skills básicas (15 min)
+<strong>•</strong> 4. Passo 3 — Configurar o Judge (10 min)
+<strong>•</strong> 5. Passo 4 — Importar e segmentar sua base (15 min)
+<strong>•</strong> 6. Passo 5 — Criar a primeira campanha de teste (10 min)
+<strong>•</strong> 7. Passo 6 — Disparar e monitorar (10 min)
+<strong>•</strong> 8. Passo 7 — Avaliar resultados e iterar (15 min)
+<strong>•</strong> 9. Templates de configuração salvos
+<strong>•</strong> 10. Checklist final de "agente pronto pra produção"</p>
+</blockquote>
+<hr />
+<p><strong>1. Antes de começar: o que você precisa ter</strong></p>
+<ul>
+<li><strong>Conta ativa no Nexus Affil'IA'te</strong> (plano gratuito serve pra começar).</li>
+<li><strong>Token de API</strong> pessoal (gere em <code>/dashboard/settings/api</code>).</li>
+<li><strong>Base de contatos</strong> com pelo menos 100 contatos válidos (não use base fria comprada).</li>
+<li><strong>Pelo menos 1 produto</strong> com link de afiliado configurado.</li>
+<li><strong>1 hora e meia</strong> de foco (sem reunião, sem telefone).</li>
+</ul>
+<p><strong>Recomendado mas não obrigatório:</strong>
+- 1 conta WhatsApp Business conectada (aumenta conversão).
+- Integração com seu CRM (HubSpot, RD Station, etc.) — opcional, 1 webhook resolve.</p>
+<p><strong>2. Passo 1 — Criar o agente (5 min)</strong></p>
+<ol>
+<li>Acesse <code>/dashboard/agents/new</code>.</li>
+<li>Dê um nome descritivo: <code>agente_pessoal_&lt;seu_nome&gt;</code> (ex: <code>agente_pessoal_marina</code>).</li>
+<li>Defina o objetivo em 1 frase. Exemplo: "Atender leads do nicho de suplementos, qualificar interesse, e direcionar para compra."</li>
+<li>Escolha o template "Pessoal — Solo Afiliado" (esse é o template mais simples).</li>
+<li>Clique "Criar".</li>
+</ol>
+<p>O sistema vai provisionar o agente (cria sandbox, registra, configura log). Tempo: ~30 segundos.</p>
+<p><strong>3. Passo 2 — Instalar e configurar as 3 skills básicas (15 min)</strong></p>
+<p>Vá em <code>/dashboard/agents/&lt;id&gt;/skills</code> e instale, nessa ordem:</p>
+<p><strong>Skill 1: copywriter (copy persuasivo)</strong>
+- Versão: 2.3.1 (estável).
+- Configuração: tom "consultivo", idioma "pt-BR", tamanho máximo "240 caracteres" (WhatsApp).
+- Custo estimado: R$ 0,012 por geração.</p>
+<p><strong>Skill 2: audience-segmenter (segmentador de coorte)</strong>
+- Versão: 1.4.0.
+- Configuração: deixar padrão (ele já reconhece as 4 coortes padrão).
+- Custo estimado: R$ 0,016 por análise.</p>
+<p><strong>Skill 3: judge-revisor (revisor de saída)</strong>
+- Versão: 3.0.0 (essencial).
+- Configuração: template "Conservador LGPD" (mais rígido, ideal pra começar).
+- Custo estimado: R$ 0,004 por revisão.</p>
+<p>Clique "Salvar e ativar".</p>
+<p><strong>4. Passo 3 — Configurar o Judge (10 min)</strong></p>
+<p>O Judge é o componente mais importante. Vá em <code>/dashboard/judge</code>:</p>
+<ol>
+<li>
+<p><strong>Modo de operação</strong>: "Bloqueio Total" (Judge reprova → mensagem não é enviada). Mude para "Alerta" só quando tiver confiança.</p>
+</li>
+<li>
+<p><strong>Regras habilitadas</strong> (todas obrigatórias pra começar):
+   - ✅ LGPD: bloquear mensagens sem consentimento.
+   - ✅ Spam: bloquear palavras-gatilho ("GRÁTIS", "URGENTE", "CLIQUE AGORA").
+   - ✅ Claim médico: bloquear claims não suportados por evidência.
+   - ✅ Tom: bloquear tom agressivo ou desrespeitoso.
+   - ✅ Personalização: exigir nome do lead (mensagens genéricas são alertadas).</p>
+</li>
+<li>
+<p><strong>Whitelist</strong>: adicione suas palavras-autorizadas (ex: nome do seu produto, slogans da marca).</p>
+</li>
+<li>
+<p><strong>Blacklist</strong>: adicione palavras que você NUNCA quer enviar (concorrentes, termos ofensivos, etc.).</p>
+</li>
+<li>
+<p>Clique "Testar Judge" — escreva uma mensagem de exemplo e veja o veredito.</p>
+</li>
+<li>
+<p>Salve.</p>
+</li>
+</ol>
+<p><strong>5. Passo 4 — Importar e segmentar sua base (15 min)</strong></p>
+<ol>
+<li>Vá em <code>/dashboard/contacts/import</code>.</li>
+<li>Escolha uma das 3 formas:
+   - <strong>Upload CSV</strong>: baixe o template em <code>/dashboard/contacts/template.csv</code>.
+   - <strong>Webhook de CRM</strong>: cole a URL do seu CRM.
+   - <strong>Integração direta</strong>: conecte com HubSpot, RD Station, etc.</li>
+<li>O sistema vai validar os números (descartar inválidos, marcar duplicatas).</li>
+<li>Após importar, vá em <code>/dashboard/cohorts</code> e veja as 4 coortes padrão criadas automaticamente.</li>
+<li>(Opcional) Crie 1 coorte custom para teste: "Base 100 — Leads que clicaram no link mas não compraram".</li>
+</ol>
+<p><strong>Tamanho mínimo:</strong> 100 contatos. Se você tem menos, junte com a base geral e faça teste com todo mundo.</p>
+<p><strong>6. Passo 5 — Criar a primeira campanha de teste (10 min)</strong></p>
+<ol>
+<li>Vá em <code>/dashboard/dispatch/new</code>.</li>
+<li><strong>Nome da campanha</strong>: <code>Teste_Inicial_&lt;data&gt;</code> (ex: <code>Teste_Inicial_20260612</code>).</li>
+<li><strong>Coorte</strong>: escolha uma pequena primeiro (ex: 100 contatos frios).</li>
+<li><strong>Objetivo da mensagem</strong> (em linguagem natural): "Reativar leads frios oferecendo 15% de desconto no produto X, com tom consultivo, mencionando o último produto que visualizaram".</li>
+<li>Clique "Gerar Copy com Skill" — o copywriter vai criar 3 variações.</li>
+<li>Escolha a melhor, ou edite manualmente.</li>
+<li><strong>Horário</strong>: agende para daqui 30 minutos (tempo de revisar tudo).</li>
+<li><strong>Frequência</strong>: "Disparo único" (você vai avaliar antes de tornar recorrente).</li>
+<li><strong>Revise o preview</strong> com Judge.</li>
+<li>Aprove.</li>
+</ol>
+<p><strong>7. Passo 6 — Disparar e monitorar (10 min)</strong></p>
+<ol>
+<li>Clique "Disparar agora" no horário agendado.</li>
+<li>Vá para <code>/dashboard/dispatch/&lt;id&gt;</code> e monitore em tempo real.</li>
+<li>Observe:
+   - <strong>Enviadas</strong>: contador subindo.
+   - <strong>Bloqueadas pelo Judge</strong>: se &gt; 20%, reveja a copy.
+   - <strong>Latência</strong>: se &gt; 5s, tem problema técnico.</li>
+<li>Anote o horário, mensagem usada, e coorte (vai precisar no Passo 7).</li>
+</ol>
+<p><strong>8. Passo 7 — Avaliar resultados e iterar (15 min)</strong></p>
+<p>Após 24 horas, volte e meça:</p>
+<p><strong>Métricas mínimas pra avaliar:</strong>
+- <strong>Taxa de entrega</strong> (mensagens que chegaram): meta &gt; 95%.
+- <strong>Taxa de abertura</strong> (WhatsApp lida): meta &gt; 70%.
+- <strong>Taxa de resposta</strong>: meta &gt; 5% (depende do nicho).
+- <strong>Taxa de conversão</strong> (compra): meta &gt; 0.5%.</p>
+<p><strong>Se conversão &lt; 0.5%:</strong> itere. Mude copy, mude horário, mude coorte. Teste 1 variável por vez.</p>
+<p><strong>Se conversão &gt; 0.5%:</strong> escale. Aumente a base (ex: 200, 500, 1000 contatos). Mantenha a copy vencedora.</p>
+<p><strong>9. Templates de configuração salvos</strong></p>
+<p>Depois de validar o setup, salve como template para reutilizar:</p>
+<ul>
+<li><strong>Template A — Reativação de Frios</strong>: copywriter + audience-segmenter + judge conservador.</li>
+<li><strong>Template B — Boas-vindas Novos</strong>: copywriter + audience-segmenter (coorte novos) + judge permissivo.</li>
+<li><strong>Template C — Recompra</strong>: copywriter (oferta) + audience-segmenter (coorte ativos) + judge padrão.</li>
+<li><strong>Template D — Lançamento</strong>: copywriter + audience-segmenter + judge rigoroso (compliance).</li>
+</ul>
+<p><strong>10. Checklist final de "agente pronto pra produção"</strong></p>
+<ul>
+<li>[ ] Agente criado com nome descritivo</li>
+<li>[ ] 3 skills básicas instaladas</li>
+<li>[ ] Judge configurado com regras LGPD, spam, claim, tom, personalização</li>
+<li>[ ] Whitelist e Blacklist preenchidas</li>
+<li>[ ] Base importada e validada</li>
+<li>[ ] 4 coortes padrão criadas</li>
+<li>[ ] 1 campanha de teste disparada</li>
+<li>[ ] Métricas de 24h avaliadas</li>
+<li>[ ] Conversão &gt; 0.5% atingida</li>
+<li>[ ] Templates salvos</li>
+<li>[ ] Backup da configuração feito (<code>/dashboard/agents/&lt;id&gt;/export</code>)</li>
+<li>[ ] Webhook de monitoramento configurado (opcional)</li>
+</ul>
+<p>Se todos os itens estão marcados: <strong>seu agente está pronto para produção</strong>. A partir daqui, o trabalho é iterar.</p>
+<hr />
+<p><strong>Setup Completo do Agente Pessoal</strong> --- Por MMN_IA Collective</p>
+<hr />
+<h2>🎯 Exercícios Práticos Aprofundados — Apostila: Setup do Agente Pessoal</h2>
+<blockquote>
+<p><strong>Tempo sugerido:</strong> 2-4 horas (apostila é aprofundamento, não curso)
+<strong>Formato:</strong> individual ou em dupla, com consulta ao painel/ambiente real
+<strong>Entrega:</strong> resultados documentados em caderno/planilha/notion pessoal</p>
+</blockquote>
+<p><strong>Exercício 1 — Setup completo</strong></p>
+<p>Siga o tutorial e suba seu agente pessoal em docker. Tempo esperado: 30-60 min.</p>
+<p><strong>Exercício 2 — Identidade</strong></p>
+<p>Escreva um system prompt de 200+ palavras para SEU agente (não copie template). Teste 5 prompts diferentes.</p>
+<p><strong>Exercício 3 — Skills</strong></p>
+<p>Instale 3 skills do catálogo. Para cada, customize o prompt interno para seu nicho.</p>
+<p><strong>Exercício 4 — Judge</strong></p>
+<p>Configure o Judge com 5 regras do seu nicho. Teste 10 prompts adversariais.</p>
+<p><strong>Exercício 5 — Backup</strong></p>
+<p>Faça backup completo do setup (volume, config, identity). Documente o restore.</p>
+<hr />
+<h2>✅ Checklist de Conclusão</h2>
+<p>Marque conforme for completando:</p>
+<ul>
+<li>[ ] Li a apostila inteira, sem pular seções.</li>
+<li>[ ] Completei os 5 exercícios práticos.</li>
+<li>[ ] Documentei cada exercício (resultados, decisões, próximos passos).</li>
+<li>[ ] Respondi às 7 questões de auto-avaliação (mentalmente, sem colar).</li>
+<li>[ ] Anotei 3 dúvidas que surgiram (para perguntar em webinar/fórum).</li>
+<li>[ ] Identifiquei 1 insight acionável que vou aplicar nas próximas 24h.</li>
+<li>[ ] Compartilhei 1 aprendizado com pelo menos 1 pessoa.</li>
+<li>[ ] Documentei o que essa apostila mudou na minha operação.</li>
+</ul>
+<hr />
+<h2>🧠 Auto-Avaliação Avançada (7 questões)</h2>
+<p>Tente responder <strong>sem consultar a apostila</strong>. Depois, valide:</p>
+<ol>
+<li>Quais são os pré-requisitos de hardware/software?</li>
+<li>Qual a diferença entre 'system prompt' e 'few-shot examples'?</li>
+<li>Como versionar a identidade do agente (controle de mudança)?</li>
+<li>O que fazer se o Judge bloquear muitas mensagens (falsos positivos)?</li>
+<li>Como migrar de 'pessoal' para 'equipe' (multi-usuário)?</li>
+<li>Qual a política de segurança recomendada (secrets, logs, acesso)?</li>
+<li>Como monitorar uso de tokens e custos?</li>
+</ol>
+<hr />
+<h2>🚀 Próximos Passos Recomendados</h2>
+<ol>
+<li><strong>Aplicar imediatamente:</strong> pegue 1 insight e aplique HOJE.</li>
+<li><strong>Medir em 7-30 dias:</strong> meça o impacto (qualitativo + quantitativo).</li>
+<li><strong>Documentar:</strong> escreva 1 página sobre o que aprendeu + o que mudou.</li>
+<li><strong>Compartilhar:</strong> publique 1 post/conteúdo sobre o tema.</li>
+<li>
+<p><strong>Avançar:</strong> siga para a próxima apostila da trilha.</p>
+</li>
+<li>
+<p><strong>Consultar materiais relacionados:</strong></p>
+</li>
+</ol>
+<p><em>MMN AI-to-AI · 2026 · Todos os direitos reservados</em></p>
+      <hr/>
+      <p style="text-align:center;color:var(--fg-muted);margin-top:2rem;">
+        <em>Fim da Apostila #06 2026 - Licenca CC BY-NC-SA 4.0 - MMN_IA Collective - Nexus HUB57</em>
+      </p>
+    </section>
+  </article>
+</body>
+</html>

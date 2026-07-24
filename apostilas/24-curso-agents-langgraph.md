@@ -14,7 +14,7 @@ AcademIA · Apostila C2
 
 ## Construa agentes production-ready em 28 páginas
 
-![Capa](../../docs/ebooks/ACAD-apostila-24-curso-agents-langgraph.webp)
+![Capa](../docs/ebooks/ACAD-apostila-24-curso-agents-langgraph.webp)
 
 **Shakespeare da Atualidade** PHD nível Harvard do Universo AI
 

@@ -113,7 +113,7 @@ plano)                       semantic)
 - **Personas:** Ive (abertura + fecho) · Alencar (corpo técnico)
 - **Tom híbrido:** conceitual + visualização + manifesto
 - **CTA:** ebook completo + trilha Academy
-- **Thumbnail:** `thumb-15-orquestracao-ecossistemas.webp` (2K, 16:9)
+- **Thumbnail:** `../thumbnails/thumb-15-orquestracao-ecossistemas.webp` (2K, 16:9)
 
 ---
 

@@ -31,7 +31,7 @@ pattern: "MMN_IA"
 
 ## 🎞️ CENA 2 — O que é SHO (0:20-0:50)
 
-**[Visual: Escudo holográfico se formando (`video-02-sho-immune.mp4` gerado)]**
+**[Visual: Escudo holográfico se formando (animação do escudo holográfico do SHO já renderizada gerado)]**
 **[Narração:]**
 
 > *"SHO significa Self-Healing Orchestrator. É o sistema imunológico do seu ecossistema."*
@@ -165,7 +165,7 @@ pattern: "MMN_IA"
 - [ ] Vídeo 1080p renderizado
 - [ ] Animação do diagrama (5 blocos)
 - [ ] 3 cards de cenários com mockups
-- [ ] Thumbnail (`thumb-02-sho.png` ✅)
+- [ ] Thumbnail (`../thumbnails/thumb-02-sho.png` ✅)
 - [ ] Legendas .SRT
 - [ ] Versão vertical 60s para Shorts (resumo)
 

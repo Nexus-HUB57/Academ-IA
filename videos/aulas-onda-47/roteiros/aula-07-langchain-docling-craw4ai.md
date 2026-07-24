@@ -13,5 +13,5 @@ Aluno sabe combinar 3 ferramentas em um pipeline de agente de research.
 6. CTA aula 08 (montar agente do zero)
 
 ## 🎨 Assets
-- Thumb: `thumb-aula-07-langchain-docling-craw4ai.webp`
-- Áudio: `aula-07-langchain-docling-craw4ai.mp3` (1min17, voz Eve)
+- Thumb: `../thumbs/thumb-aula-07-langchain-docling-craw4ai.webp`
+- Áudio: `../audios/aula-07-langchain-docling-craw4ai.mp3` (1min17, voz Eve)

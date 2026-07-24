@@ -15,7 +15,7 @@ pattern: "MMN_IA"
 
 Nexus Affil'IA'te · 2026
 
-![Capa — Pricing de Produtos Digitais com IA](../../docs/ebooks/ACAD-apostila-32-pricing-ia-2026.webp)
+![Capa — Pricing de Produtos Digitais com IA](../docs/ebooks/ACAD-apostila-32-pricing-ia-2026.webp)
 
 **Sobre esta apostila**
 

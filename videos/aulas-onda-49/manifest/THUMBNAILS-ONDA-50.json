@@ -1,0 +1,197 @@
+{
+  "onda": "50",
+  "asset_type": "course_thumbnails_youtube",
+  "format": "PNG 16:9 widescreen (1280x720)",
+  "description": "19 capas YouTube para videoaulas 15-33 ONDA-49/50 com personas validadas. Regeradas após TTL 1h da sessão ONDA-49.",
+  "personas_canonicas": {
+    "alencar": "Sir Alencar — mentor solene, captain jacket navy com listras douradas, barba cinza, cabelo escuro, pose séria",
+    "ive": "Lady Ive — acolhedora, cabelo roxo-loiro, sorriso caloroso, presença suave",
+    "dupla": "Sir Alencar + Lady Ive em interação pedagógica"
+  },
+  "validation": {
+    "method": "image_generation com image_urls referenciando personas canonicas",
+    "fixed_in": "2026-07-23 — capas 15 e 16 corrigidas para Alencar solo após feedback do autor",
+    "regenerated_in": "2026-07-23 sessão Mavis — todas as capas recriadas para evitar TTL 1h"
+  },
+  "aulas": [
+    {
+      "aula": 15,
+      "persona": "alencar",
+      "titulo": "Métricas ROI Ecossistema",
+      "trilha": "Master",
+      "slug": "metricas-roi-ecossistema",
+      "thumbnail": "capa-15-metricas-roi-alencar.png",
+      "size_kb": 2397.9
+    },
+    {
+      "aula": 16,
+      "persona": "alencar",
+      "titulo": "Trilha Fundamental de IA",
+      "trilha": "Fundamental",
+      "slug": "trilha-fundamental-ia",
+      "thumbnail": "capa-16-trilha-fundamental-alencar.png",
+      "size_kb": 2321.2
+    },
+    {
+      "aula": 17,
+      "persona": "dupla",
+      "titulo": "SEO & Marketing de Conteúdo IA",
+      "trilha": "Master",
+      "slug": "seo-marketing-conteudo-ia",
+      "thumbnail": "capa-17-seo-marketing-dupla.png",
+      "size_kb": 2239.2
+    },
+    {
+      "aula": 18,
+      "persona": "alencar",
+      "titulo": "Segurança Ofensiva · Pentest de Agentes",
+      "trilha": "Agente",
+      "slug": "seguranca-ofensiva-pentest",
+      "thumbnail": "capa-18-seguranca-pentest-alencar.png",
+      "size_kb": 2375.0
+    },
+    {
+      "aula": 19,
+      "persona": "dupla",
+      "titulo": "Monetização Avançada em Escala",
+      "trilha": "Master",
+      "slug": "monetizacao-avancada-escala",
+      "thumbnail": "capa-19-monetizacao-escala-dupla.png",
+      "size_kb": 2450.0
+    },
+    {
+      "aula": 20,
+      "persona": "alencar",
+      "titulo": "Trilha Elite · Engenharia",
+      "trilha": "Elite",
+      "slug": "trilha-elite-engenharia",
+      "thumbnail": "capa-20-elite-engenharia-alencar.png",
+      "size_kb": 2630.8
+    },
+    {
+      "aula": 21,
+      "persona": "dupla",
+      "titulo": "Trilha Master · Arquitetura",
+      "trilha": "Master",
+      "slug": "trilha-master-arquitetura",
+      "thumbnail": "capa-21-master-arquitetura-dupla.png",
+      "size_kb": 2952.5
+    },
+    {
+      "aula": 22,
+      "persona": "ive",
+      "titulo": "Trilha Master · Mentoria",
+      "trilha": "Master",
+      "slug": "trilha-master-mentoria",
+      "thumbnail": "capa-22-master-mentoria-ive.png",
+      "size_kb": 2069.0
+    },
+    {
+      "aula": 23,
+      "persona": "alencar",
+      "titulo": "Curso · RAG Prático",
+      "trilha": "Elite",
+      "slug": "curso-rag-pratico",
+      "thumbnail": "capa-23-curso-rag-alencar.png",
+      "size_kb": 2307.6
+    },
+    {
+      "aula": 24,
+      "persona": "alencar",
+      "titulo": "Curso · Agents com LangGraph",
+      "trilha": "Elite",
+      "slug": "curso-agents-langgraph",
+      "thumbnail": "capa-24-curso-agents-langgraph-alencar.png",
+      "size_kb": 2016.9
+    },
+    {
+      "aula": 25,
+      "persona": "ive",
+      "titulo": "Curso · Prompt Engineering",
+      "trilha": "Fundamental",
+      "slug": "curso-prompt-engineering",
+      "thumbnail": "capa-25-curso-prompt-engineering-ive.png",
+      "size_kb": 2320.5
+    },
+    {
+      "aula": 26,
+      "persona": "alencar",
+      "titulo": "Curso · Vector DB",
+      "trilha": "Elite",
+      "slug": "curso-vector-db",
+      "thumbnail": "capa-26-curso-vector-db-alencar.png",
+      "size_kb": 2319.8
+    },
+    {
+      "aula": 27,
+      "persona": "ive",
+      "titulo": "Curso · Voice AI",
+      "trilha": "Agente",
+      "slug": "curso-voice-ai",
+      "thumbnail": "capa-27-curso-voice-ai-ive.png",
+      "size_kb": 2252.5
+    },
+    {
+      "aula": 28,
+      "persona": "dupla",
+      "titulo": "Curso · Multimodal RAG",
+      "trilha": "Elite",
+      "slug": "curso-multimodal-rag",
+      "thumbnail": "capa-28-curso-multimodal-rag-dupla.png",
+      "size_kb": 2236.1
+    },
+    {
+      "aula": 29,
+      "persona": "dupla",
+      "titulo": "Protocolo AI ↔ AI",
+      "trilha": "Master",
+      "slug": "ai-to-ai-protocol",
+      "thumbnail": "capa-29-ai-to-ai-protocol-dupla.png",
+      "size_kb": 2159.4
+    },
+    {
+      "aula": 30,
+      "persona": "dupla",
+      "titulo": "Federação Zero Trust",
+      "trilha": "Master",
+      "slug": "federacao-zero-trust",
+      "thumbnail": "capa-30-federacao-zero-trust-dupla.png",
+      "size_kb": 2402.5
+    },
+    {
+      "aula": 31,
+      "persona": "ive",
+      "titulo": "Fábrica de Conteúdo com IA",
+      "trilha": "Master",
+      "slug": "fabrica-conteudo-ia",
+      "thumbnail": "capa-31-fabrica-conteudo-ive.png",
+      "size_kb": 2336.2
+    },
+    {
+      "aula": 32,
+      "persona": "dupla",
+      "titulo": "Pricing de IA em 2026",
+      "trilha": "Master",
+      "slug": "pricing-ia-2026",
+      "thumbnail": "capa-32-pricing-ia-2026-dupla.png",
+      "size_kb": 2248.3
+    },
+    {
+      "aula": 33,
+      "persona": "alencar",
+      "titulo": "Data Stack para Agentes IA",
+      "trilha": "Elite",
+      "slug": "data-stack-agentes-ia",
+      "thumbnail": "capa-33-data-stack-agentes-alencar.png",
+      "size_kb": 2513.5
+    }
+  ],
+  "stats": {
+    "total_capas": 19,
+    "por_persona": {
+      "alencar": 8,
+      "ive": 4,
+      "dupla": 7
+    }
+  }
+}

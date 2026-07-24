@@ -8,7 +8,7 @@ tags: [academia, campanhas, whatsapp, instagram, automacao]
 pattern: "MMN_IA"
 ---
 
-![Capa — Campanhas Automatizadas com Agente](../../assets/ebook_covers/ACAD-apostila-09-campanhas-automatizadas.webp)
+![Capa — Campanhas Automatizadas com Agente](../docs/ebooks/ACAD-apostila-09-campanhas-automatizadas.webp)
 
 **Campanhas Automatizadas com Agente**
 

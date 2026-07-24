@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IOAID — Arquitetura Profunda da Infraestrutura de IA Distribuída - AcademIA Nexus</title>
+  <link rel="stylesheet" href="../html/acad-style.css">
+</head>
+<body class="dark-theme">
+  <article class="ebook">
+    <header class="cover">
+      <div class="series-tag">AcademIA - Apostila #12</div>
+      <h1>IOAID — Arquitetura Profunda da Infraestrutura de IA Distribuída</h1>
+      <h2>Como Funciona, Camada por Camada, o Cérebro Operacional do Ecossistema Nexus</h2>
+      <img class="cover-image" src="docs/ebooks/ACAD-apostila-12-ioaid-arquitetura-profunda.webp" alt="Capa - IOAID — Arquitetura Profunda da Infraestrutura de IA Distribuída">
+      <div class="author"><strong>MMN_IA Collective</strong><br>PHD nivel Harvard do Universo AI</div>
+      <div class="meta">Apostila 12 - Nivel Master - v1.0.0 - 2026</div>
+    </header>
+    <section class="page toc-page">
+      <h2>Sumario</h2>
+      <ul><li>(conteudo detalhado no corpo)</li></ul>
+      <div class="info-box success">
+        <strong>Sobre esta apostila:</strong> parte da colecao AcademIA - Nexus HUB57. Conteudo hands-on, baseado em producao real.
+      </div>
+    </section>
+    <section class="page">
+      <h2>Conteudo</h2>
+      <p><strong>IOAID — Arquitetura Profunda da Infraestrutura de IA Distribuída</strong></p>
+<p><em>Como Funciona, Camada por Camada, o Cérebro Operacional do Ecossistema Nexus</em></p>
+<p><strong>Por MMN_IA Collective · Academ'IA</strong></p>
+<p>Nexus Affil'IA'te · 2026</p>
+<p><strong>Sobre este documento</strong></p>
+<p>IOAID é a sigla de <strong>Infraestrutura de Orquestração Autônoma de Inteligência Distribuída</strong> — o nome técnico do que chamamos informalmente de "o motor da Nexus". Este documento é o mapa técnico profundo de cada uma das 7 camadas que compõem o IOAID: da borda (edge) onde os agentes atendem afiliados, até o núcleo (core) onde a federação é gerenciada. Se você é arquiteto de plataforma, operador de rede, ou afiliado que quer entender de verdade o que acontece "por trás do painel", este guia é seu ponto de entrada.</p>
+<p><strong>Sumário</strong></p>
+<blockquote>
+<p><strong>•</strong> 1. O que é o IOAID e por que ele é distribuído
+<strong>•</strong> 2. As 7 camadas da pilha IOAID
+<strong>•</strong> 3. Camada L0 — Edge de afiliado (onde tudo começa)
+<strong>•</strong> 4. Camada L1 — Gateway de API (a porta de entrada)
+<strong>•</strong> 5. Camada L2 — Orquestrador de agentes (onde a mágica acontece)
+<strong>•</strong> 6. Camada L3 — Memória federada (o cérebro de longo prazo)
+<strong>•</strong> 7. Camada L4 — Camada de modelos (LLMs, embeddings, etc.)
+<strong>•</strong> 8. Camada L5 — Camada de dados (data lake, knowledge graph)
+<strong>•</strong> 9. Camada L6 — Núcleo de federação (o coração)
+<strong>•</strong> 10. Como as camadas se conversam (request lifecycle completo)
+<strong>•</strong> 11. Padrões de deployment: single-tenant vs multi-tenant
+<strong>•</strong> 12. SLA e observabilidade por camada
+<strong>•</strong> 13. Como o IOAID escala horizontalmente
+<strong>•</strong> 14. Failover e disaster recovery
+<strong>•</strong> 15. Como customizar o IOAID para white-label
+<strong>•</strong> 16. Glossário de termos</p>
+</blockquote>
+<hr />
+<p><strong>1. O que é o IOAID e por que ele é distribuído</strong></p>
+<p>IOAID é a <strong>infraestrutura computacional e lógica</strong> que permite que o ecossistema Nexus funcione. Não é um monolito. É uma <strong>federação de componentes</strong> que operam em camadas, cada uma com responsabilidade clara, contratos bem definidos, e SLAs próprios.</p>
+<p><strong>Por que distribuído?</strong></p>
+<p>Em 2024, a Nexus operava com arquitetura monolítica: tudo num cluster Kubernetes único, em uma região, com failover limitado. Em 2025, migramos para <strong>arquitetura distribuída federada</strong> por três razões:</p>
+<ol>
+<li><strong>Resiliência</strong>: nenhuma região pode derrubar o ecossistema.</li>
+<li><strong>Latência</strong>: edge nodes atendem afiliados com p99 &lt; 200ms em qualquer continente.</li>
+<li><strong>Soberania</strong>: tenants em diferentes jurisdições têm dados em regiões apropriadas.</li>
+</ol>
+<p>O IOAID é o resultado dessa decisão. Cada camada pode escalar independentemente, falhar independentemente, e ser customizada independentemente.</p>
+<p><strong>2. As 7 camadas da pilha IOAID</strong></p>
+<p>A pilha é <strong>vertical</strong>, do mais próximo do usuário (L0) ao mais profundo (L6):</p>
+<div class="codehilite"><pre><span></span><code><span class="err">┌─────────────────────────────────────┐</span>
+<span class="err">│</span><span class="w"> </span><span class="n">L0</span><span class="w"> </span><span class="err">·</span><span class="w"> </span><span class="n">Edge</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">afiliado</span><span class="w">               </span><span class="err">│</span><span class="w">   </span><span class="n">SDK</span><span class="p">,</span><span class="w"> </span><span class="n">webhooks</span><span class="p">,</span><span class="w"> </span><span class="n">browsers</span>
+<span class="err">├─────────────────────────────────────┤</span>
+<span class="err">│</span><span class="w"> </span><span class="n">L1</span><span class="w"> </span><span class="err">·</span><span class="w"> </span><span class="n">Gateway</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">API</span><span class="w">                 </span><span class="err">│</span><span class="w">   </span><span class="n">Rate</span><span class="w"> </span><span class="n">limit</span><span class="p">,</span><span class="w"> </span><span class="n">auth</span><span class="p">,</span><span class="w"> </span><span class="n">routing</span>
+<span class="err">├─────────────────────────────────────┤</span>
+<span class="err">│</span><span class="w"> </span><span class="n">L2</span><span class="w"> </span><span class="err">·</span><span class="w"> </span><span class="n">Orquestrador</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">agentes</span><span class="w">        </span><span class="err">│</span><span class="w">   </span><span class="n">Plano</span><span class="p">,</span><span class="w"> </span><span class="n">tools</span><span class="p">,</span><span class="w"> </span><span class="n">execução</span>
+<span class="err">├─────────────────────────────────────┤</span>
+<span class="err">│</span><span class="w"> </span><span class="n">L3</span><span class="w"> </span><span class="err">·</span><span class="w"> </span><span class="n">Memória</span><span class="w"> </span><span class="n">federada</span><span class="w">               </span><span class="err">│</span><span class="w">   </span><span class="n">Episódica</span><span class="p">,</span><span class="w"> </span><span class="n">semântica</span><span class="p">,</span><span class="w"> </span><span class="n">skills</span>
+<span class="err">├─────────────────────────────────────┤</span>
+<span class="err">│</span><span class="w"> </span><span class="n">L4</span><span class="w"> </span><span class="err">·</span><span class="w"> </span><span class="n">Camada</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">modelos</span><span class="w">              </span><span class="err">│</span><span class="w">   </span><span class="n">LLMs</span><span class="p">,</span><span class="w"> </span><span class="n">embeddings</span><span class="p">,</span><span class="w"> </span><span class="n">fine</span><span class="o">-</span><span class="n">tunes</span>
+<span class="err">├─────────────────────────────────────┤</span>
+<span class="err">│</span><span class="w"> </span><span class="n">L5</span><span class="w"> </span><span class="err">·</span><span class="w"> </span><span class="n">Camada</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">dados</span><span class="w">                </span><span class="err">│</span><span class="w">   </span><span class="n">Data</span><span class="w"> </span><span class="n">lake</span><span class="p">,</span><span class="w"> </span><span class="n">KG</span><span class="p">,</span><span class="w"> </span><span class="n">vector</span><span class="w"> </span><span class="n">store</span>
+<span class="err">├─────────────────────────────────────┤</span>
+<span class="err">│</span><span class="w"> </span><span class="n">L6</span><span class="w"> </span><span class="err">·</span><span class="w"> </span><span class="n">Núcleo</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">federação</span><span class="w">            </span><span class="err">│</span><span class="w">   </span><span class="n">Registry</span><span class="p">,</span><span class="w"> </span><span class="n">votes</span><span class="p">,</span><span class="w"> </span><span class="n">governance</span>
+<span class="err">└─────────────────────────────────────┘</span>
+</code></pre></div>
+
+<p>Cada camada <strong>expõe</strong> uma API para a camada acima e <strong>consome</strong> APIs das camadas abaixo. O contrato é versionado e monitorado.</p>
+<p><strong>3. Camada L0 — Edge de afiliado</strong></p>
+<p>A camada L0 é o que o afiliado <strong>vê e toca</strong>. Inclui:</p>
+<ul>
+<li><strong>Web app</strong> (<code>/dashboard</code>) — interface principal.</li>
+<li><strong>Mobile app</strong> — iOS e Android.</li>
+<li><strong>SDKs</strong> — Python, TypeScript, CLI.</li>
+<li><strong>Webhooks</strong> — notificações outbound para sistemas do afiliado.</li>
+<li><strong>API REST pública</strong> — para integrações customizadas.</li>
+</ul>
+<p><strong>Características-chave:</strong>
+- Stateless: toda requisição carrega auth + contexto.
+- Resiliente: opera offline por até 5min com retry queue.
+- Multi-idioma: i18n com 11 idiomas em produção.
+- Observabilidade: 100% das ações têm trace_id.</p>
+<p><strong>SLA:</strong> disponibilidade 99.95%, p99 latência &lt; 200ms para 90% das ações.</p>
+<p><strong>4. Camada L1 — Gateway de API</strong></p>
+<p>A L1 é o <strong>portão de entrada</strong> de toda requisição. Faz:</p>
+<ul>
+<li><strong>Autenticação</strong> — Bearer token, OAuth2, API key, mTLS.</li>
+<li><strong>Rate limiting</strong> — por tenant, por IP, por global.</li>
+<li><strong>Routing</strong> — para o serviço correto baseado em path/header.</li>
+<li><strong>Logging estruturado</strong> — toda requisição é logada.</li>
+<li><strong>Circuit breaker</strong> — protege serviços downstream.</li>
+</ul>
+<p><strong>Stack típico:</strong>
+- Kong ou Tyk para API gateway.
+- Redis para rate limiting state.
+- OpenTelemetry collector para tracing.
+- Prometheus para métricas.</p>
+<p><strong>SLA:</strong> disponibilidade 99.99%, latência adicionada &lt; 10ms.</p>
+<p><strong>5. Camada L2 — Orquestrador de agentes</strong></p>
+<p>A L2 é onde <strong>agentes ganham vida</strong>. Inclui:</p>
+<ul>
+<li><strong>Agent Registry</strong> — onde cada agente é instanciado.</li>
+<li><strong>Planner</strong> — decompõe objetivos em planos.</li>
+<li><strong>Tool Router</strong> — resolve qual tool usar quando.</li>
+<li><strong>Memory Manager</strong> — coordena working/episodic/semantic.</li>
+<li><strong>Executor</strong> — roda o plano de fato.</li>
+</ul>
+<p><strong>Características-chave:</strong>
+- State management distribuído (Redis + Postgres).
+- Fault tolerance: plano pode retomar de onde parou.
+- Multi-tenancy: cada tenant tem namespace isolado.
+- Auto-scaling: spawna workers sob demanda.</p>
+<p><strong>SLA:</strong> disponibilidade 99.95%, execução de plano em &lt;30s para 95% dos casos.</p>
+<p><strong>6. Camada L3 — Memória federada</strong></p>
+<p>A L3 guarda <strong>tudo que importa lembrar</strong>:</p>
+<ul>
+<li><strong>Memória episódica</strong> — eventos de conversa, decisões, traces.</li>
+<li><strong>Memória semântica</strong> — embeddings, knowledge graph, facts.</li>
+<li><strong>Memória procedural</strong> — skills, playbooks, configurations.</li>
+<li><strong>Memória identitária</strong> — constituição, valores, regras de tenant.</li>
+</ul>
+<p><strong>Stack típico:</strong>
+- <strong>Episódica</strong>: PostgreSQL + ClickHouse.
+- <strong>Semântica</strong>: pgvector + Neo4j.
+- <strong>Procedural</strong>: S3 + DVC.
+- <strong>Identitária</strong>: Postgres + versionamento semântico.</p>
+<p><strong>Privacy:</strong> dados criptografados at-rest e in-transit. Chaves por tenant. <strong>PII nunca persiste sem consentimento explícito.</strong></p>
+<p><strong>SLA:</strong> read p99 &lt; 50ms, write p99 &lt; 200ms.</p>
+<p><strong>7. Camada L4 — Camada de modelos</strong></p>
+<p>A L4 hospeda <strong>todos os modelos</strong> que a plataforma usa:</p>
+<ul>
+<li><strong>LLMs</strong> — Claude, GPT-4, Llama, Gemini, Mixtral.</li>
+<li><strong>Embeddings</strong> — sentence-transformers, OpenAI ada, Cohere.</li>
+<li><strong>Classificadores</strong> — Judge Revisor, toxicity, jailbreak.</li>
+<li><strong>Custom models</strong> — fine-tunes de tenant.</li>
+</ul>
+<p><strong>Características-chave:</strong>
+- Multi-provider: roteamento por custo, latência, qualidade.
+- Fallback chain: se um modelo cai, outro assume.
+- Rate limiting por provider para evitar bloqueio.
+- Cost tracking em tempo real por requisição.</p>
+<p><strong>SLA:</strong> disponibilidade 99.9% (depende de providers upstream).</p>
+<p><strong>8. Camada L5 — Camada de dados</strong></p>
+<p>A L5 é onde <strong>dados estruturados e não estruturados</strong> vivem:</p>
+<ul>
+<li><strong>Data Lake</strong> — S3 + Parquet para analytics de longo prazo.</li>
+<li><strong>Knowledge Graph</strong> — Neo4j para relações semânticas.</li>
+<li><strong>Vector Store</strong> — pgvector para busca por similaridade.</li>
+<li><strong>Search Index</strong> — Elasticsearch para full-text.</li>
+</ul>
+<p><strong>Casos de uso:</strong>
+- Análise de cohort de afiliados.
+- Treinamento de modelos custom.
+- Auditoria de longo prazo.
+- Recomendações personalizadas.</p>
+<p><strong>SLA:</strong> backups diários, retenção de 7 anos para audit logs.</p>
+<p><strong>9. Camada L6 — Núcleo de federação</strong></p>
+<p>A L6 é <strong>onde a rede se governa</strong>:</p>
+<ul>
+<li><strong>Skill Registry</strong> — onde skills são publicadas, votadas, removidas.</li>
+<li><strong>Agent Reputation</strong> — score de cada agente baseado em outcomes.</li>
+<li><strong>Governance Engine</strong> — implementa regras de plataforma.</li>
+<li><strong>Federation Gateway</strong> — interface com outras instâncias Nexus.</li>
+</ul>
+<p><strong>Princípio de design:</strong> <strong>nenhuma decisão crítica</strong> é tomada por um único nó. Federation = consensus.</p>
+<p><strong>SLA:</strong> disponibilidade 99.99%, decisão de governance &lt;5s.</p>
+<p><strong>10. Como as camadas se conversam (request lifecycle completo)</strong></p>
+<p>Trace de uma requisição típica de afiliado:</p>
+<div class="codehilite"><pre><span></span><code><span class="mf">1.</span><span class="w"> </span><span class="n">Usuário</span><span class="w"> </span><span class="n">clica</span><span class="w"> </span><span class="s">&quot;Disparar campanha&quot;</span>
+<span class="w">   </span><span class="err">↓</span><span class="w"> </span><span class="n">L0</span><span class="w"> </span><span class="p">(</span><span class="n">web</span><span class="w"> </span><span class="n">app</span><span class="p">)</span>
+<span class="mf">2.</span><span class="w"> </span><span class="n">Web</span><span class="w"> </span><span class="n">app</span><span class="w"> </span><span class="n">chama</span><span class="w"> </span><span class="n">API</span><span class="p">:</span><span class="w"> </span><span class="nb">POS</span><span class="n">T</span><span class="w"> </span><span class="o">/</span><span class="n">campaigns</span><span class="o">/</span><span class="err">{</span><span class="n">id</span><span class="err">}</span><span class="o">/</span><span class="n">dispatch</span>
+<span class="w">   </span><span class="err">↓</span><span class="w"> </span><span class="n">L1</span><span class="w"> </span><span class="p">(</span><span class="n">gateway</span><span class="p">)</span>
+<span class="mf">3.</span><span class="w"> </span><span class="n">Gateway</span><span class="w"> </span><span class="nb">val</span><span class="n">ida</span><span class="w"> </span><span class="n">auth</span><span class="p">,</span><span class="w"> </span><span class="n">rate</span><span class="w"> </span><span class="n">limit</span><span class="p">,</span><span class="w"> </span><span class="n">roteia</span>
+<span class="w">   </span><span class="err">↓</span><span class="w"> </span><span class="n">L2</span><span class="w"> </span><span class="p">(</span><span class="ow">or</span><span class="n">questrador</span><span class="p">)</span>
+<span class="mf">4.</span><span class="w"> </span><span class="ow">Or</span><span class="n">questrador</span><span class="w"> </span><span class="n">cria</span><span class="w"> </span><span class="n">plano</span><span class="p">:</span><span class="w"> </span><span class="err">[</span><span class="n">check</span><span class="w"> </span><span class="n">budget</span><span class="p">,</span><span class="w"> </span><span class="n">fetch</span><span class="w"> </span><span class="n">audience</span><span class="p">,</span><span class="w"> </span><span class="n">dispatch</span><span class="err">]</span>
+<span class="w">   </span><span class="err">↓</span><span class="w"> </span><span class="n">L2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">L4</span><span class="w"> </span><span class="p">(</span><span class="n">modelos</span><span class="p">)</span>
+<span class="mf">5.</span><span class="w"> </span><span class="n">Planner</span><span class="w"> </span><span class="n">usa</span><span class="w"> </span><span class="n">LLM</span><span class="w"> </span><span class="n">para</span><span class="w"> </span><span class="nb">val</span><span class="n">idar</span><span class="w"> </span><span class="n">plano</span>
+<span class="w">   </span><span class="err">↓</span><span class="w"> </span><span class="n">L3</span><span class="w"> </span><span class="p">(</span><span class="n">memória</span><span class="p">)</span>
+<span class="mf">6.</span><span class="w"> </span><span class="n">Memória</span><span class="w"> </span><span class="n">carrega</span><span class="w"> </span><span class="kr">cont</span><span class="n">exto</span><span class="w"> </span><span class="n">do</span><span class="w"> </span><span class="n">tenant</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">histórico</span>
+<span class="w">   </span><span class="err">↓</span><span class="w"> </span><span class="n">L2</span><span class="w"> </span><span class="p">(</span><span class="n">executor</span><span class="p">)</span>
+<span class="mf">7.</span><span class="w"> </span><span class="n">Executor</span><span class="w"> </span><span class="n">roda</span><span class="w"> </span><span class="n">cada</span><span class="w"> </span><span class="kr">step</span><span class="p">:</span>
+<span class="w">   </span><span class="o">-</span><span class="w"> </span><span class="n">Check</span><span class="w"> </span><span class="n">budget</span><span class="p">:</span><span class="w"> </span><span class="n">query</span><span class="w"> </span><span class="n">L5</span>
+<span class="w">   </span><span class="o">-</span><span class="w"> </span><span class="n">Fetch</span><span class="w"> </span><span class="n">audience</span><span class="p">:</span><span class="w"> </span><span class="n">query</span><span class="w"> </span><span class="n">L3</span>
+<span class="w">   </span><span class="o">-</span><span class="w"> </span><span class="n">Dispatch</span><span class="p">:</span><span class="w"> </span><span class="n">chama</span><span class="w"> </span><span class="n">gateway</span><span class="w"> </span><span class="n">do</span><span class="w"> </span><span class="n">WhatsApp</span>
+<span class="w">   </span><span class="err">↓</span><span class="w"> </span><span class="n">L1</span>
+<span class="mf">8.</span><span class="w"> </span><span class="n">Resposta</span><span class="w"> </span><span class="n">volta</span><span class="w"> </span><span class="n">ao</span><span class="w"> </span><span class="n">usuário</span><span class="w"> </span><span class="n">com</span><span class="w"> </span><span class="n">trace_id</span>
+</code></pre></div>
+
+<p><strong>Tempo total:</strong> ~800ms para uma campanha pequena. ~30s para uma campanha complexa com IA generativa.</p>
+<p><strong>11. Padrões de deployment: single-tenant vs multi-tenant</strong></p>
+<p><strong>Single-tenant:</strong>
+- Um cliente Nexus por deployment.
+- Isolamento físico completo.
+- Mais caro, mais seguro.
+- Usado por: clientes enterprise.</p>
+<p><strong>Multi-tenant:</strong>
+- Múltiplos clientes no mesmo deployment.
+- Isolamento lógico (namespace, RLS).
+- Mais barato, suficiente para 95% dos casos.
+- Usado por: 95% dos afiliados Nexus.</p>
+<p><strong>Híbrido (white-label):</strong>
+- Multi-tenant mas com branding customizado.
+- Cada white-label vê apenas seus tenants.
+- Caso comum de parceria regional.</p>
+<p><strong>12. SLA e observabilidade por camada</strong></p>
+<table>
+<thead>
+<tr>
+<th>Camada</th>
+<th>SLA</th>
+<th>Observabilidade</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>L0 Edge</td>
+<td>99.95%</td>
+<td>RUM, error tracking, perf</td>
+</tr>
+<tr>
+<td>L1 Gateway</td>
+<td>99.99%</td>
+<td>Request logs, latency</td>
+</tr>
+<tr>
+<td>L2 Orchestrator</td>
+<td>99.95%</td>
+<td>Plan execution traces</td>
+</tr>
+<tr>
+<td>L3 Memory</td>
+<td>99.99%</td>
+<td>Query latency, cache hit</td>
+</tr>
+<tr>
+<td>L4 Models</td>
+<td>99.9%</td>
+<td>Token usage, cost</td>
+</tr>
+<tr>
+<td>L5 Data</td>
+<td>99.95%</td>
+<td>Backup status, query plans</td>
+</tr>
+<tr>
+<td>L6 Federation</td>
+<td>99.99%</td>
+<td>Vote latency, consensus</td>
+</tr>
+</tbody>
+</table>
+<p><strong>SHO</strong> monitora todas as camadas com 27 sensores (vide Apostila 11).</p>
+<p><strong>13. Como o IOAID escala horizontalmente</strong></p>
+<p>Cada camada escala independentemente:</p>
+<ul>
+<li><strong>L0</strong>: CDN + edge compute (Cloudflare, Vercel).</li>
+<li><strong>L1</strong>: API gateway stateless, escala com K8s HPA.</li>
+<li><strong>L2</strong>: workers stateless, estado em Redis/Postgres.</li>
+<li><strong>L3</strong>: sharding por tenant_id.</li>
+<li><strong>L4</strong>: multi-provider + cache agressivo.</li>
+<li><strong>L5</strong>: data warehouse escala com Snowflake/BigQuery.</li>
+<li><strong>L6</strong>: consensus distribuído com Raft.</li>
+</ul>
+<p><strong>Pattern 2026:</strong> <strong>scale-to-zero</strong> para tenants pequenos, scale-to-millions para enterprise.</p>
+<p><strong>14. Failover e disaster recovery</strong></p>
+<p>Três níveis de failover:</p>
+<ul>
+<li><strong>L1-L4</strong>: hot standby em outra região, failover &lt;30s.</li>
+<li><strong>L5 (dados)</strong>: replica cross-region, RPO &lt;5min, RTO &lt;1h.</li>
+<li><strong>L6 (federação)</strong>: quorum distribuído, tolera até 1/3 de nós offline.</li>
+</ul>
+<p><strong>DR drills</strong> são trimestrais. Resultado esperado: <strong>RTO &lt;1h para SEV-4</strong>.</p>
+<p><strong>15. Como customizar o IOAID para white-label</strong></p>
+<p>White-label pode customizar:</p>
+<ul>
+<li>Branding visual (L0).</li>
+<li>Domain e SSL (L0, L1).</li>
+<li>Skills disponíveis (L3, L6).</li>
+<li>Modelos permitidos (L4).</li>
+<li>Knowledge graph de domínio (L5).</li>
+<li>Regras de governance (L6).</li>
+</ul>
+<p><strong>Não pode</strong> customizar: SHO, audit logs, security baseline.</p>
+<p><strong>16. Glossário de termos</strong></p>
+<table>
+<thead>
+<tr>
+<th>Termo</th>
+<th>Definição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>IOAID</strong></td>
+<td>Infraestrutura de Orquestração Autônoma de IA Distribuída</td>
+</tr>
+<tr>
+<td><strong>L0..L6</strong></td>
+<td>Camadas da pilha (0=edge, 6=federação)</td>
+</tr>
+<tr>
+<td><strong>Edge</strong></td>
+<td>Computação próxima do usuário</td>
+</tr>
+<tr>
+<td><strong>Gateway</strong></td>
+<td>Porta de entrada da API</td>
+</tr>
+<tr>
+<td><strong>Orchestrator</strong></td>
+<td>Componente que coordena agentes</td>
+</tr>
+<tr>
+<td><strong>Federation</strong></td>
+<td>Rede distribuída de nós interconectados</td>
+</tr>
+<tr>
+<td><strong>Multi-tenant</strong></td>
+<td>Múltiplos clientes no mesmo deployment</td>
+</tr>
+<tr>
+<td><strong>White-label</strong></td>
+<td>Plataforma com marca customizada</td>
+</tr>
+<tr>
+<td><strong>RTO</strong></td>
+<td>Recovery Time Objective</td>
+</tr>
+<tr>
+<td><strong>RPO</strong></td>
+<td>Recovery Point Objective</td>
+</tr>
+<tr>
+<td><strong>Circuit Breaker</strong></td>
+<td>Padrão que isola serviço com falha</td>
+</tr>
+<tr>
+<td><strong>HPA</strong></td>
+<td>Horizontal Pod Autoscaler (K8s)</td>
+</tr>
+<tr>
+<td><strong>RUM</strong></td>
+<td>Real User Monitoring</td>
+</tr>
+<tr>
+<td><strong>RLS</strong></td>
+<td>Row Level Security (Postgres)</td>
+</tr>
+<tr>
+<td><strong>Quorum</strong></td>
+<td>Mínimo de nós para decisão em consensus</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><em>© 2026 Nexus HUB57 · Academ'IA · Todos os direitos reservados</em>
+<em>Versão 1.0.0 · Junho 2026 · Apostila Academ'IA #12 — IOAID — Arquitetura Profunda</em></p>
+      <hr/>
+      <p style="text-align:center;color:var(--fg-muted);margin-top:2rem;">
+        <em>Fim da Apostila #12 2026 - Licenca CC BY-NC-SA 4.0 - MMN_IA Collective - Nexus HUB57</em>
+      </p>
+    </section>
+  </article>
+</body>
+</html>

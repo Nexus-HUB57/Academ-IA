@@ -12,5 +12,5 @@ Aluno entende o poder de agentes com acesso web em tempo real e como isso destra
 5. CTA aula 07 (LangChain + Docling + Craw4AI)
 
 ## 🎨 Assets
-- Thumb: `thumb-aula-06-openclaw.webp`
-- Áudio: `aula-06-openclaw.mp3` (1min16, voz Eve)
+- Thumb: `../thumbs/thumb-aula-06-openclaw.webp`
+- Áudio: `../audios/aula-06-openclaw.mp3` (1min16, voz Eve)

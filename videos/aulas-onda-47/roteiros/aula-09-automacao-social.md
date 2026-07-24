@@ -14,5 +14,5 @@ Aluno sai da aula com plano para conectar suas 3 redes principais a um agente IA
 7. CTA aula 10 (marketplaces)
 
 ## 🎨 Assets
-- Thumb: `thumb-aula-09-automacao-social.webp`
-- Áudio: `aula-09-automacao-social.mp3` (1min25, voz Eve)
+- Thumb: `../thumbs/thumb-aula-09-automacao-social.webp`
+- Áudio: `../audios/aula-09-automacao-social.mp3` (1min25, voz Eve)

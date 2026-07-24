@@ -97,7 +97,7 @@ ebook_origem: "NEXUS_AFFIL_IA_TECH_VOL_05"
 - **Personas:** Ive (estratégia + custo ambiental + CTA) · Alencar (hardware + memória + provisionamento + CTA)
 - **Tom híbrido:** engenharia + termodinâmica + decisão de produto
 - **CTA:** ebook completo + decisão de infra
-- **Thumbnail:** `thumb-19-poder-processamento-ia.webp` (2K, 16:9)
+- **Thumbnail:** `../thumbnails/thumb-19-poder-processamento-ia.webp` (2K, 16:9)
 
 ---
 

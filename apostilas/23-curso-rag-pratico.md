@@ -14,7 +14,7 @@ AcademIA · Apostila C1
 
 ## Construa 3 RAG pipelines reais em 25 páginas
 
-![Capa](../../docs/ebooks/ACAD-apostila-23-curso-rag-pratico.webp)
+![Capa](../docs/ebooks/ACAD-apostila-23-curso-rag-pratico.webp)
 
 **Shakespeare da Atualidade** PHD nível Harvard do Universo AI
 
