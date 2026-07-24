@@ -2,13 +2,49 @@
 title: "CHANGELOG · Academ'IA"
 description: "Histórico de versões da Academ'IA · HUB de Conhecimento & Sabedoria"
 tags: [changelog, versionamento, historico, academia]
-version: 1.6.3
+version: 1.6.4
 last_updated: 2026-07-24
 ---
 
 # 📜 CHANGELOG · Academ'IA
 
 > Histórico de versões do HUB Academ'IA — Nexus Affil'IA'te. Segue **Semantic Versioning**: MAJOR (breaking), MINOR (compatível, novo asset), PATCH (correções, polish).
+
+---
+
+## [1.6.4] — 2026-07-24 · "Índices navegáveis para hubs, playbooks e sync"
+
+### 🆕 Adicionado (3 índices de navegação, ~20KB)
+
+Documentos-índice para 3 áreas com gap de navegação. Sem sobrescrita,
+sem duplicidade — apenas criação de novos arquivos onde não havia README/INDEX.
+
+- `hubs/README.md` (5.8KB): índice navegável dos 11 HUBs HTML estáticos
+  (index, cursos, trilhas, apostilas, lib, lab, playbooks, webinars,
+  tutoriais, landing, player). Documenta arquitetura técnica, paleta
+  Nexus, padrão de cartão, workflow de atualização.
+
+- `playbooks/INDEX.md` (7.1KB): índice navegável dos 13 playbooks
+  organizados por urgência (crise/urgente/importante/operacional),
+  por caso de uso, e por categoria. Diferente do README.md (visão
+  editorial) — este foca em "encontrar o playbook certo em <30s".
+
+- `sync/INDEX.md` (7.6KB): índice dos 4 artefatos de sincronização
+  (agent-bridge.json, skill-manifest.json, audit-log-schema.md,
+  MCP-CONFIG.md). Documenta arquitetura de sync, versões, compatibilidade,
+  workflow de atualização, validação CI.
+
+### 📋 Contexto
+
+Esta versão foi criada por Mavis Agent após:
+1. `git pull --ff-only origin main` (23 commits remotos integrados)
+2. Leitura do `GUIA_MULTI_DEV.md` (convenções multi-dev)
+3. Auditoria para identificar gaps sem risco de colisão
+4. Backup local em `/tmp/staging_mavis_24jul/` (precaução)
+
+**Zero sobrescrita, zero duplicação, zero exclusão.**
+Todos os 6 arquivos do push anterior (api-docs, prompts governanca,
+governanca 04-05) foram verificados e estão intactos.
 
 ---
 
