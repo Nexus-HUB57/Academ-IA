@@ -2,13 +2,50 @@
 title: "CHANGELOG · Academ'IA"
 description: "Histórico de versões da Academ'IA · HUB de Conhecimento & Sabedoria"
 tags: [changelog, versionamento, historico, academia]
-version: 1.6.1
+version: 1.6.2
 last_updated: 2026-07-24
 ---
 
 # 📜 CHANGELOG · Academ'IA
 
 > Histórico de versões do HUB Academ'IA — Nexus Affil'IA'te. Segue **Semantic Versioning**: MAJOR (breaking), MINOR (compatível, novo asset), PATCH (correções, polish).
+
+---
+
+## [1.6.2] — 2026-07-24 · "Simulados oficiais CON/CEN/CEN+ (GAP-09 fechado)"
+
+### 🆕 Adicionado (3 simulados, ~41KB)
+
+GAP-09 do roadmap finalmente fechado. 3 simulados oficiais cronometrados para auto-avaliação de candidatos a certificação.
+
+- `certificacoes/simulado-con-001.md` (14KB): 20 questões, 45 min, aprovação 70%
+  Blocos: fundamentos, WhatsApp, LGPD, Skills/Judge, métricas
+
+- `certificacoes/simulado-cen-001.md` (14KB): 25 questões, 60 min, aprovação 72%
+  Blocos: funis, A/B test, coortes/churn, LTV/CAC, Judge tuning
+
+- `certificacoes/simulado-cen-plus-001.md` (12KB): 20 questões, 60 min, aprovação 75%
+  Blocos: federação, multi-tenant, segurança enterprise, arquitetura, GTM
+
+Cada simulado inclui: instruções cronometradas, 4-5 questões por bloco temático, gabarito comentado com explicações, cálculo de nota com faixas (distinção, aprovado, revisão, reprovado), material de estudo recomendado por bloco.
+
+### 📊 Métricas Atualizadas
+
+| Recurso | v1.6.1 | v1.6.2 | Delta |
+|---|---|---|---|
+| Simululados oficiais | 0 | 3 | +3 |
+| Questões em simulados | 0 | 65 | +65 |
+| Linhas de conteúdo | ~15.500 | ~16.500 | +1.000 |
+
+### 🎯 GAPs Fechados Acumulados
+
+- ✅ GAP-01: 3 bancos de questões (CON/CEN/CEN+)
+- ✅ GAP-02: 6 tutoriais #16-21
+- ✅ GAP-03: 3 cursos Master (RAG/Deploy/Segurança)
+- ✅ GAP-09: 3 simulados oficiais cronometrados
+- 🚧 GAP-04: roteiros de vídeo (parcial, faltam Elite)
+- 🚧 GAP-05: landing page (parcial)
+- ⏳ GAP-07/12/13: pendentes
 
 ---
 
