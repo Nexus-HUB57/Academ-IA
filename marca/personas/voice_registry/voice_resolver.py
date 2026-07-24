@@ -3,7 +3,10 @@
 Camada única para resolver voice IDs das personas a partir do registro canônico.
 Uso em pipelines TTS, scripts de produção de vídeo e geradores de áudio.
 
-Fonte da verdade: personas/voice_registry/OFFICIAL_VOICES_REGISTRY.md
+Fonte da verdade: marca/personas/voice_registry/OFFICIAL_VOICES_REGISTRY.md
+
+ATENÇÃO: O caminho canônico foi migrado de `personas/` para `marca/personas/`
+em 2026-07-23. A pasta `personas/` foi removida do repo.
 """
 from __future__ import annotations
 import json
@@ -13,9 +16,9 @@ from pathlib import Path
 
 # Constantes do registro (espelham OFFICIAL_VOICES_REGISTRY.md)
 ROOT = Path('/workspace/Academ-IA')
-PERSONAS = ROOT / 'personas'
-IVE_WAV = PERSONAS / 'ive' / 'audio' / 'official_voice.wav'
-ALENCAR_WAV = PERSONAS / 'alencar' / 'audio' / 'official_voice.wav'
+MARCA = ROOT / 'marca' / 'personas'
+IVE_WAV = MARCA / 'ive' / 'audio' / 'official_voice.wav'
+ALENCAR_WAV = MARCA / 'alencar' / 'audio' / 'official_voice.wav'
 IVE_MD5 = '073d4964d3de3713f0349731dd3bf683'
 ALENCAR_MD5 = '9f1cbd7aaef82b70f8972e4dc7374eba'
 
@@ -69,7 +72,7 @@ def get_voice_id(persona: str, allow_fallback: bool = False) -> str:
     raise RuntimeError(
         f"Voice clone ID para {p!r} não configurado. "
         f"Defina ${p.upper()}_CLONE_ID ou passe allow_fallback=True. "
-        f"Veja personas/voice_registry/OFFICIAL_VOICES_REGISTRY.md."
+        f"Veja marca/personas/voice_registry/OFFICIAL_VOICES_REGISTRY.md."
     )
 
 
