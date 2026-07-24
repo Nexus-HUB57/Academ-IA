@@ -1,0 +1,1112 @@
+{
+  "generated_on": "2026-07-24",
+  "official_voices": {
+    "ive": {
+      "exists": true,
+      "codec": "pcm_s16le",
+      "sample_rate": 24000,
+      "channels": 1,
+      "duration_sec": 31.28,
+      "size_bytes": 1501484,
+      "path": "marca/personas/ive/audio/official_voice.wav"
+    },
+    "alencar": {
+      "exists": true,
+      "codec": "pcm_s16le",
+      "sample_rate": 24000,
+      "channels": 1,
+      "duration_sec": 29.16,
+      "size_bytes": 1399724,
+      "path": "marca/personas/alencar/audio/official_voice.wav"
+    }
+  },
+  "onda47": [
+    {
+      "file": "videos/aulas-onda-47/roteiros/aula-01-o-que-e-agente-ia.md",
+      "title": "AULA 01 · O que é um Agente IA?",
+      "slug": "",
+      "persona": "",
+      "voice_declared": "",
+      "thumb_ref": "thumb-aula-01-o-que-e-agente-ia.webp",
+      "audio_ref": "aula-01-o-que-e-agente-ia.mp3",
+      "expected_canonical_voice_files": [],
+      "thumb_exists": true,
+      "thumb_path": "videos/aulas-onda-47/thumbs/thumb-aula-01-o-que-e-agente-ia.webp",
+      "audio_exists": true,
+      "audio_path": "videos/aulas-onda-47/audios/aula-01-o-que-e-agente-ia.mp3",
+      "audio_meta": {
+        "exists": true,
+        "codec": "mp3",
+        "sample_rate": 32000,
+        "channels": 1,
+        "duration_sec": 112.82,
+        "size_bytes": 1805229
+      },
+      "render_candidates": [],
+      "status": "ok"
+    },
+    {
+      "file": "videos/aulas-onda-47/roteiros/aula-02-o-que-ias-desenvolvem.md",
+      "title": "AULA 02 · O que as IAs são capazes de desenvolver?",
+      "slug": "",
+      "persona": "",
+      "voice_declared": "",
+      "thumb_ref": "thumb-aula-02-o-que-ias-desenvolvem.webp",
+      "audio_ref": "aula-02-o-que-ias-desenvolvem.mp3",
+      "expected_canonical_voice_files": [],
+      "thumb_exists": true,
+      "thumb_path": "videos/aulas-onda-47/thumbs/thumb-aula-02-o-que-ias-desenvolvem.webp",
+      "audio_exists": true,
+      "audio_path": "videos/aulas-onda-47/audios/aula-02-o-que-ias-desenvolvem.mp3",
+      "audio_meta": {
+        "exists": true,
+        "codec": "mp3",
+        "sample_rate": 32000,
+        "channels": 1,
+        "duration_sec": 95.58,
+        "size_bytes": 1529325
+      },
+      "render_candidates": [],
+      "status": "ok"
+    },
+    {
+      "file": "videos/aulas-onda-47/roteiros/aula-03-o-que-sao-skills.md",
+      "title": "AULA 03 · O que são Skills de IA?",
+      "slug": "",
+      "persona": "",
+      "voice_declared": "",
+      "thumb_ref": "thumb-aula-03-o-que-sao-skills.webp",
+      "audio_ref": "aula-03-o-que-sao-skills.mp3",
+      "expected_canonical_voice_files": [],
+      "thumb_exists": true,
+      "thumb_path": "videos/aulas-onda-47/thumbs/thumb-aula-03-o-que-sao-skills.webp",
+      "audio_exists": true,
+      "audio_path": "videos/aulas-onda-47/audios/aula-03-o-que-sao-skills.mp3",
+      "audio_meta": {
+        "exists": true,
+        "codec": "mp3",
+        "sample_rate": 32000,
+        "channels": 1,
+        "duration_sec": 82.51,
+        "size_bytes": 1320237
+      },
+      "render_candidates": [],
+      "status": "ok"
+    },
+    {
+      "file": "videos/aulas-onda-47/roteiros/aula-04-tipos-de-agentes.md",
+      "title": "AULA 04 · Tipos de Agentes IA e diferenças",
+      "slug": "",
+      "persona": "",
+      "voice_declared": "",
+      "thumb_ref": "thumb-aula-04-tipos-de-agentes.webp",
+      "audio_ref": "aula-04-tipos-de-agentes.mp3",
+      "expected_canonical_voice_files": [],
+      "thumb_exists": true,
+      "thumb_path": "videos/aulas-onda-47/thumbs/thumb-aula-04-tipos-de-agentes.webp",
+      "audio_exists": true,
+      "audio_path": "videos/aulas-onda-47/audios/aula-04-tipos-de-agentes.mp3",
+      "audio_meta": {
+        "exists": true,
+        "codec": "mp3",
+        "sample_rate": 32000,
+        "channels": 1,
+        "duration_sec": 71.35,
+        "size_bytes": 1141677
+      },
+      "render_candidates": [],
+      "status": "ok"
+    },
+    {
+      "file": "videos/aulas-onda-47/roteiros/aula-05-bibliotecas-ia.md",
+      "title": "AULA 05 · Principais Bibliotecas de IA",
+      "slug": "",
+      "persona": "",
+      "voice_declared": "",
+      "thumb_ref": "thumb-aula-05-bibliotecas-ia.webp",
+      "audio_ref": "aula-05-bibliotecas-ia.mp3",
+      "expected_canonical_voice_files": [],
+      "thumb_exists": true,
+      "thumb_path": "videos/aulas-onda-47/thumbs/thumb-aula-05-bibliotecas-ia.webp",
+      "audio_exists": true,
+      "audio_path": "videos/aulas-onda-47/audios/aula-05-bibliotecas-ia.mp3",
+      "audio_meta": {
+        "exists": true,
+        "codec": "mp3",
+        "sample_rate": 44100,
+        "channels": 1,
+        "duration_sec": 96.99,
+        "size_bytes": 1552344
+      },
+      "render_candidates": [],
+      "status": "ok"
+    },
+    {
+      "file": "videos/aulas-onda-47/roteiros/aula-06-openclaw.md",
+      "title": "AULA 06 · OpenClaw · IA na Web em Tempo Real",
+      "slug": "",
+      "persona": "",
+      "voice_declared": "",
+      "thumb_ref": "thumb-aula-06-openclaw.webp",
+      "audio_ref": "aula-06-openclaw.mp3",
+      "expected_canonical_voice_files": [],
+      "thumb_exists": true,
+      "thumb_path": "videos/aulas-onda-47/thumbs/thumb-aula-06-openclaw.webp",
+      "audio_exists": true,
+      "audio_path": "videos/aulas-onda-47/audios/aula-06-openclaw.mp3",
+      "audio_meta": {
+        "exists": true,
+        "codec": "mp3",
+        "sample_rate": 44100,
+        "channels": 1,
+        "duration_sec": 76.36,
+        "size_bytes": 1222156
+      },
+      "render_candidates": [],
+      "status": "ok"
+    },
+    {
+      "file": "videos/aulas-onda-47/roteiros/aula-07-langchain-docling-craw4ai.md",
+      "title": "AULA 07 · LangChain + Docling + Craw4AI",
+      "slug": "",
+      "persona": "",
+      "voice_declared": "",
+      "thumb_ref": "thumb-aula-07-langchain-docling-craw4ai.webp",
+      "audio_ref": "aula-07-langchain-docling-craw4ai.mp3",
+      "expected_canonical_voice_files": [],
+      "thumb_exists": true,
+      "thumb_path": "videos/aulas-onda-47/thumbs/thumb-aula-07-langchain-docling-craw4ai.webp",
+      "audio_exists": true,
+      "audio_path": "videos/aulas-onda-47/audios/aula-07-langchain-docling-craw4ai.mp3",
+      "audio_meta": {
+        "exists": true,
+        "codec": "mp3",
+        "sample_rate": 44100,
+        "channels": 1,
+        "duration_sec": 76.59,
+        "size_bytes": 1225918
+      },
+      "render_candidates": [],
+      "status": "ok"
+    },
+    {
+      "file": "videos/aulas-onda-47/roteiros/aula-08-como-construir-agente.md",
+      "title": "AULA 08 · Construa Seu Agente IA",
+      "slug": "",
+      "persona": "",
+      "voice_declared": "",
+      "thumb_ref": "thumb-aula-08-como-construir-agente.webp",
+      "audio_ref": "aula-08-como-construir-agente.mp3",
+      "expected_canonical_voice_files": [],
+      "thumb_exists": true,
+      "thumb_path": "videos/aulas-onda-47/thumbs/thumb-aula-08-como-construir-agente.webp",
+      "audio_exists": true,
+      "audio_path": "videos/aulas-onda-47/audios/aula-08-como-construir-agente.mp3",
+      "audio_meta": {
+        "exists": true,
+        "codec": "mp3",
+        "sample_rate": 44100,
+        "channels": 1,
+        "duration_sec": 82.44,
+        "size_bytes": 1319541
+      },
+      "render_candidates": [],
+      "status": "ok"
+    },
+    {
+      "file": "videos/aulas-onda-47/roteiros/aula-09-automacao-social.md",
+      "title": "AULA 09 · Automatize WhatsApp, Instagram e Facebook",
+      "slug": "",
+      "persona": "",
+      "voice_declared": "",
+      "thumb_ref": "thumb-aula-09-automacao-social.webp",
+      "audio_ref": "aula-09-automacao-social.mp3",
+      "expected_canonical_voice_files": [],
+      "thumb_exists": true,
+      "thumb_path": "videos/aulas-onda-47/thumbs/thumb-aula-09-automacao-social.webp",
+      "audio_exists": true,
+      "audio_path": "videos/aulas-onda-47/audios/aula-09-automacao-social.mp3",
+      "audio_meta": {
+        "exists": true,
+        "codec": "mp3",
+        "sample_rate": 44100,
+        "channels": 1,
+        "duration_sec": 84.69,
+        "size_bytes": 1355485
+      },
+      "render_candidates": [],
+      "status": "ok"
+    },
+    {
+      "file": "videos/aulas-onda-47/roteiros/aula-10-marketplaces.md",
+      "title": "AULA 10 · Hotmart, Shopee, Mercado Livre",
+      "slug": "",
+      "persona": "",
+      "voice_declared": "",
+      "thumb_ref": "thumb-aula-10-marketplaces.webp",
+      "audio_ref": "aula-10-marketplaces.mp3",
+      "expected_canonical_voice_files": [],
+      "thumb_exists": true,
+      "thumb_path": "videos/aulas-onda-47/thumbs/thumb-aula-10-marketplaces.webp",
+      "audio_exists": true,
+      "audio_path": "videos/aulas-onda-47/audios/aula-10-marketplaces.mp3",
+      "audio_meta": {
+        "exists": true,
+        "codec": "mp3",
+        "sample_rate": 44100,
+        "channels": 1,
+        "duration_sec": 77.09,
+        "size_bytes": 1233859
+      },
+      "render_candidates": [],
+      "status": "ok"
+    },
+    {
+      "file": "videos/aulas-onda-47/roteiros/aula-11-ioaid-ive.md",
+      "title": "Aula 11 · IOAID · Sistema Nervoso Nexus",
+      "slug": "",
+      "persona": "Sra. Nexus Ive · **Voz:** Eve (ElevenLabs V3) · **Duração:** 72s · **Trilha:** Fundamental",
+      "voice_declared": "",
+      "thumb_ref": "thumb-aula-11-ioaid-ive.webp",
+      "audio_ref": "aula-11-ioaid-ive.mp3",
+      "expected_canonical_voice_files": [
+        "marca/personas/ive/audio/official_voice.wav"
+      ],
+      "thumb_exists": true,
+      "thumb_path": "videos/aulas-onda-47/thumbs/thumb-aula-11-ioaid-ive.webp",
+      "audio_exists": true,
+      "audio_path": "videos/aulas-onda-47/audios/aula-11-ioaid-ive.mp3",
+      "audio_meta": {
+        "exists": true,
+        "codec": "mp3",
+        "sample_rate": 44100,
+        "channels": 1,
+        "duration_sec": 72.05,
+        "size_bytes": 1153193
+      },
+      "render_candidates": [],
+      "status": "ok"
+    },
+    {
+      "file": "videos/aulas-onda-47/roteiros/aula-12-sho-alencar.md",
+      "title": "Aula 12 · SHO · Sistema Híbrido de Orquestração",
+      "slug": "",
+      "persona": "Sir. Nexus Alencar · **Voz:** James (ElevenLabs V3) · **Duração:** 83s · **Trilha:** Fundamental",
+      "voice_declared": "",
+      "thumb_ref": "thumb-aula-12-sho-alencar.webp",
+      "audio_ref": "aula-12-sho-alencar.mp3",
+      "expected_canonical_voice_files": [
+        "marca/personas/alencar/audio/official_voice.wav"
+      ],
+      "thumb_exists": true,
+      "thumb_path": "videos/aulas-onda-47/thumbs/thumb-aula-12-sho-alencar.webp",
+      "audio_exists": true,
+      "audio_path": "videos/aulas-onda-47/audios/aula-12-sho-alencar.mp3",
+      "audio_meta": {
+        "exists": true,
+        "codec": "mp3",
+        "sample_rate": 44100,
+        "channels": 1,
+        "duration_sec": 83.07,
+        "size_bytes": 1329572
+      },
+      "render_candidates": [],
+      "status": "ok"
+    },
+    {
+      "file": "videos/aulas-onda-47/roteiros/aula-13-painel-afiliado-ive.md",
+      "title": "Aula 13 · Painel do Afiliado",
+      "slug": "",
+      "persona": "Sra. Nexus Ive · **Voz:** Eve · **Duração:** 77s · **Trilha:** Fundamental",
+      "voice_declared": "",
+      "thumb_ref": "thumb-aula-13-painel-afiliado-ive.webp",
+      "audio_ref": "aula-13-painel-afiliado-ive.mp3",
+      "expected_canonical_voice_files": [
+        "marca/personas/ive/audio/official_voice.wav"
+      ],
+      "thumb_exists": true,
+      "thumb_path": "videos/aulas-onda-47/thumbs/thumb-aula-13-painel-afiliado-ive.webp",
+      "audio_exists": true,
+      "audio_path": "videos/aulas-onda-47/audios/aula-13-painel-afiliado-ive.mp3",
+      "audio_meta": {
+        "exists": true,
+        "codec": "mp3",
+        "sample_rate": 44100,
+        "channels": 1,
+        "duration_sec": 76.51,
+        "size_bytes": 1224664
+      },
+      "render_candidates": [],
+      "status": "ok"
+    },
+    {
+      "file": "videos/aulas-onda-47/roteiros/aula-14-arquitetura-tecnica-alencar.md",
+      "title": "Aula 14 · Arquitetura Técnica Nexus",
+      "slug": "",
+      "persona": "Sir. Nexus Alencar · **Voz:** James · **Duração:** 103s · **Trilha:** Agente",
+      "voice_declared": "",
+      "thumb_ref": "thumb-aula-14-arquitetura-tecnica-alencar.webp",
+      "audio_ref": "aula-14-arquitetura-tecnica-alencar.mp3",
+      "expected_canonical_voice_files": [
+        "marca/personas/alencar/audio/official_voice.wav"
+      ],
+      "thumb_exists": true,
+      "thumb_path": "videos/aulas-onda-47/thumbs/thumb-aula-14-arquitetura-tecnica-alencar.webp",
+      "audio_exists": true,
+      "audio_path": "videos/aulas-onda-47/audios/aula-14-arquitetura-tecnica-alencar.mp3",
+      "audio_meta": {
+        "exists": true,
+        "codec": "mp3",
+        "sample_rate": 44100,
+        "channels": 1,
+        "duration_sec": 103.0,
+        "size_bytes": 1648475
+      },
+      "render_candidates": [],
+      "status": "ok"
+    },
+    {
+      "file": "videos/aulas-onda-47/roteiros/aula-15-metodo-nexus-escala-ive.md",
+      "title": "Aula 15 · Método Nexus de Escala",
+      "slug": "",
+      "persona": "Sra. Nexus Ive · **Voz:** Eve · **Duração:** 73s · **Trilha:** Agente",
+      "voice_declared": "",
+      "thumb_ref": "thumb-aula-15-metodo-nexus-escala-ive.webp",
+      "audio_ref": "aula-15-metodo-nexus-escala-ive.mp3",
+      "expected_canonical_voice_files": [
+        "marca/personas/ive/audio/official_voice.wav"
+      ],
+      "thumb_exists": true,
+      "thumb_path": "videos/aulas-onda-47/thumbs/thumb-aula-15-metodo-nexus-escala-ive.webp",
+      "audio_exists": true,
+      "audio_path": "videos/aulas-onda-47/audios/aula-15-metodo-nexus-escala-ive.mp3",
+      "audio_meta": {
+        "exists": true,
+        "codec": "mp3",
+        "sample_rate": 44100,
+        "channels": 1,
+        "duration_sec": 73.17,
+        "size_bytes": 1171165
+      },
+      "render_candidates": [],
+      "status": "ok"
+    },
+    {
+      "file": "videos/aulas-onda-47/roteiros/aula-16-primeiro-agente-escalavel-alencar.md",
+      "title": "Aula 16 · Seu Primeiro Agente Escalável",
+      "slug": "",
+      "persona": "Sir. Nexus Alencar · **Voz:** James · **Duração:** 79s · **Trilha:** Agente",
+      "voice_declared": "",
+      "thumb_ref": "thumb-aula-16-primeiro-agente-escalavel-alencar.webp",
+      "audio_ref": "aula-16-primeiro-agente-escalavel-alencar.mp3",
+      "expected_canonical_voice_files": [
+        "marca/personas/alencar/audio/official_voice.wav"
+      ],
+      "thumb_exists": true,
+      "thumb_path": "videos/aulas-onda-47/thumbs/thumb-aula-16-primeiro-agente-escalavel-alencar.webp",
+      "audio_exists": true,
+      "audio_path": "videos/aulas-onda-47/audios/aula-16-primeiro-agente-escalavel-alencar.mp3",
+      "audio_meta": {
+        "exists": true,
+        "codec": "mp3",
+        "sample_rate": 44100,
+        "channels": 1,
+        "duration_sec": 79.39,
+        "size_bytes": 1270639
+      },
+      "render_candidates": [],
+      "status": "ok"
+    }
+  ],
+  "onda49": [
+    {
+      "lesson": 15,
+      "audio_dupla": [
+        "videos/aulas-onda-49/audios/aula-15-metricas-roi-ecossistema-dupla.mp3"
+      ],
+      "audio_dupla_f": [
+        "videos/aulas-onda-49/audios/aula-15-metricas-roi-ecossistema-dupla-F.mp3"
+      ],
+      "render_720p": [
+        "videos/aulas-onda-49/renders/aula-15-metricas-roi-ecossistema-720p.mp4"
+      ],
+      "render_narrated": [
+        "videos/aulas-onda-49/renders/aula-15-metricas-roi-ecossistema-narrated.mp4"
+      ],
+      "render_v2": [
+        "videos/aulas-onda-49/v2/aula-15-metricas-roi-ecossistema-narrated-v2.mp4"
+      ],
+      "master_cover": [
+        "producao/assets/thumbnails/capa-15-metricas-roi-alencar.png",
+        "producao/assets/thumbnails/capa-15-orquestracao-ecossistemas-dupla.png"
+      ],
+      "status": "ok"
+    },
+    {
+      "lesson": 16,
+      "audio_dupla": [
+        "videos/aulas-onda-49/audios/aula-16-trilha-fundamental-ia-dupla.mp3"
+      ],
+      "audio_dupla_f": [
+        "videos/aulas-onda-49/audios/aula-16-trilha-fundamental-ia-dupla-F.mp3"
+      ],
+      "render_720p": [
+        "videos/aulas-onda-49/renders/aula-16-trilha-fundamental-ia-720p.mp4"
+      ],
+      "render_narrated": [
+        "videos/aulas-onda-49/renders/aula-16-trilha-fundamental-ia-narrated.mp4"
+      ],
+      "render_v2": [
+        "videos/aulas-onda-49/v2/aula-16-trilha-fundamental-ia-narrated-v2.mp4"
+      ],
+      "master_cover": [
+        "producao/assets/thumbnails/capa-16-senciencia-barreiras-dupla.png",
+        "producao/assets/thumbnails/capa-16-trilha-fundamental-alencar.png"
+      ],
+      "status": "ok"
+    },
+    {
+      "lesson": 17,
+      "audio_dupla": [
+        "videos/aulas-onda-49/audios/aula-17-seo-marketing-conteudo-ia-dupla.mp3"
+      ],
+      "audio_dupla_f": [
+        "videos/aulas-onda-49/audios/aula-17-seo-marketing-conteudo-ia-dupla-F.mp3"
+      ],
+      "render_720p": [
+        "videos/aulas-onda-49/renders/aula-17-seo-marketing-conteudo-ia-720p.mp4"
+      ],
+      "render_narrated": [
+        "videos/aulas-onda-49/renders/aula-17-seo-marketing-conteudo-ia-narrated.mp4"
+      ],
+      "render_v2": [
+        "videos/aulas-onda-49/v2/aula-17-seo-marketing-conteudo-ia-narrated-v2.mp4"
+      ],
+      "master_cover": [
+        "producao/assets/thumbnails/capa-17-poder-perigo-autonomia-dupla.png",
+        "producao/assets/thumbnails/capa-17-seo-marketing-dupla.png"
+      ],
+      "status": "ok"
+    },
+    {
+      "lesson": 18,
+      "audio_dupla": [
+        "videos/aulas-onda-49/audios/aula-18-seguranca-ofensiva-pentest-dupla.mp3"
+      ],
+      "audio_dupla_f": [
+        "videos/aulas-onda-49/audios/aula-18-seguranca-ofensiva-pentest-dupla-F.mp3"
+      ],
+      "render_720p": [
+        "videos/aulas-onda-49/renders/aula-18-seguranca-ofensiva-pentest-720p.mp4"
+      ],
+      "render_narrated": [
+        "videos/aulas-onda-49/renders/aula-18-seguranca-ofensiva-pentest-narrated.mp4"
+      ],
+      "render_v2": [
+        "videos/aulas-onda-49/v2/aula-18-seguranca-ofensiva-pentest-narrated-v2.mp4"
+      ],
+      "master_cover": [
+        "producao/assets/thumbnails/capa-18-fundamento-saas-ia-dupla.png",
+        "producao/assets/thumbnails/capa-18-seguranca-pentest-alencar.png"
+      ],
+      "status": "ok"
+    },
+    {
+      "lesson": 19,
+      "audio_dupla": [
+        "videos/aulas-onda-49/audios/aula-19-monetizacao-avancada-escala-dupla.mp3"
+      ],
+      "audio_dupla_f": [
+        "videos/aulas-onda-49/audios/aula-19-monetizacao-avancada-escala-dupla-F.mp3"
+      ],
+      "render_720p": [
+        "videos/aulas-onda-49/renders/aula-19-monetizacao-avancada-escala-720p.mp4"
+      ],
+      "render_narrated": [
+        "videos/aulas-onda-49/renders/aula-19-monetizacao-avancada-escala-narrated.mp4"
+      ],
+      "render_v2": [
+        "videos/aulas-onda-49/v2/aula-19-monetizacao-avancada-escala-narrated-v2.mp4"
+      ],
+      "master_cover": [
+        "producao/assets/thumbnails/capa-19-monetizacao-escala-dupla.png",
+        "producao/assets/thumbnails/capa-19-poder-processamento-ia-alencar.png"
+      ],
+      "status": "ok"
+    },
+    {
+      "lesson": 20,
+      "audio_dupla": [
+        "videos/aulas-onda-49/audios/aula-20-trilha-elite-engenharia-dupla.mp3"
+      ],
+      "audio_dupla_f": [
+        "videos/aulas-onda-49/audios/aula-20-trilha-elite-engenharia-dupla-F.mp3"
+      ],
+      "render_720p": [
+        "videos/aulas-onda-49/renders/aula-20-trilha-elite-engenharia-720p.mp4"
+      ],
+      "render_narrated": [
+        "videos/aulas-onda-49/renders/aula-20-trilha-elite-engenharia-narrated.mp4"
+      ],
+      "render_v2": [
+        "videos/aulas-onda-49/v2/aula-20-trilha-elite-engenharia-narrated-v2.mp4"
+      ],
+      "master_cover": [
+        "producao/assets/thumbnails/capa-20-elite-engenharia-alencar.png"
+      ],
+      "status": "ok"
+    },
+    {
+      "lesson": 21,
+      "audio_dupla": [
+        "videos/aulas-onda-49/audios/aula-21-trilha-master-arquitetura-dupla.mp3"
+      ],
+      "audio_dupla_f": [
+        "videos/aulas-onda-49/audios/aula-21-trilha-master-arquitetura-dupla-F.mp3"
+      ],
+      "render_720p": [
+        "videos/aulas-onda-49/renders/aula-21-trilha-master-arquitetura-720p.mp4"
+      ],
+      "render_narrated": [
+        "videos/aulas-onda-49/renders/aula-21-trilha-master-arquitetura-narrated.mp4"
+      ],
+      "render_v2": [
+        "videos/aulas-onda-49/v2/aula-21-trilha-master-arquitetura-narrated-v2.mp4"
+      ],
+      "master_cover": [
+        "producao/assets/thumbnails/capa-21-master-arquitetura-dupla.png"
+      ],
+      "status": "ok"
+    },
+    {
+      "lesson": 22,
+      "audio_dupla": [
+        "videos/aulas-onda-49/audios/aula-22-trilha-master-mentoria-dupla.mp3"
+      ],
+      "audio_dupla_f": [
+        "videos/aulas-onda-49/audios/aula-22-trilha-master-mentoria-dupla-F.mp3"
+      ],
+      "render_720p": [
+        "videos/aulas-onda-49/renders/aula-22-trilha-master-mentoria-720p.mp4"
+      ],
+      "render_narrated": [
+        "videos/aulas-onda-49/renders/aula-22-trilha-master-mentoria-narrated.mp4"
+      ],
+      "render_v2": [
+        "videos/aulas-onda-49/v2/aula-22-trilha-master-mentoria-narrated-v2.mp4"
+      ],
+      "master_cover": [
+        "producao/assets/thumbnails/capa-22-master-mentoria-ive.png"
+      ],
+      "status": "ok"
+    },
+    {
+      "lesson": 23,
+      "audio_dupla": [
+        "videos/aulas-onda-49/audios/aula-23-curso-rag-pratico-dupla.mp3"
+      ],
+      "audio_dupla_f": [
+        "videos/aulas-onda-49/audios/aula-23-curso-rag-pratico-dupla-F.mp3"
+      ],
+      "render_720p": [
+        "videos/aulas-onda-49/renders/aula-23-curso-rag-pratico-720p.mp4"
+      ],
+      "render_narrated": [
+        "videos/aulas-onda-49/renders/aula-23-curso-rag-pratico-narrated.mp4"
+      ],
+      "render_v2": [
+        "videos/aulas-onda-49/v2/aula-23-curso-rag-pratico-narrated-v2.mp4"
+      ],
+      "master_cover": [
+        "producao/assets/thumbnails/capa-23-curso-rag-alencar.png"
+      ],
+      "status": "ok"
+    },
+    {
+      "lesson": 24,
+      "audio_dupla": [
+        "videos/aulas-onda-49/audios/aula-24-curso-agents-langgraph-dupla.mp3"
+      ],
+      "audio_dupla_f": [
+        "videos/aulas-onda-49/audios/aula-24-curso-agents-langgraph-dupla-F.mp3"
+      ],
+      "render_720p": [
+        "videos/aulas-onda-49/renders/aula-24-curso-agents-langgraph-720p.mp4"
+      ],
+      "render_narrated": [
+        "videos/aulas-onda-49/renders/aula-24-curso-agents-langgraph-narrated.mp4"
+      ],
+      "render_v2": [
+        "videos/aulas-onda-49/v2/aula-24-curso-agents-langgraph-narrated-v2.mp4"
+      ],
+      "master_cover": [
+        "producao/assets/thumbnails/capa-24-curso-agents-langgraph-alencar.png"
+      ],
+      "status": "ok"
+    },
+    {
+      "lesson": 25,
+      "audio_dupla": [
+        "videos/aulas-onda-49/audios/aula-25-curso-prompt-engineering-dupla.mp3"
+      ],
+      "audio_dupla_f": [
+        "videos/aulas-onda-49/audios/aula-25-curso-prompt-engineering-dupla-F.mp3"
+      ],
+      "render_720p": [
+        "videos/aulas-onda-49/renders/aula-25-curso-prompt-engineering-720p.mp4"
+      ],
+      "render_narrated": [
+        "videos/aulas-onda-49/renders/aula-25-curso-prompt-engineering-narrated.mp4"
+      ],
+      "render_v2": [
+        "videos/aulas-onda-49/v2/aula-25-curso-prompt-engineering-narrated-v2.mp4"
+      ],
+      "master_cover": [
+        "producao/assets/thumbnails/capa-25-curso-prompt-engineering-ive.png"
+      ],
+      "status": "ok"
+    },
+    {
+      "lesson": 26,
+      "audio_dupla": [
+        "videos/aulas-onda-49/audios/aula-26-curso-vector-db-dupla.mp3"
+      ],
+      "audio_dupla_f": [
+        "videos/aulas-onda-49/audios/aula-26-curso-vector-db-dupla-F.mp3"
+      ],
+      "render_720p": [
+        "videos/aulas-onda-49/renders/aula-26-curso-vector-db-720p.mp4"
+      ],
+      "render_narrated": [
+        "videos/aulas-onda-49/renders/aula-26-curso-vector-db-narrated.mp4"
+      ],
+      "render_v2": [
+        "videos/aulas-onda-49/v2/aula-26-curso-vector-db-narrated-v2.mp4"
+      ],
+      "master_cover": [
+        "producao/assets/thumbnails/capa-26-curso-vector-db-alencar.png"
+      ],
+      "status": "ok"
+    },
+    {
+      "lesson": 27,
+      "audio_dupla": [
+        "videos/aulas-onda-49/audios/aula-27-curso-voice-ai-dupla.mp3"
+      ],
+      "audio_dupla_f": [
+        "videos/aulas-onda-49/audios/aula-27-curso-voice-ai-dupla-F.mp3"
+      ],
+      "render_720p": [
+        "videos/aulas-onda-49/renders/aula-27-curso-voice-ai-720p.mp4"
+      ],
+      "render_narrated": [
+        "videos/aulas-onda-49/renders/aula-27-curso-voice-ai-narrated.mp4"
+      ],
+      "render_v2": [
+        "videos/aulas-onda-49/v2/aula-27-curso-voice-ai-narrated-v2.mp4"
+      ],
+      "master_cover": [
+        "producao/assets/thumbnails/capa-27-curso-voice-ai-ive.png"
+      ],
+      "status": "ok"
+    },
+    {
+      "lesson": 28,
+      "audio_dupla": [
+        "videos/aulas-onda-49/audios/aula-28-curso-multimodal-rag-dupla.mp3"
+      ],
+      "audio_dupla_f": [
+        "videos/aulas-onda-49/audios/aula-28-curso-multimodal-rag-dupla-F.mp3"
+      ],
+      "render_720p": [
+        "videos/aulas-onda-49/renders/aula-28-curso-multimodal-rag-720p.mp4"
+      ],
+      "render_narrated": [
+        "videos/aulas-onda-49/renders/aula-28-curso-multimodal-rag-narrated.mp4"
+      ],
+      "render_v2": [
+        "videos/aulas-onda-49/v2/aula-28-curso-multimodal-rag-narrated-v2.mp4"
+      ],
+      "master_cover": [
+        "producao/assets/thumbnails/capa-28-curso-multimodal-rag-dupla.png"
+      ],
+      "status": "ok"
+    },
+    {
+      "lesson": 29,
+      "audio_dupla": [
+        "videos/aulas-onda-49/audios/aula-29-ai-to-ai-protocol-dupla.mp3"
+      ],
+      "audio_dupla_f": [
+        "videos/aulas-onda-49/audios/aula-29-ai-to-ai-protocol-dupla-F.mp3"
+      ],
+      "render_720p": [
+        "videos/aulas-onda-49/renders/aula-29-ai-to-ai-protocol-720p.mp4"
+      ],
+      "render_narrated": [
+        "videos/aulas-onda-49/renders/aula-29-ai-to-ai-protocol-narrated.mp4"
+      ],
+      "render_v2": [
+        "videos/aulas-onda-49/v2/aula-29-ai-to-ai-protocol-narrated-v2.mp4"
+      ],
+      "master_cover": [
+        "producao/assets/thumbnails/capa-29-ai-to-ai-protocol-dupla.png"
+      ],
+      "status": "ok"
+    },
+    {
+      "lesson": 30,
+      "audio_dupla": [
+        "videos/aulas-onda-49/audios/aula-30-federacao-zero-trust-dupla.mp3"
+      ],
+      "audio_dupla_f": [
+        "videos/aulas-onda-49/audios/aula-30-federacao-zero-trust-dupla-F.mp3"
+      ],
+      "render_720p": [
+        "videos/aulas-onda-49/renders/aula-30-federacao-zero-trust-720p.mp4"
+      ],
+      "render_narrated": [
+        "videos/aulas-onda-49/renders/aula-30-federacao-zero-trust-narrated.mp4"
+      ],
+      "render_v2": [
+        "videos/aulas-onda-49/v2/aula-30-federacao-zero-trust-narrated-v2.mp4"
+      ],
+      "master_cover": [
+        "producao/assets/thumbnails/capa-30-federacao-zero-trust-dupla.png"
+      ],
+      "status": "ok"
+    },
+    {
+      "lesson": 31,
+      "audio_dupla": [
+        "videos/aulas-onda-49/audios/aula-31-fabrica-conteudo-ia-dupla.mp3"
+      ],
+      "audio_dupla_f": [
+        "videos/aulas-onda-49/audios/aula-31-fabrica-conteudo-ia-dupla-F.mp3"
+      ],
+      "render_720p": [
+        "videos/aulas-onda-49/renders/aula-31-fabrica-conteudo-ia-720p.mp4"
+      ],
+      "render_narrated": [
+        "videos/aulas-onda-49/renders/aula-31-fabrica-conteudo-ia-narrated.mp4"
+      ],
+      "render_v2": [
+        "videos/aulas-onda-49/v2/aula-31-fabrica-conteudo-ia-narrated-v2.mp4"
+      ],
+      "master_cover": [
+        "producao/assets/thumbnails/capa-31-fabrica-conteudo-ive.png"
+      ],
+      "status": "ok"
+    },
+    {
+      "lesson": 32,
+      "audio_dupla": [
+        "videos/aulas-onda-49/audios/aula-32-pricing-ia-2026-dupla.mp3"
+      ],
+      "audio_dupla_f": [
+        "videos/aulas-onda-49/audios/aula-32-pricing-ia-2026-dupla-F.mp3"
+      ],
+      "render_720p": [
+        "videos/aulas-onda-49/renders/aula-32-pricing-ia-2026-720p.mp4"
+      ],
+      "render_narrated": [
+        "videos/aulas-onda-49/renders/aula-32-pricing-ia-2026-narrated.mp4"
+      ],
+      "render_v2": [
+        "videos/aulas-onda-49/v2/aula-32-pricing-ia-2026-narrated-v2.mp4"
+      ],
+      "master_cover": [
+        "producao/assets/thumbnails/capa-32-pricing-ia-2026-dupla.png"
+      ],
+      "status": "ok"
+    },
+    {
+      "lesson": 33,
+      "audio_dupla": [
+        "videos/aulas-onda-49/audios/aula-33-data-stack-agentes-ia-dupla.mp3"
+      ],
+      "audio_dupla_f": [
+        "videos/aulas-onda-49/audios/aula-33-data-stack-agentes-ia-dupla-F.mp3"
+      ],
+      "render_720p": [
+        "videos/aulas-onda-49/renders/aula-33-data-stack-agentes-ia-720p.mp4"
+      ],
+      "render_narrated": [
+        "videos/aulas-onda-49/renders/aula-33-data-stack-agentes-ia-narrated.mp4"
+      ],
+      "render_v2": [
+        "videos/aulas-onda-49/v2/aula-33-data-stack-agentes-ia-narrated-v2.mp4"
+      ],
+      "master_cover": [
+        "producao/assets/thumbnails/capa-33-data-stack-agentes-alencar.png"
+      ],
+      "status": "ok"
+    }
+  ],
+  "docs_sync": {
+    "items": [
+      {
+        "md": "apostilas/01-apresentacao-infraestrutura.md",
+        "html_count": 2,
+        "pdf_count": 1,
+        "ebook_cover_count": 1,
+        "status": "ok"
+      },
+      {
+        "md": "apostilas/02-cases-orquestracao-autonoma.md",
+        "html_count": 2,
+        "pdf_count": 1,
+        "ebook_cover_count": 1,
+        "status": "ok"
+      },
+      {
+        "md": "apostilas/03-infra-operacional-ia.md",
+        "html_count": 2,
+        "pdf_count": 1,
+        "ebook_cover_count": 1,
+        "status": "ok"
+      },
+      {
+        "md": "apostilas/04-orquestracao-hibrida-agentes.md",
+        "html_count": 2,
+        "pdf_count": 1,
+        "ebook_cover_count": 1,
+        "status": "ok"
+      },
+      {
+        "md": "apostilas/05-sete-telas-essenciais.md",
+        "html_count": 2,
+        "pdf_count": 1,
+        "ebook_cover_count": 1,
+        "status": "ok"
+      },
+      {
+        "md": "apostilas/06-setup-agente-pessoal.md",
+        "html_count": 2,
+        "pdf_count": 1,
+        "ebook_cover_count": 1,
+        "status": "ok"
+      },
+      {
+        "md": "apostilas/07-18-skills-operacionais.md",
+        "html_count": 2,
+        "pdf_count": 1,
+        "ebook_cover_count": 1,
+        "status": "ok"
+      },
+      {
+        "md": "apostilas/08-rotina-disparo-agente.md",
+        "html_count": 2,
+        "pdf_count": 1,
+        "ebook_cover_count": 1,
+        "status": "ok"
+      },
+      {
+        "md": "apostilas/09-campanhas-automatizadas.md",
+        "html_count": 2,
+        "pdf_count": 1,
+        "ebook_cover_count": 1,
+        "status": "ok"
+      },
+      {
+        "md": "apostilas/10-jornada-completa-afiliado.md",
+        "html_count": 2,
+        "pdf_count": 1,
+        "ebook_cover_count": 1,
+        "status": "ok"
+      },
+      {
+        "md": "apostilas/11-sho-em-producao.md",
+        "html_count": 2,
+        "pdf_count": 2,
+        "ebook_cover_count": 2,
+        "status": "ok"
+      },
+      {
+        "md": "apostilas/12-ioaid-arquitetura-profunda.md",
+        "html_count": 2,
+        "pdf_count": 2,
+        "ebook_cover_count": 2,
+        "status": "ok"
+      },
+      {
+        "md": "apostilas/13-marketplace-skills.md",
+        "html_count": 2,
+        "pdf_count": 2,
+        "ebook_cover_count": 1,
+        "status": "ok"
+      },
+      {
+        "md": "apostilas/14-multi-tenant-whitelabel.md",
+        "html_count": 2,
+        "pdf_count": 2,
+        "ebook_cover_count": 1,
+        "status": "ok"
+      },
+      {
+        "md": "apostilas/15-metricas-roi-ecossistema.md",
+        "html_count": 2,
+        "pdf_count": 2,
+        "ebook_cover_count": 1,
+        "status": "ok"
+      },
+      {
+        "md": "apostilas/16-trilha-fundamental-ia.md",
+        "html_count": 2,
+        "pdf_count": 2,
+        "ebook_cover_count": 1,
+        "status": "ok"
+      },
+      {
+        "md": "apostilas/17-seo-marketing-conteudo-ia.md",
+        "html_count": 2,
+        "pdf_count": 2,
+        "ebook_cover_count": 1,
+        "status": "ok"
+      },
+      {
+        "md": "apostilas/18-seguranca-ofensiva-pentest-agentes-ia.md",
+        "html_count": 2,
+        "pdf_count": 2,
+        "ebook_cover_count": 1,
+        "status": "ok"
+      },
+      {
+        "md": "apostilas/19-monetizacao-avancada-escala.md",
+        "html_count": 2,
+        "pdf_count": 2,
+        "ebook_cover_count": 1,
+        "status": "ok"
+      },
+      {
+        "md": "apostilas/20-trilha-elite-engenharia.md",
+        "html_count": 2,
+        "pdf_count": 2,
+        "ebook_cover_count": 1,
+        "status": "ok"
+      },
+      {
+        "md": "apostilas/21-trilha-master-arquitetura.md",
+        "html_count": 2,
+        "pdf_count": 2,
+        "ebook_cover_count": 1,
+        "status": "ok"
+      },
+      {
+        "md": "apostilas/22-trilha-master-mentoria.md",
+        "html_count": 2,
+        "pdf_count": 2,
+        "ebook_cover_count": 1,
+        "status": "ok"
+      },
+      {
+        "md": "apostilas/23-curso-rag-pratico.md",
+        "html_count": 2,
+        "pdf_count": 2,
+        "ebook_cover_count": 1,
+        "status": "ok"
+      },
+      {
+        "md": "apostilas/24-curso-agents-langgraph.md",
+        "html_count": 2,
+        "pdf_count": 2,
+        "ebook_cover_count": 1,
+        "status": "ok"
+      },
+      {
+        "md": "apostilas/25-curso-prompt-engineering.md",
+        "html_count": 2,
+        "pdf_count": 2,
+        "ebook_cover_count": 1,
+        "status": "ok"
+      },
+      {
+        "md": "apostilas/26-curso-vector-db.md",
+        "html_count": 2,
+        "pdf_count": 2,
+        "ebook_cover_count": 1,
+        "status": "ok"
+      },
+      {
+        "md": "apostilas/27-curso-voice-ai.md",
+        "html_count": 2,
+        "pdf_count": 2,
+        "ebook_cover_count": 1,
+        "status": "ok"
+      },
+      {
+        "md": "apostilas/28-curso-multimodal-rag.md",
+        "html_count": 2,
+        "pdf_count": 2,
+        "ebook_cover_count": 1,
+        "status": "ok"
+      },
+      {
+        "md": "apostilas/29-ai-to-ai-protocol.md",
+        "html_count": 2,
+        "pdf_count": 2,
+        "ebook_cover_count": 1,
+        "status": "ok"
+      },
+      {
+        "md": "apostilas/30-federacao-zero-trust.md",
+        "html_count": 2,
+        "pdf_count": 2,
+        "ebook_cover_count": 1,
+        "status": "ok"
+      },
+      {
+        "md": "apostilas/31-fabrica-conteudo-ia.md",
+        "html_count": 2,
+        "pdf_count": 2,
+        "ebook_cover_count": 1,
+        "status": "ok"
+      },
+      {
+        "md": "apostilas/32-pricing-ia-2026.md",
+        "html_count": 2,
+        "pdf_count": 2,
+        "ebook_cover_count": 1,
+        "status": "ok"
+      },
+      {
+        "md": "apostilas/33-data-stack-agentes-ia.md",
+        "html_count": 2,
+        "pdf_count": 2,
+        "ebook_cover_count": 1,
+        "status": "ok"
+      },
+      {
+        "md": "apostilas/34-deploy-continuo-agentes-ia.md",
+        "html_count": 2,
+        "pdf_count": 2,
+        "ebook_cover_count": 1,
+        "status": "ok"
+      },
+      {
+        "md": "apostilas/35-marketing-conversacional-ia.md",
+        "html_count": 2,
+        "pdf_count": 2,
+        "ebook_cover_count": 1,
+        "status": "ok"
+      },
+      {
+        "md": "apostilas/36-comunidade-engajamento-ia.md",
+        "html_count": 1,
+        "pdf_count": 1,
+        "ebook_cover_count": 1,
+        "status": "ok"
+      }
+    ],
+    "ok_count": 36,
+    "incomplete_count": 0
+  },
+  "summary": {
+    "onda47_ok": 16,
+    "onda47_total": 16,
+    "onda49_ok": 19,
+    "onda49_total": 19,
+    "docs_ok": 36,
+    "docs_total": 36
+  }
+}
