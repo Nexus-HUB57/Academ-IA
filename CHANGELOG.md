@@ -2,13 +2,57 @@
 title: "CHANGELOG · Academ'IA"
 description: "Histórico de versões da Academ'IA · HUB de Conhecimento & Sabedoria"
 tags: [changelog, versionamento, historico, academia]
-version: 1.6.4
+version: 1.6.5
 last_updated: 2026-07-24
 ---
 
 # 📜 CHANGELOG · Academ'IA
 
 > Histórico de versões do HUB Academ'IA — Nexus Affil'IA'te. Segue **Semantic Versioning**: MAJOR (breaking), MINOR (compatível, novo asset), PATCH (correções, polish).
+
+---
+
+## [1.6.5] — 2026-07-24 · "5 índices navegáveis para áreas sem navegação estruturada"
+
+### 🆕 Adicionado (5 índices navegáveis, ~38KB)
+
+5 novos documentos `INDEX.md` para áreas que já tinham README mas não tinham
+índice navegável. Complementa v1.6.4 (que criou índices para hubs, playbooks, sync).
+
+- `tutoriais/INDEX.md` (7.4KB): índice dos 36 tutoriais práticos com
+  filtros por nível (🥉🥈🥇💎), por necessidade imediata, e por duração.
+  Diferente do `tutoriais/README.md` (que é visão editorial por nível) — este
+  foca em "encontrar o tutorial certo em <30s" via caso de uso concreto.
+
+- `treinamentos/INDEX.md` (6.3KB): índice dos 9 workshops estruturados
+  com filtros por nível, persona mentora (Ive/Alencar/Dupla), caso de uso
+  e mês de calendário. Documenta sequências recomendadas e pré-requisitos.
+
+- `cursos/INDEX.md` (8.6KB): panorama das 4 trilhas (Fundamental, Agente,
+  Master, Elite) com carga horária, dificuldades, mapeamento de cursos
+  e versões alternativas. Inclui trilha de progressão recomendada e
+  mapeamento para certificações (CON/CEN/CEN+/MAS+/CNX).
+
+- `producao/roteiros/INDEX.md` (7.5KB): índice dos 38 roteiros organizados
+  por onda, trilha, persona, status de produção. Distingue versões
+  revisadas (-roteiro-revisado.md) e roteiros da Onda 47 (filosófica).
+
+- `marca/INDEX.md` (8.4KB): índice da pasta de marca com personas oficiais
+  (Alencar, Ive, Dupla), áudios canônicos (source of truth), assets
+  visuais, registry de vozes. Resolve ambiguidade entre múltiplos
+  documentos legacy (OFFICIAL_VOICES.md, VOICES.md, VOZES-OFICIAIS.md).
+
+### 📋 Contexto
+
+Esta versão foi criada por Mavis Agent após:
+1. `git fetch origin` → confirmado sincronizado (zero commits remotos pendentes)
+2. Auditoria de 25 diretórios procurando por gaps de navegação estruturada
+3. Identificação de 5 áreas com README mas sem INDEX navegável
+4. Coexistência segura: cada INDEX.md documenta explicitamente que é
+   diferente/complementar ao README.md existente
+
+**Zero sobrescrita, zero duplicação, zero exclusão, zero conflito.**
+v1.6.4 (3 índices) + v1.6.5 (5 índices) = 8 áreas com navegação navegável.
 
 ---
 
