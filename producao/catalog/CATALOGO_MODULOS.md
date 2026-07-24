@@ -1,7 +1,7 @@
 # 📚 Catálogo de Módulos — AcademIA
 
 **Nexus Affil'IA'te · MMN_IA · 2026**
-**Status atualizado:** 2026-07-15 · v2.1 (Onda 49 — 15 vídeos full)
+**Status atualizado:** 2026-07-24 · v2.4 (catálogo sincronizado com publish plan e fila real de upload)
 
 Catálogo oficial de todos os módulos de vídeo-aulas com status de produção.
 
@@ -11,17 +11,17 @@ Catálogo oficial de todos os módulos de vídeo-aulas com status de produção.
 
 | Métrica | Valor |
 |---------|-------|
-| Total de módulos | 16 (4 Fund · 4 Agente · 4 Master · 4 Elite) |
-| Módulos com roteiro | **16/16 (100%)** |
-| Módulos com roteiro revisado | 16/16 (100%) |
-| Módulos com TTS/áudio completo | **15/16 (94%)** — 00 com 7 cenas WAV; 01-14 com TTS PT-BR (Onda 49) |
-| Módulos com motion-graphics slides | **15/16 (94%)** — 4 PNGs 1280x720 por vídeo |
-| Módulos com vídeo full (19-30s, Onda 49) | **15/16 (94%)** — H.264+AAC, TTS voice-cloned PT-BR |
-| Teasers publicados (5-10s) | 6 (00, 05, 07, master-otim, elite-fed, hero) |
-| Módulos no publish_plan.json | 16/16 (100%) |
-| Thumbnails 2K geradas | 9 (00, 01, 02, 03, 04, 05, 06, 07, 08) |
-| Thumbnails YouTube | 15 (00-14) |
-| Módulos publicados no YouTube | 0/16 (0%) — aguardando upload PRIVATE→unlisted |
+| Total de módulos | 15 (4 Fund · 4 Agente · 4 Master · 3 Elite) |
+| Módulos com roteiro | **15/15 (100%)** |
+| Módulos com roteiro revisado | 15/15 (100%) |
+| Módulos com slides de curso | **15/15 (100%)** |
+| Módulos com HTML/PDF de curso | **15/15 (100%)** |
+| Módulos no `publish_plan.json` | **15/15 (100%)** |
+| Módulos publicados no YouTube | **10/15 (67%)** |
+| Módulos na fila pronta de upload | **5/15 (33%)** |
+| Thumbnails YouTube | **15/15 (100%)** |
+| Descrições YouTube `.txt` | **15/15 (100%)** |
+| Bloqueio externo atual | limite de upload do canal do YouTube (codes 09-13) |
 
 ---
 
@@ -40,8 +40,8 @@ Catálogo oficial de todos os módulos de vídeo-aulas com status de produção.
   - `AcademIA/producao/roteiros/00-boas-vindas-ive.md` (Ive solo, 8 min, 5 cenas)
 - **Slides:** `00-boas-vindas-slides.md` (referência)
 - **Áudio TTS pronto:** 7 cenas WAV em `cursos/fundamental/00-boas-vindas-cena{1..7}.wav` (21s + 60s + 47s + 38s + 43s + 28s + 23s = 261s ≈ 4min21s)
-- **Teaser publicado:** `videos/video-00-boas-vindas.mp4` (5.8s)
-- **Status:** 🟢 Roteiro + áudio + teaser. **Pendente:** vídeo full 60-140s com motion-graphics
+- **Teaser local:** `video-00-boas-vindas.mp4` (apoio de campanha)
+- **Status:** 🟢 Upload concluído no YouTube. Vídeo principal já publicado; assets locais seguem como referência editorial e operacional.
 - **Publish plan:** ✅ em `youtube/publish_plan.json`
 - **Thumbnail:** `thumb-00-boas-vindas.png` (2K) + `youtube/thumbnails_yt/00-boas-vindas-a-academia-nexus.jpg`
 
@@ -54,8 +54,8 @@ Catálogo oficial de todos os módulos de vídeo-aulas com status de produção.
   - `AcademIA/cursos/fundamental/01-entendendo-ioaid-roteiro.md`
   - `AcademIA/cursos/fundamental/01-entendendo-ioaid-roteiro-revisado.md`
 - **Slides:** `01-entendendo-ioaid-slides.md`
-- **Teasers:** `video-01-ioaid` (em `youtube/videos_teaser/`)
-- **Status:** 🟡 Roteiro pronto, sem áudio. **Pendente:** TTS + vídeo full
+- **Teaser local:** `video-01-ioaid` (apoio operacional; vídeo principal já publicado)
+- **Status:** 🟢 Upload concluído no YouTube. Vídeo principal já publicado; teaser e thumbnail permanecem como apoio operacional.
 - **Publish plan:** ✅ em `youtube/publish_plan.json`
 - **Thumbnails:** `thumb-01-ioaid.png` + `.webp` + `youtube/thumbnails_yt/01-entendendo-o-ioaid.jpg`
 
@@ -66,7 +66,7 @@ Catálogo oficial de todos os módulos de vídeo-aulas com status de produção.
   - `AcademIA/videos/roteiros/02-sho-sistema-imune-roteiro.md` (176 linhas)
   - `AcademIA/cursos/fundamental/02-sistema-sho-roteiro.md`
 - **Slides:** `02-sistema-sho-slides.md`
-- **Status:** 🟡 Roteiro pronto, sem áudio. **Pendente:** TTS + vídeo full
+- **Status:** 🟢 Upload concluído no YouTube. Vídeo principal já publicado; teaser e thumbnail permanecem como apoio operacional.
 - **Publish plan:** ✅ em `youtube/publish_plan.json`
 - **Thumbnails:** `thumb-02-sho.png` + `youtube/thumbnails_yt/02-o-sistema-sho-self-healing-orchestrator.jpg`
 
@@ -78,7 +78,7 @@ Catálogo oficial de todos os módulos de vídeo-aulas com status de produção.
   - `AcademIA/videos/roteiros/03-painel-afiliado-visao-geral-roteiro.md` (92 linhas — variante)
   - `AcademIA/cursos/fundamental/03-painel-afiliado-roteiro.md`
 - **Slides:** `03-painel-afiliado-slides.md`
-- **Status:** 🟡 Roteiro pronto, sem áudio. **Pendente:** TTS + vídeo full
+- **Status:** 🟢 Upload concluído no YouTube. Vídeo principal já publicado; teaser e thumbnail permanecem como apoio operacional.
 - **Publish plan:** ✅ em `youtube/publish_plan.json`
 - **Thumbnails:** `thumb-03-painel.png` + `.webp` + `youtube/thumbnails_yt/03-painel-do-afiliado-visao-geral-da-operacao.jpg`
 
@@ -182,7 +182,7 @@ Catálogo oficial de todos os módulos de vídeo-aulas com status de produção.
 
 ---
 
-## 🔴 Nível Elite (4 módulos)
+## 🔴 Nível Elite (3 módulos)
 
 *Implementações corporativas e federação*
 
@@ -224,7 +224,7 @@ Catálogo oficial de todos os módulos de vídeo-aulas com status de produção.
 - **Status:** ✅ Material pronto, falta clonagem de voz TTS para vídeos full
 
 ### Sir. Nexus Alencar
-- **Módulos como persona principal:** 8 (00 técnico, 02, 04, 05, 06, 07, 08, 10, 11, 13)
+- **Módulos como persona principal:** 10 (00 técnico, 02, 04, 05, 06, 07, 08, 10, 11, 13)
 - **Módulos como co-persona (Dupla):** 6 (mesmos da Ive)
 - **Vozes disponíveis:** `voz_sir_nexus_alencar.wav` (1.4 MB, 29.2s) + `official_voice.wav` (1.4 MB) + 7 áudios cena 00
 - **Status:** ✅ Material pronto, WAVs oficiais disponíveis para clonagem
@@ -236,29 +236,37 @@ Catálogo oficial de todos os módulos de vídeo-aulas com status de produção.
 
 ---
 
-## 🎯 Roadmap de Produção (Onda 49+)
+## 🎯 Roadmap de Produção (histórico + handoff atual)
 
-### 🎬 Sprint 1 — Vídeos full 60-140s
-**Meta:** 16 vídeos full publicados como PRIVATE no YouTube
+### 📌 Estado canônico em 2026-07-24
+- Publicados no YouTube: **10** módulos (`00-08`, `14`).
+- Fila pronta e bloqueada apenas por limite do canal: **09-13**.
+- `youtube/publish_plan.json` é a fonte canônica de publicação.
+- `youtube/upload_batch_ready.json` contém somente os próximos itens elegíveis para nova tentativa.
+- `youtube/teaser_aliases.json` documenta divergências de nomenclatura entre teaser local e slug canônico.
+
+
+### 🎬 Sprint 1 — Histórico da composição de vídeos full
+**Meta histórica:** 15 vídeos full previstos no publish plan canônico
 
 - [ ] **00-boas-vindas** — compor motion-graphics + concatenar áudios cena{1..7} WAVs
-- [ ] **01 a 14** — gerar TTS voice-cloned (15 roteiros × ~2-3 cenas) + slides + render
+- [ ] **01 a 14** — gerar TTS voice-cloned (14 roteiros × ~2-3 cenas) + slides + render
 - [ ] Padronizar loudnorm I=-16 LUFS, TP=-1.5, LRA=11
 - [ ] Fade in 0.5s / fade out 0.8s
 - [ ] H.264 1280x720 @ 25fps CRF 23, AAC 192kbps
 
-### 🖼️ Sprint 2 — Motion-graphics slides
-- [ ] Implementar `scripts/youtube/compose_videos_academia.py` com 16 trilhas
+### 🖼️ Sprint 2 — Histórico dos motion-graphics
+- [ ] Implementar `scripts/youtube/compose_videos_academia.py` com 15 trilhas canônicas
 - [ ] Pilares visuais: BG_DARK, ACCENT_TEAL, ACCENT_GOLD
 - [ ] Pill "TRILHA {SÉRIE}" + barra superior 4px + barra lateral 8px
 - [ ] Marca d'água `ACADEM IA NEXUS` + rodapé `oneverso.com.br/academia`
 
-### 📤 Sprint 3 — Upload YouTube (PRIVATE → unlisted)
+### 📤 Sprint 3 — Estado atual da publicação YouTube
 - [ ] Usar `scripts/youtube/upload_academia_youtube.py` com `ready: true`
 - [ ] `privacy_status: unlisted` após aprovação humana
 - [ ] Popular `youtube_video_id` no DB `academia_lessons`
 
-### 🚀 Sprint 4 — Deploy VPS
+### 🚀 Sprint 4 — Handoff de deploy / integração
 - [ ] `scp video-*-full.mp4 root@143.95.213.237:/var/www/oneverso/current/public/academia/videos/`
 - [ ] `sudo -u postgres psql nexus_prod -c "UPDATE academia_lessons SET video_url=..., duration_s=...;"`
 - [ ] Validar URLs no frontend (https://oneverso.com.br/academia/lesson/fund-00, etc.)

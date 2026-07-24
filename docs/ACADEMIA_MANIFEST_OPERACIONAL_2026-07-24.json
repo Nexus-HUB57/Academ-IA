@@ -1,0 +1,318 @@
+{
+  "generated_on": "2026-07-24",
+  "publish_plan_total": 15,
+  "uploaded_total": 10,
+  "ready_total": 5,
+  "upload_limit_errors": 72,
+  "invalid_description_errors": 1,
+  "modules": [
+    {
+      "code": "00",
+      "series": "Fundamentos",
+      "title": "Boas-vindas à AcademIA Nexus",
+      "status": "uploaded",
+      "youtube_title": "AcademIA Nexus • 00 | Boas-vindas à AcademIA Nexus",
+      "video_file": "video-00-boas-vindas-full.mp4",
+      "thumbnail_file": "00-boas-vindas-a-academia-nexus.png",
+      "db_lessons": [
+        "fund-00"
+      ],
+      "teaser_alias": {
+        "code": "00",
+        "slug": "video-00-boas-vindas-a-academia-nexus",
+        "canonical_teaser_file": "video-00-boas-vindas-a-academia-nexus.mp4",
+        "actual_teaser_file": "",
+        "actual_exists": false,
+        "canonical_exists": false,
+        "status": "missing"
+      }
+    },
+    {
+      "code": "01",
+      "series": "Fundamentos",
+      "title": "Entendendo o IOAID",
+      "status": "uploaded",
+      "youtube_title": "AcademIA Nexus • 01 | Entendendo o IOAID",
+      "video_file": "video-01-ioaid.mp4",
+      "thumbnail_file": "01-entendendo-o-ioaid.png",
+      "db_lessons": [
+        "fund-01"
+      ],
+      "teaser_alias": {
+        "code": "01",
+        "slug": "video-01-entendendo-o-ioaid",
+        "canonical_teaser_file": "video-01-entendendo-o-ioaid.mp4",
+        "actual_teaser_file": "",
+        "actual_exists": false,
+        "canonical_exists": false,
+        "status": "missing"
+      }
+    },
+    {
+      "code": "02",
+      "series": "Fundamentos",
+      "title": "O Sistema SHO (Self-Healing Orchestrator)",
+      "status": "uploaded",
+      "youtube_title": "AcademIA Nexus • 02 | O Sistema SHO (Self-Healing Orchestrator)",
+      "video_file": "video-02-sho.mp4",
+      "thumbnail_file": "02-o-sistema-sho-self-healing-orchestrator.png",
+      "db_lessons": [
+        "fund-02"
+      ],
+      "teaser_alias": {
+        "code": "02",
+        "slug": "video-02-o-sistema-sho-self-healing-orchestrator",
+        "canonical_teaser_file": "video-02-o-sistema-sho-self-healing-orchestrator.mp4",
+        "actual_teaser_file": "",
+        "actual_exists": false,
+        "canonical_exists": false,
+        "status": "missing"
+      }
+    },
+    {
+      "code": "03",
+      "series": "Fundamentos",
+      "title": "Painel do Afiliado — Visão Geral da Operação",
+      "status": "uploaded",
+      "youtube_title": "AcademIA Nexus • 03 | Painel do Afiliado — Visão Geral da Operação",
+      "video_file": "video-03-painel.mp4",
+      "thumbnail_file": "03-painel-do-afiliado-visao-geral-da-operacao.png",
+      "db_lessons": [
+        "fund-03"
+      ],
+      "teaser_alias": {
+        "code": "03",
+        "slug": "video-03-painel-do-afiliado-visao-geral-da-operacao",
+        "canonical_teaser_file": "video-03-painel-do-afiliado-visao-geral-da-operacao.mp4",
+        "actual_teaser_file": "",
+        "actual_exists": false,
+        "canonical_exists": false,
+        "status": "missing"
+      }
+    },
+    {
+      "code": "04",
+      "series": "Agentes",
+      "title": "Construindo Seu Primeiro Agente em 4 Minutos",
+      "status": "uploaded",
+      "youtube_title": "AcademIA Nexus • 04 | Construindo Seu Primeiro Agente em 4 Minutos",
+      "video_file": "mod00-primeiro-agente.mp4",
+      "thumbnail_file": "04-construindo-seu-primeiro-agente-em-4-minutos.png",
+      "db_lessons": [
+        "agent-00"
+      ],
+      "teaser_alias": {
+        "code": "04",
+        "slug": "video-04-construindo-seu-primeiro-agente-em-4-minutos",
+        "canonical_teaser_file": "video-04-construindo-seu-primeiro-agente-em-4-minutos.mp4",
+        "actual_teaser_file": "video-04-seu-primeiro-agente.mp4",
+        "actual_exists": true,
+        "canonical_exists": false,
+        "status": "mapped_alias"
+      }
+    },
+    {
+      "code": "05",
+      "series": "Agentes",
+      "title": "Skills Essenciais — Copywriter + Audience-Segmenter",
+      "status": "uploaded",
+      "youtube_title": "AcademIA Nexus • 05 | Skills Essenciais — Copywriter + Audience-Segmenter",
+      "video_file": "mod01-skills-essenciais.mp4",
+      "thumbnail_file": "05-skills-essenciais-copywriter-audience-segmenter.png",
+      "db_lessons": [
+        "agent-01"
+      ],
+      "teaser_alias": {
+        "code": "05",
+        "slug": "video-05-skills-essenciais-copywriter-audience-segmenter",
+        "canonical_teaser_file": "video-05-skills-essenciais-copywriter-audience-segmenter.mp4",
+        "actual_teaser_file": "video-05-skills-essenciais.mp4",
+        "actual_exists": true,
+        "canonical_exists": false,
+        "status": "mapped_alias"
+      }
+    },
+    {
+      "code": "06",
+      "series": "Agentes",
+      "title": "Disparando no WhatsApp em Escala",
+      "status": "uploaded",
+      "youtube_title": "AcademIA Nexus • 06 | Disparando no WhatsApp em Escala",
+      "video_file": "mod02-disparo-whatsapp.mp4",
+      "thumbnail_file": "06-disparando-no-whatsapp-em-escala.png",
+      "db_lessons": [
+        "agent-02"
+      ],
+      "teaser_alias": {
+        "code": "06",
+        "slug": "video-06-disparando-no-whatsapp-em-escala",
+        "canonical_teaser_file": "video-06-disparando-no-whatsapp-em-escala.mp4",
+        "actual_teaser_file": "video-06-disparo-no-whatsapp-em-escala.mp4",
+        "actual_exists": true,
+        "canonical_exists": false,
+        "status": "mapped_alias"
+      }
+    },
+    {
+      "code": "07",
+      "series": "Agentes",
+      "title": "Judge Revisor — A IA que Decide por Você",
+      "status": "uploaded",
+      "youtube_title": "AcademIA Nexus • 07 | Judge Revisor — A IA que Decide por Você",
+      "video_file": "mod03-judge-revisor.mp4",
+      "thumbnail_file": "07-judge-revisor-a-ia-que-decide-por-voce.png",
+      "db_lessons": [
+        "agent-03"
+      ],
+      "teaser_alias": {
+        "code": "07",
+        "slug": "video-07-judge-revisor-a-ia-que-decide-por-voce",
+        "canonical_teaser_file": "video-07-judge-revisor-a-ia-que-decide-por-voce.mp4",
+        "actual_teaser_file": "video-07-judge-revisor.mp4",
+        "actual_exists": true,
+        "canonical_exists": false,
+        "status": "mapped_alias"
+      }
+    },
+    {
+      "code": "08",
+      "series": "Master",
+      "title": "Otimização de Conversão — A Matemática da Receita",
+      "status": "uploaded",
+      "youtube_title": "AcademIA Nexus • 08 | Otimização de Conversão — A Matemática da Receita",
+      "video_file": "video-master-otimizacao.mp4",
+      "thumbnail_file": "08-otimizacao-de-conversao-a-matematica-da-receita.png",
+      "db_lessons": [],
+      "teaser_alias": {
+        "code": "08",
+        "slug": "video-08-otimizacao-de-conversao-a-matematica-da-receita",
+        "canonical_teaser_file": "video-08-otimizacao-de-conversao-a-matematica-da-receita.mp4",
+        "actual_teaser_file": "video-08-otimizacao-de-conversao.mp4",
+        "actual_exists": true,
+        "canonical_exists": false,
+        "status": "mapped_alias"
+      }
+    },
+    {
+      "code": "09",
+      "series": "Master",
+      "title": "Funis e Lifecycle — O Sistema Completo",
+      "status": "ready_to_upload",
+      "youtube_title": "AcademIA Nexus • 09 | Funis e Lifecycle — O Sistema Completo",
+      "video_file": "video-09-funis-e-lifecycle.mp4",
+      "thumbnail_file": "09-funis-e-lifecycle-o-sistema-completo.png",
+      "db_lessons": [],
+      "teaser_alias": {
+        "code": "09",
+        "slug": "video-09-funis-e-lifecycle-o-sistema-completo",
+        "canonical_teaser_file": "video-09-funis-e-lifecycle-o-sistema-completo.mp4",
+        "actual_teaser_file": "video-09-funis-e-lifecycle.mp4",
+        "actual_exists": true,
+        "canonical_exists": false,
+        "status": "mapped_alias"
+      }
+    },
+    {
+      "code": "10",
+      "series": "Master",
+      "title": "A/B Testing com Judge — Ciência da Experimentação",
+      "status": "ready_to_upload",
+      "youtube_title": "AcademIA Nexus • 10 | A/B Testing com Judge — Ciência da Experimentação",
+      "video_file": "video-10-a-b-testing-com-judge.mp4",
+      "thumbnail_file": "10-a-b-testing-com-judge-ciencia-da-experimentacao.png",
+      "db_lessons": [],
+      "teaser_alias": {
+        "code": "10",
+        "slug": "video-10-a-b-testing-com-judge-ciencia-da-experimentacao",
+        "canonical_teaser_file": "video-10-a-b-testing-com-judge-ciencia-da-experimentacao.mp4",
+        "actual_teaser_file": "video-10-a-b-testing-com-judge.mp4",
+        "actual_exists": true,
+        "canonical_exists": false,
+        "status": "mapped_alias"
+      }
+    },
+    {
+      "code": "11",
+      "series": "Master",
+      "title": "Análise de Coortes e Churn — A Arte de Reter",
+      "status": "ready_to_upload",
+      "youtube_title": "AcademIA Nexus • 11 | Análise de Coortes e Churn — A Arte de Reter",
+      "video_file": "video-11-coortes-e-churn.mp4",
+      "thumbnail_file": "11-analise-de-coortes-e-churn-a-arte-de-reter.png",
+      "db_lessons": [],
+      "teaser_alias": {
+        "code": "11",
+        "slug": "video-11-analise-de-coortes-e-churn-a-arte-de-reter",
+        "canonical_teaser_file": "video-11-analise-de-coortes-e-churn-a-arte-de-reter.mp4",
+        "actual_teaser_file": "video-11-coortes-e-churn.mp4",
+        "actual_exists": true,
+        "canonical_exists": false,
+        "status": "mapped_alias"
+      }
+    },
+    {
+      "code": "12",
+      "series": "Elite",
+      "title": "Blueprints Elite — O Jogo do Top 10%",
+      "status": "ready_to_upload",
+      "youtube_title": "AcademIA Nexus • 12 | Blueprints Elite — O Jogo do Top 10%",
+      "video_file": "video-12-blueprints-elite.mp4",
+      "thumbnail_file": "12-blueprints-elite-o-jogo-do-top-10.png",
+      "db_lessons": [],
+      "teaser_alias": {
+        "code": "12",
+        "slug": "video-12-blueprints-elite-o-jogo-do-top-10",
+        "canonical_teaser_file": "video-12-blueprints-elite-o-jogo-do-top-10.mp4",
+        "actual_teaser_file": "video-12-blueprints-elite.mp4",
+        "actual_exists": true,
+        "canonical_exists": false,
+        "status": "mapped_alias"
+      }
+    },
+    {
+      "code": "13",
+      "series": "Elite",
+      "title": "Multi-Tenant e White-Label na Prática",
+      "status": "ready_to_upload",
+      "youtube_title": "AcademIA Nexus • 13 | Multi-Tenant e White-Label na Prática",
+      "video_file": "video-13-multi-tenant-e-white-label.mp4",
+      "thumbnail_file": "13-multi-tenant-e-white-label-na-pratica.png",
+      "db_lessons": [],
+      "teaser_alias": {
+        "code": "13",
+        "slug": "video-13-multi-tenant-e-white-label-na-pratica",
+        "canonical_teaser_file": "video-13-multi-tenant-e-white-label-na-pratica.mp4",
+        "actual_teaser_file": "video-13-multi-tenant-e-white-label.mp4",
+        "actual_exists": true,
+        "canonical_exists": false,
+        "status": "mapped_alias"
+      }
+    },
+    {
+      "code": "14",
+      "series": "Elite",
+      "title": "Federação de Agentes Zero-Trust",
+      "status": "uploaded",
+      "youtube_title": "AcademIA Nexus • 14 | Federação de Agentes Zero-Trust",
+      "video_file": "video-elite-federacao.mp4",
+      "thumbnail_file": "14-federacao-de-agentes-zero-trust.png",
+      "db_lessons": [],
+      "teaser_alias": {
+        "code": "14",
+        "slug": "video-14-federacao-de-agentes-zero-trust",
+        "canonical_teaser_file": "video-14-federacao-de-agentes-zero-trust.mp4",
+        "actual_teaser_file": "video-14-federacao-de-agentes-zero-trust.mp4",
+        "actual_exists": true,
+        "canonical_exists": true,
+        "status": "exact"
+      }
+    }
+  ],
+  "ready_queue_codes": [
+    "09",
+    "10",
+    "11",
+    "12",
+    "13"
+  ]
+}
