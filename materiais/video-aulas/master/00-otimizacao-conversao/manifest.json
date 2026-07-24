@@ -1,0 +1,20 @@
+{
+  "code": "08",
+  "title": "Otimização de Conversão — A Matemática da Receita",
+  "track": "master",
+  "persona": "dupla",
+  "target_duration_s": 135,
+  "approved_cover": "producao/assets/thumbnails/capa-08-otimizacao-conversao-dupla.png",
+  "approved_thumb": "producao/assets/thumbnails/thumb-08-otimizacao.png",
+  "slides_source": "cursos/master/00-otimizacao-conversao-slides.md",
+  "course_script": "cursos/master/00-otimizacao-conversao-roteiro.md",
+  "video_script": "videos/roteiros/08-otimizacao-conversao-master-roteiro.md",
+  "legacy_audio": "videos/audio/full_08_dupla.wav",
+  "legacy_video": "videos/video-08-otimizacao-de-conversao-full.mp4",
+  "youtube_description": "youtube/descriptions/08-otimizacao-de-conversao-a-matematica-da-receita.txt",
+  "final_video_name": "video-08-08-otimizacao-de-conversao-a-matematica-da-receita-master.mp4",
+  "opening_video_name": "video-08-opening.mp4",
+  "new_audio_name": "rebuild_08_narracao_ptbr.wav",
+  "workspace_dir": "materiais/video-aulas/master/00-otimizacao-conversao",
+  "status": "pronto_para_rebuild"
+}

@@ -1,0 +1,20 @@
+{
+  "code": "10",
+  "title": "A/B Testing com Judge — Ciência da Experimentação",
+  "track": "master",
+  "persona": "dupla",
+  "target_duration_s": 145,
+  "approved_cover": "producao/assets/thumbnails/capa-10-ab-testing-judge-dupla.png",
+  "approved_thumb": "producao/assets/thumbnails/thumb-10-ab-test-judge.webp",
+  "slides_source": "cursos/master/02-ab-test-judge-slides.md",
+  "course_script": "cursos/master/02-ab-test-judge-roteiro.md",
+  "video_script": "videos/roteiros/10-ab-test-judge-roteiro.md",
+  "legacy_audio": "videos/audio/full_10_dupla.wav",
+  "legacy_video": "videos/video-10-a-b-testing-com-judge-full.mp4",
+  "youtube_description": "youtube/descriptions/10-a-b-testing-com-judge-ciencia-da-experimentacao.txt",
+  "final_video_name": "video-10-10-a-b-testing-com-judge-ciencia-da-experimentacao-master.mp4",
+  "opening_video_name": "video-10-opening.mp4",
+  "new_audio_name": "rebuild_10_narracao_ptbr.wav",
+  "workspace_dir": "materiais/video-aulas/master/02-ab-test-judge",
+  "status": "pronto_para_rebuild"
+}

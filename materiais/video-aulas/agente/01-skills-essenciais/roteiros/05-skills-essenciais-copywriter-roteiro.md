@@ -1,0 +1,1 @@
+../../../../../videos/roteiros/05-skills-essenciais-copywriter-roteiro.md

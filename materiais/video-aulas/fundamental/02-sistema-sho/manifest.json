@@ -1,0 +1,20 @@
+{
+  "code": "02",
+  "title": "O Sistema SHO (Self-Healing Orchestrator)",
+  "track": "fundamental",
+  "persona": "alencar",
+  "target_duration_s": 95,
+  "approved_cover": "producao/assets/thumbnails/capa-02-sistema-sho-dupla.png",
+  "approved_thumb": "producao/assets/thumbnails/thumb-02-sho.png",
+  "slides_source": "cursos/fundamental/02-sistema-sho-slides.md",
+  "course_script": "cursos/fundamental/02-sistema-sho-roteiro.md",
+  "video_script": "videos/roteiros/02-sho-sistema-imune-roteiro.md",
+  "legacy_audio": "videos/audio/full_02_alencar.wav",
+  "legacy_video": "videos/video-02-o-sistema-sho-full.mp4",
+  "youtube_description": "youtube/descriptions/02-o-sistema-sho-self-healing-orchestrator.txt",
+  "final_video_name": "video-02-02-o-sistema-sho-self-healing-orchestrator-master.mp4",
+  "opening_video_name": "video-02-opening.mp4",
+  "new_audio_name": "rebuild_02_narracao_ptbr.wav",
+  "workspace_dir": "materiais/video-aulas/fundamental/02-sistema-sho",
+  "status": "pronto_para_rebuild"
+}

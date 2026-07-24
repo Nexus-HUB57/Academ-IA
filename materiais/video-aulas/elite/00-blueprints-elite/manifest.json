@@ -1,0 +1,20 @@
+{
+  "code": "12",
+  "title": "Blueprints Elite — O Jogo do Top 10%",
+  "track": "elite",
+  "persona": "dupla",
+  "target_duration_s": 155,
+  "approved_cover": "producao/assets/thumbnails/capa-12-blueprints-elite-dupla.png",
+  "approved_thumb": "producao/assets/thumbnails/thumb-12-blueprints-elite.webp",
+  "slides_source": "cursos/elite/00-blueprints-elite-slides.md",
+  "course_script": "cursos/elite/00-blueprints-elite-roteiro.md",
+  "video_script": "videos/roteiros/12-blueprints-elite-roteiro.md",
+  "legacy_audio": "videos/audio/full_12_dupla.wav",
+  "legacy_video": "videos/video-12-blueprints-elite-full.mp4",
+  "youtube_description": "youtube/descriptions/12-blueprints-elite-o-jogo-do-top-10.txt",
+  "final_video_name": "video-12-12-blueprints-elite-o-jogo-do-top-10-master.mp4",
+  "opening_video_name": "video-12-opening.mp4",
+  "new_audio_name": "rebuild_12_narracao_ptbr.wav",
+  "workspace_dir": "materiais/video-aulas/elite/00-blueprints-elite",
+  "status": "pronto_para_rebuild"
+}

@@ -1,0 +1,20 @@
+{
+  "code": "14",
+  "title": "Federação de Agentes Zero-Trust",
+  "track": "elite",
+  "persona": "dupla",
+  "target_duration_s": 165,
+  "approved_cover": "producao/assets/thumbnails/capa-14-federacao-agentes-dupla.png",
+  "approved_thumb": "producao/assets/thumbnails/thumb-14-federacao-agentes.webp",
+  "slides_source": "cursos/elite/02-federacao-agentes-slides.md",
+  "course_script": "cursos/elite/02-federacao-agentes-roteiro.md",
+  "video_script": "videos/roteiros/14-federacao-agentes-roteiro.md",
+  "legacy_audio": "videos/audio/full_14_dupla.wav",
+  "legacy_video": "videos/video-14-federacao-de-agentes-full.mp4",
+  "youtube_description": "youtube/descriptions/14-federacao-de-agentes-zero-trust.txt",
+  "final_video_name": "video-14-14-federacao-de-agentes-zero-trust-master.mp4",
+  "opening_video_name": "video-14-opening.mp4",
+  "new_audio_name": "rebuild_14_narracao_ptbr.wav",
+  "workspace_dir": "materiais/video-aulas/elite/02-federacao-agentes",
+  "status": "pronto_para_rebuild"
+}

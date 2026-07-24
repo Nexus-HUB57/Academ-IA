@@ -1,0 +1,20 @@
+{
+  "code": "06",
+  "title": "Disparando no WhatsApp em Escala",
+  "track": "agente",
+  "persona": "alencar",
+  "target_duration_s": 100,
+  "approved_cover": "producao/assets/thumbnails/capa-06-disparo-whatsapp-alencar.png",
+  "approved_thumb": "producao/assets/thumbnails/thumb-06-disparo.png",
+  "slides_source": "cursos/agente/02-disparo-whatsapp-slides.md",
+  "course_script": "cursos/agente/02-disparo-whatsapp-roteiro.md",
+  "video_script": "videos/roteiros/06-disparo-whatsapp-escala-roteiro.md",
+  "legacy_audio": "videos/audio/full_06_alencar.wav",
+  "legacy_video": "videos/video-06-disparo-whatsapp-em-escala-full.mp4",
+  "youtube_description": "youtube/descriptions/06-disparando-no-whatsapp-em-escala.txt",
+  "final_video_name": "video-06-06-disparando-no-whatsapp-em-escala-master.mp4",
+  "opening_video_name": "video-06-opening.mp4",
+  "new_audio_name": "rebuild_06_narracao_ptbr.wav",
+  "workspace_dir": "materiais/video-aulas/agente/02-disparo-whatsapp",
+  "status": "pronto_para_rebuild"
+}

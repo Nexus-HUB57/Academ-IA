@@ -1,0 +1,1 @@
+../../../../../cursos/fundamental/03-painel-afiliado-slides.md

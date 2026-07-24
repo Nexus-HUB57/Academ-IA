@@ -1,0 +1,20 @@
+{
+  "code": "11",
+  "title": "Análise de Coortes e Churn — A Arte de Reter",
+  "track": "master",
+  "persona": "dupla",
+  "target_duration_s": 150,
+  "approved_cover": "producao/assets/thumbnails/capa-11-coortes-churn-dupla.png",
+  "approved_thumb": "producao/assets/thumbnails/thumb-11-coortes-churn.webp",
+  "slides_source": "cursos/master/03-coortes-churn-slides.md",
+  "course_script": "cursos/master/03-coortes-churn-roteiro.md",
+  "video_script": "videos/roteiros/11-coortes-churn-roteiro.md",
+  "legacy_audio": "videos/audio/full_11_dupla.wav",
+  "legacy_video": "videos/video-11-coortes-e-churn-full.mp4",
+  "youtube_description": "youtube/descriptions/11-analise-de-coortes-e-churn-a-arte-de-reter.txt",
+  "final_video_name": "video-11-11-analise-de-coortes-e-churn-a-arte-de-reter-master.mp4",
+  "opening_video_name": "video-11-opening.mp4",
+  "new_audio_name": "rebuild_11_narracao_ptbr.wav",
+  "workspace_dir": "materiais/video-aulas/master/03-coortes-churn",
+  "status": "pronto_para_rebuild"
+}

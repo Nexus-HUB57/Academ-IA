@@ -1,0 +1,20 @@
+{
+  "code": "13",
+  "title": "Multi-Tenant e White-Label na Prática",
+  "track": "elite",
+  "persona": "alencar",
+  "target_duration_s": 160,
+  "approved_cover": "producao/assets/thumbnails/capa-13-multi-tenant-dupla.png",
+  "approved_thumb": "producao/assets/thumbnails/thumb-13-multi-tenant.webp",
+  "slides_source": "cursos/elite/01-multi-tenant-whitelabel-slides.md",
+  "course_script": "cursos/elite/01-multi-tenant-whitelabel-roteiro.md",
+  "video_script": "videos/roteiros/13-multi-tenant-whitelabel-roteiro.md",
+  "legacy_audio": "videos/audio/full_13_dupla.wav",
+  "legacy_video": "videos/video-13-multi-tenant-e-white-label-full.mp4",
+  "youtube_description": "youtube/descriptions/13-multi-tenant-e-white-label-na-pratica.txt",
+  "final_video_name": "video-13-13-multi-tenant-e-white-label-na-pratica-master.mp4",
+  "opening_video_name": "video-13-opening.mp4",
+  "new_audio_name": "rebuild_13_narracao_ptbr.wav",
+  "workspace_dir": "materiais/video-aulas/elite/01-multi-tenant-whitelabel",
+  "status": "pronto_para_rebuild"
+}

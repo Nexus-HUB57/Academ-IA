@@ -1,0 +1,20 @@
+{
+  "code": "01",
+  "title": "Entendendo o IOAID",
+  "track": "fundamental",
+  "persona": "ive",
+  "target_duration_s": 90,
+  "approved_cover": "producao/assets/thumbnails/capa-01-entendendo-ioaid-dupla.png",
+  "approved_thumb": "producao/assets/thumbnails/thumb-01-ioaid.png",
+  "slides_source": "cursos/fundamental/01-entendendo-ioaid-slides.md",
+  "course_script": "cursos/fundamental/01-entendendo-ioaid-roteiro.md",
+  "video_script": "videos/roteiros/01-entendendo-ioaid-roteiro.md",
+  "legacy_audio": "videos/audio/full_01_ive.wav",
+  "legacy_video": "videos/video-01-entendendo-o-ioaid-full.mp4",
+  "youtube_description": "youtube/descriptions/01-entendendo-o-ioaid.txt",
+  "final_video_name": "video-01-01-entendendo-o-ioaid-master.mp4",
+  "opening_video_name": "video-01-opening.mp4",
+  "new_audio_name": "rebuild_01_narracao_ptbr.wav",
+  "workspace_dir": "materiais/video-aulas/fundamental/01-entendendo-ioaid",
+  "status": "pronto_para_rebuild"
+}

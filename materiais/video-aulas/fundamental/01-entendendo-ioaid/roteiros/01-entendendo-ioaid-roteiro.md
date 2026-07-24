@@ -1,0 +1,1 @@
+../../../../../videos/roteiros/01-entendendo-ioaid-roteiro.md

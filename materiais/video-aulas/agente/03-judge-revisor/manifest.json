@@ -1,0 +1,20 @@
+{
+  "code": "07",
+  "title": "Judge Revisor — A IA que Decide por Você",
+  "track": "agente",
+  "persona": "alencar",
+  "target_duration_s": 105,
+  "approved_cover": "producao/assets/thumbnails/capa-07-judge-revisor-alencar.png",
+  "approved_thumb": "producao/assets/thumbnails/thumb-07-judge.png",
+  "slides_source": "cursos/agente/03-judge-revisor-slides.md",
+  "course_script": "cursos/agente/03-judge-revisor-roteiro.md",
+  "video_script": "videos/roteiros/07-judge-revisor-decisoes-roteiro.md",
+  "legacy_audio": "videos/audio/full_07_alencar.wav",
+  "legacy_video": "videos/video-07-judge-revisor-full.mp4",
+  "youtube_description": "youtube/descriptions/07-judge-revisor-a-ia-que-decide-por-voce.txt",
+  "final_video_name": "video-07-07-judge-revisor-a-ia-que-decide-por-voce-master.mp4",
+  "opening_video_name": "video-07-opening.mp4",
+  "new_audio_name": "rebuild_07_narracao_ptbr.wav",
+  "workspace_dir": "materiais/video-aulas/agente/03-judge-revisor",
+  "status": "pronto_para_rebuild"
+}
