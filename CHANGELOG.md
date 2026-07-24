@@ -2,13 +2,41 @@
 title: "CHANGELOG · Academ'IA"
 description: "Histórico de versões da Academ'IA · HUB de Conhecimento & Sabedoria"
 tags: [changelog, versionamento, historico, academia]
-version: 1.6.2
+version: 1.6.3
 last_updated: 2026-07-24
 ---
 
 # 📜 CHANGELOG · Academ'IA
 
 > Histórico de versões do HUB Academ'IA — Nexus Affil'IA'te. Segue **Semantic Versioning**: MAJOR (breaking), MINOR (compatível, novo asset), PATCH (correções, polish).
+
+---
+
+## [1.6.3] — 2026-07-24 · "Simulados oficiais MAS+ e CNX (cobertura completa de certificações)"
+
+### 🆕 Adicionado (2 simulados avançados, ~20KB)
+
+Complementa a cobertura de certificações com simulados para os níveis mais altos:
+
+- `certificacoes/simulado-mas-plus-001.md` (10KB, 15q, 40min, aprovação 73%)
+  Blocos: A/B testing estatístico, coortes/sobrevivência, Judge tuning, mentoria
+
+- `certificacoes/simulado-cnx-001.md` (10KB, 12q, 50min, aprovação 75%)
+  Blocos: arquitetura federada/white-label, governança estratégica, mentoria avançada
+  **Diferencial**: questões dissertativas + múltipla escolha. Avalia RACIOCÍNIO, não memorização.
+  Nível elite da elite: apenas para top 5% da rede.
+
+### 📊 Cobertura Completa de Certificações
+
+| Certificação | Banco | Simulado | Status |
+|---|---|---|---|
+| CON (Operador) | 50q ✅ | 20q ✅ | 100% |
+| CEN (Estrategista) | 60q ✅ | 25q ✅ | 100% |
+| CEN+ (Elite) | 70q ✅ | 20q ✅ | 100% |
+| MAS+ (Master Plus) | — | 15q ✅ | 100% |
+| CNX (Master) | — | 12q ✅ | 100% |
+
+5 de 5 certificações agora têm simulados oficiais.
 
 ---
 
