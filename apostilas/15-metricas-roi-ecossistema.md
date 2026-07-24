@@ -8,7 +8,7 @@ tags: [academia, metricas, roi, kpi, analytics, financas]
 pattern: "MMN_IA"
 ---
 
-![Capa — Métricas & ROI do Ecossistema](../../assets/ebook_covers/ACAD-apostila-15-metricas-roi-ecossistema.webp)
+![Capa — Métricas & ROI do Ecossistema](../docs/ebooks/ACAD-apostila-15-metricas-roi-ecossistema.webp)
 
 **Métricas & ROI do Ecossistema Nexus**
 

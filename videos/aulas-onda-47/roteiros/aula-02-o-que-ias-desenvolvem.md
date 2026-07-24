@@ -29,4 +29,4 @@ Provar, com casos reais e ao vivo, que uma IA hoje entrega: app, texto, imagem, 
 > "Na próxima aula você vai entender o segredo por trás disso: **Skills**. É o que separa um usuário comum de um operador de IA."
 
 ## 🎨 Assets
-- Thumb: `thumb-aula-02-o-que-ias-desenvolvem.webp`
+- Thumb: `../thumbs/thumb-aula-02-o-que-ias-desenvolvem.webp`

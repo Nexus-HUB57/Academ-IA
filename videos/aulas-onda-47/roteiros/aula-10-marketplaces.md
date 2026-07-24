@@ -13,5 +13,5 @@ Aluno domina como usar IA para vender em massa nos 3 principais marketplaces + i
 6. Fechamento da série: "Você tem o mapa. Hora de andar."
 
 ## 🎨 Assets
-- Thumb: `thumb-aula-10-marketplaces.webp`
-- Áudio: `aula-10-marketplaces.mp3` (1min17, voz Eve)
+- Thumb: `../thumbs/thumb-aula-10-marketplaces.webp`
+- Áudio: `../audios/aula-10-marketplaces.mp3` (1min17, voz Eve)

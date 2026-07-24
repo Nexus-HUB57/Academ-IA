@@ -14,5 +14,5 @@ O aluno entende as 5 principais bibliotecas do universo IA e sabe qual usar em c
 7. **CTA** aula 06
 
 ## 🎨 Assets
-- Thumb: `thumb-aula-05-bibliotecas-ia.webp`
-- Áudio: `aula-05-bibliotecas-ia.mp3` (1min37, voz Eve)
+- Thumb: `../thumbs/thumb-aula-05-bibliotecas-ia.webp`
+- Áudio: `../audios/aula-05-bibliotecas-ia.mp3` (1min37, voz Eve)

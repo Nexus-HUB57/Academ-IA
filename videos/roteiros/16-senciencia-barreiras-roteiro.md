@@ -98,7 +98,7 @@ ebook_origem: "NEXUS_AFFIL_IA_TECH_VOL_02"
 - **Personas:** Ive (abertura + manifesto) · Alencar (corpo técnico + CTA)
 - **Tom híbrido:** filosófico + técnico + ético
 - **CTA:** ebook completo + reflexão crítica
-- **Thumbnail:** `thumb-16-senciencia-barreiras.webp` (2K, 16:9)
+- **Thumbnail:** `../thumbnails/thumb-16-senciencia-barreiras.webp` (2K, 16:9)
 
 ---
 

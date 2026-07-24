@@ -14,5 +14,5 @@ Aluno constrói seu primeiro agente IA seguindo a fórmula de 5 passos.
 Demo Nexus: template pronto em 15 min.
 
 ## 🎨 Assets
-- Thumb: `thumb-aula-08-como-construir-agente.webp`
-- Áudio: `aula-08-como-construir-agente.mp3` (1min22, voz Eve)
+- Thumb: `../thumbs/thumb-aula-08-como-construir-agente.webp`
+- Áudio: `../audios/aula-08-como-construir-agente.mp3` (1min22, voz Eve)

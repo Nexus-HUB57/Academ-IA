@@ -19,7 +19,7 @@
 ## Slide 3: Anatomia do Ecossistema Nexus
 
 *   **Título:** A Anatomia do Ecossistema
-*   **Imagem:** /home/ubuntu/MMN_AI-to-AI/AcademIA/cursos/fundamental/diagrama_ecossistema_nexus.png
+*   **Imagem:** diagrama_ecossistema_nexus.png
 *   **Conteúdo:** Diagrama de 5 camadas:
     *   Camada 5: Academ'IA (Este HUB)
     *   Camada 4: Marketplace de Skills

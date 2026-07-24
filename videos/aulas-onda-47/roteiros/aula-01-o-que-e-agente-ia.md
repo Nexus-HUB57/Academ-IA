@@ -32,5 +32,5 @@ Ao final da aula, o aluno consegue explicar em 30 segundos o que é um Agente IA
 - 4:30 → Case Nexus: "1 agente = 24h de trabalho/dia"
 
 ## 🎨 Assets
-- Thumb: `thumb-aula-01-o-que-e-agente-ia.webp`
-- Cover ebook complementar: `curso-universo-ia--ebook-01-fundamentos-ia-ml.webp`
+- Thumb: `../thumbs/thumb-aula-01-o-que-e-agente-ia.webp`
+- Cover ebook complementar: `../../../docs/ebooks/curso-universo-ia--ebook-01-fundamentos-ia-ml.webp`

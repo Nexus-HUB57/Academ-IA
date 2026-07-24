@@ -8,7 +8,7 @@ tags: [academia, ioaid, infraestrutura, arquitetura, distribuida]
 pattern: "MMN_IA"
 ---
 
-![Capa — IOAID Arquitetura Profunda](../../assets/ebook_covers/ACAD-apostila-12-ioaid-arquitetura-profunda.webp)
+![Capa — IOAID Arquitetura Profunda](../docs/ebooks/ACAD-apostila-12-ioaid-arquitetura-profunda.webp)
 
 **IOAID — Arquitetura Profunda da Infraestrutura de IA Distribuída**
 

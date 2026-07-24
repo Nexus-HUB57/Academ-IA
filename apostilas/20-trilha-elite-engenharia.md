@@ -14,7 +14,7 @@ AcademIA · Apostila T2
 
 ## RAG, Agents, Observability e Deploy
 
-![Capa](../../docs/ebooks/ACAD-apostila-20-trilha-elite-engenharia.webp)
+![Capa](../docs/ebooks/ACAD-apostila-20-trilha-elite-engenharia.webp)
 
 **Shakespeare da Atualidade** PHD nível Harvard do Universo AI
 

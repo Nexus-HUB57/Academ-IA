@@ -8,7 +8,7 @@ tags: [academia, multi-tenant, white-label, parceria, escala]
 pattern: "MMN_IA"
 ---
 
-![Capa — Multi-Tenant & White-Label](../../assets/ebook_covers/ACAD-apostila-14-multi-tenant-whitelabel.webp)
+![Capa — Multi-Tenant & White-Label](../docs/ebooks/ACAD-apostila-14-multi-tenant-whitelabel.webp)
 
 **Multi-Tenant & White-Label — Como Escalar a Nexus Para Parceiros**
 
