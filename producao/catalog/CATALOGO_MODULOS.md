@@ -95,7 +95,7 @@ Catálogo oficial de todos os módulos de vídeo-aulas com status de produção.
   - `AcademIA/videos/roteiros/04-primeiro-agente-roteiro.md` (224 linhas)
   - `AcademIA/cursos/agente/00-primeiro-agente-roteiro.md`
 - **Persona slides:** `AcademIA/personas/alencar/slides-aula01.md`
-- **Status:** 🟡 Roteiro pronto, sem áudio. **Pendente:** TTS + vídeo full
+- **Status:** 🟢 Upload concluído no YouTube. Vídeo principal já publicado; teaser local permanece como apoio de campanha.
 - **Publish plan:** ✅ em `youtube/publish_plan.json`
 - **Thumbnails:** `thumb-04-primeiro-agente.png` + `youtube/thumbnails_yt/04-construindo-seu-primeiro-agente-em-4-minutos.jpg`
 - **Teaser:** `video-04-seu-primeiro-agente.mp4` (em `youtube/videos_teaser/`)
@@ -106,8 +106,8 @@ Catálogo oficial de todos os módulos de vídeo-aulas com status de produção.
 - **Roteiros:**
   - `AcademIA/videos/roteiros/05-skills-essenciais-copywriter-roteiro.md` (98 linhas)
   - `AcademIA/cursos/agente/01-skills-essenciais-roteiro.md`
-- **Teaser publicado:** `videos/video-05-skills-assembly.mp4` (5.8s) — *atenção: nome divergente*
-- **Status:** 🟡 Roteiro + teaser. **Pendente:** TTS + vídeo full
+- **Teaser local:** `video-05-skills-essenciais.mp4` · alias legado adicional: `video-05-skills-assembly.mp4`
+- **Status:** 🟢 Upload concluído no YouTube. Vídeo principal já publicado; aliases antigos de teaser permanecem apenas por retrocompatibilidade.
 - **Publish plan:** ✅ em `youtube/publish_plan.json`
 - **Thumbnails:** `thumb-05-skills.png` + `.webp` + `youtube/thumbnails_yt/05-skills-essenciais-copywriter-audience-segmenter.jpg`
 - **Teasers extras:** `video-05-skills-assembly.mp4`, `video-05-skills-essenciais.mp4`
@@ -118,7 +118,7 @@ Catálogo oficial de todos os módulos de vídeo-aulas com status de produção.
 - **Roteiros:**
   - `AcademIA/videos/roteiros/06-disparo-whatsapp-escala-roteiro.md` (103 linhas)
   - `AcademIA/cursos/agente/02-disparo-whatsapp-roteiro.md`
-- **Status:** 🟡 Roteiro pronto, sem áudio. **Pendente:** TTS + vídeo full
+- **Status:** 🟢 Upload concluído no YouTube. Vídeo principal já publicado; teaser local permanece como apoio de campanha.
 - **Publish plan:** ✅ em `youtube/publish_plan.json`
 - **Thumbnails:** `thumb-06-disparo.png` + `.webp` + `youtube/thumbnails_yt/06-disparando-no-whatsapp-em-escala.jpg`
 - **Teaser:** `video-06-disparo-no-whatsapp-em-escala.mp4`
@@ -129,8 +129,8 @@ Catálogo oficial de todos os módulos de vídeo-aulas com status de produção.
 - **Roteiros:**
   - `AcademIA/videos/roteiros/07-judge-revisor-decisoes-roteiro.md` (103 linhas, 12K)
   - `AcademIA/cursos/agente/03-judge-revisor-roteiro.md`
-- **Teaser publicado:** `videos/video-07-judge-scales.mp4` (5.8s) — *atenção: nome divergente*
-- **Status:** 🟡 Roteiro + teaser. **Pendente:** TTS + vídeo full
+- **Teaser local:** `video-07-judge-revisor.mp4` · alias legado adicional: `video-07-judge-scales.mp4`
+- **Status:** 🟢 Upload concluído no YouTube. Vídeo principal já publicado; aliases antigos de teaser permanecem apenas por retrocompatibilidade.
 - **Publish plan:** ✅ em `youtube/publish_plan.json`
 - **Thumbnails:** `thumb-07-judge.png` + `.webp` + `youtube/thumbnails_yt/07-judge-revisor-a-ia-que-decide-por-voce.jpg`
 - **Teasers extras:** `video-07-judge-revisor.mp4`, `video-07-judge-scales.mp4`
@@ -147,8 +147,8 @@ Catálogo oficial de todos os módulos de vídeo-aulas com status de produção.
 - **Roteiros:**
   - `AcademIA/videos/roteiros/08-otimizacao-conversao-master-roteiro.md` (117 linhas, 12K)
   - `AcademIA/cursos/master/00-otimizacao-conversao-roteiro.md`
-- **Teaser publicado:** `videos/video-master-otimizacao.mp4` (10.1s) — *nome divergente*
-- **Status:** 🟠 Roteiro + teaser. `ready: true` no build_academia_materials. **Pendente:** TTS + vídeo full
+- **Teaser local:** `video-08-otimizacao-de-conversao.mp4` · master full publicado: `video-master-otimizacao.mp4`
+- **Status:** 🟢 Upload concluído no YouTube. Vídeo principal já publicado; teaser local permanece como apoio de campanha.
 - **Publish plan:** ✅ em `youtube/publish_plan.json`
 - **Thumbnails:** `thumb-08-otimizacao.png` + `.webp` + `youtube/thumbnails_yt/08-otimizacao-de-conversao-a-matematica-da-receita.jpg`
 - **Teaser:** `video-08-otimizacao-de-conversao.mp4`
@@ -157,7 +157,7 @@ Catálogo oficial de todos os módulos de vídeo-aulas com status de produção.
 - **ID:** `09-funis-lifecycle`
 - **Persona padrão:** Dupla (Ive + Alencar)
 - **Roteiro:** `AcademIA/videos/roteiros/09-funis-lifecycle-roteiro.md` (123 linhas, 12K)
-- **Status:** 🟠 Roteiro pronto. `ready: false` no build_academia_materials. **Pendente:** TTS + vídeo full
+- **Status:** 🟡 Assets locais completos e fila pronta. Upload externo bloqueado temporariamente por limite do canal no YouTube.
 - **Publish plan:** ✅ em `youtube/publish_plan.json`
 - **Thumbnails:** `thumb-09-funis-lifecycle.webp` + `youtube/thumbnails_yt/09-funis-e-lifecycle-o-sistema-completo.jpg`
 - **Teaser:** `video-09-funis-e-lifecycle.mp4`
@@ -166,7 +166,7 @@ Catálogo oficial de todos os módulos de vídeo-aulas com status de produção.
 - **ID:** `10-ab-test-judge`
 - **Persona padrão:** Sir. Nexus Alencar
 - **Roteiro:** `AcademIA/videos/roteiros/10-ab-test-judge-roteiro.md` (126 linhas, 12K)
-- **Status:** 🟠 Roteiro pronto. `ready: false` no build_academia_materials. **Pendente:** TTS + vídeo full
+- **Status:** 🟡 Assets locais completos e fila pronta. Upload externo bloqueado temporariamente por limite do canal no YouTube; descrição foi saneada para nova tentativa.
 - **Publish plan:** ✅ em `youtube/publish_plan.json`
 - **Thumbnails:** `thumb-10-ab-test-judge.webp` + `youtube/thumbnails_yt/10-a-b-testing-com-judge.jpg` (?)
 - **Teaser:** `video-10-a-b-testing-com-judge.mp4`
@@ -175,7 +175,7 @@ Catálogo oficial de todos os módulos de vídeo-aulas com status de produção.
 - **ID:** `11-coortes-churn`
 - **Persona padrão:** Sir. Nexus Alencar
 - **Roteiro:** `AcademIA/videos/roteiros/11-coortes-churn-roteiro.md` (128 linhas, 12K)
-- **Status:** 🟠 Roteiro pronto. `ready: false` no build_academia_materials. **Pendente:** TTS + vídeo full
+- **Status:** 🟡 Assets locais completos e fila pronta. Upload externo bloqueado temporariamente por limite do canal no YouTube.
 - **Publish plan:** ✅ em `youtube/publish_plan.json`
 - **Thumbnails:** `thumb-11-coortes-churn.webp`
 - **Teaser:** `video-11-coortes-e-churn.mp4`
@@ -187,18 +187,20 @@ Catálogo oficial de todos os módulos de vídeo-aulas com status de produção.
 *Implementações corporativas e federação*
 
 ### 12 · Blueprints Elite — O Jogo do Top 10%
+- **Teaser:** `video-12-blueprints-elite.mp4`
 - **ID:** `12-blueprints-elite`
 - **Persona padrão:** Dupla (Ive + Alencar)
 - **Roteiro:** `AcademIA/videos/roteiros/12-blueprints-elite-roteiro.md` (129 linhas, 12K)
-- **Status:** 🟠 Roteiro pronto. `ready: false` no build_academia_materials. **Pendente:** TTS + vídeo full
+- **Status:** 🟡 Assets locais completos e fila pronta. Upload externo bloqueado temporariamente por limite do canal no YouTube.
 - **Publish plan:** ✅ em `youtube/publish_plan.json`
 - **Thumbnails:** `thumb-12-blueprints-elite.webp`
 
 ### 13 · Multi-Tenant e White-Label na Prática
+- **Teaser:** `video-13-multi-tenant-e-white-label.mp4`
 - **ID:** `13-multi-tenant-whitelabel`
 - **Persona padrão:** Sir. Nexus Alencar
 - **Roteiro:** `AcademIA/videos/roteiros/13-multi-tenant-whitelabel-roteiro.md` (135 linhas, 12K)
-- **Status:** 🟠 Roteiro pronto. `ready: false` no build_academia_materials. **Pendente:** TTS + vídeo full
+- **Status:** 🟡 Assets locais completos e fila pronta. Upload externo bloqueado temporariamente por limite do canal no YouTube.
 - **Publish plan:** ✅ em `youtube/publish_plan.json`
 - **Thumbnails:** `thumb-13-multi-tenant.webp`
 
@@ -206,8 +208,8 @@ Catálogo oficial de todos os módulos de vídeo-aulas com status de produção.
 - **ID:** `14-federacao-agentes`
 - **Persona padrão:** Dupla (Ive + Alencar)
 - **Roteiro:** `AcademIA/videos/roteiros/14-federacao-agentes-roteiro.md` (131 linhas, 16K)
-- **Teaser publicado:** `videos/video-elite-federacao.mp4` (10.1s)
-- **Status:** 🟠 Roteiro + teaser. `ready: true` no build_academia_materials. **Pendente:** TTS + vídeo full
+- **Teaser local:** `video-14-federacao-de-agentes-zero-trust.mp4` · master full publicado: `video-elite-federacao.mp4`
+- **Status:** 🟢 Upload concluído no YouTube. Vídeo principal já publicado; teaser local permanece como apoio de campanha.
 - **Publish plan:** ✅ em `youtube/publish_plan.json`
 - **Thumbnails:** `thumb-14-federacao-agentes.webp`
 
