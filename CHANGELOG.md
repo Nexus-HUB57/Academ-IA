@@ -2,13 +2,44 @@
 title: "CHANGELOG · Academ'IA"
 description: "Histórico de versões da Academ'IA · HUB de Conhecimento & Sabedoria"
 tags: [changelog, versionamento, historico, academia]
-version: 1.6.5
-last_updated: 2026-07-24
+version: 1.6.6
+last_updated: 2026-07-25
 ---
 
 # 📜 CHANGELOG · Academ'IA
 
 > Histórico de versões do HUB Academ'IA — Nexus Affil'IA'te. Segue **Semantic Versioning**: MAJOR (breaking), MINOR (compatível, novo asset), PATCH (correções, polish).
+
+---
+
+## [1.6.6] — 2026-07-25 · "Índice navegável para 15 vídeo-aulas canônicas"
+
+### 🆕 Adicionado (1 índice navegável, ~8.5KB)
+
+Índice navegável para a nova pasta canônica `materiais/video-aulas/`
+criada por outro dev (Mavis/genspark_dev) em 24-25/jul. A pasta contém
+15 vídeo-aulas canônicas (codes 00-14) com estrutura workspace
+autocontida (manifest + slides + roteiros + audios + capas + videos).
+
+- `materiais/video-aulas/INDEX.md` (8.5KB): índice das 15 vídeo-aulas
+  com metadados de manifest (code, title, persona, duration, status).
+  Filtros por trilha (Fundamental/Agente/Master/Elite), por persona
+  apresentadora (Alencar/Ive/Dupla), e por caso de uso (15 cenários).
+  Documenta o workspace canônico e seu pipeline de produção.
+
+### 📋 Contexto
+
+Esta versão foi criada por Mavis Agent após:
+1. `git fetch` → 3 commits remotos detectados (organização do workspace
+   de vídeo-aulas + canonização de capas + definição de rebuild)
+2. `git pull --ff-only origin main` → 3 commits integrados sem conflito
+3. Backup preventido dos 14 arquivos Mavis para `/tmp/staging_mavis_25jul/`
+4. Validação de integridade: 14 arquivos IDÊNTICOS ao backup
+5. Identificação do gap: `materiais/video-aulas/` sem README/INDEX
+6. Criação de índice **complementar** ao manifesto canônico já existente
+
+**Zero sobrescrita, zero duplicação, zero exclusão.**
+Os 14 arquivos das versões 1.6.3-1.6.5 seguem intactos.
 
 ---
 
