@@ -1,0 +1,7 @@
+file '/home/user/repo/Academ-IA/cursos/fundamental/00-boas-vindas-cena1.wav'
+file '/home/user/repo/Academ-IA/cursos/fundamental/00-boas-vindas-cena2.wav'
+file '/home/user/repo/Academ-IA/cursos/fundamental/00-boas-vindas-cena3.wav'
+file '/home/user/repo/Academ-IA/cursos/fundamental/00-boas-vindas-cena4.wav'
+file '/home/user/repo/Academ-IA/cursos/fundamental/00-boas-vindas-cena5.wav'
+file '/home/user/repo/Academ-IA/cursos/fundamental/00-boas-vindas-cena6.wav'
+file '/home/user/repo/Academ-IA/cursos/fundamental/00-boas-vindas-cena7.wav'

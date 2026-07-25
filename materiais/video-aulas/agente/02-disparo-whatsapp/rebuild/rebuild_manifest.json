@@ -1,0 +1,14 @@
+{
+  "code": "06",
+  "title": "Disparando no WhatsApp em Escala",
+  "track": "agente",
+  "persona": "alencar",
+  "final_video": "video-06-02-disparo-whatsapp-master.mp4",
+  "duration_s": 32.92,
+  "slides_count": 9,
+  "audio_source": "videos/audio/full_06_alencar.wav",
+  "cover": "producao/assets/thumbnails/capa-06-disparo-whatsapp-alencar.png",
+  "thumb": "producao/assets/thumbnails/thumb-06-disparo.png",
+  "youtube_description": "youtube/descriptions/06-disparando-no-whatsapp-em-escala.txt",
+  "render_spec": "1280x720@25fps H.264 + AAC 192k"
+}

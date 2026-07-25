@@ -1,0 +1,14 @@
+{
+  "code": "08",
+  "title": "Otimização de Conversão — A Matemática da Receita",
+  "track": "master",
+  "persona": "dupla",
+  "final_video": "video-08-00-otimizacao-conversao-master.mp4",
+  "duration_s": 37.92,
+  "slides_count": 10,
+  "audio_source": "videos/audio/full_08_dupla.wav",
+  "cover": "producao/assets/thumbnails/capa-08-otimizacao-conversao-dupla.png",
+  "thumb": "producao/assets/thumbnails/thumb-08-otimizacao.png",
+  "youtube_description": "youtube/descriptions/08-otimizacao-de-conversao-a-matematica-da-receita.txt",
+  "render_spec": "1280x720@25fps H.264 + AAC 192k"
+}

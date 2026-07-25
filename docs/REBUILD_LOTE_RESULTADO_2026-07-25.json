@@ -1,0 +1,23 @@
+[
+  {
+    "code": "12",
+    "ok": true,
+    "duration_s": 37.92,
+    "file": "materiais/video-aulas/elite/00-blueprints-elite/rebuild/video-12-00-blueprints-elite-master.mp4",
+    "slides": 10
+  },
+  {
+    "code": "13",
+    "ok": true,
+    "duration_s": 37.92,
+    "file": "materiais/video-aulas/elite/01-multi-tenant-whitelabel/rebuild/video-13-01-multi-tenant-whitelabel-master.mp4",
+    "slides": 10
+  },
+  {
+    "code": "14",
+    "ok": true,
+    "duration_s": 37.92,
+    "file": "materiais/video-aulas/elite/02-federacao-agentes/rebuild/video-14-02-federacao-agentes-master.mp4",
+    "slides": 10
+  }
+]

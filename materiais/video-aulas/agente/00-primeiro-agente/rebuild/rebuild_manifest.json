@@ -1,0 +1,14 @@
+{
+  "code": "04",
+  "title": "Construindo Seu Primeiro Agente em 4 Minutos",
+  "track": "agente",
+  "persona": "alencar",
+  "final_video": "video-04-00-primeiro-agente-master.mp4",
+  "duration_s": 32.92,
+  "slides_count": 9,
+  "audio_source": "videos/audio/full_04_alencar.wav",
+  "cover": "producao/assets/thumbnails/capa-04-primeiro-agente-dupla.png",
+  "thumb": "producao/assets/thumbnails/thumb-04-primeiro-agente.png",
+  "youtube_description": "youtube/descriptions/04-construindo-seu-primeiro-agente-em-4-minutos.txt",
+  "render_spec": "1280x720@25fps H.264 + AAC 192k"
+}

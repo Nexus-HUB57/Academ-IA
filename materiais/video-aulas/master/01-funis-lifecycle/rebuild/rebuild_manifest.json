@@ -1,0 +1,14 @@
+{
+  "code": "09",
+  "title": "Funis e Lifecycle — O Sistema Completo",
+  "track": "master",
+  "persona": "dupla",
+  "final_video": "video-09-01-funis-lifecycle-master.mp4",
+  "duration_s": 37.92,
+  "slides_count": 10,
+  "audio_source": "videos/audio/full_09_dupla.wav",
+  "cover": "producao/assets/thumbnails/capa-09-funis-lifecycle-dupla.png",
+  "thumb": "producao/assets/thumbnails/thumb-09-funis-lifecycle.webp",
+  "youtube_description": "youtube/descriptions/09-funis-e-lifecycle-o-sistema-completo.txt",
+  "render_spec": "1280x720@25fps H.264 + AAC 192k"
+}
