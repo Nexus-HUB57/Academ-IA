@@ -1,7 +1,8 @@
 # Plano Editorial YouTube · AcademIA Nexus
 
-Prontos para upload imediato: **10**
-Roteiro pronto, vídeo pendente: **5**
+Publicados com sucesso: **10**
+Prontos para upload imediato: **5**
+Bloqueio externo atual: **limite de upload do canal no YouTube**
 
 ## Lote pronto agora
 - **00 · Boas-vindas à AcademIA Nexus** — vídeo: `video-00-boas-vindas-full.mp4` · thumb: `00-boas-vindas-a-academia-nexus.png`
@@ -15,9 +16,9 @@ Roteiro pronto, vídeo pendente: **5**
 - **08 · Otimização de Conversão — A Matemática da Receita** — vídeo: `video-master-otimizacao.mp4` · thumb: `08-otimizacao-de-conversao-a-matematica-da-receita.png`
 - **14 · Federação de Agentes Zero-Trust** — vídeo: `video-elite-federacao.mp4` · thumb: `14-federacao-de-agentes-zero-trust.png`
 
-## Em produção
-- **09 · Funis e Lifecycle — O Sistema Completo** — roteiro pronto, aguardando MP4 final
-- **10 · A/B Testing com Judge — Ciência da Experimentação** — roteiro pronto, aguardando MP4 final
-- **11 · Análise de Coortes e Churn — A Arte de Reter** — roteiro pronto, aguardando MP4 final
-- **12 · Blueprints Elite — O Jogo do Top 10%** — roteiro pronto, aguardando MP4 final
-- **13 · Multi-Tenant e White-Label na Prática** — roteiro pronto, aguardando MP4 final
+## Prontos para envio quando o canal liberar uploads
+- **09 · Funis e Lifecycle — O Sistema Completo** — assets locais completos, bloqueado apenas por limite de upload
+- **10 · A/B Testing com Judge — Ciência da Experimentação** — assets locais completos, bloqueado apenas por limite de upload
+- **11 · Análise de Coortes e Churn — A Arte de Reter** — assets locais completos, bloqueado apenas por limite de upload
+- **12 · Blueprints Elite — O Jogo do Top 10%** — assets locais completos, bloqueado apenas por limite de upload
+- **13 · Multi-Tenant e White-Label na Prática** — assets locais completos, bloqueado apenas por limite de upload

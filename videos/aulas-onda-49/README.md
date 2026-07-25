@@ -14,8 +14,8 @@ pattern: "MMN_IA · AcademIA · Videoaulas · CamadasVisuais"
 
 > Sucessora natural das Ondas 47/48 (audio-aulas 01-16 do "Curso Universo IA"),
 > esta onda entrega o conjunto visual completo: 19 videoaulas com slides B2
-> 1920×1080 navy+gold + 9 renders MP4 720p sincronizados com áudio TTS + 19 capas
-> YouTube PNG 16:9 widescreen prontas para publicação.
+> 1920×1080 navy+gold + 19 renders 720p + 19 narrated + 19 narrated-v2
+> e 19 capas YouTube PNG 16:9 widescreen prontas para publicação.
 
 ## 📊 Deliverables
 
@@ -23,7 +23,7 @@ pattern: "MMN_IA · AcademIA · Videoaulas · CamadasVisuais"
 |---|---|---|
 | **Roteiros MD** | 19 (aulas 15-33) | `roteiros/aula-NN-SLUG.md` |
 | **Slides B2 PNG** | 95 (19 × 5 cenas) | `slides/aula-NN-SLUG/cena-*.png` |
-| **Vídeos MP4 720p** | 9 (aulas 17, 26-33) | `renders/aula-NN-SLUG-720p.mp4` |
+| **Vídeos MP4 720p** | 19 (aulas 15-33) | `renders/aula-NN-SLUG-720p.mp4` |
 | **Capas YouTube PNG** | 19 (1280×720, 16:9) | `thumbnails/capa-NN-SLUG-PERSONA.png` |
 | **Manifests JSON** | 3 | `manifest/MANIFEST-ONDA-49.json`, `manifest/THUMBNAILS-ONDA-50.json`, `manifest/MASTER-ONDA-49-50.json` |
 | **Script gerador** | 1 (`gen_slides_b2.py`) | `scripts/` |
@@ -67,7 +67,7 @@ pattern: "MMN_IA · AcademIA · Videoaulas · CamadasVisuais"
 | 32 | Pricing IA 2026 | Elite | ✅ | **✅** |
 | 33 | Data Stack de Agentes IA | Elite | ✅ | **✅** |
 
-**Total renders prontos**: 9/19 (47%)
+**Total renders prontos**: 19/19 720p · 19/19 narrated · 19/19 narrated-v2 (100%)
 
 ## 🎭 Camadas YouTube ONDA-50
 

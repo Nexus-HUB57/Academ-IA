@@ -1,0 +1,20 @@
+{
+  "code": "03",
+  "title": "Painel do Afiliado — Visão Geral da Operação",
+  "track": "fundamental",
+  "persona": "dupla",
+  "target_duration_s": 105,
+  "approved_cover": "producao/assets/thumbnails/capa-03-painel-afiliado-ive.png",
+  "approved_thumb": "producao/assets/thumbnails/thumb-03-painel.png",
+  "slides_source": "cursos/fundamental/03-painel-afiliado-slides.md",
+  "course_script": "cursos/fundamental/03-painel-afiliado-roteiro.md",
+  "video_script": "videos/roteiros/03-painel-afiliado-roteiro.md",
+  "legacy_audio": "videos/audio/full_03_dupla.wav",
+  "legacy_video": "videos/video-03-painel-do-afiliado-full.mp4",
+  "youtube_description": "youtube/descriptions/03-painel-do-afiliado-visao-geral-da-operacao.txt",
+  "final_video_name": "video-03-03-painel-do-afiliado-visao-geral-da-operacao-master.mp4",
+  "opening_video_name": "video-03-opening.mp4",
+  "new_audio_name": "rebuild_03_narracao_ptbr.wav",
+  "workspace_dir": "materiais/video-aulas/fundamental/03-painel-afiliado",
+  "status": "pronto_para_rebuild"
+}

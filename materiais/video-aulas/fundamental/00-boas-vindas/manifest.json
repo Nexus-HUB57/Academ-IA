@@ -1,0 +1,20 @@
+{
+  "code": "00",
+  "title": "Boas-vindas à AcademIA Nexus",
+  "track": "fundamental",
+  "persona": "alencar",
+  "target_duration_s": 75,
+  "approved_cover": "producao/assets/thumbnails/capa-00-boas-vindas-ive.png",
+  "approved_thumb": "producao/assets/thumbnails/thumb-00-boas-vindas.png",
+  "slides_source": "cursos/fundamental/00-boas-vindas-slides.md",
+  "course_script": "cursos/fundamental/00-boas-vindas-roteiro.md",
+  "video_script": "videos/roteiros/00-boas-vindas-academia-roteiro.md",
+  "legacy_audio": "videos/audio/full_00_alencar.wav",
+  "legacy_video": "videos/video-00-boas-vindas-a-academia-nexus-full.mp4",
+  "youtube_description": "youtube/descriptions/00-boas-vindas-a-academia-nexus.txt",
+  "final_video_name": "video-00-00-boas-vindas-a-academia-nexus-master.mp4",
+  "opening_video_name": "video-00-opening.mp4",
+  "new_audio_name": "rebuild_00_narracao_ptbr.wav",
+  "workspace_dir": "materiais/video-aulas/fundamental/00-boas-vindas",
+  "status": "pronto_para_rebuild"
+}

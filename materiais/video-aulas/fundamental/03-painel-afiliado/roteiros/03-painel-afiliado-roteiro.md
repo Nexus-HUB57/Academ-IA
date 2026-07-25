@@ -1,0 +1,1 @@
+../../../../../videos/roteiros/03-painel-afiliado-roteiro.md

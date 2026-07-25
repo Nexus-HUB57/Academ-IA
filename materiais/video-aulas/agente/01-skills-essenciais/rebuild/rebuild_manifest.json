@@ -1,0 +1,14 @@
+{
+  "code": "05",
+  "title": "Skills Essenciais — Copywriter + Audience-Segmenter",
+  "track": "agente",
+  "persona": "alencar",
+  "final_video": "video-05-01-skills-essenciais-master.mp4",
+  "duration_s": 32.92,
+  "slides_count": 9,
+  "audio_source": "videos/audio/full_05_alencar.wav",
+  "cover": "producao/assets/thumbnails/capa-05-skills-essenciais-alencar.png",
+  "thumb": "producao/assets/thumbnails/thumb-05-skills.png",
+  "youtube_description": "youtube/descriptions/05-skills-essenciais-copywriter-audience-segmenter.txt",
+  "render_spec": "1280x720@25fps H.264 + AAC 192k"
+}

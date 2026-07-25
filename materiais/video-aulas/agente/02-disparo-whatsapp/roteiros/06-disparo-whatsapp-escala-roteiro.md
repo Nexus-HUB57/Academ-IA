@@ -1,0 +1,1 @@
+../../../../../videos/roteiros/06-disparo-whatsapp-escala-roteiro.md

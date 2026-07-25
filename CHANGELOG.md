@@ -2,13 +2,216 @@
 title: "CHANGELOG · Academ'IA"
 description: "Histórico de versões da Academ'IA · HUB de Conhecimento & Sabedoria"
 tags: [changelog, versionamento, historico, academia]
-version: 1.6.0
-last_updated: 2026-07-21
+version: 1.6.6
+last_updated: 2026-07-25
 ---
 
 # 📜 CHANGELOG · Academ'IA
 
 > Histórico de versões do HUB Academ'IA — Nexus Affil'IA'te. Segue **Semantic Versioning**: MAJOR (breaking), MINOR (compatível, novo asset), PATCH (correções, polish).
+
+---
+
+## [1.6.6] — 2026-07-25 · "Índice navegável para 15 vídeo-aulas canônicas"
+
+### 🆕 Adicionado (1 índice navegável, ~8.5KB)
+
+Índice navegável para a nova pasta canônica `materiais/video-aulas/`
+criada por outro dev (Mavis/genspark_dev) em 24-25/jul. A pasta contém
+15 vídeo-aulas canônicas (codes 00-14) com estrutura workspace
+autocontida (manifest + slides + roteiros + audios + capas + videos).
+
+- `materiais/video-aulas/INDEX.md` (8.5KB): índice das 15 vídeo-aulas
+  com metadados de manifest (code, title, persona, duration, status).
+  Filtros por trilha (Fundamental/Agente/Master/Elite), por persona
+  apresentadora (Alencar/Ive/Dupla), e por caso de uso (15 cenários).
+  Documenta o workspace canônico e seu pipeline de produção.
+
+### 📋 Contexto
+
+Esta versão foi criada por Mavis Agent após:
+1. `git fetch` → 3 commits remotos detectados (organização do workspace
+   de vídeo-aulas + canonização de capas + definição de rebuild)
+2. `git pull --ff-only origin main` → 3 commits integrados sem conflito
+3. Backup preventido dos 14 arquivos Mavis para `/tmp/staging_mavis_25jul/`
+4. Validação de integridade: 14 arquivos IDÊNTICOS ao backup
+5. Identificação do gap: `materiais/video-aulas/` sem README/INDEX
+6. Criação de índice **complementar** ao manifesto canônico já existente
+
+**Zero sobrescrita, zero duplicação, zero exclusão.**
+Os 14 arquivos das versões 1.6.3-1.6.5 seguem intactos.
+
+---
+
+## [1.6.5] — 2026-07-24 · "5 índices navegáveis para áreas sem navegação estruturada"
+
+### 🆕 Adicionado (5 índices navegáveis, ~38KB)
+
+5 novos documentos `INDEX.md` para áreas que já tinham README mas não tinham
+índice navegável. Complementa v1.6.4 (que criou índices para hubs, playbooks, sync).
+
+- `tutoriais/INDEX.md` (7.4KB): índice dos 36 tutoriais práticos com
+  filtros por nível (🥉🥈🥇💎), por necessidade imediata, e por duração.
+  Diferente do `tutoriais/README.md` (que é visão editorial por nível) — este
+  foca em "encontrar o tutorial certo em <30s" via caso de uso concreto.
+
+- `treinamentos/INDEX.md` (6.3KB): índice dos 9 workshops estruturados
+  com filtros por nível, persona mentora (Ive/Alencar/Dupla), caso de uso
+  e mês de calendário. Documenta sequências recomendadas e pré-requisitos.
+
+- `cursos/INDEX.md` (8.6KB): panorama das 4 trilhas (Fundamental, Agente,
+  Master, Elite) com carga horária, dificuldades, mapeamento de cursos
+  e versões alternativas. Inclui trilha de progressão recomendada e
+  mapeamento para certificações (CON/CEN/CEN+/MAS+/CNX).
+
+- `producao/roteiros/INDEX.md` (7.5KB): índice dos 38 roteiros organizados
+  por onda, trilha, persona, status de produção. Distingue versões
+  revisadas (-roteiro-revisado.md) e roteiros da Onda 47 (filosófica).
+
+- `marca/INDEX.md` (8.4KB): índice da pasta de marca com personas oficiais
+  (Alencar, Ive, Dupla), áudios canônicos (source of truth), assets
+  visuais, registry de vozes. Resolve ambiguidade entre múltiplos
+  documentos legacy (OFFICIAL_VOICES.md, VOICES.md, VOZES-OFICIAIS.md).
+
+### 📋 Contexto
+
+Esta versão foi criada por Mavis Agent após:
+1. `git fetch origin` → confirmado sincronizado (zero commits remotos pendentes)
+2. Auditoria de 25 diretórios procurando por gaps de navegação estruturada
+3. Identificação de 5 áreas com README mas sem INDEX navegável
+4. Coexistência segura: cada INDEX.md documenta explicitamente que é
+   diferente/complementar ao README.md existente
+
+**Zero sobrescrita, zero duplicação, zero exclusão, zero conflito.**
+v1.6.4 (3 índices) + v1.6.5 (5 índices) = 8 áreas com navegação navegável.
+
+---
+
+## [1.6.4] — 2026-07-24 · "Índices navegáveis para hubs, playbooks e sync"
+
+### 🆕 Adicionado (3 índices de navegação, ~20KB)
+
+Documentos-índice para 3 áreas com gap de navegação. Sem sobrescrita,
+sem duplicidade — apenas criação de novos arquivos onde não havia README/INDEX.
+
+- `hubs/README.md` (5.8KB): índice navegável dos 11 HUBs HTML estáticos
+  (index, cursos, trilhas, apostilas, lib, lab, playbooks, webinars,
+  tutoriais, landing, player). Documenta arquitetura técnica, paleta
+  Nexus, padrão de cartão, workflow de atualização.
+
+- `playbooks/INDEX.md` (7.1KB): índice navegável dos 13 playbooks
+  organizados por urgência (crise/urgente/importante/operacional),
+  por caso de uso, e por categoria. Diferente do README.md (visão
+  editorial) — este foca em "encontrar o playbook certo em <30s".
+
+- `sync/INDEX.md` (7.6KB): índice dos 4 artefatos de sincronização
+  (agent-bridge.json, skill-manifest.json, audit-log-schema.md,
+  MCP-CONFIG.md). Documenta arquitetura de sync, versões, compatibilidade,
+  workflow de atualização, validação CI.
+
+### 📋 Contexto
+
+Esta versão foi criada por Mavis Agent após:
+1. `git pull --ff-only origin main` (23 commits remotos integrados)
+2. Leitura do `GUIA_MULTI_DEV.md` (convenções multi-dev)
+3. Auditoria para identificar gaps sem risco de colisão
+4. Backup local em `/tmp/staging_mavis_24jul/` (precaução)
+
+**Zero sobrescrita, zero duplicação, zero exclusão.**
+Todos os 6 arquivos do push anterior (api-docs, prompts governanca,
+governanca 04-05) foram verificados e estão intactos.
+
+---
+
+## [1.6.3] — 2026-07-24 · "Simulados oficiais MAS+ e CNX (cobertura completa de certificações)"
+
+### 🆕 Adicionado (2 simulados avançados, ~20KB)
+
+Complementa a cobertura de certificações com simulados para os níveis mais altos:
+
+- `certificacoes/simulado-mas-plus-001.md` (10KB, 15q, 40min, aprovação 73%)
+  Blocos: A/B testing estatístico, coortes/sobrevivência, Judge tuning, mentoria
+
+- `certificacoes/simulado-cnx-001.md` (10KB, 12q, 50min, aprovação 75%)
+  Blocos: arquitetura federada/white-label, governança estratégica, mentoria avançada
+  **Diferencial**: questões dissertativas + múltipla escolha. Avalia RACIOCÍNIO, não memorização.
+  Nível elite da elite: apenas para top 5% da rede.
+
+### 📊 Cobertura Completa de Certificações
+
+| Certificação | Banco | Simulado | Status |
+|---|---|---|---|
+| CON (Operador) | 50q ✅ | 20q ✅ | 100% |
+| CEN (Estrategista) | 60q ✅ | 25q ✅ | 100% |
+| CEN+ (Elite) | 70q ✅ | 20q ✅ | 100% |
+| MAS+ (Master Plus) | — | 15q ✅ | 100% |
+| CNX (Master) | — | 12q ✅ | 100% |
+
+5 de 5 certificações agora têm simulados oficiais.
+
+---
+
+## [1.6.2] — 2026-07-24 · "Simulados oficiais CON/CEN/CEN+ (GAP-09 fechado)"
+
+### 🆕 Adicionado (3 simulados, ~41KB)
+
+GAP-09 do roadmap finalmente fechado. 3 simulados oficiais cronometrados para auto-avaliação de candidatos a certificação.
+
+- `certificacoes/simulado-con-001.md` (14KB): 20 questões, 45 min, aprovação 70%
+  Blocos: fundamentos, WhatsApp, LGPD, Skills/Judge, métricas
+
+- `certificacoes/simulado-cen-001.md` (14KB): 25 questões, 60 min, aprovação 72%
+  Blocos: funis, A/B test, coortes/churn, LTV/CAC, Judge tuning
+
+- `certificacoes/simulado-cen-plus-001.md` (12KB): 20 questões, 60 min, aprovação 75%
+  Blocos: federação, multi-tenant, segurança enterprise, arquitetura, GTM
+
+Cada simulado inclui: instruções cronometradas, 4-5 questões por bloco temático, gabarito comentado com explicações, cálculo de nota com faixas (distinção, aprovado, revisão, reprovado), material de estudo recomendado por bloco.
+
+### 📊 Métricas Atualizadas
+
+| Recurso | v1.6.1 | v1.6.2 | Delta |
+|---|---|---|---|
+| Simululados oficiais | 0 | 3 | +3 |
+| Questões em simulados | 0 | 65 | +65 |
+| Linhas de conteúdo | ~15.500 | ~16.500 | +1.000 |
+
+### 🎯 GAPs Fechados Acumulados
+
+- ✅ GAP-01: 3 bancos de questões (CON/CEN/CEN+)
+- ✅ GAP-02: 6 tutoriais #16-21
+- ✅ GAP-03: 3 cursos Master (RAG/Deploy/Segurança)
+- ✅ GAP-09: 3 simulados oficiais cronometrados
+- 🚧 GAP-04: roteiros de vídeo (parcial, faltam Elite)
+- 🚧 GAP-05: landing page (parcial)
+- ⏳ GAP-07/12/13: pendentes
+
+---
+
+## [1.6.1] — 2026-07-24 · "Versões estendidas Mavis para cursos Master 04/05/06"
+
+### 🆕 Adicionado (6 arquivos, ~93KB)
+
+Após merge do commit d208624 (genspark_dev) que criou slides+roteiros canônicos para os módulos 04 (RAG), 05 (Deploy) e 06 (Segurança), esta versão adiciona **versões estendidas complementares** (sufixo `-mavis-detalhado`) sem sobrescrever os arquivos existentes.
+
+**Convenção de coexistência**:
+- Padrão canônico (genspark_dev): 5 cenas, ~4KB, videoaulas regulares
+- Versão estendida (Mavis): 11-12 cenas, ~6-29KB, videoaulas longas/workshops/mentorias
+
+**Arquivos criados** (todos sufixo `-mavis-detalhado`):
+- `cursos/master/04-rag-em-producao-roteiro-mavis-detalhado.md` (12 cenas, 21KB)
+- `cursos/master/04-rag-em-producao-slides-mavis-detalhado.md` (12 slides, 8KB)
+- `cursos/master/05-deploy-em-producao-roteiro-mavis-detalhado.md` (11 cenas, 22KB)
+- `cursos/master/05-deploy-em-producao-slides-mavis-detalhado.md` (11 slides, 6KB)
+- `cursos/master/06-seguranca-jailbreaks-lgpd-roteiro-mavis-detalhado.md` (11 cenas, 29KB)
+- `cursos/master/06-seguranca-jailbreaks-lgpd-slides-mavis-detalhado.md` (11 slides, 6KB)
+- `cursos/master/README.md` (documenta estrutura da trilha e coexistência de versões)
+
+**Coordenação multi-dev**:
+- ✅ Nenhum arquivo pré-existente foi sobrescrito
+- ✅ Convenção de nomenclatura clara para evitar duplicidade conflitante
+- ✅ Cada arquivo `-mavis-detalhado` referencia o canônico no frontmatter
+- ✅ Time de produção decide oficialização via PR de consolidação
 
 ---
 

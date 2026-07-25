@@ -1,0 +1,1 @@
+../../../../../videos/roteiros/00-boas-vindas-academia-roteiro.md

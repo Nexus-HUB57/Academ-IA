@@ -1,0 +1,20 @@
+{
+  "code": "05",
+  "title": "Skills Essenciais — Copywriter + Audience-Segmenter",
+  "track": "agente",
+  "persona": "alencar",
+  "target_duration_s": 95,
+  "approved_cover": "producao/assets/thumbnails/capa-05-skills-essenciais-alencar.png",
+  "approved_thumb": "producao/assets/thumbnails/thumb-05-skills.png",
+  "slides_source": "cursos/agente/01-skills-essenciais-slides.md",
+  "course_script": "cursos/agente/01-skills-essenciais-roteiro.md",
+  "video_script": "videos/roteiros/05-skills-essenciais-copywriter-roteiro.md",
+  "legacy_audio": "videos/audio/full_05_alencar.wav",
+  "legacy_video": "videos/video-05-skills-essenciais-full.mp4",
+  "youtube_description": "youtube/descriptions/05-skills-essenciais-copywriter-audience-segmenter.txt",
+  "final_video_name": "video-05-05-skills-essenciais-copywriter-audience-segmenter-master.mp4",
+  "opening_video_name": "video-05-opening.mp4",
+  "new_audio_name": "rebuild_05_narracao_ptbr.wav",
+  "workspace_dir": "materiais/video-aulas/agente/01-skills-essenciais",
+  "status": "pronto_para_rebuild"
+}

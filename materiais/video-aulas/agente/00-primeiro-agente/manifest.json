@@ -1,0 +1,20 @@
+{
+  "code": "04",
+  "title": "Construindo Seu Primeiro Agente em 4 Minutos",
+  "track": "agente",
+  "persona": "alencar",
+  "target_duration_s": 90,
+  "approved_cover": "producao/assets/thumbnails/capa-04-primeiro-agente-dupla.png",
+  "approved_thumb": "producao/assets/thumbnails/thumb-04-primeiro-agente.png",
+  "slides_source": "cursos/agente/00-primeiro-agente-slides.md",
+  "course_script": "cursos/agente/00-primeiro-agente-roteiro.md",
+  "video_script": "videos/roteiros/04-primeiro-agente-roteiro.md",
+  "legacy_audio": "videos/audio/full_04_alencar.wav",
+  "legacy_video": "videos/video-04-primeiro-agente-full.mp4",
+  "youtube_description": "youtube/descriptions/04-construindo-seu-primeiro-agente-em-4-minutos.txt",
+  "final_video_name": "video-04-04-construindo-seu-primeiro-agente-em-4-minutos-master.mp4",
+  "opening_video_name": "video-04-opening.mp4",
+  "new_audio_name": "rebuild_04_narracao_ptbr.wav",
+  "workspace_dir": "materiais/video-aulas/agente/00-primeiro-agente",
+  "status": "pronto_para_rebuild"
+}

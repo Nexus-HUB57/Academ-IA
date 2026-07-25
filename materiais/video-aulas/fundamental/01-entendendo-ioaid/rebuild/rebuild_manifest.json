@@ -1,0 +1,14 @@
+{
+  "code": "01",
+  "title": "Entendendo o IOAID",
+  "track": "fundamental",
+  "persona": "ive",
+  "final_video": "video-01-01-entendendo-ioaid-master.mp4",
+  "duration_s": 37.92,
+  "slides_count": 10,
+  "audio_source": "videos/audio/full_01_ive.wav",
+  "cover": "producao/assets/thumbnails/capa-01-entendendo-ioaid-dupla.png",
+  "thumb": "producao/assets/thumbnails/thumb-01-ioaid.png",
+  "youtube_description": "youtube/descriptions/01-entendendo-o-ioaid.txt",
+  "render_spec": "1280x720@25fps H.264 + AAC 192k"
+}
