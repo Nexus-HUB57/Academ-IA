@@ -114,7 +114,7 @@ def render_cover(dst, title, subtitle, src, category='APOSTILA', issue="NEXUS AF
     print(f'OK {dst.relative_to(ROOT)} from {src.name}')
 
 
-# Capas a gerar: apostila 37/38 + webinar WB-19/20
+# Capas a gerar: apostila 37/38/39/40 + webinar WB-19/20
 TARGETS = [
     {
         'dst': 'ACAD-apostila-37-mentoria-ia-coaching.webp',
@@ -143,6 +143,20 @@ TARGETS = [
         'title': 'Produto Premium · R$ 25k+',
         'subtitle': 'A arte de vender caro. Como justificar, ancorar e fechar high-ticket. Cases reais com a Dupla (Ive + Alencar).',
         'category': 'WEBINAR WB-20',
+    },
+    {
+        'dst': 'ACAD-apostila-39-ia-generativa-avancada.webp',
+        'src': 'capa-21-master-arquitetura-dupla.png',
+        'title': 'IA Generativa Avancada',
+        'subtitle': 'O guia completo de 2026: do prompt ao agente autonomo. LLMs, RAG, agentes, multimodal, voice, video e producao em escala.',
+        'category': 'APOSTILA 39',
+    },
+    {
+        'dst': 'ACAD-apostila-40-escala-global-ia.webp',
+        'src': 'capa-19-poder-processamento-ia-alencar.png',
+        'title': 'Escala Global com IA',
+        'subtitle': 'Do Brasil para o mundo. Como internacionalizar produto, dobrar receita e construir marca global. Cases reais (Ive + Alencar).',
+        'category': 'APOSTILA 40',
     },
 ]
 

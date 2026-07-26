@@ -1,0 +1,1373 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Sra. Nexus Ive (estrategista) + Sir. Nexus Alencar (técnico)" />
+  <meta name="dcterms.date" content="2026-07-26" />
+  <title>IA Generativa Avançada — Do Prompt ao Agente Autônomo</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="/workspace/Academ-IA/html/acad-style.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">IA Generativa Avançada — Do Prompt ao Agente
+Autônomo</h1>
+<p class="subtitle">O guia completo de 2026. Do zero ao avançado: LLMs,
+RAG, agentes, multimodal, voice, video e produção em escala.</p>
+<p class="author">Sra. Nexus Ive (estrategista) + Sir. Nexus Alencar
+(técnico)</p>
+<p class="date">2026-07-26</p>
+</header>
+<p><strong>Apostila 39 · IA Generativa Avançada — Do Prompt ao Agente
+Autônomo</strong></p>
+<p><em>O guia completo de 2026. Do zero ao avançado: LLMs, RAG, agentes,
+multimodal, voice, video e produção em escala. Cases reais com a Dupla
+(Ive + Alencar).</em></p>
+<p><strong>Por Sra. Nexus Ive + Sir. Nexus Alencar ·
+Academ’IA</strong></p>
+<p>Nexus Affil’IA’te · 2026</p>
+<p><strong>Sobre esta apostila</strong></p>
+<p>Em 2026, IA generativa é <strong>commodity</strong>. Todos têm
+acesso. A diferença é <strong>como você usa</strong>: prompt avançado,
+RAG otimizado, agentes autônomos, multimodal integrado, voice AI, video
+AI, produção em escala. Essa apostila cobre <strong>todos esses
+temas</strong> com profundidade técnica e visão estratégica.</p>
+<p><strong>TL;DR:</strong> 7 camadas da IA generativa —
+<strong>prompts</strong>, <strong>LLMs</strong>,
+<strong>embeddings</strong>, <strong>RAG</strong>,
+<strong>agentes</strong>, <strong>multimodal</strong>, <strong>produção
+em escala</strong>. Resultado: dominar o <strong>stack completo</strong>
+e construir produtos que <strong>multiplicam receita por
+10x</strong>.</p>
+<p><strong>Por que essa apostila existe:</strong></p>
+<p>Em 2022, comecei com ChatGPT básico. Em 2023, migrei pra Claude +
+RAG. Em 2024, construí agentes autônomos. Em 2025, integrei multimodal.
+Em 2026, escalo produção com IA. <strong>Essa jornada</strong>, em uma
+apostila.</p>
+<hr />
+<h1 id="sumário">Sumário</h1>
+<p><strong>PARTE I — FUNDAMENTOS</strong></p>
+<ol type="1">
+<li><a href="#cap1">O que mudou em 2026: do LLM ao ecossistema</a></li>
+<li><a href="#cap2">As 7 camadas da IA generativa</a></li>
+<li><a href="#cap3">Anatomia de um LLM moderno</a></li>
+</ol>
+<p><strong>PARTE II — PROMPTING AVANÇADO</strong></p>
+<ol start="4" type="1">
+<li><a href="#cap4">Anatomia de um prompt perfeito</a></li>
+<li><a href="#cap5">Chain-of-Thought, ReAct, Tree-of-Thoughts</a></li>
+<li><a href="#cap6">System prompts, function calling, structured
+output</a></li>
+</ol>
+<p><strong>PARTE III — RAG E MEMÓRIA</strong></p>
+<ol start="7" type="1">
+<li><a href="#cap7">Embeddings e vector databases</a></li>
+<li><a href="#cap8">Chunking strategies avançadas</a></li>
+<li><a href="#cap9">RAG híbrido, re-ranking, evaluation</a></li>
+</ol>
+<p><strong>PARTE IV — AGENTES AUTÔNOMOS</strong></p>
+<ol start="10" type="1">
+<li><a href="#cap10">Arquitetura de agentes (ReAct, LangGraph,
+AutoGen)</a></li>
+<li><a href="#cap11">Tools, memory, planning</a></li>
+<li><a href="#cap12">Multi-agent systems e orquestração</a></li>
+</ol>
+<p><strong>PARTE V — MULTIMODAL E VOICE</strong></p>
+<ol start="13" type="1">
+<li><a href="#cap13">Visão, áudio, video AI</a></li>
+<li><a href="#cap14">Voice AI: STT, TTS, conversação</a></li>
+<li><a href="#cap15">Video AI: geração, edição, dublagem</a></li>
+</ol>
+<p><strong>PARTE VI — PRODUÇÃO EM ESCALA</strong></p>
+<ol start="16" type="1">
+<li><a href="#cap16">LLMOps, monitoring, custos</a></li>
+<li><a href="#cap17">Segurança, LGPD, AI Act</a></li>
+<li><a href="#cap18">Custo total: de R$ 100/mês a R$ 50k/mês</a></li>
+</ol>
+<p>Epílogo: <a href="#epilogo">O futuro da IA generativa em
+2027-2030</a></p>
+<p>Apêndice: <a href="#apendice">Stack recomendado por orçamento</a></p>
+<hr />
+<p><a id="cap1"></a> # Capítulo 1 — O que mudou em 2026: do LLM ao
+ecossistema</p>
+<p><strong>Em 2022, IA generativa = LLM único (GPT-3).</strong> Resposta
+de texto. Sem memória. Sem tools.</p>
+<p><strong>Em 2026, IA generativa = ecossistema completo:</strong></p>
+<pre><code>LLMs (Claude 4, GPT-5, Gemini 2, Llama 4)
+   ↓
+Embeddings + Vector DBs (Qdrant, Weaviate, Pinecone)
+   ↓
+RAG (Retrieval-Augmented Generation)
+   ↓
+Agentes (LangGraph, AutoGen, CrewAI)
+   ↓
+Tools (300+ integrações: Slack, Gmail, Sheets, Stripe, etc)
+   ↓
+Multimodal (Visão, Áudio, Video, Voice)
+   ↓
+Produção (LLMOps, monitoring, evaluation)</code></pre>
+<p><strong>Evolução temporal:</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th>Ano</th>
+<th>Estado</th>
+<th>Capacidade</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2022</td>
+<td>LLM</td>
+<td>Texto</td>
+</tr>
+<tr class="even">
+<td>2023</td>
+<td>Chat + RAG</td>
+<td>Texto + memória simples</td>
+</tr>
+<tr class="odd">
+<td>2024</td>
+<td>Agentes</td>
+<td>Tools + planning</td>
+</tr>
+<tr class="even">
+<td>2025</td>
+<td>Multimodal</td>
+<td>Texto + imagem + voz</td>
+</tr>
+<tr class="odd">
+<td>2026</td>
+<td><strong>Ecossistema</strong></td>
+<td><strong>Tudo integrado, autônomo, escalável</strong></td>
+</tr>
+</tbody>
+</table>
+<p>“Quando comecei, usava ChatGPT como Google. Em 2026, tenho
+<strong>10+ agentes autônomos</strong> rodando em produção, integrados a
+<strong>15+ ferramentas</strong>, atendendo <strong>100+
+clientes</strong>.”</p>
+<hr />
+<p><a id="cap2"></a> # Capítulo 2 — As 7 camadas da IA generativa</p>
+<h3 id="camada-1-llm-large-language-model">Camada 1 — LLM (Large
+Language Model)</h3>
+<ul>
+<li><strong>O que é:</strong> modelo de linguagem (Claude, GPT, Gemini,
+Llama)</li>
+<li><strong>Função:</strong> gerar texto, raciocinar, classificar</li>
+<li><strong>Custo:</strong> US$ 3-60 por 1M tokens (entrada)</li>
+<li><strong>Quando usar:</strong> qualquer tarefa de linguagem</li>
+</ul>
+<h3 id="camada-2-embeddings">Camada 2 — Embeddings</h3>
+<ul>
+<li><strong>O que é:</strong> representação vetorial de texto (1536-3072
+dimensões)</li>
+<li><strong>Função:</strong> busca semântica, similaridade,
+clustering</li>
+<li><strong>Custo:</strong> US$ 0.02-0.13 por 1M tokens</li>
+<li><strong>Quando usar:</strong> RAG, recomendação, deduplicação</li>
+</ul>
+<h3 id="camada-3-vector-database">Camada 3 — Vector Database</h3>
+<ul>
+<li><strong>O que é:</strong> banco de dados otimizado para
+embeddings</li>
+<li><strong>Função:</strong> busca rápida por similaridade (ANN)</li>
+<li><strong>Custo:</strong> US$ 0-100/mês (depende do tamanho)</li>
+<li><strong>Quando usar:</strong> RAG, memória de longo prazo</li>
+</ul>
+<h3 id="camada-4-rag-retrieval-augmented-generation">Camada 4 — RAG
+(Retrieval-Augmented Generation)</h3>
+<ul>
+<li><strong>O que é:</strong> combinar LLM com busca em base de
+conhecimento</li>
+<li><strong>Função:</strong> responder baseado em documentos
+próprios</li>
+<li><strong>Custo:</strong> embedding + busca + LLM</li>
+<li><strong>Quando usar:</strong> chatbot com docs, Q&amp;A interno</li>
+</ul>
+<h3 id="camada-5-agentes">Camada 5 — Agentes</h3>
+<ul>
+<li><strong>O que é:</strong> LLM + tools + memória + planning</li>
+<li><strong>Função:</strong> executar tarefas complexas
+autonomamente</li>
+<li><strong>Custo:</strong> LLM + tools (cada tool call = LLM call)</li>
+<li><strong>Quando usar:</strong> automação, atendimento, research</li>
+</ul>
+<h3 id="camada-6-multimodal">Camada 6 — Multimodal</h3>
+<ul>
+<li><strong>O que é:</strong> texto + imagem + áudio + video</li>
+<li><strong>Função:</strong> analisar/gerar conteúdo multimodal</li>
+<li><strong>Custo:</strong> 2-10x mais caro que texto</li>
+<li><strong>Quando usar:</strong> análise de imagem, voice AI, video
+AI</li>
+</ul>
+<h3 id="camada-7-produção-llmops">Camada 7 — Produção (LLMOps)</h3>
+<ul>
+<li><strong>O que é:</strong> observability, monitoring, custos</li>
+<li><strong>Função:</strong> manter agentes em produção</li>
+<li><strong>Custo:</strong> US$ 100-10k/mês</li>
+<li><strong>Quando usar:</strong> produtos em escala (&gt;1k
+usuários)</li>
+</ul>
+<hr />
+<p><a id="cap3"></a> # Capítulo 3 — Anatomia de um LLM moderno</p>
+<p><strong>Componentes principais:</strong></p>
+<pre><code>1. TOKENIZAÇÃO
+   Texto → tokens (pedaços de 4 caracteres em média)
+   &quot;Olá, mundo!&quot; → [&quot;Ol&quot;, &quot;á,&quot;, &quot; mun&quot;, &quot;do&quot;, &quot;!&quot;]
+
+2. EMBEDDING
+   Tokens → vetores (1536-3072 dimensões)
+   Cada token vira ponto no espaço semântico
+
+3. ATTENTION
+   Cada token &quot;olha&quot; pra todos os outros
+   Aprende relações: &quot;rei&quot; - &quot;homem&quot; + &quot;mulher&quot; = &quot;rainha&quot;
+
+4. TRANSFORMER BLOCKS
+   50-200 camadas de atenção + feedforward
+   Cada camada refina a representação
+
+5. OUTPUT
+   Próximo token mais provável
+   Sampling (temperature, top_p) gera variação</code></pre>
+<p><strong>Comparação de LLMs 2026:</strong></p>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 40%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Modelo</th>
+<th>Janela</th>
+<th>Preço (1M tok)</th>
+<th>Forças</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Claude Sonnet 4</strong></td>
+<td>200k</td>
+<td>$3</td>
+<td>Coding, raciocínio, contexto longo</td>
+</tr>
+<tr class="even">
+<td><strong>Claude Opus 4</strong></td>
+<td>200k</td>
+<td>$15</td>
+<td>Tarefas complexas, alta qualidade</td>
+</tr>
+<tr class="odd">
+<td><strong>GPT-5</strong></td>
+<td>128k</td>
+<td>$2.50</td>
+<td>Multimodal, function calling</td>
+</tr>
+<tr class="even">
+<td><strong>GPT-5 Pro</strong></td>
+<td>128k</td>
+<td>$15</td>
+<td>Reasoning profundo</td>
+</tr>
+<tr class="odd">
+<td><strong>Gemini 2 Pro</strong></td>
+<td>2M</td>
+<td>$1.25</td>
+<td>Janela gigante, multimodal</td>
+</tr>
+<tr class="even">
+<td><strong>Llama 4 70B</strong></td>
+<td>128k</td>
+<td>$0.59 (open source)</td>
+<td>Custo baixo, customizável</td>
+</tr>
+<tr class="odd">
+<td><strong>DeepSeek V3</strong></td>
+<td>64k</td>
+<td>$0.14</td>
+<td>Custo mínimo</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recomendação 2026:</strong></p>
+<ul>
+<li><strong>Coding/raciocínio:</strong> Claude Sonnet 4</li>
+<li><strong>Multimodal:</strong> GPT-5 ou Gemini 2</li>
+<li><strong>Custo mínimo:</strong> DeepSeek V3</li>
+<li><strong>Customização:</strong> Llama 4 (self-hosted)</li>
+</ul>
+<hr />
+<p><a id="cap4"></a> # Capítulo 4 — Anatomia de um prompt perfeito</p>
+<p><strong>Estrutura de prompt profissional:</strong></p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>prompt <span class="op">=</span> <span class="ss">f&quot;&quot;&quot;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ss"># ROLE</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="ss">Você é </span><span class="sc">{</span>role<span class="sc">}</span><span class="ss">, com expertise em </span><span class="sc">{</span>domain<span class="sc">}</span><span class="ss">.</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="ss"># CONTEXT</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="sc">{</span>context_about_user<span class="sc">}</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="sc">{</span>context_about_task<span class="sc">}</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="sc">{</span>context_about_constraints<span class="sc">}</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="ss"># TASK</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="sc">{</span>task_description<span class="sc">}</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="ss"># INPUT</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="sc">{</span>user_input<span class="sc">}</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="ss"># FORMAT</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="ss">Responda em </span><span class="sc">{</span><span class="bu">format</span><span class="sc">}</span><span class="ss">:</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="sc">{</span>format_rule_1<span class="sc">}</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="sc">{</span>format_rule_2<span class="sc">}</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="ss"># EXAMPLES</span></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="sc">{</span>examples_in_context<span class="sc">}</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a><span class="ss"># CONSTRAINTS</span></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="ss">- Máximo </span><span class="sc">{</span>max_length<span class="sc">}</span><span class="ss"> caracteres</span></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a><span class="ss">- Tom: </span><span class="sc">{</span>tone<span class="sc">}</span></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a><span class="ss">- Não use: </span><span class="sc">{</span>avoid_words<span class="sc">}</span></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a><span class="ss"># SUCCESS CRITERIA</span></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a><span class="ss">A resposta será boa se:</span></span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="sc">{</span>criteria_1<span class="sc">}</span></span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="sc">{</span>criteria_2<span class="sc">}</span></span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a><span class="ss">&quot;&quot;&quot;</span></span></code></pre></div>
+<p><strong>Técnica Few-Shot:</strong></p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>EXAMPLES <span class="op">=</span> <span class="st">&quot;&quot;&quot;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="st">[Exemplo 1]</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="st">Input: &quot;Como aumentar conversão?&quot;</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="st">Output: &quot;1. Analise funil atual. 2. Identifique gargalo. 3. A/B test...&quot;</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="st">[Exemplo 2]</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="st">Input: &quot;Como criar oferta irresistível?&quot;</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="st">Output: &quot;1. Defina avatar. 2. Liste 10 desejos. 3. Combine 3...&quot;</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;&quot;&quot;</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>prompt <span class="op">=</span> <span class="ss">f&quot;&quot;&quot;</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="ss">Use o seguinte formato:</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="sc">{</span>EXAMPLES<span class="sc">}</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="ss">Input: </span><span class="sc">{</span>user_input<span class="sc">}</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="ss">Output:</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="ss">&quot;&quot;&quot;</span></span></code></pre></div>
+<p><strong>Por que Few-Shot funciona:</strong> LLM aprende o
+<strong>padrão</strong> sem precisar de fine-tuning.</p>
+<hr />
+<p><a id="cap5"></a> # Capítulo 5 — Chain-of-Thought, ReAct,
+Tree-of-Thoughts</p>
+<h3 id="chain-of-thought-cot">Chain-of-Thought (CoT)</h3>
+<p><strong>O que é:</strong> forçar LLM a “pensar em voz alta” antes de
+responder.</p>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>prompt <span class="op">=</span> <span class="st">&quot;&quot;&quot;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="st">Resolva o problema passo a passo:</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="st">Problema: </span><span class="sc">{problem}</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="st">Pensamento:</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="st">1. Primeiro, identifique...</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="st">2. Depois, calcule...</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="st">3. Finalmente, responda...</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="st">Resposta final: ...</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;&quot;&quot;</span></span></code></pre></div>
+<p><strong>Quando usar:</strong> problemas lógicos, matemáticos,
+multi-step.</p>
+<h3 id="react-reasoning-acting">ReAct (Reasoning + Acting)</h3>
+<p><strong>O que é:</strong> alternar entre raciocínio e ação.</p>
+<pre><code>Thought 1: &quot;Preciso buscar cotação do dólar&quot;
+Action 1: get_dollar_quote()
+Observation 1: &quot;R$ 5.20&quot;
+
+Thought 2: &quot;Agora calculo o preço em reais&quot;
+Action 2: calculate(usd_price * 5.20)
+Observation 2: &quot;R$ 520&quot;
+
+Thought 3: &quot;Tenho a resposta final&quot;
+Action 3: finish()</code></pre>
+<p><strong>Quando usar:</strong> agentes com tools, pesquisa
+dinâmica.</p>
+<h3 id="tree-of-thoughts-tot">Tree-of-Thoughts (ToT)</h3>
+<p><strong>O que é:</strong> explorar múltiplos caminhos antes de
+decidir.</p>
+<pre><code>Caminho A: solução 1
+Caminho B: solução 2  
+Caminho C: solução 3
+
+Avalie cada um → escolha o melhor</code></pre>
+<p><strong>Quando usar:</strong> problemas com múltiplas soluções
+válidas.</p>
+<hr />
+<p><a id="cap6"></a> # Capítulo 6 — System prompts, function calling,
+structured output</p>
+<h3 id="system-prompt-persona">System Prompt (Persona)</h3>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>SYSTEM <span class="op">=</span> <span class="st">&quot;&quot;&quot;</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="st">Você é a Sra. Nexus Ive, persona acolhedora.</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="st">Tom: sotaque sulista, rouquidão suave.</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="st">Estilo: didática, estratégica, acolhedora.</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="st">Limites: não dá diagnóstico médico, não fala de política.</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;&quot;&quot;</span></span></code></pre></div>
+<h3 id="function-calling-tools">Function Calling (Tools)</h3>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>tools <span class="op">=</span> [</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    {</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;name&quot;</span>: <span class="st">&quot;search_docs&quot;</span>,</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;description&quot;</span>: <span class="st">&quot;Busca na base de conhecimento&quot;</span>,</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;parameters&quot;</span>: {</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>            <span class="st">&quot;query&quot;</span>: {<span class="st">&quot;type&quot;</span>: <span class="st">&quot;string&quot;</span>}</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>    },</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>    {</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;name&quot;</span>: <span class="st">&quot;send_email&quot;</span>,</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;description&quot;</span>: <span class="st">&quot;Envia email para cliente&quot;</span>,</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;parameters&quot;</span>: {</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>            <span class="st">&quot;to&quot;</span>: {<span class="st">&quot;type&quot;</span>: <span class="st">&quot;string&quot;</span>},</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>            <span class="st">&quot;subject&quot;</span>: {<span class="st">&quot;type&quot;</span>: <span class="st">&quot;string&quot;</span>},</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>            <span class="st">&quot;body&quot;</span>: {<span class="st">&quot;type&quot;</span>: <span class="st">&quot;string&quot;</span>}</span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>response <span class="op">=</span> llm.invoke(</span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;Busque docs sobre IA e envie email pro João&quot;</span>,</span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>    tools<span class="op">=</span>tools</span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a><span class="co"># LLM decide: chamar search_docs → usar resultado → chamar send_email</span></span></code></pre></div>
+<h3 id="structured-output-json-schema">Structured Output (JSON
+Schema)</h3>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>schema <span class="op">=</span> {</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;type&quot;</span>: <span class="st">&quot;object&quot;</span>,</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;properties&quot;</span>: {</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;intent&quot;</span>: {<span class="st">&quot;type&quot;</span>: <span class="st">&quot;string&quot;</span>, <span class="st">&quot;enum&quot;</span>: [<span class="st">&quot;exploring&quot;</span>, <span class="st">&quot;ready&quot;</span>, <span class="st">&quot;objection&quot;</span>]},</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;confidence&quot;</span>: {<span class="st">&quot;type&quot;</span>: <span class="st">&quot;number&quot;</span>, <span class="st">&quot;minimum&quot;</span>: <span class="dv">0</span>, <span class="st">&quot;maximum&quot;</span>: <span class="dv">1</span>},</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;next_action&quot;</span>: {<span class="st">&quot;type&quot;</span>: <span class="st">&quot;string&quot;</span>}</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>response <span class="op">=</span> llm.invoke(</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>    user_message,</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>    response_format<span class="op">=</span>{<span class="st">&quot;type&quot;</span>: <span class="st">&quot;json_schema&quot;</span>, <span class="st">&quot;schema&quot;</span>: schema}</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Garante output estruturado, parseável</span></span></code></pre></div>
+<hr />
+<p><a id="cap7"></a> # Capítulo 7 — Embeddings e vector databases</p>
+<p><strong>Embeddings em 2026:</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th>Modelo</th>
+<th>Dimensões</th>
+<th>Custo (1M tok)</th>
+<th>Quando usar</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>text-embedding-3-large</strong></td>
+<td>3072</td>
+<td>$0.13</td>
+<td>Alta qualidade</td>
+</tr>
+<tr class="even">
+<td><strong>text-embedding-3-small</strong></td>
+<td>1536</td>
+<td>$0.02</td>
+<td>Custo baixo</td>
+</tr>
+<tr class="odd">
+<td><strong>voyage-large-2</strong></td>
+<td>1536</td>
+<td>$0.12</td>
+<td>Retrieval</td>
+</tr>
+<tr class="even">
+<td><strong>cohere-embed-v3</strong></td>
+<td>1024</td>
+<td>$0.10</td>
+<td>Multilingual</td>
+</tr>
+<tr class="odd">
+<td><strong>BGE-M3</strong> (open)</td>
+<td>1024</td>
+<td>Grátis</td>
+<td>Self-hosted</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Vector DBs em 2026:</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th>DB</th>
+<th>Tipo</th>
+<th>Custo</th>
+<th>Quando usar</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Qdrant</strong></td>
+<td>Self/Cloud</td>
+<td>$0-50/mês</td>
+<td>RAG sério</td>
+</tr>
+<tr class="even">
+<td><strong>Weaviate</strong></td>
+<td>Self/Cloud</td>
+<td>$0-100/mês</td>
+<td>Hybrid search</td>
+</tr>
+<tr class="odd">
+<td><strong>Pinecone</strong></td>
+<td>Cloud</td>
+<td>$70-500/mês</td>
+<td>Serverless, escala</td>
+</tr>
+<tr class="even">
+<td><strong>Chroma</strong></td>
+<td>Self</td>
+<td>Grátis</td>
+<td>Protótipo</td>
+</tr>
+<tr class="odd">
+<td><strong>Supabase pgvector</strong></td>
+<td>Self/Cloud</td>
+<td>$25-100/mês</td>
+<td>Tudo junto</td>
+</tr>
+<tr class="even">
+<td><strong>pgvector</strong></td>
+<td>Postgres</td>
+<td>$0</td>
+<td>Self-hosted</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recomendação 2026:</strong> Qdrant (self-hosted) ou Pinecone
+(cloud).</p>
+<hr />
+<p><a id="cap8"></a> # Capítulo 8 — Chunking strategies avançadas</p>
+<p><strong>Estratégia de chunking impacta qualidade do RAG em
+30-50%.</strong></p>
+<h3 id="estratégia-1-fixed-size-básica">Estratégia 1 — Fixed-size
+(básica)</h3>
+<pre><code>Texto: &quot;Lorem ipsum dolor sit amet...&quot;
+Chunks: [&quot;Lorem ipsum&quot;, &quot;dolor sit&quot;, &quot;amet consecte...&quot;]
+Tamanho: 500-1000 tokens
+Overlap: 100-200 tokens</code></pre>
+<p><strong>Problema:</strong> corta no meio de frases, perde
+contexto.</p>
+<h3 id="estratégia-2-semantic-chunking-recomendada">Estratégia 2 —
+Semantic chunking (recomendada)</h3>
+<pre><code>Chunk 1: &quot;Seção 1 do doc&quot;
+Chunk 2: &quot;Seção 2 do doc&quot;
+Chunk 3: &quot;Seção 3 do doc&quot;</code></pre>
+<p><strong>Vantagem:</strong> preserva estrutura semântica do
+documento.</p>
+<h3 id="estratégia-3-recursive-chunking-langchain">Estratégia 3 —
+Recursive chunking (LangChain)</h3>
+<div class="sourceCode" id="cb13"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> langchain.text_splitter <span class="im">import</span> RecursiveCharacterTextSplitter</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>splitter <span class="op">=</span> RecursiveCharacterTextSplitter(</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    chunk_size<span class="op">=</span><span class="dv">1000</span>,</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>    chunk_overlap<span class="op">=</span><span class="dv">200</span>,</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>    separators<span class="op">=</span>[<span class="st">&quot;</span><span class="ch">\n\n</span><span class="st">&quot;</span>, <span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>, <span class="st">&quot;. &quot;</span>, <span class="st">&quot; &quot;</span>, <span class="st">&quot;&quot;</span>]</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>chunks <span class="op">=</span> splitter.split_text(document)</span></code></pre></div>
+<p><strong>Vantagem:</strong> respeita hierarquia (parágrafo &gt; frase
+&gt; palavra).</p>
+<h3 id="estratégia-4-document-aware-avançada">Estratégia 4 —
+Document-aware (avançada)</h3>
+<ul>
+<li><strong>Markdown:</strong> chunk por header (H1, H2, H3)</li>
+<li><strong>PDF:</strong> chunk por página/seção</li>
+<li><strong>Code:</strong> chunk por função/classe</li>
+<li><strong>Tables:</strong> chunk por linha (com header repetido)</li>
+</ul>
+<p><strong>Recomendação 2026:</strong> recursive + metadata (chunk_id,
+doc_id, page).</p>
+<hr />
+<p><a id="cap9"></a> # Capítulo 9 — RAG híbrido, re-ranking,
+evaluation</p>
+<h3 id="rag-básico-bm25-embeddings">RAG básico (BM25 + Embeddings)</h3>
+<pre><code>Query → Embedding → Vector search → Top K chunks → LLM</code></pre>
+<h3 id="rag-híbrido-bm25-embeddings-re-rank">RAG híbrido (BM25 +
+Embeddings + Re-rank)</h3>
+<pre><code>Query → 
+   ├→ BM25 (keyword search)
+   ├→ Embedding (semantic search)
+   └→ Re-ranker (cross-encoder)
+   ↓
+Top K (5-10) chunks finais → LLM</code></pre>
+<p><strong>Vantagem:</strong> 30-50% melhor em queries complexas.</p>
+<h3 id="re-ranker-cross-encoder">Re-ranker (Cross-encoder)</h3>
+<div class="sourceCode" id="cb16"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sentence_transformers <span class="im">import</span> CrossEncoder</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>reranker <span class="op">=</span> CrossEncoder(<span class="st">&#39;cross-encoder/ms-marco-MiniLM-L-6-v2&#39;</span>)</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>scores <span class="op">=</span> reranker.predict([(query, chunk) <span class="cf">for</span> chunk <span class="kw">in</span> chunks])</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>top_chunks <span class="op">=</span> <span class="bu">sorted</span>(<span class="bu">zip</span>(chunks, scores), key<span class="op">=</span><span class="kw">lambda</span> x: <span class="op">-</span>x[<span class="dv">1</span>])[:<span class="dv">5</span>]</span></code></pre></div>
+<h3 id="rag-evaluation-ragas">RAG Evaluation (RAGAS)</h3>
+<div class="sourceCode" id="cb17"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> ragas <span class="im">import</span> evaluate</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> ragas.metrics <span class="im">import</span> faithfulness, context_precision, context_recall</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> evaluate(</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>    dataset<span class="op">=</span>test_dataset,</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>    metrics<span class="op">=</span>[faithfulness, context_precision, context_recall]</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(result)</span></code></pre></div>
+<p><strong>Métricas:</strong></p>
+<ul>
+<li><strong>Faithfulness:</strong> resposta é fiel ao contexto? (&gt;0.8
+é bom)</li>
+<li><strong>Context precision:</strong> contexto é relevante?
+(&gt;0.7)</li>
+<li><strong>Context recall:</strong> contexto cobre a pergunta?
+(&gt;0.7)</li>
+<li><strong>Answer relevance:</strong> resposta é útil? (&gt;0.8)</li>
+</ul>
+<hr />
+<p><a id="cap10"></a> # Capítulo 10 — Arquitetura de agentes (ReAct,
+LangGraph, AutoGen)</p>
+<h3 id="agente-react-básico">Agente ReAct (básico)</h3>
+<div class="sourceCode" id="cb18"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> react_agent(question):</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>    thought <span class="op">=</span> llm.invoke(<span class="ss">f&quot;Thought: </span><span class="sc">{</span>question<span class="sc">}</span><span class="ss">&quot;</span>)</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>    action <span class="op">=</span> parse_action(thought)</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>    observation <span class="op">=</span> execute_tool(action)</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> llm.invoke(<span class="ss">f&quot;Observation: </span><span class="sc">{</span>observation<span class="sc">}</span><span class="ss">&quot;</span>)</span></code></pre></div>
+<h3 id="langgraph-recomendado-para-produção">LangGraph (recomendado para
+produção)</h3>
+<div class="sourceCode" id="cb19"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> langgraph.graph <span class="im">import</span> StateGraph</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> State(TypedDict):</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>    messages: <span class="bu">list</span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>    next_step: <span class="bu">str</span></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> should_continue(state):</span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="st">&quot;FINAL&quot;</span> <span class="kw">in</span> state[<span class="st">&quot;messages&quot;</span>][<span class="op">-</span><span class="dv">1</span>]:</span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">&quot;end&quot;</span></span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">&quot;tool&quot;</span></span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>workflow <span class="op">=</span> StateGraph(State)</span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>workflow.add_node(<span class="st">&quot;agent&quot;</span>, agent_node)</span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a>workflow.add_node(<span class="st">&quot;tool&quot;</span>, tool_node)</span>
+<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a>workflow.add_conditional_edges(<span class="st">&quot;agent&quot;</span>, should_continue, {<span class="st">&quot;tool&quot;</span>: <span class="st">&quot;tool&quot;</span>, <span class="st">&quot;end&quot;</span>: END})</span>
+<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a>workflow.add_edge(<span class="st">&quot;tool&quot;</span>, <span class="st">&quot;agent&quot;</span>)</span>
+<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a>app <span class="op">=</span> workflow.<span class="bu">compile</span>()</span></code></pre></div>
+<h3 id="autogen-multi-agent">AutoGen (multi-agent)</h3>
+<div class="sourceCode" id="cb20"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> autogen <span class="im">import</span> AssistantAgent, UserProxyAgent</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>assistant <span class="op">=</span> AssistantAgent(<span class="st">&quot;assistant&quot;</span>, llm_config<span class="op">=</span>llm_config)</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>user <span class="op">=</span> UserProxyAgent(<span class="st">&quot;user&quot;</span>, code_execution_config<span class="op">=</span>{<span class="st">&quot;work_dir&quot;</span>: <span class="st">&quot;coding&quot;</span>})</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>user.initiate_chat(</span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>    assistant,</span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>    message<span class="op">=</span><span class="st">&quot;Crie um agente que faz RAG&quot;</span></span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<p><strong>Comparação:</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th>Framework</th>
+<th>Quando usar</th>
+<th>Vantagem</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>ReAct</strong></td>
+<td>Tarefas simples</td>
+<td>Fácil</td>
+</tr>
+<tr class="even">
+<td><strong>LangGraph</strong></td>
+<td>Produção</td>
+<td>Controle total</td>
+</tr>
+<tr class="odd">
+<td><strong>AutoGen</strong></td>
+<td>Multi-agent</td>
+<td>Conversação</td>
+</tr>
+<tr class="even">
+<td><strong>CrewAI</strong></td>
+<td>Times de agentes</td>
+<td>Role-based</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recomendação 2026:</strong> LangGraph (controle) ou CrewAI
+(times).</p>
+<hr />
+<p><a id="cap11"></a> # Capítulo 11 — Tools, memory, planning</p>
+<h3 id="tools-function-calling">Tools (function calling)</h3>
+<div class="sourceCode" id="cb21"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>tools <span class="op">=</span> [</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>    {</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;name&quot;</span>: <span class="st">&quot;search_web&quot;</span>,</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;description&quot;</span>: <span class="st">&quot;Busca na web&quot;</span>,</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;function&quot;</span>: search_web_function</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>    },</span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>    {</span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;name&quot;</span>: <span class="st">&quot;read_file&quot;</span>,</span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;description&quot;</span>: <span class="st">&quot;Lê arquivo local&quot;</span>,</span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;function&quot;</span>: read_file_function</span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a>agent <span class="op">=</span> create_react_agent(llm, tools, prompt)</span></code></pre></div>
+<h3 id="memory-long-term-short-term">Memory (long-term +
+short-term)</h3>
+<div class="sourceCode" id="cb22"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> AgentMemory:</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.short_term <span class="op">=</span> []  <span class="co"># janela de conversa</span></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.long_term <span class="op">=</span> VectorStore()  <span class="co"># memórias importantes</span></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> add(<span class="va">self</span>, message):</span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.short_term.append(message)</span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> is_important(message):</span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.long_term.add(embed(message), message)</span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> recall(<span class="va">self</span>, query, k<span class="op">=</span><span class="dv">5</span>):</span>
+<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">self</span>.long_term.search(embed(query), k<span class="op">=</span>k)</span></code></pre></div>
+<h3 id="planning-decomposição-de-tarefas">Planning (decomposição de
+tarefas)</h3>
+<div class="sourceCode" id="cb23"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> plan(goal):</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>    plan <span class="op">=</span> llm.invoke(<span class="ss">f&quot;&quot;&quot;</span></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="ss">    Decomponha o objetivo em passos:</span></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="ss">    Objetivo: </span><span class="sc">{</span>goal<span class="sc">}</span></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a><span class="ss">    </span></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a><span class="ss">    1. ...</span></span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a><span class="ss">    2. ...</span></span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a><span class="ss">    3. ...</span></span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a><span class="ss">    &quot;&quot;&quot;</span>)</span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> parse_steps(plan)</span></code></pre></div>
+<p><strong>Patterns:</strong></p>
+<ul>
+<li><strong>Plan-and-execute:</strong> planeja tudo, executa</li>
+<li><strong>ReAct:</strong> planeja e executa incremental</li>
+<li><strong>Reflexion:</strong> aprende com erros</li>
+</ul>
+<hr />
+<p><a id="cap12"></a> # Capítulo 12 — Multi-agent systems e
+orquestração</p>
+<h3 id="tipos-de-multi-agent">Tipos de multi-agent</h3>
+<p><strong>1. Sequential (sequencial):</strong></p>
+<pre><code>Agente A → Agente B → Agente C</code></pre>
+<p><strong>2. Hierarchical (gerente + workers):</strong></p>
+<pre><code>Gerente
+   ├── Worker 1
+   ├── Worker 2
+   └── Worker 3</code></pre>
+<p><strong>3. Collaborative (pares):</strong></p>
+<pre><code>Agente A ⇄ Agente B
+   ↓
+Resultado conjunto</code></pre>
+<p><strong>4. Competitive (melhor de N):</strong></p>
+<pre><code>Agente 1 → solução 1
+Agente 2 → solução 2
+Agente 3 → solução 3
+Jurado → melhor</code></pre>
+<h3 id="implementação-com-crewai">Implementação com CrewAI</h3>
+<div class="sourceCode" id="cb28"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> crewai <span class="im">import</span> Agent, Task, Crew</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>researcher <span class="op">=</span> Agent(</span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>    role<span class="op">=</span><span class="st">&quot;Researcher&quot;</span>,</span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>    goal<span class="op">=</span><span class="st">&quot;Pesquisar tema&quot;</span>,</span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a>    backstory<span class="op">=</span><span class="st">&quot;Especialista em pesquisa&quot;</span></span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a>writer <span class="op">=</span> Agent(</span>
+<span id="cb28-10"><a href="#cb28-10" aria-hidden="true" tabindex="-1"></a>    role<span class="op">=</span><span class="st">&quot;Writer&quot;</span>,</span>
+<span id="cb28-11"><a href="#cb28-11" aria-hidden="true" tabindex="-1"></a>    goal<span class="op">=</span><span class="st">&quot;Escrever artigo&quot;</span>,</span>
+<span id="cb28-12"><a href="#cb28-12" aria-hidden="true" tabindex="-1"></a>    backstory<span class="op">=</span><span class="st">&quot;Jornalista experiente&quot;</span></span>
+<span id="cb28-13"><a href="#cb28-13" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb28-14"><a href="#cb28-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-15"><a href="#cb28-15" aria-hidden="true" tabindex="-1"></a>task1 <span class="op">=</span> Task(description<span class="op">=</span><span class="st">&quot;Pesquisar X&quot;</span>, agent<span class="op">=</span>researcher)</span>
+<span id="cb28-16"><a href="#cb28-16" aria-hidden="true" tabindex="-1"></a>task2 <span class="op">=</span> Task(description<span class="op">=</span><span class="st">&quot;Escrever sobre X&quot;</span>, agent<span class="op">=</span>writer)</span>
+<span id="cb28-17"><a href="#cb28-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-18"><a href="#cb28-18" aria-hidden="true" tabindex="-1"></a>crew <span class="op">=</span> Crew(agents<span class="op">=</span>[researcher, writer], tasks<span class="op">=</span>[task1, task2])</span>
+<span id="cb28-19"><a href="#cb28-19" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> crew.kickoff()</span></code></pre></div>
+<p><strong>Quando usar multi-agent:</strong></p>
+<ul>
+<li>Tarefas complexas com <strong>especializações
+diferentes</strong></li>
+<li>Pesquisa + síntese + revisão</li>
+<li>Análise de múltiplas fontes</li>
+<li>Workflow com <strong>checks and balances</strong></li>
+</ul>
+<hr />
+<p><a id="cap13"></a> # Capítulo 13 — Visão, áudio, video AI</p>
+<h3 id="visão-image-ai">Visão (Image AI)</h3>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 35%" />
+<col style="width: 22%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Modelo</th>
+<th>Capacidade</th>
+<th>Preço</th>
+<th>Uso</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>GPT-5 Vision</strong></td>
+<td>Análise + OCR</td>
+<td>$0.01-0.03/img</td>
+<td>Análise geral</td>
+</tr>
+<tr class="even">
+<td><strong>Claude Vision</strong></td>
+<td>Análise + raciocínio</td>
+<td>$0.0012-0.0048/img</td>
+<td>Coding visual</td>
+</tr>
+<tr class="odd">
+<td><strong>Gemini 2 Vision</strong></td>
+<td>Alta qualidade</td>
+<td>$0.0025/img</td>
+<td>Multimodal</td>
+</tr>
+<tr class="even">
+<td><strong>LLaVA</strong> (open)</td>
+<td>Análise básica</td>
+<td>Grátis</td>
+<td>Self-hosted</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Casos de uso:</strong></p>
+<ul>
+<li>OCR de documentos</li>
+<li>Análise de gráficos</li>
+<li>Geração de caption</li>
+<li>Verificação de identidade</li>
+</ul>
+<h3 id="áudio-voice-ai-ver-cap-14">Áudio (Voice AI) — ver cap 14</h3>
+<h3 id="video-video-ai">Video (Video AI)</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Modelo</th>
+<th>Capacidade</th>
+<th>Preço</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Sora 2</strong></td>
+<td>Geração de video 60s</td>
+<td>$0.10-0.50/video</td>
+</tr>
+<tr class="even">
+<td><strong>Runway Gen-4</strong></td>
+<td>Edição avançada</td>
+<td>$0.05-0.20/s</td>
+</tr>
+<tr class="odd">
+<td><strong>Pika</strong></td>
+<td>Geração rápida</td>
+<td>$0.05-0.10/s</td>
+</tr>
+<tr class="even">
+<td><strong>Synthesia</strong></td>
+<td>Avatar AI</td>
+<td>$30-100/mês</td>
+</tr>
+<tr class="odd">
+<td><strong>HeyGen</strong></td>
+<td>Dublagem multilíngue</td>
+<td>$30-200/mês</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Casos de uso:</strong></p>
+<ul>
+<li>Geração de anúncio</li>
+<li>Dublagem automática</li>
+<li>Avatar para vídeo</li>
+<li>Edição por prompt</li>
+</ul>
+<hr />
+<p><a id="cap14"></a> # Capítulo 14 — Voice AI: STT, TTS,
+conversação</p>
+<h3 id="stt-speech-to-text">STT (Speech-to-Text)</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Modelo</th>
+<th>Idioma</th>
+<th>Preço</th>
+<th>Qualidade</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Whisper V3</strong></td>
+<td>99+</td>
+<td>$0.006/min</td>
+<td>⭐⭐⭐⭐⭐</td>
+</tr>
+<tr class="even">
+<td><strong>Deepgram Nova-3</strong></td>
+<td>36</td>
+<td>$0.0043/min</td>
+<td>⭐⭐⭐⭐⭐</td>
+</tr>
+<tr class="odd">
+<td><strong>AssemblyAI</strong></td>
+<td>99+</td>
+<td>$0.0083/min</td>
+<td>⭐⭐⭐⭐</td>
+</tr>
+<tr class="even">
+<td><strong>Google STT</strong></td>
+<td>125+</td>
+<td>$0.016/min</td>
+<td>⭐⭐⭐⭐</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tts-text-to-speech">TTS (Text-to-Speech)</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Modelo</th>
+<th>Vozes</th>
+<th>Preço</th>
+<th>Qualidade</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>ElevenLabs</strong></td>
+<td>1000+</td>
+<td>$5-330/mês</td>
+<td>⭐⭐⭐⭐⭐</td>
+</tr>
+<tr class="even">
+<td><strong>OpenAI TTS</strong></td>
+<td>6</td>
+<td>$15-30/1M chars</td>
+<td>⭐⭐⭐⭐</td>
+</tr>
+<tr class="odd">
+<td><strong>Play.ht</strong></td>
+<td>800+</td>
+<td>$30-200/mês</td>
+<td>⭐⭐⭐⭐</td>
+</tr>
+<tr class="even">
+<td><strong>Cartesia</strong></td>
+<td>100+</td>
+<td>$0.04/1k chars</td>
+<td>⭐⭐⭐⭐</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Vozes oficiais (AcademIA):</strong></p>
+<ul>
+<li><code>personas/ive/audio/official_voice.wav</code> — Sra. Nexus
+Ive</li>
+<li><code>personas/alencar/audio/official_voice.wav</code> — Sir. Nexus
+Alencar</li>
+<li><strong>MD5:</strong> <code>073d4964d3de3713f0349731dd3bf683</code>
+(Ive), <code>9f1cbd7aaef82b70f8972e4dc7374eba</code> (Alencar)</li>
+</ul>
+<h3 id="conversação-voice-agent">Conversação (Voice Agent)</h3>
+<p><strong>Stack recomendado:</strong></p>
+<pre><code>Twilio / WhatsApp Business (telefonia)
+   ↓
+STT (Whisper / Deepgram)
+   ↓
+LLM (Claude Sonnet 4)
+   ↓
+TTS (ElevenLabs)
+   ↓
+Resposta em voz</code></pre>
+<p><strong>Latência:</strong> 800-1500ms (tempo total).</p>
+<p><strong>Custo por minuto:</strong> US$ 0.10-0.30 (telefonia + STT +
+LLM + TTS).</p>
+<hr />
+<p><a id="cap15"></a> # Capítulo 15 — Video AI: geração, edição,
+dublagem</p>
+<h3 id="geração-de-video-text-to-video">Geração de video
+(text-to-video)</h3>
+<div class="sourceCode" id="cb30"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> openai <span class="im">import</span> OpenAI</span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>client <span class="op">=</span> OpenAI()</span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>video <span class="op">=</span> client.videos.generate(</span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a>    model<span class="op">=</span><span class="st">&quot;sora-2&quot;</span>,</span>
+<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a>    prompt<span class="op">=</span><span class="st">&quot;Pessoa explicando IA em escritório moderno&quot;</span>,</span>
+<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a>    duration<span class="op">=</span><span class="dv">30</span>,</span>
+<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a>    resolution<span class="op">=</span><span class="st">&quot;1080p&quot;</span></span>
+<span id="cb30-9"><a href="#cb30-9" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<h3 id="edição-por-prompt">Edição por prompt</h3>
+<div class="sourceCode" id="cb31"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> runwayml <span class="im">import</span> RunwayML</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>runway <span class="op">=</span> RunwayML()</span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>edit <span class="op">=</span> runway.edit(</span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>    video<span class="op">=</span>video_url,</span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>    prompt<span class="op">=</span><span class="st">&quot;Mude o fundo para uma sala de aula&quot;</span>,</span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a>    mask<span class="op">=</span><span class="st">&quot;person_only&quot;</span></span>
+<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<h3 id="dublagem-multilíngue">Dublagem multilíngue</h3>
+<div class="sourceCode" id="cb32"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> heygen <span class="im">import</span> HeyGen</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>heygen <span class="op">=</span> HeyGen()</span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>dubbed <span class="op">=</span> heygen.dub(</span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>    video<span class="op">=</span>video_url,</span>
+<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a>    target_language<span class="op">=</span><span class="st">&quot;pt-BR&quot;</span>,</span>
+<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a>    voice_clone<span class="op">=</span><span class="va">True</span></span>
+<span id="cb32-8"><a href="#cb32-8" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<h3 id="avatar-ai-palco-sem-ator">Avatar AI (palco sem ator)</h3>
+<div class="sourceCode" id="cb33"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> synthesia <span class="im">import</span> Synthesia</span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>synthesia <span class="op">=</span> Synthesia()</span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>video <span class="op">=</span> synthesia.create_avatar_video(</span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>    script<span class="op">=</span><span class="st">&quot;Bem-vindo ao curso de IA!&quot;</span>,</span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a>    avatar<span class="op">=</span><span class="st">&quot;anna_white&quot;</span>,</span>
+<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a>    background<span class="op">=</span><span class="st">&quot;office&quot;</span></span>
+<span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<p><strong>Casos de uso (AcademIA):</strong></p>
+<ul>
+<li>100+ videoaulas (com TTS Ive + Alencar)</li>
+<li>Shorts automáticos para YouTube</li>
+<li>Trailers de mentoria</li>
+<li>Dublagem PT-BR → EN/ES</li>
+</ul>
+<hr />
+<p><a id="cap16"></a> # Capítulo 16 — LLMOps, monitoring, custos</p>
+<h3 id="observability">Observability</h3>
+<div class="sourceCode" id="cb34"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> langfuse <span class="im">import</span> Langfuse</span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>langfuse <span class="op">=</span> Langfuse(public_key<span class="op">=</span>..., secret_key<span class="op">=</span>...)</span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a><span class="at">@langfuse.observe</span>()</span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> my_agent(question):</span>
+<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> agent.invoke(question)</span></code></pre></div>
+<p><strong>Métricas essenciais:</strong></p>
+<ul>
+<li><strong>Latência</strong> (p50, p95, p99)</li>
+<li><strong>Tokens</strong> (entrada, saída, custo)</li>
+<li><strong>Error rate</strong> (timeout, parse fail)</li>
+<li><strong>Quality</strong> (faithfulness, relevance)</li>
+<li><strong>User feedback</strong> (thumbs up/down)</li>
+</ul>
+<h3 id="ferramentas-de-monitoring">Ferramentas de monitoring</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Tool</th>
+<th>Custo</th>
+<th>Quando usar</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Langfuse</strong></td>
+<td>Grátis-$59/mês</td>
+<td>Open source, self-hosted</td>
+</tr>
+<tr class="even">
+<td><strong>LangSmith</strong></td>
+<td>$39-1500/mês</td>
+<td>LangChain nativo</td>
+</tr>
+<tr class="odd">
+<td><strong>Helicone</strong></td>
+<td>$0-100/mês</td>
+<td>Proxy LLM</td>
+</tr>
+<tr class="even">
+<td><strong>Arize</strong></td>
+<td>$0-1000/mês</td>
+<td>ML + LLM</td>
+</tr>
+<tr class="odd">
+<td><strong>Phoenix</strong></td>
+<td>Grátis</td>
+<td>Self-hosted</td>
+</tr>
+</tbody>
+</table>
+<h3 id="custo-por-stack">Custo por stack</h3>
+<pre><code>LLM: Claude Sonnet 4 = $3/1M input tokens
+Embeddings: Voyage = $0.12/1M tokens
+Vector DB: Qdrant self-hosted = $20/mês
+Monitoring: Langfuse = $0-59/mês
+
+Por 1000 conversas (10 turns cada):
+- 10M tokens input = $30
+- 2M tokens output = $60
+- 100k tokens embedding = $12
+- Total: ~$100
+
+Por 100k conversas/mês: $10k/mês</code></pre>
+<hr />
+<p><a id="cap17"></a> # Capítulo 17 — Segurança, LGPD, AI Act</p>
+<h3 id="lgpd-para-ia-generativa">LGPD para IA generativa</h3>
+<p><strong>O que se aplica:</strong></p>
+<ul>
+<li><strong>Dados de input:</strong> se contém dados pessoais, é
+tratamento de dados</li>
+<li><strong>Dados de output:</strong> se LLM vaza dado pessoal, é
+incidente</li>
+<li><strong>Embeddings:</strong> armazenam informação dos documentos
+originais</li>
+<li><strong>Logs:</strong> tudo que passa pelo LLM vira log</li>
+</ul>
+<p><strong>Compliance:</strong></p>
+<ol type="1">
+<li><strong>Consentimento</strong> explícito do titular</li>
+<li><strong>Transparência</strong> sobre uso de IA</li>
+<li><strong>Retenção</strong> limitada (30-90 dias)</li>
+<li><strong>Direito ao esquecimento</strong> (deletar + retreinar
+embedding)</li>
+<li><strong>DPO</strong> (Data Protection Officer) nomeado</li>
+</ol>
+<p><strong>Implementação:</strong></p>
+<div class="sourceCode" id="cb36"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Anonimizar antes de enviar pro LLM</span></span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> anonymize(text):</span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>    text <span class="op">=</span> re.sub(<span class="vs">r&#39;\b\d</span><span class="sc">{3}</span><span class="vs">\.\d</span><span class="sc">{3}</span><span class="vs">\.\d</span><span class="sc">{3}</span><span class="vs">-\d</span><span class="sc">{2}</span><span class="vs">\b&#39;</span>, <span class="st">&#39;[CPF]&#39;</span>, text)</span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a>    text <span class="op">=</span> re.sub(<span class="vs">r&#39;\b[\w\.-]+@[\w\.-]+\.\w+\b&#39;</span>, <span class="st">&#39;[EMAIL]&#39;</span>, text)</span>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> text</span>
+<span id="cb36-6"><a href="#cb36-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-7"><a href="#cb36-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Nunca logar input com PII</span></span>
+<span id="cb36-8"><a href="#cb36-8" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> safe_log(messages):</span>
+<span id="cb36-9"><a href="#cb36-9" aria-hidden="true" tabindex="-1"></a>    sanitized <span class="op">=</span> [anonymize(m[<span class="st">&#39;content&#39;</span>]) <span class="cf">for</span> m <span class="kw">in</span> messages]</span>
+<span id="cb36-10"><a href="#cb36-10" aria-hidden="true" tabindex="-1"></a>    logger.info(sanitized)</span></code></pre></div>
+<h3 id="eu-ai-act-2026">EU AI Act (2026)</h3>
+<p><strong>Categorias de risco:</strong></p>
+<ul>
+<li><strong>Risco inaceitável:</strong> proibido (manipulação
+subliminar, etc)</li>
+<li><strong>Alto risco:</strong> auditoria obrigatória (contratação,
+educação, etc)</li>
+<li><strong>Risco limitado:</strong> transparência (chatbot deve dizer
+que é IA)</li>
+<li><strong>Risco mínimo:</strong> sem regulação extra</li>
+</ul>
+<p><strong>Para AcademIA:</strong></p>
+<ul>
+<li>Somos <strong>risco limitado</strong> (chatbot)</li>
+<li>Devemos dizer que é IA em cada conversa</li>
+<li>Não somos alto risco (não decidimos sobre pessoas)</li>
+</ul>
+<hr />
+<p><a id="cap18"></a> # Capítulo 18 — Custo total: de R$ 100/mês a R$
+50k/mês</p>
+<h3 id="stack-mínimo-r-100mês">Stack mínimo (R$ 100/mês)</h3>
+<ul>
+<li><strong>LLM:</strong> DeepSeek V3 ($0.14/1M tok)</li>
+<li><strong>Embeddings:</strong> BGE-M3 self-hosted (grátis)</li>
+<li><strong>Vector DB:</strong> Chroma self-hosted (grátis)</li>
+<li><strong>Monitoring:</strong> Phoenix self-hosted (grátis)</li>
+<li><strong>Servidor:</strong> Hetzner €4/mês</li>
+</ul>
+<p><strong>Suporta:</strong> 1k conversas/mês.</p>
+<h3 id="stack-profissional-r-1kmês">Stack profissional (R$ 1k/mês)</h3>
+<ul>
+<li><strong>LLM:</strong> Claude Sonnet 4 ($3/1M tok)</li>
+<li><strong>Embeddings:</strong> Voyage ($0.12/1M tok)</li>
+<li><strong>Vector DB:</strong> Qdrant Cloud ($50/mês)</li>
+<li><strong>Monitoring:</strong> Langfuse Pro ($59/mês)</li>
+<li><strong>Servidor:</strong> AWS t3.medium ($30/mês)</li>
+</ul>
+<p><strong>Suporta:</strong> 10k conversas/mês.</p>
+<h3 id="stack-empresarial-r-10kmês">Stack empresarial (R$ 10k/mês)</h3>
+<ul>
+<li><strong>LLM:</strong> Claude Opus 4 ($15/1M tok) + GPT-5
+multimodal</li>
+<li><strong>Embeddings:</strong> OpenAI text-embedding-3-large</li>
+<li><strong>Vector DB:</strong> Pinecone ($500/mês)</li>
+<li><strong>Monitoring:</strong> LangSmith + Arize</li>
+<li><strong>Multi-cloud:</strong> AWS + GCP</li>
+<li><strong>Voice AI:</strong> ElevenLabs + Twilio</li>
+</ul>
+<p><strong>Suporta:</strong> 100k conversas/mês.</p>
+<h3 id="stack-global-r-50kmês">Stack global (R$ 50k+/mês)</h3>
+<ul>
+<li><strong>Tudo acima, multi-região</strong></li>
+<li><strong>Fine-tuning</strong> com Llama 4 (self-hosted)</li>
+<li><strong>Dedicated cluster</strong> GPU H100</li>
+<li><strong>Custom embeddings</strong> fine-tuned</li>
+<li><strong>Voice cloning</strong> custom</li>
+<li><strong>SLA 99.99%</strong></li>
+</ul>
+<p><strong>Suporta:</strong> 1M+ conversas/mês.</p>
+<hr />
+<p><a id="epilogo"></a> # Epílogo — O futuro da IA generativa em
+2027-2030</p>
+<p><strong>2027:</strong> <strong>AGI parcial.</strong> Modelos passam
+em 90% dos testes profissionais. RAG é o padrão. Agentes autônomos
+dominam atendimento.</p>
+<p><strong>2028:</strong> <strong>Modelos multimodais
+unificados.</strong> Texto + imagem + áudio + video no mesmo modelo.
+<strong>Multimodal native</strong> (não combinações).</p>
+<p><strong>2029:</strong> <strong>AI-to-AI como protocolo.</strong>
+Agentes negociam, transacionam, fecham contratos.
+<strong>On-chain</strong> (blockchain).</p>
+<p><strong>2030:</strong> <strong>AGI completo (ou quase).</strong>
+Modelo faz <strong>qualquer tarefa cognitiva</strong> que humano faz.
+<strong>Democratização total.</strong></p>
+<p><strong>Recomendação 2026:</strong></p>
+<ul>
+<li><strong>Comece com stack mínimo</strong> (R$ 100/mês) — valide o
+produto</li>
+<li><strong>Escale para profissional</strong> (R$ 1k/mês) — quando
+&gt;1k usuários</li>
+<li><strong>Enterprise</strong> (R$ 10k/mês) — quando &gt;10k
+usuários</li>
+<li><strong>Global</strong> (R$ 50k+) — quando &gt;100k usuários</li>
+</ul>
+<hr />
+<p><a id="apendice"></a> # Apêndice — Stack recomendado por
+orçamento</p>
+<h3 id="r-100mês-hobbyvalidação">🟢 R$ 100/mês (hobby/validação)</h3>
+<div class="sourceCode" id="cb37"><pre
+class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">LLM</span><span class="kw">:</span><span class="at"> DeepSeek V3 (ou Llama 4 self-hosted)</span></span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="fu">Embeddings</span><span class="kw">:</span><span class="at"> BGE-M3 (self-hosted)</span></span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a><span class="fu">Vector DB</span><span class="kw">:</span><span class="at"> Chroma (self-hosted)</span></span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a><span class="fu">Monitoring</span><span class="kw">:</span><span class="at"> Phoenix (self-hosted)</span></span>
+<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a><span class="fu">Server</span><span class="kw">:</span><span class="at"> Hetzner CX22 (€4)</span></span>
+<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a><span class="fu">Deploy</span><span class="kw">:</span><span class="at"> Docker Compose</span></span></code></pre></div>
+<h3 id="r-1kmês-pme">🟡 R$ 1k/mês (PME)</h3>
+<div class="sourceCode" id="cb38"><pre
+class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">LLM</span><span class="kw">:</span><span class="at"> Claude Sonnet 4</span></span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="fu">Embeddings</span><span class="kw">:</span><span class="at"> Voyage</span></span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a><span class="fu">Vector DB</span><span class="kw">:</span><span class="at"> Qdrant Cloud</span></span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a><span class="fu">Monitoring</span><span class="kw">:</span><span class="at"> Langfuse Pro</span></span>
+<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a><span class="fu">Server</span><span class="kw">:</span><span class="at"> AWS t3.medium</span></span>
+<span id="cb38-6"><a href="#cb38-6" aria-hidden="true" tabindex="-1"></a><span class="fu">Deploy</span><span class="kw">:</span><span class="at"> K8s (single node)</span></span></code></pre></div>
+<h3 id="r-10kmês-enterprise">🟠 R$ 10k/mês (enterprise)</h3>
+<div class="sourceCode" id="cb39"><pre
+class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">LLM</span><span class="kw">:</span><span class="at"> Claude Opus 4 + GPT-5</span></span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="fu">Embeddings</span><span class="kw">:</span><span class="at"> OpenAI text-embedding-3-large</span></span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a><span class="fu">Vector DB</span><span class="kw">:</span><span class="at"> Pinecone</span></span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a><span class="fu">Monitoring</span><span class="kw">:</span><span class="at"> LangSmith + Arize</span></span>
+<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a><span class="fu">Server</span><span class="kw">:</span><span class="at"> AWS EKS</span></span>
+<span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a><span class="fu">Voice AI</span><span class="kw">:</span><span class="at"> ElevenLabs + Twilio</span></span>
+<span id="cb39-7"><a href="#cb39-7" aria-hidden="true" tabindex="-1"></a><span class="fu">Multimodal</span><span class="kw">:</span><span class="at"> GPT-5 vision + Sora 2</span></span></code></pre></div>
+<h3 id="r-50kmês-global">🔴 R$ 50k+/mês (global)</h3>
+<div class="sourceCode" id="cb40"><pre
+class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">LLM</span><span class="kw">:</span><span class="at"> Multi-modelo (Claude + GPT + Gemini + Llama)</span></span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a><span class="fu">Embeddings</span><span class="kw">:</span><span class="at"> Multi-vendor</span></span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a><span class="fu">Vector DB</span><span class="kw">:</span><span class="at"> Pinecone + Weaviate (multi-region)</span></span>
+<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a><span class="fu">Monitoring</span><span class="kw">:</span><span class="at"> Full stack (Arize + Honeycomb + Datadog)</span></span>
+<span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a><span class="fu">Server</span><span class="kw">:</span><span class="at"> AWS EKS multi-region + GPU cluster</span></span>
+<span id="cb40-6"><a href="#cb40-6" aria-hidden="true" tabindex="-1"></a><span class="fu">Voice AI</span><span class="kw">:</span><span class="at"> ElevenLabs + Cartesia + custom</span></span>
+<span id="cb40-7"><a href="#cb40-7" aria-hidden="true" tabindex="-1"></a><span class="fu">Multimodal</span><span class="kw">:</span><span class="at"> Sora 2 + Runway + Synthesia</span></span>
+<span id="cb40-8"><a href="#cb40-8" aria-hidden="true" tabindex="-1"></a><span class="fu">Fine-tuning</span><span class="kw">:</span><span class="at"> Llama 4 + Mistral</span></span></code></pre></div>
+<hr />
+<p><em>Fim da Apostila 39 · IA Generativa Avançada — Do Prompt ao Agente
+Autônomo</em></p>
+<p><em>Por Sra. Nexus Ive + Sir. Nexus Alencar · 2026 · Licença: CC
+BY-SA 4.0</em></p>
+<p><em>“IA generativa em 2026 é como eletricidade em 1900: commodity que
+muda tudo. Quem domina o stack completo constrói produtos que
+multiplicam receita por 10x. A Dupla Nexus (Ive + Alencar) mostra o
+caminho — da teoria à produção em escala.”</em></p>
+<script src="../enhance.js"></script>
+</body>
+</html>
