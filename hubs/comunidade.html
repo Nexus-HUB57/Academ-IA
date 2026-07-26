@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comunidade · Academ'IA · Nexus Affil'IA'te</title>
+  <meta name="description" content="Comunidade Nexus: 4 canais oficiais, eventos mensais, masterminds, networking qualificado.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a0e1a;
+      --bg2: #0f1424;
+      --card: #131a2c;
+      --border: rgba(99, 234, 255, 0.18);
+      --cyan: #63eaff;
+      --purple: #b78cff;
+      --pink: #ff7eb6;
+      --gold: #facc15;
+      --green: #4ade80;
+      --text: #e5edf5;
+      --dim: #94a3b8;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+    .nav {
+      position: sticky; top: 0; z-index: 50;
+      backdrop-filter: blur(20px);
+      background: rgba(10, 14, 26, 0.85);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 32px;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .logo {
+      font-size: 20px; font-weight: 800;
+      background: linear-gradient(135deg, var(--cyan), var(--purple));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .nav-links { display: flex; gap: 24px; }
+    .nav-links a { color: var(--dim); text-decoration: none; font-size: 14px; }
+    .nav-links a:hover { color: var(--cyan); }
+    .container { max-width: 1280px; margin: 0 auto; padding: 0 32px; }
+    .hero {
+      padding: 80px 32px 40px;
+      text-align: center;
+      background: radial-gradient(circle at 50% 0%, rgba(183, 140, 255, 0.08), transparent 60%);
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(183, 140, 255, 0.1);
+      border: 1px solid var(--purple);
+      color: var(--purple);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 12px; font-weight: 600;
+      margin-bottom: 16px;
+    }
+    h1 {
+      font-size: 56px; font-weight: 800;
+      line-height: 1.1; margin-bottom: 16px;
+      background: linear-gradient(135deg, var(--text) 0%, var(--purple) 50%, var(--pink) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .subtitle { color: var(--dim); font-size: 20px; max-width: 720px; margin: 0 auto 32px; }
+    .stats {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 24px; padding: 40px 32px;
+      max-width: 1280px; margin: 0 auto;
+    }
+    .stat-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px; padding: 24px;
+      text-align: center;
+    }
+    .stat-num {
+      font-size: 36px; font-weight: 800;
+      background: linear-gradient(135deg, var(--cyan), var(--purple));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .stat-label { color: var(--dim); font-size: 14px; margin-top: 4px; }
+    .section { padding: 60px 32px; }
+    .canais-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .canal {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px 24px;
+      transition: all 0.3s;
+    }
+    .canal:hover { transform: translateY(-4px); border-color: var(--purple); }
+    .canal-icon {
+      font-size: 40px; margin-bottom: 16px;
+    }
+    .canal-titulo { font-size: 20px; font-weight: 700; margin-bottom: 4px; }
+    .canal-acesso {
+      display: inline-block;
+      background: var(--bg2);
+      color: var(--cyan);
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .canal-desc { color: var(--dim); font-size: 14px; margin-bottom: 16px; }
+    .canal-stats {
+      display: flex; gap: 16px;
+      font-size: 12px; color: var(--dim);
+    }
+    .canal-stats span { display: flex; align-items: center; gap: 4px; }
+    .eventos-timeline {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .evento {
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      gap: 24px;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .evento:last-child { border-bottom: none; }
+    .evento-data {
+      color: var(--purple);
+      font-weight: 700;
+      font-size: 14px;
+    }
+    .evento-titulo { font-size: 18px; font-weight: 700; margin-bottom: 4px; }
+    .evento-desc { color: var(--dim); font-size: 14px; }
+    .evento-tipo {
+      display: inline-block;
+      background: var(--bg2);
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 11px;
+      color: var(--cyan);
+      margin-top: 8px;
+    }
+    .footer {
+      padding: 60px 32px; text-align: center;
+      border-top: 1px solid var(--border);
+      color: var(--dim);
+    }
+    .footer a { color: var(--cyan); text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="logo">NEXUS·ACADEMY</div>
+  <div class="nav-links">
+    <a href="/academia">Hub</a>
+    <a href="/academia/cursos">Cursos</a>
+    <a href="/academia/comunidade">Comunidade</a>
+    <a href="/academia/certificacoes">Certificações</a>
+    <a href="/academia/webinars">Webinars</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <span class="badge">👥 4 Canais Oficiais</span>
+  <h1>Comunidade<br>Nexus</h1>
+  <p class="subtitle">
+    Mais que uma academia: uma rede de profissionais que estão construindo
+    o futuro do marketing de afiliação com agentes IA. Networking, masterminds
+    e suporte contínuo.
+  </p>
+</section>
+
+<div class="stats">
+  <div class="stat-card">
+    <div class="stat-num">3.2k+</div>
+    <div class="stat-label">Membros ativos</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-num">12</div>
+    <div class="stat-label">Eventos mensais</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-num">4</div>
+    <div class="stat-label">Canais oficiais</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-num">4.9/5</div>
+    <div class="stat-label">NPS médio</div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <h2 style="text-align: center; font-size: 40px; margin-bottom: 48px;">
+      📡 Canais Oficiais
+    </h2>
+    <div class="canais-grid">
+
+      <div class="canal">
+        <div class="canal-icon">📱</div>
+        <div class="canal-titulo">Telegram · Nexus Geral</div>
+        <div class="canal-acesso">🆓 GRATUITO</div>
+        <div class="canal-desc">
+          Canal principal para dúvidas, networking e novidades.
+          Qualquer aluno matriculado pode entrar.
+        </div>
+        <div class="canal-stats">
+          <span>👥 3.247 membros</span>
+          <span>💬 247 msgs/dia</span>
+        </div>
+      </div>
+
+      <div class="canal">
+        <div class="canal-icon">💼</div>
+        <div class="canal-titulo">Slack · Estrategistas</div>
+        <div class="canal-acesso">🎯 CEN+</div>
+        <div class="canal-desc">
+          Para Estrategistas e Master. Discussões técnicas, code review,
+          ajuda mútua, networking qualificado.
+        </div>
+        <div class="canal-stats">
+          <span>👥 487 membros</span>
+          <span>💬 89 msgs/dia</span>
+        </div>
+      </div>
+
+      <div class="canal">
+        <div class="canal-icon">👑</div>
+        <div class="canal-titulo">Telegram · Elite (privado)</div>
+        <div class="canal-acesso">👑 CEN+</div>
+        <div class="canal-desc">
+          Acesso ultra-restrito. Apenas Cert Elite e Master Plus.
+          Networking C-level + oportunidades de co-investimento.
+        </div>
+        <div class="canal-stats">
+          <span>👥 47 membros</span>
+          <span>💬 23 msgs/dia</span>
+        </div>
+      </div>
+
+      <div class="canal">
+        <div class="canal-icon">🎓</div>
+        <div class="canal-titulo">Discord · Comunidade Master+</div>
+        <div class="canal-acesso">⭐ MAS+</div>
+        <div class="canal-desc">
+          Para Master Plus. Mentoria 1:1, decisões estratégicas,
+          revenue share em produtos da rede.
+        </div>
+        <div class="canal-stats">
+          <span>👥 12 membros</span>
+          <span>💬 8 msgs/dia</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background: rgba(183, 140, 255, 0.03);">
+  <div class="container">
+    <h2 style="text-align: center; font-size: 40px; margin-bottom: 16px;">
+      📅 Eventos Recorrentes
+    </h2>
+    <p style="text-align: center; color: var(--dim); margin-bottom: 48px;">
+      12 eventos por mês, todos com replay
+    </p>
+
+    <div class="eventos-timeline">
+      <div class="evento">
+        <div class="evento-data">Toda Segunda<br>20h BRT</div>
+        <div>
+          <div class="evento-titulo">Live de Abertura da Semana</div>
+          <div class="evento-desc">
+            Sra. Nexus Ive abre a semana com novidades, cases e tira-dúvidas
+            ao vivo da comunidade.
+          </div>
+          <span class="evento-tipo">📡 Live · 60min</span>
+        </div>
+      </div>
+
+      <div class="evento">
+        <div class="evento-data">Toda Quarta<br>19h BRT</div>
+        <div>
+          <div class="evento-titulo">Mastermind Técnico</div>
+          <div class="evento-desc">
+            Sir. Nexus Alencar tira dúvidas técnicas avançadas sobre
+            agentes, SHO, multi-tenant e federation.
+          </div>
+          <span class="evento-tipo">🔧 Mastermind · 90min</span>
+        </div>
+      </div>
+
+      <div class="evento">
+        <div class="evento-data">Toda Sexta<br>20h BRT</div>
+        <div>
+          <div class="evento-titulo">Demo Day · Afiliados</div>
+          <div class="evento-desc">
+            Membros apresentam cases reais: o que funcionou, o que não funcionou,
+            métricas concretas. Peer-learning.
+          </div>
+          <span class="evento-tipo">🎬 Demo · 90min</span>
+        </div>
+      </div>
+
+      <div class="evento">
+        <div class="evento-data">1º Sábado do Mês<br>10h BRT</div>
+        <div>
+          <div class="evento-titulo">Workshop Presencial (SP/RJ)</div>
+          <div class="evento-desc">
+            Workshop presencial (SP + RJ) com almoço e networking.
+            Membros MAS+ têm acesso gratuito.
+          </div>
+          <span class="evento-tipo">🏢 Presencial · 6h</span>
+        </div>
+      </div>
+
+      <div class="evento">
+        <div class="evento-data">15º dia do Mês<br>20h BRT</div>
+        <div>
+          <div class="evento-titulo">AMA com C-Suite</div>
+          <div class="evento-desc">
+            Perguntas abertas para Niko, Ravi, Helena, Otto e Otavio.
+            Temas estratégicos do ecossistema.
+          </div>
+          <span class="evento-tipo">🎯 AMA · 60min</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 style="text-align: center; font-size: 40px; margin-bottom: 16px;">
+      🤝 Como Entrar
+    </h2>
+    <p style="text-align: center; color: var(--dim); margin-bottom: 40px;">
+      3 passos para fazer parte da comunidade
+    </p>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px;">
+      <div style="background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 24px; text-align: center;">
+        <div style="font-size: 40px; margin-bottom: 12px;">1️⃣</div>
+        <h3 style="font-size: 18px; margin-bottom: 8px;">Crie sua conta</h3>
+        <p style="color: var(--dim); font-size: 14px;">
+          Cadastro gratuito em 60 segundos. Email + senha, sem cartão.
+        </p>
+      </div>
+
+      <div style="background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 24px; text-align: center;">
+        <div style="font-size: 40px; margin-bottom: 12px;">2️⃣</div>
+        <h3 style="font-size: 18px; margin-bottom: 8px;">Entre no Telegram</h3>
+        <p style="color: var(--dim); font-size: 14px;">
+          Link enviado por email automaticamente. Acesso imediato ao canal
+          principal.
+        </p>
+      </div>
+
+      <div style="background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 24px; text-align: center;">
+        <div style="font-size: 40px; margin-bottom: 12px;">3️⃣</div>
+        <h3 style="font-size: 18px; margin-bottom: 8px;">Suba de Nível</h3>
+        <p style="color: var(--dim); font-size: 14px;">
+          Conclua trilhas para acessar canais premium. CEN → Slack Estrategistas.
+          CEN+ → Telegram Elite.
+        </p>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 40px;">
+      <a href="/cadastro" class="btn" style="display: inline-flex; background: linear-gradient(135deg, var(--cyan), var(--purple)); color: var(--bg); padding: 18px 36px; border-radius: 14px; text-decoration: none; font-weight: 700; font-size: 16px;">
+        🚀 Entrar na Comunidade Gratuitamente
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>© 2026 Nexus Affil'IA'te · MMN_IA · Academ'IA</p>
+  <p style="margin-top: 8px;">
+    <a href="/academia">Hub</a> ·
+    <a href="/academia/cursos">Cursos</a> ·
+    <a href="/academia/certificacoes">Certificações</a> ·
+    <a href="/academia/webinars">Webinars</a>
+  </p>
+</footer>
+
+</body>
+</html>

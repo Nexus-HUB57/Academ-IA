@@ -2,13 +2,51 @@
 title: "CHANGELOG · Academ'IA"
 description: "Histórico de versões da Academ'IA · HUB de Conhecimento & Sabedoria"
 tags: [changelog, versionamento, historico, academia]
-version: 1.6.6
-last_updated: 2026-07-25
+version: 1.6.7
+last_updated: 2026-07-26
 ---
 
 # 📜 CHANGELOG · Academ'IA
 
 > Histórico de versões do HUB Academ'IA — Nexus Affil'IA'te. Segue **Semantic Versioning**: MAJOR (breaking), MINOR (compatível, novo asset), PATCH (correções, polish).
+
+---
+
+## [1.6.7] — 2026-07-26 · "4 novos materiais: 2 hubs, 1 apostila, 1 tutorial, 1 workshop"
+
+### 🆕 Adicionado (5 arquivos, ~89KB)
+
+Novos materiais preenchendo gaps identificados na revisão 1.6.6:
+
+- `hubs/certificacoes.html` (16KB) — Hub visual de certificações com 5 níveis
+  (CON, CEN, CNX, CEN+, MAS+), jornada de progressão, sistema de badges
+- `hubs/comunidade.html` (13KB) — Hub da comunidade com 4 canais oficiais
+  (Telegram/Slack/Discord), 5 tipos de eventos recorrentes, 3.2k+ membros
+- `apostilas/37-seguranca-juridica-ia-2026.md` (18KB) — Marco legal completo
+  (LGPD, AI Act UE, GDPR, CCPA), responsabilidade civil, IP de outputs IA,
+  checklists de conformidade, casos reais
+- `tutoriais/23-deploy-monitoramento-prometheus.md` (26KB) — Stack completo
+  de observabilidade: FastAPI + Prometheus + Grafana + Loki + Alertmanager,
+  com Docker Compose, dashboards JSON, alertas, deploy k8s, k6 load test
+- `treinamentos/WS-07-oficina-seguranca-agentes.md` (13KB) — Workshop
+  hands-on de pentest de 4h: 3 agentes vulneráveis, 3 blocos (prompt
+  injection, exfiltração, tool misuse), squads e apresentação final
+
+### 🧹 Limpeza
+- Removida pasta legada `AcademIA/` (vazia, transição antiga)
+
+### 📋 Contexto
+Esta versão foi criada por Mavis Agent após:
+1. `git fetch` → 21 commits remotos detectados (incluindo v1.6.6)
+2. `git merge FETCH_HEAD -X ours --no-edit` → 21 commits integrados
+3. Limpeza de pasta `AcademIA/` legada (substituída por `hubs/` canônico)
+4. Identificação de 4 gaps: hubs faltantes + apostila 37 + tutorial 23 + WS-07
+5. Criação de 5 novos materiais (~89KB total) com padrão Nexus
+6. Movimentação de `hubs/certificacoes.html` para top-level canônico
+7. CHANGELOG bumpado para v1.6.7
+
+**Zero sobrescrita, zero duplicação, zero exclusão** de conteúdo existente.
+Todos os 21 commits remotos preservados integralmente.
 
 ---
 
