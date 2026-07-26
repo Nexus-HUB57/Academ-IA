@@ -2,13 +2,80 @@
 title: "CHANGELOG · Academ'IA"
 description: "Histórico de versões da Academ'IA · HUB de Conhecimento & Sabedoria"
 tags: [changelog, versionamento, historico, academia]
-version: 1.7.1
+version: 1.7.2
 last_updated: 2026-07-26
 ---
 
 # 📜 CHANGELOG · Academ'IA
 
 > Histórico de versões do HUB Academ'IA — Nexus Affil'IA'te. Segue **Semantic Versioning**: MAJOR (breaking), MINOR (compatível, novo asset), PATCH (correções, polish).
+
+---
+
+## [1.7.2] — 2026-07-26 · "Povoamento do canal YouTube — scripts e procedimentos"
+
+### 🆕 Adicionado (6 arquivos, ~36KB)
+
+Pacote completo para popular o canal YouTube (que tem só 1 vídeo público).
+
+#### Scripts (2)
+
+- `scripts/youtube_set_privacy_public.py` (6.5KB): muda unlisted/private → public
+  em lote, com OAuth2, dry-run, e suporte a codes específicos. Idempotente.
+
+- `scripts/youtube_upload_pending.py` (8.5KB): re-tenta upload dos codes
+  pendentes, com rate-limit awareness, atualização automática de
+  `publish_plan.json` e `upload_results.json`, e suporte a `--public`.
+
+#### Documentação (3)
+
+- `youtube/OPERACAO-CANAL.md` (10.9KB): procedimentos canônicos de operação
+  do canal, convenções de privacidade (private/unlisted/public), KPIs,
+  workflow de atualização. **Integra** com a fila de re-povoamento criada
+  por outro dev (Mavis Agent) em 25/jul.
+
+- `youtube/RUNBOOK-POVOAR-CANAL.md` (10.1KB): passo a passo executável,
+  dividido em 4 fases (Setup, Liberar Vídeos, Upload Pendentes, Validação).
+  Inclui dry-run, troubleshooting, e rollback.
+
+- `docs/ACADEMIA_MANIFEST_OPERACIONAL_2026-07-25.md` (3.6KB): manifesto
+  operacional atualizado com base no rebuild 25-jul (14 codes no padrão
+  60-240s, 1 fora, 1 legado já público). Cruza com `upload_results.json`
+  para dar visibilidade por privacidade.
+
+#### Segurança (1)
+
+- `youtube/.gitignore` (0.3KB): ignora `client_secret.json` e `token.json`
+  (credenciais OAuth2 que dão acesso ao canal).
+
+### 🔄 Integração com trabalho de outros devs
+
+Esta versão **complementa** o trabalho de outros devs sem sobrescrever:
+
+- **Fila de re-povoamento** (`upload_queue_repovoamento_2026-07-25.json`):
+  15 codes com masters rebuildados (14 padrão + 1 fora). Documentada em
+  `OPERACAO-CANAL.md` § "Integração com Fila de Re-povoamento".
+
+- **Manifest do rebuild** (`MANIFESTO_REBUILD_VIDEO_AULAS_00_14_2026-07-24.json`):
+  usado como referência de metadata.
+
+- **Auditoria de gargalos** (`reports/BOTTLENECK-AUDIT-2026-07-26.md`):
+  validado que os scripts cobrem os gargalos identificados.
+
+### 📋 Contexto
+
+Esta versão foi criada por Mavis Agent após:
+1. `git fetch` → 14 commits remotos detectados (Onda 45-47 + scripts + 3 índices)
+2. Backup preventido de 21 arquivos Mavis para `/tmp/staging_mavis_26jul/`
+3. `git pull --ff-only origin main` → 14 commits integrados sem conflito
+4. Validação de integridade: 21 arquivos IDÊNTICOS ao backup
+5. Detecção de possível sobreposição com `build_youtube_repovoamento_queue.py`
+   de outro dev → **coexistência** (complemento, não duplicação)
+6. Atualização do `OPERACAO-CANAL.md` para referenciar a nova fila
+
+**Zero sobrescrita, zero duplicação, zero exclusão.**
+15 arquivos das versões 1.6.3-1.6.6 + 6 arquivos desta versão = 21 arquivos Mavis
+no remote, todos intactos.
 
 ---
 
