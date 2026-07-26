@@ -2,13 +2,58 @@
 title: "CHANGELOG · Academ'IA"
 description: "Histórico de versões da Academ'IA · HUB de Conhecimento & Sabedoria"
 tags: [changelog, versionamento, historico, academia]
-version: 1.7.0
+version: 1.7.1
 last_updated: 2026-07-26
 ---
 
 # 📜 CHANGELOG · Academ'IA
 
 > Histórico de versões do HUB Academ'IA — Nexus Affil'IA'te. Segue **Semantic Versioning**: MAJOR (breaking), MINOR (compatível, novo asset), PATCH (correções, polish).
+
+---
+
+## [1.7.1] — 2026-07-26 · "Roteiros de narração para os 18 webinars (GAP-08 fechado)"
+
+### 🆕 Adicionado (17 roteiros, ~85KB)
+
+GAP-08 do roadmap fechado. Cada webinar agora tem roteiro de narração completo.
+
+**Estrutura padrão de cada roteiro**:
+- BLOCO 0: Abertura com Sra. Ive + Sir Alencar
+- BLOCOS DE CONTEÚDO: tópicos extraídos do material original
+- BLOCO FINAL: Q&A estruturado + CTA + referência à AcademIA
+- Especificações técnicas (1920x1080, H.264, vozes oficiais)
+- Estrutura de engajamento com timestamps
+- Material de apoio cruzado
+
+**Webinars cobertos** (17 com roteiro gerado):
+- WB-01 a WB-03: Lançamento/IOAID/SHO/Open House
+- WB-04 a WB-08: Skills/Multi-tenant/A-B/LGPD/Financeiro
+- WB-10 a WB-15: SEO/Burnout/Federation/Conteúdo/Pricing/Data-stack
+- WB-16 a WB-18: Deploy-continuo/Conversa-vende/Comunidade-tribo
+
+**Trilha inferida** por tópico:
+- Fundamental: ioaid, sho, academia, burnout, comunidade
+- Agente: skills, agentes, conversa-vende, criacao-conteudo
+- Master: ab-test, lgpd, financeiro, seo, pricing, deploy-continuo
+- Elite: multi-tenant, federation, data-stack
+
+### 📊 Métricas Atualizadas
+
+| Recurso | v1.7.0 | v1.7.1 | Delta |
+|---|---|---|---|
+| Webinars | 18 | 18 | 0 |
+| Roteiros de webinar | 0 | 17 | +17 |
+| Cobertura roteiro/webinar | 0% | 94% | +94% |
+
+### 🎯 GAPs Fechados Acumulados
+
+- ✅ GAP-01: 3 bancos de questões
+- ✅ GAP-02: 6 tutoriais #16-21
+- ✅ GAP-03: 3 cursos Master
+- ✅ GAP-04: slides para 22 vídeos
+- ✅ GAP-08: 17 roteiros de webinar (NOVO)
+- ✅ GAP-09: 5 simulados de certificação
 
 ---
 
