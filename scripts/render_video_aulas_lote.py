@@ -165,7 +165,6 @@ def rebuild_module(mod):
     persona = mod['persona']
     cover = ROOT / mod['approved_cover']
     slides_md = ROOT / mod['slides_source']
-    audio_src = ROOT / mod['legacy_audio']
 
     work = ROOT / mod['workspace_dir'] / 'rebuild'
     slides_dir = work / 'slides'
@@ -174,8 +173,14 @@ def rebuild_module(mod):
     slides_dir.mkdir(parents=True, exist_ok=True)
     segs_dir.mkdir(parents=True, exist_ok=True)
 
-    if not audio_src.exists():
-        return {'code': code, 'ok': False, 'error': f'audio missing {audio_src}'}
+    preferred_audios = [
+        work / f"rebuild_{code}_narracao_ptbr.wav",
+        work / f"rebuild_{code}_narracao_ptbr.mp3",
+        ROOT / mod['legacy_audio'],
+    ]
+    audio_src = next((p for p in preferred_audios if p.exists()), None)
+    if not audio_src:
+        return {'code': code, 'ok': False, 'error': f'audio missing for module {code}'}
 
     audio_dur = ffprobe_duration(audio_src)
     if audio_dur < 1:
@@ -242,7 +247,7 @@ def rebuild_module(mod):
         'final_video': final_name,
         'duration_s': round(dur, 2),
         'slides_count': n,
-        'audio_source': str(audio_src.relative_to(ROOT)),
+        'audio_source': str(audio_src.relative_to(ROOT)) if audio_src.is_relative_to(ROOT) else str(audio_src),
         'cover': str(cover.relative_to(ROOT)),
         'thumb': mod['approved_thumb'],
         'youtube_description': mod['youtube_description'],
