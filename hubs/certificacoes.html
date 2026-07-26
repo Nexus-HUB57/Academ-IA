@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certificações · Academ'IA · Nexus Affil'IA'te</title>
+  <meta name="description" content="5 certificações oficiais: CON, CEN, CNX, CEN+ e MAS+. Reconhecidas pelo mercado e válidas para LinkedIn.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a0e1a;
+      --bg2: #0f1424;
+      --card: #131a2c;
+      --border: rgba(99, 234, 255, 0.18);
+      --cyan: #63eaff;
+      --purple: #b78cff;
+      --gold: #facc15;
+      --green: #4ade80;
+      --red: #ef4444;
+      --text: #e5edf5;
+      --dim: #94a3b8;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+    .nav {
+      position: sticky; top: 0; z-index: 50;
+      backdrop-filter: blur(20px);
+      background: rgba(10, 14, 26, 0.85);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 32px;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .logo {
+      font-size: 20px; font-weight: 800;
+      background: linear-gradient(135deg, var(--cyan), var(--purple));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .nav-links { display: flex; gap: 24px; }
+    .nav-links a { color: var(--dim); text-decoration: none; font-size: 14px; }
+    .nav-links a:hover { color: var(--cyan); }
+    .container { max-width: 1280px; margin: 0 auto; padding: 0 32px; }
+    .hero {
+      padding: 80px 32px 40px;
+      text-align: center;
+      background: radial-gradient(circle at 50% 0%, rgba(99, 234, 255, 0.08), transparent 60%);
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(99, 234, 255, 0.1);
+      border: 1px solid var(--cyan);
+      color: var(--cyan);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 12px; font-weight: 600;
+      margin-bottom: 16px;
+    }
+    h1 {
+      font-size: 56px; font-weight: 800;
+      line-height: 1.1; margin-bottom: 16px;
+      background: linear-gradient(135deg, var(--text) 0%, var(--cyan) 50%, var(--purple) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .subtitle { color: var(--dim); font-size: 20px; max-width: 720px; margin: 0 auto 32px; }
+    .niveis-grid {
+      padding: 40px 32px;
+    }
+    .nivel-row {
+      margin-bottom: 40px;
+    }
+    .nivel-title {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      display: flex; align-items: center; gap: 12px;
+    }
+    .nivel-title::before {
+      content: ''; width: 4px; height: 32px;
+      border-radius: 2px;
+    }
+    .nivel-title.operador::before { background: var(--green); }
+    .nivel-title.estrategista::before { background: var(--cyan); }
+    .nivel-title.master::before { background: var(--purple); }
+    .nivel-title.elite::before { background: var(--gold); }
+    .certs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+    }
+    .cert {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      transition: all 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+    .cert::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 4px;
+    }
+    .cert.operador::before { background: var(--green); }
+    .cert.estrategista::before { background: var(--cyan); }
+    .cert.master::before { background: var(--purple); }
+    .cert.elite::before { background: var(--gold); }
+    .cert:hover { transform: translateY(-4px); border-color: var(--cyan); }
+    .cert-icon {
+      font-size: 48px; margin-bottom: 12px;
+      display: inline-block;
+    }
+    .cert-codigo {
+      display: inline-block;
+      background: var(--bg2);
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--cyan);
+      margin-bottom: 8px;
+    }
+    .cert-titulo { font-size: 20px; font-weight: 700; margin-bottom: 4px; }
+    .cert-subtitulo { color: var(--dim); font-size: 13px; margin-bottom: 12px; }
+    .cert-meta {
+      display: flex; gap: 12px;
+      font-size: 12px; color: var(--dim);
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+    .cert-meta span { display: flex; align-items: center; gap: 4px; }
+    .cert-requisitos {
+      background: var(--bg2);
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 12px;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+    .cert-requisitos strong { color: var(--cyan); }
+    .cert-beneficios {
+      list-style: none;
+      margin-bottom: 16px;
+    }
+    .cert-beneficios li {
+      font-size: 13px;
+      color: var(--text);
+      padding: 4px 0;
+      display: flex; align-items: center; gap: 6px;
+    }
+    .cert-beneficios li::before { content: '✓'; color: var(--green); }
+    .cert-cta {
+      display: block;
+      text-align: center;
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 10px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 13px;
+      transition: all 0.2s;
+    }
+    .cert-cta:hover { background: var(--cyan); color: var(--bg); border-color: var(--cyan); }
+    .footer {
+      padding: 60px 32px; text-align: center;
+      border-top: 1px solid var(--border);
+      color: var(--dim);
+    }
+    .footer a { color: var(--cyan); text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="logo">NEXUS·ACADEMY</div>
+  <div class="nav-links">
+    <a href="/academia">Hub</a>
+    <a href="/academia/cursos">Cursos</a>
+    <a href="/academia/trilhas">Trilhas</a>
+    <a href="/academia/certificacoes">Certificações</a>
+    <a href="/academia/webinars">Webinars</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <span class="badge">🏆 5 Certificações Oficiais</span>
+  <h1>Certificações<br>Reconhecidas</h1>
+  <p class="subtitle">
+    5 níveis progressivos de certificação, do Operador ao Master Plus.
+    Cada uma valida habilidades reais e gera badge para LinkedIn.
+  </p>
+</section>
+
+<div class="container niveis-grid">
+
+  <!-- NÍVEL OPERADOR -->
+  <div class="nivel-row">
+    <div class="nivel-title operador">🥉 Nível Operador (Gratuito)</div>
+    <div class="certs-grid">
+      <div class="cert operador">
+        <div class="cert-icon">🥉</div>
+        <div class="cert-codigo">CON</div>
+        <div class="cert-titulo">Operador Nexus</div>
+        <div class="cert-subtitulo">Fundamentos do ecossistema</div>
+        <div class="cert-meta">
+          <span>⏱ 38 min</span>
+          <span>📚 4 módulos</span>
+          <span>🆓 Grátis</span>
+        </div>
+        <div class="cert-requisitos">
+          <strong>Pré-requisitos:</strong> Nenhum. Trilha Fundamental completa.
+        </div>
+        <ul class="cert-beneficios">
+          <li>Certificado PDF com hash</li>
+          <li>Badge LinkedIn verificado</li>
+          <li>Acesso à comunidade Nexus</li>
+        </ul>
+        <a href="#" class="cert-cta">Iniciar Certificação →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NÍVEL ESTRATEGISTA -->
+  <div class="nivel-row">
+    <div class="nivel-title estrategista">🎯 Nível Estrategista (Premium)</div>
+    <div class="certs-grid">
+      <div class="cert estrategista">
+        <div class="cert-icon">🎯</div>
+        <div class="cert-codigo">CEN</div>
+        <div class="cert-titulo">Estrategista Nexus</div>
+        <div class="cert-subtitulo">Agentes autônomos e skills essenciais</div>
+        <div class="cert-meta">
+          <span>⏱ 54 min</span>
+          <span>📚 4 módulos</span>
+          <span>👑 Premium</span>
+        </div>
+        <div class="cert-requisitos">
+          <strong>Pré-requisitos:</strong> Certificação CON.
+        </div>
+        <ul class="cert-beneficios">
+          <li>Tudo do CON</li>
+          <li>Certificado Estrategista Nexus</li>
+          <li>Badge LinkedIn premium</li>
+          <li>Acesso ao canal #estrategista no Slack</li>
+          <li>1 call de mentoria 30min</li>
+        </ul>
+        <a href="#" class="cert-cta">Iniciar Certificação →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NÍVEL MASTER -->
+  <div class="nivel-row">
+    <div class="nivel-title master">💎 Nível Master (Premium+)</div>
+    <div class="certs-grid">
+      <div class="cert master">
+        <div class="cert-icon">💎</div>
+        <div class="cert-codigo">CNX</div>
+        <div class="cert-titulo">Nexus Master</div>
+        <div class="cert-subtitulo">Otimização, funis e A/B testing</div>
+        <div class="cert-meta">
+          <span>⏱ 70 min</span>
+          <span>📚 4 módulos</span>
+          <span>👑 Premium+</span>
+        </div>
+        <div class="cert-requisitos">
+          <strong>Pré-requisitos:</strong> Certificação CEN.
+        </div>
+        <ul class="cert-beneficios">
+          <li>Tudo do CEN</li>
+          <li>Certificado Nexus Master</li>
+          <li>Badge LinkedIn Master</li>
+          <li>Acesso ao canal #master</li>
+          <li>2 calls de mentoria 60min</li>
+          <li>Convite para grupo fechado (Telegram)</li>
+        </ul>
+        <a href="#" class="cert-cta">Iniciar Certificação →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NÍVEL ELITE -->
+  <div class="nivel-row">
+    <div class="nivel-title elite">👑 Nível Elite (Premium++)</div>
+    <div class="certs-grid">
+      <div class="cert elite">
+        <div class="cert-icon">👑</div>
+        <div class="cert-codigo">CEN+</div>
+        <div class="cert-titulo">Cert Elite Nexus</div>
+        <div class="cert-subtitulo">Arquitetura multi-tenant e federation</div>
+        <div class="cert-meta">
+          <span>⏱ 67 min</span>
+          <span>📚 3 módulos</span>
+          <span>👑 Elite</span>
+        </div>
+        <div class="cert-requisitos">
+          <strong>Pré-requisitos:</strong> Certificação CNX + 1 case real publicado.
+        </div>
+        <ul class="cert-beneficios">
+          <li>Tudo do CNX</li>
+          <li>Certificado Cert Elite Nexus</li>
+          <li>Badge LinkedIn Elite Architect</li>
+          <li>Acesso ao canal #elite</li>
+          <li>4 calls de mentoria 60min</li>
+          <li>Listing no diretório público de Elite</li>
+          <li>Convite para eventos presenciais</li>
+        </ul>
+        <a href="#" class="cert-cta">Iniciar Certificação →</a>
+      </div>
+
+      <div class="cert elite">
+        <div class="cert-icon">⭐</div>
+        <div class="cert-codigo">MAS+</div>
+        <div class="cert-titulo">Master Plus</div>
+        <div class="cert-subtitulo">Nível mais alto — leadership técnico</div>
+        <div class="cert-meta">
+          <span>⏱ 80 min</span>
+          <span>📚 4 módulos avançados</span>
+          <span>👑 Elite+</span>
+        </div>
+        <div class="cert-requisitos">
+          <strong>Pré-requisitos:</strong> Certificação CEN+ + 2 anos de experiência comprovada.
+        </div>
+        <ul class="cert-beneficios">
+          <li>Tudo do CEN+</li>
+          <li>Certificado Master Plus (raro, ≤ 50 pessoas)</li>
+          <li>Badge LinkedIn Master Plus</li>
+          <li>Mentoria 1:1 mensal com C-Suite</li>
+          <li>Voto em decisões da plataforma</li>
+          <li>Revenue share em produtos da rede</li>
+        </ul>
+        <a href="#" class="cert-cta">Aplicar para Master Plus →</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<section class="container" style="padding: 60px 32px;">
+  <h2 style="font-size: 36px; margin-bottom: 16px; text-align: center;">📋 Como Funciona a Certificação</h2>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; margin-top: 32px;">
+    <div style="background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 24px; text-align: center;">
+      <div style="font-size: 32px; margin-bottom: 12px;">1️⃣</div>
+      <h3 style="font-size: 16px; margin-bottom: 8px;">Conclua a Trilha</h3>
+      <p style="color: var(--dim); font-size: 13px;">Assista todos os módulos da trilha correspondente (100% progresso).</p>
+    </div>
+
+    <div style="background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 24px; text-align: center;">
+      <div style="font-size: 32px; margin-bottom: 12px;">2️⃣</div>
+      <h3 style="font-size: 16px; margin-bottom: 8px;">Faça a Prova</h3>
+      <p style="color: var(--dim); font-size: 13px;">Teste online de 30 min com 20 questões. Nota mínima: 70%.</p>
+    </div>
+
+    <div style="background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 24px; text-align: center;">
+      <div style="font-size: 32px; margin-bottom: 12px;">3️⃣</div>
+      <h3 style="font-size: 16px; margin-bottom: 8px;">Submeta Case Real</h3>
+      <p style="color: var(--dim); font-size: 13px;">Para CEN+ e MAS+, documente um case real de aplicação (com métricas).</p>
+    </div>
+
+    <div style="background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 24px; text-align: center;">
+      <div style="font-size: 32px; margin-bottom: 12px;">4️⃣</div>
+      <h3 style="font-size: 16px; margin-bottom: 8px;">Receba o Badge</h3>
+      <p style="color: var(--dim); font-size: 13px;">PDF assinado digitalmente + badge LinkedIn verificado.</p>
+    </div>
+  </div>
+</section>
+
+<section class="container" style="padding: 60px 32px; text-align: center;">
+  <h2 style="font-size: 36px; margin-bottom: 16px;">📊 Jornada de Certificação</h2>
+  <p style="color: var(--dim); margin-bottom: 40px;">
+    Da primeira aula ao Master Plus, em ritmo regular de 2-3h por semana
+  </p>
+
+  <div style="background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 32px; max-width: 720px; margin: 0 auto; text-align: left;">
+    <div style="display: flex; gap: 16px; align-items: center; margin-bottom: 16px;">
+      <div style="width: 32px; height: 32px; border-radius: 50%; background: var(--green); display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--bg);">1</div>
+      <div>
+        <strong>Semanas 1-2:</strong> Trilha Fundamental → CON
+      </div>
+    </div>
+    <div style="display: flex; gap: 16px; align-items: center; margin-bottom: 16px;">
+      <div style="width: 32px; height: 32px; border-radius: 50%; background: var(--cyan); display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--bg);">2</div>
+      <div>
+        <strong>Semanas 3-6:</strong> Trilha Agente → CEN
+      </div>
+    </div>
+    <div style="display: flex; gap: 16px; align-items: center; margin-bottom: 16px;">
+      <div style="width: 32px; height: 32px; border-radius: 50%; background: var(--purple); display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--bg);">3</div>
+      <div>
+        <strong>Semanas 7-10:</strong> Trilha Master → CNX
+      </div>
+    </div>
+    <div style="display: flex; gap: 16px; align-items: center; margin-bottom: 16px;">
+      <div style="width: 32px; height: 32px; border-radius: 50%; background: var(--gold); display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--bg);">4</div>
+      <div>
+        <strong>Semanas 11-14:</strong> Trilha Elite → CEN+
+      </div>
+    </div>
+    <div style="display: flex; gap: 16px; align-items: center;">
+      <div style="width: 32px; height: 32px; border-radius: 50%; background: var(--gold); display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--bg);">5</div>
+      <div>
+        <strong>Meses 6-12:</strong> Master Plus → MAS+ (aplicação)
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>© 2026 Nexus Affil'IA'te · MMN_IA · Academ'IA</p>
+  <p style="margin-top: 8px;">
+    <a href="/academia">Hub</a> ·
+    <a href="/academia/cursos">Cursos</a> ·
+    <a href="/academia/trilhas">Trilhas</a> ·
+    <a href="/academia/comunidade">Comunidade</a>
+  </p>
+</footer>
+
+</body>
+</html>
