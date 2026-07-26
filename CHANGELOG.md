@@ -2,13 +2,55 @@
 title: "CHANGELOG · Academ'IA"
 description: "Histórico de versões da Academ'IA · HUB de Conhecimento & Sabedoria"
 tags: [changelog, versionamento, historico, academia]
-version: 1.6.7
+version: 1.7.0
 last_updated: 2026-07-26
 ---
 
 # 📜 CHANGELOG · Academ'IA
 
 > Histórico de versões do HUB Academ'IA — Nexus Affil'IA'te. Segue **Semantic Versioning**: MAJOR (breaking), MINOR (compatível, novo asset), PATCH (correções, polish).
+
+---
+
+## [1.7.0] — 2026-07-26 · "Slides para os 22 roteiros de vídeo (GAP-04 fechado)"
+
+### 🆕 Adicionado (22 slides, ~200KB)
+
+GAP-04 do roadmap finalmente fechado. Cada roteiro de vídeo agora tem seu material visual de apoio (slides ASCII art) para renderização.
+
+**Slides por trilha:**
+
+| Trilha | Slides | Vídeos cobertos |
+|---|---|---|
+| Fundamental | 7 | 00-boas-vindas, 01-ioaid×2, 02-sho, 03-painel×2 |
+| Agente | 3 | 04-primeiro-agente, 05-skills, 06-whatsapp, 07-judge |
+| Master | 4 | 08-otimizacao, 09-funis, 10-ab-test, 11-coortes |
+| Elite | 4 | 12-blueprints, 13-multi-tenant, 14-federacao |
+| NEXUS AFFIL'IA'TE TECH | 5 | 15-orquestracao, 16-senciencia, 17-autonomia, 18-saas, 19-processamento |
+
+**Padrão estabelecido**:
+- Slide 00: Abertura com título + trilha + duração
+- Slides 01-06: Cada cena do roteiro como slide visual
+- Slide final: CTA + checklist + próximo vídeo
+- Paleta por trilha (Fundamental=cyan, Agente=azul, Master=gold, Elite=roxo)
+- Background canônico #0A0E27
+- Fontes: Montserrat Bold (títulos) + Inter (corpo)
+
+### 📊 Métricas Atualizadas
+
+| Recurso | v1.6.7 | v1.7.0 | Delta |
+|---|---|---|---|
+| Roteiros de vídeo | 22 | 22 | 0 |
+| Slides de vídeo | 0 | 22 | +22 |
+| Cobertura slides/roteiro | 0% | 100% | +100% |
+
+### 🎯 GAPs Fechados Acumulados
+
+- ✅ GAP-01: 3 bancos de questões
+- ✅ GAP-02: 6 tutoriais #16-21
+- ✅ GAP-03: 3 cursos Master
+- ✅ GAP-04: slides para 22 vídeos (ROTEIROS COMPLETOS)
+- ✅ GAP-09: 5 simulados de certificação
 
 ---
 
