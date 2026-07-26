@@ -2,13 +2,55 @@
 title: "CHANGELOG · Academ'IA"
 description: "Histórico de versões da Academ'IA · HUB de Conhecimento & Sabedoria"
 tags: [changelog, versionamento, historico, academia]
-version: 1.6.6
-last_updated: 2026-07-25
+version: 1.6.7
+last_updated: 2026-07-26
 ---
 
 # 📜 CHANGELOG · Academ'IA
 
 > Histórico de versões do HUB Academ'IA — Nexus Affil'IA'te. Segue **Semantic Versioning**: MAJOR (breaking), MINOR (compatível, novo asset), PATCH (correções, polish).
+
+---
+
+## [1.6.7] — 2026-07-26 · "3 índices navegáveis para Lab-Nexus, Lib-Nexus, agent-sessions"
+
+### 🆕 Adicionado (3 índices navegáveis, ~22.5KB)
+
+3 novos documentos `INDEX.md` para áreas estratégicas do repo que já tinham README mas não tinham índice navegável. Complementa v1.6.5/v1.6.6 (que cobriram `tutoriais/`, `treinamentos/`, `cursos/`, `materiais/video-aulas/`, `playbooks/`, `sync/`, `producao/roteiros/`, `marca/`).
+
+- `Lab-Nexus/INDEX.md` (11.4KB): índice dos 75 assets do Lab Nexus
+  (40 tools + 24 prompts + 6 templates + 5 workflows) com filtros por
+  categoria, persona-alvo e caso de uso (lançamento, copy, analytics,
+  automação, visual, finanças). Detecta gap: README cita 57 assets,
+  contagem real = 75. Atualização recomendada em PR pelo owner do Lab.
+
+- `Lib-Nexus/INDEX.md` (6.9KB): índice das 27 referências canônicas
+  (9 knowledge-base + 7 agents-specs + 5 api-docs + 6 best-practices)
+  com filtros por domínio, audiência (dev/estrategista/SRE/jurídico)
+  e tipo de artefato. Respeita regra read-mostly: navegação pura,
+  sem alterar governança.
+
+- `agent-sessions/INDEX.md` (4.3KB): índice da única sessão catalogada
+  (2026-06-03-mavis) com seus 5 artefatos. Documenta convenção de
+  nomenclatura para novas sessões e links para GUIA_MULTI_DEV.
+
+### 📋 Contexto
+
+Esta versão foi criada por Mavis Agent após:
+1. `git pull --no-rebase origin main` → 3 commits remotos integrados
+   (v1.6.6 + 2 docs de governança)
+2. `cat GUIA_MULTI_DEV.md` → confirmada regra "NUNCA sobrescrever,
+   SEMPRE criar versão alternativa"
+3. Auditoria de 25 diretórios procurando por áreas com README mas
+   sem INDEX navegável
+4. Identificação do gap: `Lab-Nexus/`, `Lib-Nexus/`, `agent-sessions/`
+5. Criação de 3 índices **complementares** aos READMEs existentes
+   (zero sobrescrita)
+
+**Zero sobrescrita, zero duplicação, zero exclusão.**
+Os READMEs de Lab-Nexus (135 linhas), Lib-Nexus (91 linhas) e
+agent-sessions (95 linhas) seguem intactos. Os 6 artefatos da sessão
+2026-06-03-mavis também seguem intactos.
 
 ---
 
