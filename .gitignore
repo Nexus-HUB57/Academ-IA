@@ -43,3 +43,26 @@ temp/
 /AcademIA/producao/quality/.working/
 *.local.md
 *.draft.md
+
+# P0 (2026-07-26 BOTTLENECK-AUDIT): debug/hash folders nunca devem ser commitados
+# audit_hashes/ foi usado como debug de cenas no piloto da aula-15
+**/audit_hashes/
+**/audit_hashes/**
+
+# P0 (2026-07-26): renders intermediários (intermediarios não-canônicos)
+**/render/intermediate/
+**/.intermediate/
+**/scratch_renders/
+
+# P0 (2026-07-26): caches locais de pipelines
+.cache_*
+*.cache.json
+
+# P0 (2026-07-26): working state de scripts
+.working_state/
+*.working.json
+
+# P0 (2026-07-26): backups de migration (manter apenas os explicitamente versionados)
+*.bak.json
+*.bak.md
+migration_backup/
