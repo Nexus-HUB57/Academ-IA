@@ -2,13 +2,50 @@
 title: "CHANGELOG · Academ'IA"
 description: "Histórico de versões da Academ'IA · HUB de Conhecimento & Sabedoria"
 tags: [changelog, versionamento, historico, academia]
-version: 1.6.7
-last_updated: 2026-07-26
+version: 1.7.0
+last_updated: 2026-07-27
 ---
 
 # 📜 CHANGELOG · Academ'IA
 
 > Histórico de versões do HUB Academ'IA — Nexus Affil'IA'te. Segue **Semantic Versioning**: MAJOR (breaking), MINOR (compatível, novo asset), PATCH (correções, polish).
+
+---
+
+## [1.7.0] — 2026-07-27 · "5 novos materiais: apostila 42, tool LTV, email template, workshop pricing"
+
+### 🆕 Adicionado (5 arquivos, ~85KB)
+
+Novos materiais preenchendo gaps na trilha Estrategista/Master:
+
+- `apostilas/42-pricing-dinamico-ia-2026.md` (24KB) — Pricing dinâmico com IA:
+  modelos matemáticos, WTP, elasticidade, segmentação, implementação
+  técnica, compliance (LGPD/CDC/FTC), cases reais, plano 90 dias
+- `Lab-Nexus/tools/financas/05-calculadora-valor-vida-cliente.md` (17KB) —
+  Calculadora de LTV/CAC/payback com 3 implementações (CLI, FastAPI,
+  cohort analysis), templates de pricing por segmento
+- `Lab-Nexus/templates/email/03-sequencia-nurture-7d.md` (13KB) — Sequência
+  de 7 emails pronta para copiar, com subject lines, body, métricas
+  esperadas, segmentação pós-sequência
+- `treinamentos/WS-08-oficina-pricing-psicologia.md` (17KB) — Workshop
+  hands-on de 3h: 7 heurísticas de pricing, 3 tiers com decoy, A/B
+  test setup com GrowthBook, template HTML pronto
+
+### 🔄 Renomeado
+- `apostilas/37-seguranca-juridica-ia-2026.md` → `apostilas/41-seguranca-juridica-ia-2026.md`
+  (renomeação para evitar colisão de número com `apostilas/37-mentoria-ia-coaching.md`
+  criada por outro dev em 2026-07-25)
+
+### 📋 Contexto
+Esta versão foi criada por Mavis Agent após:
+1. `git fetch` → identificados 21 commits remotos + onda 45-48 (61/61 materiais)
+2. Detectada colisão de número 37 entre minha apostila e a do outro dev
+3. Renomeação para 41 (preserva meu trabalho, evita sobrescrita)
+4. Criação de 4 novos materiais (~85KB) em pricing/LTV/email/workshop
+5. CHANGELOG bumpado para v1.7.0
+
+**Zero sobrescrita, zero duplicação, zero exclusão** de conteúdo existente.
+Materiais do outro dev (Onda 45-48) preservados integralmente.
 
 ---
 
