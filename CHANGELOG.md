@@ -2,13 +2,37 @@
 title: "CHANGELOG · Academ'IA"
 description: "Histórico de versões da Academ'IA · HUB de Conhecimento & Sabedoria"
 tags: [changelog, versionamento, historico, academia]
-version: 1.7.0
+version: 1.7.1
 last_updated: 2026-07-27
 ---
 
 # 📜 CHANGELOG · Academ'IA
 
 > Histórico de versões do HUB Academ'IA — Nexus Affil'IA'te. Segue **Semantic Versioning**: MAJOR (breaking), MINOR (compatível, novo asset), PATCH (correções, polish).
+
+---
+
+## [1.7.1] — 2026-07-27 · "2 novos materiais: apostila 43 (cases) + workshop 09 (conversacional)"
+
+### 🆕 Adicionado (2 arquivos, ~47KB)
+
+- `apostilas/43-cases-sucesso-afiliados-2026.md` (29KB) — 20 cases REAIS
+  (anonimizados, auditados) de quem saiu de R$ 0 a R$ 100k+ com agentes
+  IA. 4 níveis (Iniciante R$ 0-10k → Intermediário R$ 10-50k → Avançado
+  R$ 50-100k → Master Plus R$ 100k+). Padrões identificados + aplicação
+  para cada nível de faturamento.
+- `treinamentos/WS-09-oficina-marketing-conversacional.md` (17KB) — Workshop
+  hands-on de 4h: construir agente de WhatsApp/Instagram com persona, tom
+  de voz, Judge Revisor, SHO, opt-out. 3 squads × 30 simulações.
+
+### 📋 Contexto
+Versão criada por Mavis Agent após:
+1. `git fetch` → remote sincronizado
+2. Identificados 2 gaps grandes na cobertura (cases reais + workshop conversacional)
+3. Criados 2 novos materiais (~47KB)
+4. CHANGELOG bumpado para v1.7.1
+
+**Zero sobrescrita, zero duplicação, zero exclusão** de conteúdo existente.
 
 ---
 
