@@ -158,6 +158,13 @@ TARGETS = [
         'subtitle': 'Do Brasil para o mundo. Como internacionalizar produto, dobrar receita e construir marca global. Cases reais (Ive + Alencar).',
         'category': 'APOSTILA 40',
     },
+    {
+        'dst': 'ACAD-apostila-37-seguranca-juridica-ia-2026.webp',
+        'src': 'capa-18-seguranca-pentest-alencar.png',
+        'title': 'Seguranca Juridica da IA',
+        'subtitle': 'Marco legal 2026: LGPD, AI Act europeu, Marco Civil da Internet e responsabilidade civil de agentes autonomos.',
+        'category': 'APOSTILA 37',
+    },
 ]
 
 
