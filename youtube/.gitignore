@@ -1,0 +1,13 @@
+# YouTube credentials — NEVER version
+# These contain OAuth2 secrets that grant access to the Nexus channel
+
+# OAuth2 client secret (downloaded from Google Cloud Console)
+client_secret.json
+*-client-secret.json
+
+# OAuth2 access/refresh token (generated on first script run)
+token.json
+*-token.json
+*-credentials.json
+token.pickle
+*.pickle

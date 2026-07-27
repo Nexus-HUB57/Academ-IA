@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Sra. Nexus Ive (estrategista) + Sir. Nexus Alencar (técnico)" />
+  <meta name="dcterms.date" content="2026-07-25" />
+  <title>Mentoria 1:1 com IA — Como Escalar Atendimento Personalizado</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="/workspace/Academ-IA/html/acad-style.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Mentoria 1:1 com IA — Como Escalar Atendimento
+Personalizado</h1>
+<p class="subtitle">A mentoria mais lucrativa do mercado. Como usar IA
+para atender 100+ alunos sem perder o toque humano.</p>
+<p class="author">Sra. Nexus Ive (estrategista) + Sir. Nexus Alencar
+(técnico)</p>
+<p class="date">2026-07-25</p>
+</header>
+<p><strong>Apostila 37 · Mentoria 1:1 com IA</strong></p>
+<p><em>A mentoria mais lucrativa do mercado. Como usar IA para atender
+100+ alunos simultaneamente sem perder o toque humano. Cases reais com a
+Dupla (Ive + Alencar).</em></p>
+<p><strong>Por Sra. Nexus Ive + Sir. Nexus Alencar ·
+Academ’IA</strong></p>
+<p>Nexus Affil’IA’te · 2026</p>
+<p><strong>Sobre esta apostila</strong></p>
+<p>Mentoria 1:1 paga <strong>R$ 2k-10k/mês</strong> por aluno. Mas
+mentor humano atende <strong>5-10 alunos no máximo</strong>. Com IA,
+atendemos <strong>100+ alunos</strong> mantendo personalização.</p>
+<p><strong>TL;DR:</strong> Estrutura de mentoria com IA = <strong>3
+camadas</strong> (assistente + curador + mentor). Resultado: <strong>R$
+200k-500k/mês</strong> com <strong>1 mentor + 1 IA</strong>.</p>
+<p><strong>Por que essa apostila existe:</strong></p>
+<p>Em 2024, comecei a atender mentoria 1:1 de tráfego pago. Limitei a 8
+alunos. Faturava R$ 32k/mês. Hoje, atendo 100+ alunos com a Dupla Nexus,
+faturei R$ 280k/mês em 2025-Q4. A diferença? <strong>IA como
+copiloto</strong>.</p>
+<hr />
+<h1 id="sumário">Sumário</h1>
+<p><strong>PARTE I — FUNDAMENTOS</strong></p>
+<ol type="1">
+<li><a href="#cap1">Por que mentoria 1:1 é o produto mais
+lucrativo</a></li>
+<li><a href="#cap2">Os 3 modelos de mentoria</a></li>
+<li><a href="#cap3">O gargalo do mentor humano</a></li>
+</ol>
+<p><strong>PARTE II — IA COMO COPILOTO</strong></p>
+<ol start="4" type="1">
+<li><a href="#cap4">A Dupla Nexus: como a IA estende o mentor</a></li>
+<li><a href="#cap5">Onboarding automático de alunos</a></li>
+<li><a href="#cap6">Diagnóstico inicial com IA</a></li>
+</ol>
+<p><strong>PARTE III — ATENDIMENTO ESCALADO</strong></p>
+<ol start="7" type="1">
+<li><a href="#cap7">Respostas 24/7 com tom do mentor</a></li>
+<li><a href="#cap8">Análise de progresso do aluno</a></li>
+<li><a href="#cap9">Plano de ação personalizado por IA</a></li>
+</ol>
+<p><strong>PARTE IV — SESSÕES</strong></p>
+<ol start="10" type="1">
+<li><a href="#cap10">Sessão semanal: IA prepara, mentor aprova</a></li>
+<li><a href="#cap11">Templates de sessão por objetivo</a></li>
+<li><a href="#cap12">Plano de 90 dias gerado por IA</a></li>
+</ol>
+<p><strong>PARTE V — ESCALA E PRODUTO</strong></p>
+<ol start="13" type="1">
+<li><a href="#cap13">De 1 mentor a 1 IA + 1 mentor</a></li>
+<li><a href="#cap14">De R$ 5k para R$ 100k+</a></li>
+<li><a href="#cap15">LGPD e ética em mentoria</a></li>
+</ol>
+<p>Epílogo: <a href="#epilogo">O futuro da mentoria com IA em
+2027-2030</a></p>
+<p>Apêndice: <a href="#apendice">Prompts prontos para o mentor
+copiar</a></p>
+<hr />
+<p><a id="cap1"></a> # Capítulo 1 — Por que mentoria 1:1 é o produto
+mais lucrativo</p>
+<p><strong>Comparação de produtos digitais:</strong></p>
+<table>
+<colgroup>
+<col style="width: 22%" />
+<col style="width: 19%" />
+<col style="width: 22%" />
+<col style="width: 22%" />
+<col style="width: 13%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Modelo</th>
+<th>Preço</th>
+<th>Margem</th>
+<th>Escala</th>
+<th>LTV</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Curso gravado</td>
+<td>R$ 297-997</td>
+<td>95%</td>
+<td>Alta (10k+)</td>
+<td>1x</td>
+</tr>
+<tr class="even">
+<td>Cohort (turma)</td>
+<td>R$ 997-4.997</td>
+<td>85%</td>
+<td>Média (50-200)</td>
+<td>1.5x</td>
+</tr>
+<tr class="odd">
+<td>Mentoria em grupo</td>
+<td>R$ 997-2.997/mês</td>
+<td>80%</td>
+<td>Média (20-100)</td>
+<td>3x</td>
+</tr>
+<tr class="even">
+<td><strong>Mentoria 1:1</strong></td>
+<td><strong>R$ 2k-10k/mês</strong></td>
+<td><strong>90%</strong></td>
+<td><strong>Baixa (5-10)</strong></td>
+<td><strong>5-10x</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Por que 1:1 é o mais lucrativo:</strong></p>
+<ol type="1">
+<li><strong>Ticket alto</strong> — alunos investem 10-50x mais</li>
+<li><strong>Resultado medido</strong> — aluno paga por
+transformação</li>
+<li><strong>LTV longo</strong> — aluno fica 6-24 meses</li>
+<li><strong>Referral orgânico</strong> — aluno satisfeito indica 3+</li>
+</ol>
+<p><strong>O problema:</strong> escalabilidade.</p>
+<p>“Um mentor consegue atender 5-10 alunos mantendo qualidade. Mais que
+isso, qualidade despenca.”</p>
+<hr />
+<p><a id="cap2"></a> # Capítulo 2 — Os 3 modelos de mentoria</p>
+<h3 id="modelo-1-mentoria-tradicional-humano-100">Modelo 1 — Mentoria
+Tradicional (humano 100%)</h3>
+<ul>
+<li>Mentor faz tudo: diagnóstico, plano, sessões, suporte</li>
+<li>Limite: 5-10 alunos</li>
+<li>Preço: R$ 5k-10k/mês</li>
+<li>Receita teto: R$ 100k/mês</li>
+</ul>
+<h3 id="modelo-2-mentoria-semi-ia-ia-mentor">Modelo 2 — Mentoria Semi-IA
+(IA + mentor)</h3>
+<ul>
+<li>IA faz: onboarding, FAQ, progresso, plano de ação</li>
+<li>Mentor faz: sessões semanais, decisões estratégicas</li>
+<li>Limite: 50-100 alunos</li>
+<li>Preço: R$ 2k-5k/mês</li>
+<li>Receita teto: R$ 500k/mês</li>
+</ul>
+<h3 id="modelo-3-mentoria-full-ia-ia-mentor-supervisor">Modelo 3 —
+Mentoria Full-IA (IA + mentor supervisor)</h3>
+<ul>
+<li>IA faz: 80% do trabalho</li>
+<li>Mentor supervisiona: 1-2 horas/semana por aluno</li>
+<li>Limite: 200-500 alunos</li>
+<li>Preço: R$ 1k-2k/mês</li>
+<li>Receita teto: R$ 1M/mês</li>
+</ul>
+<p><strong>Recomendação:</strong> comece no Modelo 2, evolua para Modelo
+3.</p>
+<hr />
+<p><a id="cap3"></a> # Capítulo 3 — O gargalo do mentor humano</p>
+<p><strong>Onde o mentor gasta tempo (Modelo 1):</strong></p>
+<pre><code>Onboarding + diagnóstico ............ 2h/aluno (uma vez)
+Sessão semanal ...................... 1h/aluno (semanal)
+Respostas no WhatsApp ............... 2h/dia (todos os alunos)
+Análise de progresso ............... 1h/aluno (semanal)
+Plano de ação ...................... 1h/aluno (mensal)
+Total: ~7h/aluno/semana
+
+Com 10 alunos = 70h/semana (impossível)</code></pre>
+<p><strong>Com IA:</strong></p>
+<pre><code>Onboarding + diagnóstico ............ 0h (IA faz, mentor aprova)
+Sessão semanal ...................... 1h/aluno (humano)
+Respostas no WhatsApp ............... 30min/dia (IA responde, mentor revisa)
+Análise de progresso ............... 0h (IA faz, mentor vê dashboard)
+Plano de ação ...................... 0h (IA gera, mentor edita)
+Total: ~2h/aluno/semana
+
+Com 100 alunos = 200h/semana (ainda impossível)</code></pre>
+<p><strong>Solução:</strong> usar IA também nas sessões, com
+<strong>gravações e resumos</strong>.</p>
+<hr />
+<p><a id="cap4"></a> # Capítulo 4 — A Dupla Nexus: como a IA estende o
+mentor</p>
+<p><strong>Conceito da Dupla:</strong></p>
+<ul>
+<li><strong>Mentor humano</strong> (Ive ou Alencar): é o
+<strong>rosto</strong>, a <strong>voz</strong>, o
+<strong>acredita</strong></li>
+<li><strong>IA treinada</strong> com tom e método do mentor: faz
+<strong>tudo que é repetitivo</strong></li>
+</ul>
+<p><strong>Divisão de tarefas:</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th>Tarefa</th>
+<th>IA</th>
+<th>Mentor</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Onboarding</td>
+<td>Faz 100%</td>
+<td>Revisa 5%</td>
+</tr>
+<tr class="even">
+<td>FAQ</td>
+<td>Faz 100%</td>
+<td>Não revisa</td>
+</tr>
+<tr class="odd">
+<td>Análise de progresso</td>
+<td>Faz 100%</td>
+<td>Vê dashboard</td>
+</tr>
+<tr class="even">
+<td>Plano de ação</td>
+<td>Sugere 80%</td>
+<td>Aprova/edita</td>
+</tr>
+<tr class="odd">
+<td>Sessão semanal</td>
+<td>Prepara 100%</td>
+<td>Conduz 100%</td>
+</tr>
+<tr class="even">
+<td>Suporte WhatsApp</td>
+<td>Responde 90%</td>
+<td>Revisa 10%</td>
+</tr>
+<tr class="odd">
+<td>Decisão estratégica</td>
+<td>Não faz</td>
+<td>Faz 100%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>A IA tem o tom do mentor, mas só o mentor tem a
+autoridade.</strong></p>
+<hr />
+<p><a id="cap5"></a> # Capítulo 5 — Onboarding automático de alunos</p>
+<p><strong>Quando novo aluno entra, a IA:</strong></p>
+<ol type="1">
+<li>Envia mensagem de boas-vindas (tom do mentor)</li>
+<li>Pede diagnóstico (perguntas-chave)</li>
+<li>Marca primeira sessão</li>
+<li>Entrega “kit de início”</li>
+<li>Adiciona ao grupo de alunos</li>
+</ol>
+<p><strong>Template de boas-vindas:</strong></p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> welcome_new_student(student, mentor_persona):</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    prompt <span class="op">=</span> <span class="ss">f&quot;&quot;&quot;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="ss">    Você é a </span><span class="sc">{</span>mentor_persona<span class="sc">.</span>name<span class="sc">}</span><span class="ss">, mentor de </span><span class="sc">{</span>student<span class="sc">.</span>area<span class="sc">}</span><span class="ss">.</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="ss">    </span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="ss">    Aluno novo:</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="ss">    - Nome: </span><span class="sc">{</span>student<span class="sc">.</span>name<span class="sc">}</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="ss">    - Área: </span><span class="sc">{</span>student<span class="sc">.</span>area<span class="sc">}</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="ss">    - Objetivo: </span><span class="sc">{</span>student<span class="sc">.</span>goal<span class="sc">}</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="ss">    - Background: </span><span class="sc">{</span>student<span class="sc">.</span>background<span class="sc">}</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="ss">    </span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="ss">    Gere mensagem de boas-vindas:</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="ss">    - Tom: acolhedor (sotaque sulista se for Ive, judaico sereno se for Alencar)</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="ss">    - Máximo 800 caracteres</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="ss">    - Inclui próximos passos (diagnóstico + sessão)</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="ss">    - Convida a se apresentar no grupo</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="ss">    &quot;&quot;&quot;</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> llm.invoke(prompt)</span></code></pre></div>
+<p><strong>Resultado:</strong> aluno recebe boas-vindas em &lt; 5
+minutos, personalizado.</p>
+<hr />
+<p><a id="cap6"></a> # Capítulo 6 — Diagnóstico inicial com IA</p>
+<p><strong>IA faz 3 perguntas-chave:</strong></p>
+<ol type="1">
+<li><strong>Onde você está hoje?</strong> (situação atual, com
+números)</li>
+<li><strong>Onde quer chegar em 90 dias?</strong> (meta específica)</li>
+<li><strong>O que já tentou?</strong> (esforços anteriores)</li>
+</ol>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> run_diagnosis(student_answers):</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    prompt <span class="op">=</span> <span class="ss">f&quot;&quot;&quot;</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="ss">    Analise as respostas do aluno:</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="ss">    </span><span class="sc">{</span>student_answers<span class="sc">}</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="ss">    </span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="ss">    Gere diagnóstico estruturado:</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="ss">    - Estágio atual: iniciante / intermediário / avançado</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="ss">    - Gargalo principal: tráfego / conversão / produto / mindset</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="ss">    - Risco de churn: baixo / médio / alto</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="ss">    - Aceleradores: o que pode acelerar o resultado</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="ss">    - Plano sugerido: 3 marcos para 90 dias</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="ss">    </span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="ss">    Tom: didático, sem jargão.</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="ss">    &quot;&quot;&quot;</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> llm.invoke(prompt, response_format<span class="op">=</span><span class="st">&quot;json&quot;</span>)</span></code></pre></div>
+<p><strong>Output para o mentor (dashboard):</strong></p>
+<pre><code>🧑 ALUNO: Marina
+📊 Estágio: Intermediário
+🎯 Gargalo: Conversão (1.2%, ideal 2.5%)
+⚠️ Risco: Médio (2 semanas inativa)
+🚀 Acelerador: A/B test no checkout
+📋 Plano: 
+   - Marco 1 (30d): aumentar conversão pra 2%
+   - Marco 2 (60d): escalar tráfego pago
+   - Marco 3 (90d): receita R$ 30k/mês</code></pre>
+<hr />
+<p><a id="cap7"></a> # Capítulo 7 — Respostas 24/7 com tom do mentor</p>
+<p><strong>Como a IA responde com o tom do mentor:</strong></p>
+<ol type="1">
+<li><strong>Treinar IA</strong> com 50-100 exemplos de respostas reais
+do mentor</li>
+<li><strong>Embedding</strong> do estilo: tamanho de frase, vocabulário,
+pausas</li>
+<li><strong>Few-shot</strong> em cada prompt: “Responda como nestes
+exemplos:”</li>
+</ol>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>MENTOR_STYLE_EXAMPLES <span class="op">=</span> <span class="st">&quot;&quot;&quot;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="st">[Trecho 1] &quot;Olha, Marina, isso é mais comum do que você imagina. Já atendi 12 alunos com o mesmo desafio. O que funcionou pra eles foi...&quot;</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="st">[Trecho 2] &quot;Pergunta difícil essa. Vou ser direto: você precisa...&quot;</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="st">[Trecho 3] &quot;Boa! Você tá no caminho certo. Próximo passo...&quot;</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;&quot;&quot;</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> mentor_reply(question, student_context, conversation_history):</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    prompt <span class="op">=</span> <span class="ss">f&quot;&quot;&quot;</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="ss">    Você é a Sra. Nexus Ive. Responda o aluno.</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="ss">    </span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="ss">    Estilo (siga RIGOROSAMENTE):</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="ss">    </span><span class="sc">{</span>MENTOR_STYLE_EXAMPLES<span class="sc">}</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="ss">    </span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a><span class="ss">    Pergunta: </span><span class="sc">{</span>question<span class="sc">}</span></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a><span class="ss">    Contexto: </span><span class="sc">{</span>student_context<span class="sc">}</span></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="ss">    Histórico: </span><span class="sc">{</span>conversation_history<span class="sc">}</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a><span class="ss">    </span></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a><span class="ss">    Regras:</span></span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a><span class="ss">    - Máximo 1500 caracteres</span></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a><span class="ss">    - Use o nome do aluno</span></span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a><span class="ss">    - Faça 1 pergunta de volta</span></span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a><span class="ss">    - Termine com próximo passo claro</span></span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a><span class="ss">    &quot;&quot;&quot;</span></span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> llm.invoke(prompt)</span></code></pre></div>
+<p><strong>Resultado:</strong> aluno recebe resposta em 30 segundos, com
+tom do mentor.</p>
+<hr />
+<p><a id="cap8"></a> # Capítulo 8 — Análise de progresso do aluno</p>
+<p><strong>IA monitora progresso toda semana:</strong></p>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> analyze_student_progress(student, last_30_days_data):</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    prompt <span class="op">=</span> <span class="ss">f&quot;&quot;&quot;</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="ss">    Analise o progresso do aluno nos últimos 30 dias.</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="ss">    </span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="ss">    Aluno: </span><span class="sc">{</span>student<span class="sc">.</span>name<span class="sc">}</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="ss">    Meta 90 dias: </span><span class="sc">{</span>student<span class="sc">.</span>goal_90d<span class="sc">}</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="ss">    Dados: </span><span class="sc">{</span>last_30_days_data<span class="sc">}</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="ss">    </span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="ss">    Retorne:</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="ss">    - progresso_porcentagem: 0-100</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="ss">    - on_track: true/false</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="ss">    - blockers: lista de bloqueios detectados</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="ss">    - next_action: próxima ação sugerida</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="ss">    - sentiment: como o aluno está se sentindo</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a><span class="ss">    - intervention_needed: precisa de mentor humano?</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a><span class="ss">    &quot;&quot;&quot;</span></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> llm.invoke(prompt, response_format<span class="op">=</span><span class="st">&quot;json&quot;</span>)</span></code></pre></div>
+<p><strong>Output:</strong></p>
+<pre><code>🧑 Marina - Semana 6
+📊 Progresso: 67% (no ritmo)
+✅ On track
+⚠️ Blockers: tráfego pago limitado
+🎯 Next: Aumentar budget de R$ 50/dia pra R$ 80/dia
+💬 Sentiment: confiante mas ansiosa
+🚨 Intervenção: NÃO (IA pode continuar)</code></pre>
+<p><strong>Dashboard para o mentor:</strong></p>
+<pre><code>Aluno        | Progresso | On Track | Sentiment | Intervenção
+-------------|-----------|----------|-----------|------------
+Marina       | 67%       | ✅       | 😊        | Não
+João         | 23%       | ❌       | 😟        | SIM
+Carla        | 89%       | ✅       | 🤩        | Não
+...</code></pre>
+<p><strong>Resultado:</strong> mentor foca em quem precisa. 10min/semana
+por aluno.</p>
+<hr />
+<p><a id="cap9"></a> # Capítulo 9 — Plano de ação personalizado por
+IA</p>
+<p><strong>IA gera plano de 30-60-90 dias baseado no
+diagnóstico:</strong></p>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> generate_90_day_plan(diagnosis, mentor_methodology):</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    prompt <span class="op">=</span> <span class="ss">f&quot;&quot;&quot;</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="ss">    Gere plano de 90 dias para o aluno.</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="ss">    </span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="ss">    Diagnóstico: </span><span class="sc">{</span>diagnosis<span class="sc">}</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="ss">    Metodologia: </span><span class="sc">{</span>mentor_methodology<span class="sc">}</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="ss">    </span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="ss">    Estrutura:</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="ss">    - Marco 1 (dias 1-30): objetivo + 4 ações semanais</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a><span class="ss">    - Marco 2 (dias 31-60): objetivo + 4 ações semanais</span></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a><span class="ss">    - Marco 3 (dias 61-90): objetivo + 4 ações semanais</span></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a><span class="ss">    </span></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a><span class="ss">    Cada ação: descrição + métrica de sucesso + prazo</span></span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a><span class="ss">    </span></span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a><span class="ss">    Tom: didático, motivacional.</span></span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a><span class="ss">    &quot;&quot;&quot;</span></span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> llm.invoke(prompt)</span></code></pre></div>
+<p><strong>Exemplo de output:</strong></p>
+<pre><code>🎯 PLANO 90 DIAS - MARINA
+
+MARCO 1 (dias 1-30): Estabilizar conversão
+   Semana 1: Mapear funil atual + identificar gargalo
+   Semana 2: Implementar pixel + tracking
+   Semana 3: A/B test no checkout
+   Semana 4: Atingir conversão 1.8%
+
+MARCO 2 (dias 31-60): Escalar tráfego
+   Semana 5-6: Aumentar budget 30%
+   Semana 7-8: Lançar 2 novos criativos
+
+MARCO 3 (dias 61-90): Atingir R$ 30k/mês
+   Semana 9-10: Otimizar CPA
+   Semana 11-12: Escalar vencedor</code></pre>
+<p><strong>Mentor revisa e ajusta em 5 minutos.</strong></p>
+<hr />
+<p><a id="cap10"></a> # Capítulo 10 — Sessão semanal: IA prepara, mentor
+aprova</p>
+<p><strong>Antes da sessão, IA prepara:</strong></p>
+<div class="sourceCode" id="cb12"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> prepare_session(student, week_number):</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    prompt <span class="op">=</span> <span class="ss">f&quot;&quot;&quot;</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="ss">    Prepare a sessão da semana </span><span class="sc">{</span>week_number<span class="sc">}</span><span class="ss"> do aluno </span><span class="sc">{</span>student<span class="sc">.</span>name<span class="sc">}</span><span class="ss">.</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="ss">    </span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="ss">    Inclua:</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="ss">    - Resumo da semana anterior (progresso, blockers)</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="ss">    - Dados relevantes (métricas, marcos atingidos)</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="ss">    - Tópicos prioritários para discutir</span></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="ss">    - Perguntas para o mentor fazer</span></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="ss">    - Próximos passos sugeridos</span></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a><span class="ss">    </span></span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a><span class="ss">    Tom: estruturado, visual (com emojis e bullets).</span></span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a><span class="ss">    &quot;&quot;&quot;</span></span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> llm.invoke(prompt)</span></code></pre></div>
+<p><strong>Output (enviado 30min antes da sessão):</strong></p>
+<pre><code>📋 SESSÃO #6 - MARINA - 25/07/2026
+
+RESUMO SEMANA ANTERIOR:
+✅ Conversão subiu de 1.2% pra 1.8% (meta atingida)
+⚠️ Budget ainda em R$ 50/dia (não escalou)
+😊 Sentiment: confiante
+
+TÓPICOS PRA DISCUTIR:
+1. Por que não escalou tráfego? (bloqueio principal)
+2. Validar 2 novos criativos
+3. Meta da semana: chegar em 2.2%
+
+PERGUNTAS SUGERIDAS:
+- &quot;Marina, o que te impediu de subir o budget?&quot;
+- &quot;Vamos definir meta de tráfego juntos?&quot;
+- &quot;Qual métrica você vai acompanhar diário?&quot;
+
+PRÓXIMOS PASSOS:
+1. Aumentar budget 20% na segunda
+2. Testar 1 criativo novo
+3. Reportar métricas na sexta</code></pre>
+<p><strong>Resultado:</strong> mentor entra na sessão preparado, aluno
+sente que é 1:1 de verdade.</p>
+<hr />
+<p><a id="cap11"></a> # Capítulo 11 — Templates de sessão por
+objetivo</p>
+<h3 id="template-1-sessão-de-check-in-semanal">Template 1 — Sessão de
+“Check-in semanal”</h3>
+<div class="sourceCode" id="cb14"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>CHECKIN_TEMPLATE <span class="op">=</span> <span class="st">&quot;&quot;&quot;</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="st">1. Abertura (5min)</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="st">   &quot;Como foi a semana? O que deu certo, o que travou?&quot;</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="st">2. Revisão de métricas (10min)</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="st">   - Tráfego: _____ (meta: _____)</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="st">   - Conversão: _____ (meta: _____)</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="st">   - Receita: _____ (meta: _____)</span></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a><span class="st">3. Blocker principal (15min)</span></span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a><span class="st">   &quot;Qual o maior bloqueio agora? Me conta em detalhes.&quot;</span></span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a><span class="st">4. Plano da semana (10min)</span></span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a><span class="st">   - Ação 1: _____</span></span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a><span class="st">   - Ação 2: _____</span></span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a><span class="st">   - Métrica de sucesso: _____</span></span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a><span class="st">5. Encerramento (5min)</span></span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a><span class="st">   &quot;Tá no caminho. Nos vemos na próxima.&quot;</span></span>
+<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;&quot;&quot;</span></span></code></pre></div>
+<h3 id="template-2-sessão-de-crise">Template 2 — Sessão de “Crise”</h3>
+<div class="sourceCode" id="cb15"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>CRISIS_TEMPLATE <span class="op">=</span> <span class="st">&quot;&quot;&quot;</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="st">1. Acolhimento (5min)</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="st">   &quot;Tá difícil, eu sei. Vamos resolver juntos.&quot;</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="st">2. Diagnóstico (15min)</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="st">   - Quando começou a piorar?</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="st">   - O que mudou? (tráfego, oferta, página, mindset?)</span></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="st">   - Quanto você perdeu/mês?</span></span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a><span class="st">3. Plano de recuperação (20min)</span></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a><span class="st">   - Ação imediata: ___</span></span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a><span class="st">   - Ação de curto prazo: ___</span></span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a><span class="st">   - Marco de 2 semanas: ___</span></span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a><span class="st">4. Compromisso (5min)</span></span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a><span class="st">   &quot;Fechou? Me reporta na sexta.&quot;</span></span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;&quot;&quot;</span></span></code></pre></div>
+<h3 id="template-3-sessão-de-marco-atingido">Template 3 — Sessão de
+“Marco atingido”</h3>
+<div class="sourceCode" id="cb16"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>MILESTONE_TEMPLATE <span class="op">=</span> <span class="st">&quot;&quot;&quot;</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="st">1. Celebração (5min)</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="st">   &quot;Você conseguiu! Vamos celebrar!&quot;</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="st">2. Análise (10min)</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="st">   - O que fez dar certo?</span></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="st">   - O que aprendeu?</span></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a><span class="st">   - O que mudaria?</span></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a><span class="st">3. Próximo marco (15min)</span></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a><span class="st">   - Qual o próximo objetivo?</span></span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a><span class="st">   - O que precisa pra chegar lá?</span></span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a><span class="st">   - Quando quer chegar?</span></span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a><span class="st">4. Comprometimento (5min)</span></span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a><span class="st">   &quot;Próxima meta: ___. Prazo: ___.&quot;</span></span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;&quot;&quot;</span></span></code></pre></div>
+<hr />
+<p><a id="cap12"></a> # Capítulo 12 — Plano de 90 dias gerado por IA</p>
+<p><strong>Workflow completo:</strong></p>
+<pre><code>Dia 0: Aluno entra → IA faz diagnóstico
+Dia 1: Mentor revisa diagnóstico (5min)
+Dia 2: IA gera plano 90 dias
+Dia 3: Mentor revisa plano (10min)
+Dia 4: Sessão de kickoff (45min, mentor + aluno)
+Dia 5-90: 
+  - IA responde aluno 24/7
+  - Aluno reporta progresso semanal
+  - IA monitora e alerta
+  - Mentor + aluno: sessão semanal de 30min
+  - IA prepara pauta da sessão
+Dia 90: Sessão de fechamento + renovação</code></pre>
+<p><strong>Tempo do mentor por aluno:</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th>Atividade</th>
+<th>Tempo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Diagnóstico</td>
+<td>5 min</td>
+</tr>
+<tr class="even">
+<td>Plano 90d</td>
+<td>10 min</td>
+</tr>
+<tr class="odd">
+<td>Sessão semanal (12x)</td>
+<td>6h total</td>
+</tr>
+<tr class="even">
+<td>Revisão IA (semanal)</td>
+<td>5 min</td>
+</tr>
+<tr class="odd">
+<td><strong>Total por aluno</strong></td>
+<td><strong>~7h em 90 dias</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Com 50 alunos:</strong> 350h em 90 dias = ~4h/dia.
+Viável.</p>
+<hr />
+<p><a id="cap13"></a> # Capítulo 13 — De 1 mentor a 1 IA + 1 mentor</p>
+<p><strong>Estrutura da empresa de mentoria:</strong></p>
+<pre><code>ANTES (Modelo 1):
+- 1 mentor
+- 10 alunos
+- R$ 100k/mês
+- Mentor queima em 6 meses
+
+DEPOIS (Modelo 2):
+- 1 mentor + 1 IA
+- 50 alunos
+- R$ 200k/mês
+- Mentor: 4h/dia
+
+EVOLUÇÃO (Modelo 3):
+- 1 mentor supervisor + 2 mentores juniores + 1 IA
+- 200 alunos
+- R$ 500k/mês
+- Mentores juniores: 6h/dia
+- Mentor senior: 2h/dia (reuniões + casos críticos)</code></pre>
+<p><strong>Contratação:</strong></p>
+<ol type="1">
+<li><strong>Mentor senior</strong> (você): foco em estratégia, casos
+críticos, marketing</li>
+<li><strong>Mentores juniores</strong> (1-2): conduzem sessões, validam
+IA, suporte</li>
+<li><strong>IA</strong>: faz 80% do operacional</li>
+</ol>
+<hr />
+<p><a id="cap14"></a> # Capítulo 14 — De R$ 5k para R$ 100k+</p>
+<p><strong>Caminho de escala:</strong></p>
+<h3 id="fase-1-solo-r-5k-30kmês">Fase 1: Solo (R$ 5k-30k/mês)</h3>
+<ul>
+<li>5-10 alunos pagando R$ 1k-3k/mês</li>
+<li>100% manual</li>
+<li>Aprende a vender e entregar</li>
+</ul>
+<h3 id="fase-2-ia-solo-r-30k-100kmês">Fase 2: IA + solo (R$
+30k-100k/mês)</h3>
+<ul>
+<li>30-50 alunos</li>
+<li>IA assume operacional</li>
+<li>Foco em sessões + casos críticos</li>
+</ul>
+<h3 id="fase-3-time-ia-r-100k-500kmês">Fase 3: Time + IA (R$
+100k-500k/mês)</h3>
+<ul>
+<li>100-200 alunos</li>
+<li>2-3 mentores juniores</li>
+<li>Mentor senior: estratégia</li>
+</ul>
+<h3 id="fase-4-plataforma-r-500kmês">Fase 4: Plataforma (R$
+500k+/mês)</h3>
+<ul>
+<li>500+ alunos</li>
+<li>Programa de certificação (aluno vira mentor)</li>
+<li>Marketplace de mentores</li>
+</ul>
+<p><strong>Receita por aluno:</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th>Modelo</th>
+<th>Preço</th>
+<th>Alunos</th>
+<th>Receita</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Solo</td>
+<td>R$ 3k</td>
+<td>10</td>
+<td>R$ 30k</td>
+</tr>
+<tr class="even">
+<td>IA + solo</td>
+<td>R$ 2k</td>
+<td>50</td>
+<td>R$ 100k</td>
+</tr>
+<tr class="odd">
+<td>Time + IA</td>
+<td>R$ 2k</td>
+<td>150</td>
+<td>R$ 300k</td>
+</tr>
+<tr class="even">
+<td>Plataforma</td>
+<td>R$ 1.5k</td>
+<td>500</td>
+<td>R$ 750k</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Margem:</strong> 80-90% (custo principal: mentores).</p>
+<hr />
+<p><a id="cap15"></a> # Capítulo 15 — LGPD e ética em mentoria</p>
+<p><strong>Dados sensíveis que mentor lida:</strong></p>
+<ul>
+<li>Saúde mental do aluno (emocional, financeiro)</li>
+<li>Informações de negócio (faturamento, métricas)</li>
+<li>Vida pessoal (família, rotina)</li>
+</ul>
+<p><strong>Compliance LGPD:</strong></p>
+<ol type="1">
+<li><strong>Contrato claro</strong> — o que é coletado, como é
+usado</li>
+<li><strong>Consentimento explícito</strong> — aluno assina termo</li>
+<li><strong>Criptografia</strong> — dados em repouso + em trânsito</li>
+<li><strong>Acesso restrito</strong> — só mentor + IA veem dados</li>
+<li><strong>Direito ao esquecimento</strong> — deletar tudo se aluno
+pedir</li>
+<li><strong>Anonimização</strong> — IA usa dados agregados, não
+individuais</li>
+</ol>
+<p><strong>Ética do mentor com IA:</strong></p>
+<ul>
+<li><strong>Transparência</strong> — aluno sabe que tem IA
+respondendo</li>
+<li><strong>Limites claros</strong> — IA não dá diagnóstico
+médico/psicológico</li>
+<li><strong>Supervisão humana</strong> — decisões críticas são
+humanas</li>
+<li><strong>Não substituir afeto</strong> — IA complementa, não
+substitui presença</li>
+</ul>
+<p><strong>Modelo de disclosure:</strong></p>
+<pre><code>&quot;Marina, quero te contar como funciona: 80% das suas respostas no 
+WhatsApp vêm da IA treinada por mim, com meu tom. Mas 1x por semana 
+eu mesmo entro na nossa sessão, olho seus dados, e tomo decisões 
+estratégicas. Você sempre pode pedir pra falar comigo diretamente.&quot;</code></pre>
+<hr />
+<p><a id="epilogo"></a> # Epílogo — O futuro da mentoria com IA em
+2027-2030</p>
+<p><strong>2027:</strong> IA faz <strong>90% do operacional</strong>.
+Mentor é <strong>curador + supervisor</strong>. <strong>1 mentor atende
+200+ alunos</strong>.</p>
+<p><strong>2028:</strong> Mentoria <strong>AI-to-AI</strong> — aluno tem
+agente de IA que aprende com mentor. <strong>Rede federada de
+mentores</strong>.</p>
+<p><strong>2029:</strong> <strong>Mentoria imersiva</strong> com VR/AR.
+Sessão com mentor holográfico. <strong>Onipresença</strong>.</p>
+<p><strong>2030:</strong> <strong>Mentores sintéticos</strong> — IA com
+1000+ cases de mentor, aprende continuamente. <strong>Democratização
+total</strong> (mentoria R$ 200/mês).</p>
+<p><strong>Recomendação 2026:</strong></p>
+<ul>
+<li><strong>Comece solo</strong> (Modelo 1) em 3 meses</li>
+<li><strong>Adicione IA</strong> em 6 meses (Modelo 2)</li>
+<li><strong>Contrate júnior</strong> em 12 meses (Modelo 3)</li>
+<li><strong>Lance plataforma</strong> em 24 meses (Modelo 4)</li>
+</ul>
+<hr />
+<p><a id="apendice"></a> # Apêndice — Prompts prontos para o mentor
+copiar</p>
+<h3 id="prompt-1-diagnóstico-de-aluno">Prompt 1 — Diagnóstico de
+aluno</h3>
+<div class="sourceCode" id="cb20"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="co">Você é {mentor_name}, mentor de {area}.</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="co">Aluno novo: {student_name}</span></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="co">Background: {student_background}</span></span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a><span class="co">Objetivo: {student_goal}</span></span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a><span class="co">Faça 5 perguntas para diagnóstico:</span></span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a><span class="co">1. Situação atual (com números)</span></span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a><span class="co">2. Esforços anteriores</span></span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a><span class="co">3. Recursos disponíveis (tempo, dinheiro, equipe)</span></span>
+<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a><span class="co">4. Bloqueios percebidos</span></span>
+<span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a><span class="co">5. Prazo desejado</span></span>
+<span id="cb20-14"><a href="#cb20-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-15"><a href="#cb20-15" aria-hidden="true" tabindex="-1"></a><span class="co">Após respostas, gere diagnóstico estruturado.</span></span>
+<span id="cb20-16"><a href="#cb20-16" aria-hidden="true" tabindex="-1"></a><span class="co">&quot;&quot;&quot;</span></span></code></pre></div>
+<h3 id="prompt-2-plano-de-90-dias">Prompt 2 — Plano de 90 dias</h3>
+<div class="sourceCode" id="cb21"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="co">Gere plano de 90 dias para {student_name}.</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="co">Diagnóstico: {diagnosis}</span></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="co">Metodologia: {mentor_methodology}</span></span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a><span class="co">Estrutura:</span></span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a><span class="co">- Marco 1 (dias 1-30): {objetivo_30d}</span></span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a><span class="co">- Marco 2 (dias 31-60): {objetivo_60d}</span></span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a><span class="co">- Marco 3 (dias 61-90): {objetivo_90d}</span></span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a><span class="co">Cada marco: 4 ações semanais + métrica de sucesso.</span></span>
+<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a><span class="co">&quot;&quot;&quot;</span></span></code></pre></div>
+<h3 id="prompt-3-resposta-whatsapp">Prompt 3 — Resposta WhatsApp</h3>
+<div class="sourceCode" id="cb22"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="co">Você é {mentor_name}, mentor de {area}.</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="co">Tom: {mentor_style_examples}</span></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a><span class="co">Pergunta do aluno: {question}</span></span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a><span class="co">Contexto: {student_context}</span></span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a><span class="co">Histórico: {conversation_history}</span></span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a><span class="co">Regras:</span></span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a><span class="co">- Máximo 1500 caracteres</span></span>
+<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a><span class="co">- Use o nome do aluno</span></span>
+<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a><span class="co">- Termine com 1 pergunta ou próximo passo</span></span>
+<span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a><span class="co">- Tom: acolhedor, direto, sem jargão</span></span>
+<span id="cb22-15"><a href="#cb22-15" aria-hidden="true" tabindex="-1"></a><span class="co">&quot;&quot;&quot;</span></span></code></pre></div>
+<h3 id="prompt-4-análise-de-progresso">Prompt 4 — Análise de
+progresso</h3>
+<div class="sourceCode" id="cb23"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="co">Analise o progresso de {student_name} na semana {week}.</span></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="co">Dados: {last_7_days_data}</span></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a><span class="co">Meta 90d: {goal}</span></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a><span class="co">Retorne:</span></span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a><span class="co">- Progresso %: 0-100</span></span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a><span class="co">- On track: sim/não</span></span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a><span class="co">- Blockers: lista</span></span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a><span class="co">- Próxima ação: 1 frase</span></span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a><span class="co">- Sentiment: descrição</span></span>
+<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a><span class="co">- Precisa mentor humano: sim/não</span></span>
+<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a><span class="co">&quot;&quot;&quot;</span></span></code></pre></div>
+<hr />
+<p><em>Fim da Apostila 37 · Mentoria 1:1 com IA</em></p>
+<p><em>Por Sra. Nexus Ive + Sir. Nexus Alencar · 2026 · Licença: CC
+BY-SA 4.0</em></p>
+<p><em>“A melhor mentoria do mundo é a que ajuda o aluno a se tornar
+melhor do que o próprio mentor. A IA multiplica o alcance do mentor, mas
+o coração da mentoria continua humano.”</em></p>
+<script src="../enhance.js"></script>
+</body>
+</html>
