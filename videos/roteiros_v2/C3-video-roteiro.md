@@ -1,131 +1,124 @@
 ---
 titulo: "Curso Pratico: Prompt Engineering Production-Ready"
 codigo: "C3"
-persona: "shakespeare-atualidade"
-voz: "male-qn-qingse"
+personas:
+  - nome: "Sra. Nexus Ive"
+    role: "Anfitria Estrategica"
+    voz: "Portuguese_SereneWoman"
+    tom: "Sereno, acolhedor, sensual sutil, autoridade firme"
+  - nome: "Sir. Nexus Alencar"
+    role: "Mentor Tecnico"
+    voz: "Portuguese_Deep-VoicedGentleman"
+    tom: "Maduro, sereno, sabedoria, autoridade intelectual"
+formato: "Co-atuacao Ive + Alencar (5 cenas)"
 duracao_alvo: "3 minutos"
-data_criacao: "2026-07-08"
+data_criacao: "2026-07-22"
 autor: "Shakespeare da Atualidade - PHD nivel Harvard do Universo AI"
 editora: "AcademIA - Nexus HUB57"
-formato: "Video-aula para Marketplace + YouTube"
+referencias: "personas/ive/voice_guidelines.md, personas/alencar/identity.md, personas/dupla/interaction_guidelines.md"
 ---
 
 # Curso Pratico: Prompt Engineering Production-Ready
 
 **Codigo:** C3  
-**Persona:** shakespeare-atualidade  
-**Voz TTS:** male-qn-qingse  
-**Duracao alvo:** 3 minutos (720 palavras, 240 wpm)  
-**Formato:** video vertical 9:16 para Shorts/Reels + horizontal 16:9 para YouTube
+**Personas:** Sra. Nexus Ive + Sir. Nexus Alencar (co-atuacao)  
+**Vozes TTS oficiais:** Portuguese_SereneWoman (Ive) + Portuguese_Deep-VoicedGentleman (Alencar)  
+**Duracao alvo:** 3 minutos (~720 palavras, 240 wpm)
 
 ---
 
-## Cenas e Tempo
+## Cenas (Co-atuacao)
 
-### Cena 1: Hook - Da arte a ciencia dos prompts
+### Cena 1: [Ive] Ive
 
-**Tipo:** Hook  
-**Duracao:** 15s  
-**Palavras:** 26
+**Persona:** Sra. Nexus Ive  
+**Voz TTS:** `Portuguese_SereneWoman`  
+**Duracao:** ~14s  
+**Palavras:** 54
 
 **Narracao:**
 
-> Prompt engineering em 2026 nao e mais arte. E ciencia. E em 6 horas, voce aprende o framework sistematico que transforma prompt artesanal em producao confiavel.
+> Ola. Eu sou a Sra. Nexus Ive. Hoje vou te contar um segredo que poucos conhecem. Prompt engineering em 2026 nao e mais arte. E ciencia. E em seis horas, voce vai aprender o framework sistematico que transforma prompt artesanal em producao confiavel. Esta pronto para mudar a forma como voce trabalha com IA?
 
-**Visual sugerido:**
-
-> Fundo gradiente escuro com texto bold aparecendo. Imagem da apostila em destaque.
-
-**B-roll / inserts:** icones de LLM, vector DB, agents, multi-modal (conforme cenario)
+**Visual sugerido:** Persona em tela, com B-roll do curso ao fundo. Transicoes suaves entre cenas.
 
 ---
 
-### Cena 2: Por que seus prompts falham
+### Cena 2: [Alencar] Alencar
 
-**Tipo:** Conteudo  
-**Duracao:** 60s  
-**Palavras:** 42
+**Persona:** Sir. Nexus Alencar  
+**Voz TTS:** `Portuguese_Deep-VoicedGentleman`  
+**Duracao:** ~11s  
+**Palavras:** 44
 
 **Narracao:**
 
-> Voce acha que sabe escrever prompt. Few-shot, Chain-of-Thought, talvez Constitutional AI. Mas quando coloca em producao, 30% das respostas quebram o formato. 15% alucinam. Custos sao imprevisiveis. E voce nao sabe por que. Porque prompt engineering sem eval e tentativa e erro.
+> Voce acha que sabe escrever prompt, Sra. Ive. Few-shot, Chain-of-Thought, talvez Constitutional AI. Mas quando coloca em producao, trinta por cento das respostas quebram o formato. Quinze por cento alucinam. Custos sao imprevisiveis. Porque prompt engineering sem eval e tentativa e erro. Pura sorte.
 
-**Visual sugerido:**
-
-> Mockup do projeto integrador. Numeros e metricas em destaque. Tom corporativo.
-
-**B-roll / inserts:** icones de LLM, vector DB, agents, multi-modal (conforme cenario)
+**Visual sugerido:** Persona em tela, com B-roll do curso ao fundo. Transicoes suaves entre cenas.
 
 ---
 
-### Cena 3: A solucao: framework com DSPy
+### Cena 3: [Ive] Ive
 
-**Tipo:** Solucao  
-**Duracao:** 60s  
-**Palavras:** 47
+**Persona:** Sra. Nexus Ive  
+**Voz TTS:** `Portuguese_SereneWoman`  
+**Duracao:** ~12s  
+**Palavras:** 49
 
 **Narracao:**
 
-> 7 modulos progressivos. Fundamentos de prompting. Zero-shot e few-shot. Chain-of-Thought. Constitutional AI. Structured outputs com JSON mode e function calling. DSPy e otimizacao automatica de prompts. E avaliacao sistematica com metricas objetivas. Voce sai com 50 prompts testados em producao. E o framework para criar os seus.
+> O Curso Pratico de Prompt Engineering tem sete modulos progressivos, Sir. Alencar. Fundamentos de prompting. Zero-shot e few-shot. Chain-of-Thought. Constitutional AI. Structured outputs com JSON mode e function calling. DSPy e otimizacao automatica de prompts. E avaliacao sistematica com metricas objetivas. Voce sai com cinquenta prompts testados em producao.
 
-**Visual sugerido:**
-
-> Screenshot do curriculo da apostila. Modulos aparecendo progressivamente. Tom verde esperanca.
-
-**B-roll / inserts:** icones de LLM, vector DB, agents, multi-modal (conforme cenario)
+**Visual sugerido:** Persona em tela, com B-roll do curso ao fundo. Transicoes suaves entre cenas.
 
 ---
 
-### Cena 4: Quem precisa deste curso
+### Cena 4: [Alencar] Alencar
 
-**Tipo:** Conteudo  
-**Duracao:** 60s  
-**Palavras:** 37
+**Persona:** Sir. Nexus Alencar  
+**Voz TTS:** `Portuguese_Deep-VoicedGentleman`  
+**Duracao:** ~10s  
+**Palavras:** 40
 
 **Narracao:**
 
-> Qualquer profissional que usa LLMs e quer extrair mais valor com menos esforco. De junior a senior. 3x de lift medio nos resultados dos alunos. Preco: R$ 297, ou 12 vezes de R$ 29,70. Link na descricao.
+> O framework e replicavel. Tres vezes de lift medio nos resultados dos alunos. Funciona para qualquer profissional que usa LLMs e quer extrair mais valor com menos esforco. De junior a senior. Investimento: 297 reais ou doze vezes de 29,70.
 
-**Visual sugerido:**
-
-> Mockup do projeto integrador. Numeros e metricas em destaque. Tom corporativo.
-
-**B-roll / inserts:** icones de LLM, vector DB, agents, multi-modal (conforme cenario)
+**Visual sugerido:** Persona em tela, com B-roll do curso ao fundo. Transicoes suaves entre cenas.
 
 ---
 
-### Cena 5: CTA final
+### Cena 5: [Ive] Ive
 
-**Tipo:** CTA  
-**Duracao:** 15s  
-**Palavras:** 21
+**Persona:** Sra. Nexus Ive  
+**Voz TTS:** `Portuguese_SereneWoman`  
+**Duracao:** ~8s  
+**Palavras:** 30
 
 **Narracao:**
 
-> Clique no link. Transforme seus prompts de tentativa e erro em sistema confiavel. Shakespeare da Atualidade, nos vemos na proxima aula.
+> Transforme seus prompts de tentativa e erro em sistema confiavel. Clique no link, garanta sua vaga, e nos vemos na primeira aula. AcademIA, Nexus HUB57, Shakespeare da Atualidade nos esperam.
 
-**Visual sugerido:**
-
-> Logo da AcademIA. Botao de CTA pulsando. URL grande no centro.
-
-**B-roll / inserts:** icones de LLM, vector DB, agents, multi-modal (conforme cenario)
+**Visual sugerido:** Persona em tela, com B-roll do curso ao fundo. Transicoes suaves entre cenas.
 
 ---
 
 ## Metricas de Producao
 
-- **Total de palavras:** 173
-- **Duracao estimada:** 0.7 min (43s)
-- **Persona autoral:** shakespeare-atualidade
-- **Voz:** male-qn-qingse (calmo, didatico, autoridade)
-- **Tom:** educativo + inspiracional + CTA forte
+- **Total de palavras:** 217
+- **Duracao estimada:** 0.9 min (54s)
+- **Persona 1 (Ive):** Portuguese_SereneWoman (serene woman)
+- **Persona 2 (Alencar):** Portuguese_Deep-VoicedGentleman (deep-voiced gentleman)
+- **Formato:** Co-atuacao seguindo diretrizes de personas/dupla/interaction_guidelines.md
 
 ## Assets Necessarios
 
-- [ ] Capa do video (1080x1920 vertical ou 1920x1080 horizontal)
-- [ ] Audio TTS em portugues brasileiro
+- [ ] Audio TTS Ive (Portuguese_SereneWoman)
+- [ ] Audio TTS Alencar (Portuguese_Deep-VoicedGentleman)
+- [ ] Mixagem final (Ive + Alencar intercalados)
+- [ ] Video com personas (imagens Ive + Alencar)
 - [ ] Legendas SRT/VTT
-- [ ] Thumbnails para Shorts/Reels e YouTube
 - [ ] Background music (royalty-free, instrumental, baixa)
 
 ## CTA Padrao (descricao)
@@ -134,7 +127,7 @@ formato: "Video-aula para Marketplace + YouTube"
 
 ## Tags
 
-AcademIA, Nexus HUB57, IA para afiliados, LLM, RAG, agents, voice AI, multimodal, marketplace, certificacao
+AcademIA, Nexus HUB57, IA para afiliados, LLM, RAG, agents, voice AI, multimodal, marketplace, certificacao, Sra Nexus Ive, Sir Nexus Alencar
 
 ---
 

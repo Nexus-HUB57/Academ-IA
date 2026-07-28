@@ -1,131 +1,124 @@
 ---
 titulo: "Trilha Fundamental: IA para Afiliados"
 codigo: "T1"
-persona: "shakespeare-atualidade"
-voz: "male-qn-qingse"
+personas:
+  - nome: "Sra. Nexus Ive"
+    role: "Anfitria Estrategica"
+    voz: "Portuguese_SereneWoman"
+    tom: "Sereno, acolhedor, sensual sutil, autoridade firme"
+  - nome: "Sir. Nexus Alencar"
+    role: "Mentor Tecnico"
+    voz: "Portuguese_Deep-VoicedGentleman"
+    tom: "Maduro, sereno, sabedoria, autoridade intelectual"
+formato: "Co-atuacao Ive + Alencar (5 cenas)"
 duracao_alvo: "3 minutos"
-data_criacao: "2026-07-08"
+data_criacao: "2026-07-22"
 autor: "Shakespeare da Atualidade - PHD nivel Harvard do Universo AI"
 editora: "AcademIA - Nexus HUB57"
-formato: "Video-aula para Marketplace + YouTube"
+referencias: "personas/ive/voice_guidelines.md, personas/alencar/identity.md, personas/dupla/interaction_guidelines.md"
 ---
 
 # Trilha Fundamental: IA para Afiliados
 
 **Codigo:** T1  
-**Persona:** shakespeare-atualidade  
-**Voz TTS:** male-qn-qingse  
-**Duracao alvo:** 3 minutos (720 palavras, 240 wpm)  
-**Formato:** video vertical 9:16 para Shorts/Reels + horizontal 16:9 para YouTube
+**Personas:** Sra. Nexus Ive + Sir. Nexus Alencar (co-atuacao)  
+**Vozes TTS oficiais:** Portuguese_SereneWoman (Ive) + Portuguese_Deep-VoicedGentleman (Alencar)  
+**Duracao alvo:** 3 minutos (~720 palavras, 240 wpm)
 
 ---
 
-## Cenas e Tempo
+## Cenas (Co-atuacao)
 
-### Cena 1: Hook - Os 3 segredos que ninguem te conta sobre IA
+### Cena 1: [Ive] Ive
 
-**Tipo:** Hook  
-**Duracao:** 15s  
-**Palavras:** 76
+**Persona:** Sra. Nexus Ive  
+**Voz TTS:** `Portuguese_SereneWoman`  
+**Duracao:** ~18s  
+**Palavras:** 71
 
 **Narracao:**
 
-> Atencao, afiliado. Voce esta perdendo dinheiro. Em 2026, 73% dos afiliados que vendem online ainda usam IA como se fosse 2023: pedem respostas genericas, copiam o output, e se perguntam por que ninguem compra. Mas existe um caminho. Em 4 semanas, sem saber programar, voce vai construir um agente de IA que conhece seu nicho, gera copy que converte, e atende clientes no WhatsApp 24 horas por dia. Parece ficcao? E a Trilha Fundamental da AcademIA.
+> Ola. Seja muito bem-vindo a Trilha Fundamental da AcademIA. Eu sou a Sra. Nexus Ive. Respire fundo. O que vou te mostrar hoje pode transformar completamente a forma como voce opera como afiliado. Compreenda: nos proximos tres minutos, voce vai entender por que 73 por cento dos afiliados que vendem online ainda perdem dinheiro com IA - e o que os 27 por cento que lucram de verdade estao fazendo diferente.
 
-**Visual sugerido:**
-
-> Fundo gradiente escuro com texto bold aparecendo. Imagem da apostila em destaque.
-
-**B-roll / inserts:** icones de LLM, vector DB, agents, multi-modal (conforme cenario)
+**Visual sugerido:** Persona em tela, com B-roll do curso ao fundo. Transicoes suaves entre cenas.
 
 ---
 
-### Cena 2: O problema real dos afiliados em 2026
+### Cena 2: [Alencar] Alencar
 
-**Tipo:** Problema  
-**Duracao:** 30s  
-**Palavras:** 69
+**Persona:** Sir. Nexus Alencar  
+**Voz TTS:** `Portuguese_Deep-VoicedGentleman`  
+**Duracao:** ~15s  
+**Palavras:** 61
 
 **Narracao:**
 
-> O problema nao e a ferramenta. Voce ate ja usou ChatGPT, Copilot, Gemini. O problema e que cada LLM responde diferente. Um dia voce pede uma headline e sai perfeita. No outro, sai generica. Voce perde 4 horas por semana ajustando prompts manualmente. Enquanto isso, concorrentes ja automatizaram tudo. A boa noticia? Existe um padrao. Few-shot, Chain-of-Thought, Constitutional AI. Quando voce aprende esses padroes, vira 5 vezes mais produtivo.
+> Concordo plenamente, Sra. Ive. Como mentor tecnico, vejo isso todos os dias. O problema nao e a ferramenta. ChatGPT, Claude, Gemini, Copilot - todos tem capacidade. O problema e o metodo. A maioria pede respostas genericas, copia o output, e se pergunta por que ningem compra. Few-shot, Chain-of-Thought, Constitutional AI - quando voce aprende esses padroes, tudo muda. Sua produtividade quintuplica.
 
-**Visual sugerido:**
-
-> Mockup de ChatGPT com respostas genericas. Relogio mostrando horas perdidas. Tom azulado, levemente frustrado.
-
-**B-roll / inserts:** icones de LLM, vector DB, agents, multi-modal (conforme cenario)
+**Visual sugerido:** Persona em tela, com B-roll do curso ao fundo. Transicoes suaves entre cenas.
 
 ---
 
-### Cena 3: A solucao: Trilha Fundamental da AcademIA
+### Cena 3: [Ive] Ive
 
-**Tipo:** Solucao  
-**Duracao:** 60s  
-**Palavras:** 69
+**Persona:** Sra. Nexus Ive  
+**Voz TTS:** `Portuguese_SereneWoman`  
+**Duracao:** ~18s  
+**Palavras:** 71
 
 **Narracao:**
 
-> A Trilha Fundamental foi desenhada especificamente para afiliados. Sao 20 horas de conteudo pratico, sem matematica, sem codigo confuso. Voce aprende 8 modulos progressivos: da anatomia de um LLM ate a construcao do seu proprio assistente treinado no seu nicho. RAG simples. Voice AI no WhatsApp. Visao computacional para criar imagens. E o mais importante: um projeto integrador de 6 semanas que voce termina com um sistema real rodando.
+> E exatamente isso, Sir. Alencar. A Trilha Fundamental foi desenhada para pegar o afiliado pela mao. Sao 20 horas de conteudo pratico. Sem matematica. Sem codigo confuso. Oito modulos progressivos que vao da anatomia de um LLM ate a construcao do seu proprio assistente treinado no seu nicho. Voice AI no WhatsApp. Visao computacional para criar imagens. E um projeto integrador de seis semanas que termina com um sistema real rodando.
 
-**Visual sugerido:**
-
-> Screenshot do curriculo da apostila. Modulos aparecendo progressivamente. Tom verde esperanca.
-
-**B-roll / inserts:** icones de LLM, vector DB, agents, multi-modal (conforme cenario)
+**Visual sugerido:** Persona em tela, com B-roll do curso ao fundo. Transicoes suaves entre cenas.
 
 ---
 
-### Cena 4: O que muda na sua vida depois da trilha
+### Cena 4: [Alencar] Alencar
 
-**Tipo:** Conteudo  
-**Duracao:** 60s  
-**Palavras:** 66
+**Persona:** Sir. Nexus Alencar  
+**Voz TTS:** `Portuguese_Deep-VoicedGentleman`  
+**Duracao:** ~18s  
+**Palavras:** 71
 
 **Narracao:**
 
-> Em 30 dias, voce vai ter 3 fluxos automatizados. Em 60 dias, custo de criacao cai 70%. Em 90 dias, conversao sobe 2 a 3 vezes. Nao e promessa. E o que 87% dos 847 alunos da Trilha Fundamental reportaram. O preco? R$ 297. Ou 12 vezes de R$ 29,70. Isso da R$ 0,40 por dia de conhecimento. Mais barato que um cafe. Link na descricao.
+> Do ponto de vista tecnico, a trilha cobre: fundamentos de LLM e tokens, Few-shot e Chain-of-Thought, ferramentas no-code como Claude.ai e ChatGPT, automacao visual com Make e Zapier, STT TTS com Whisper e ElevenLabs, e o mais importante: integracao pratica em todo o fluxo do afiliado. Os resultados mensuraveis dos 847 alunos que ja concluiram: custo de criacao cai 70 por cento, conversao sobe duas a tres vezes em 90 dias.
 
-**Visual sugerido:**
-
-> Mockup do projeto integrador. Numeros e metricas em destaque. Tom corporativo.
-
-**B-roll / inserts:** icones de LLM, vector DB, agents, multi-modal (conforme cenario)
+**Visual sugerido:** Persona em tela, com B-roll do curso ao fundo. Transicoes suaves entre cenas.
 
 ---
 
-### Cena 5: CTA final
+### Cena 5: [Ive] Ive
 
-**Tipo:** CTA  
-**Duracao:** 15s  
-**Palavras:** 26
+**Persona:** Sra. Nexus Ive  
+**Voz TTS:** `Portuguese_SereneWoman`  
+**Duracao:** ~15s  
+**Palavras:** 59
 
 **Narracao:**
 
-> Clique no link, conheca a Trilha Fundamental da AcademIA, e comece hoje. Shakespeare da Atualidade, PHD nivel Harvard do Universo AI. Nos vemos na proxima aula.
+> Sir. Alencar, qual o investimento para comecar? O preco e 297 reais, ou doze vezes de 29,70. Isso da 40 centavos por dia de conhecimento. Mais barato que um cafe. O link esta na descricao. Clique agora, garanta sua vaga, e nos vemos na primeira aula. Shakespeare da Atualidade, PHD nivel Harvard do Universo AI, nos espera la dentro.
 
-**Visual sugerido:**
-
-> Logo da AcademIA. Botao de CTA pulsando. URL grande no centro.
-
-**B-roll / inserts:** icones de LLM, vector DB, agents, multi-modal (conforme cenario)
+**Visual sugerido:** Persona em tela, com B-roll do curso ao fundo. Transicoes suaves entre cenas.
 
 ---
 
 ## Metricas de Producao
 
-- **Total de palavras:** 306
-- **Duracao estimada:** 1.3 min (76s)
-- **Persona autoral:** shakespeare-atualidade
-- **Voz:** male-qn-qingse (calmo, didatico, autoridade)
-- **Tom:** educativo + inspiracional + CTA forte
+- **Total de palavras:** 333
+- **Duracao estimada:** 1.4 min (83s)
+- **Persona 1 (Ive):** Portuguese_SereneWoman (serene woman)
+- **Persona 2 (Alencar):** Portuguese_Deep-VoicedGentleman (deep-voiced gentleman)
+- **Formato:** Co-atuacao seguindo diretrizes de personas/dupla/interaction_guidelines.md
 
 ## Assets Necessarios
 
-- [ ] Capa do video (1080x1920 vertical ou 1920x1080 horizontal)
-- [ ] Audio TTS em portugues brasileiro
+- [ ] Audio TTS Ive (Portuguese_SereneWoman)
+- [ ] Audio TTS Alencar (Portuguese_Deep-VoicedGentleman)
+- [ ] Mixagem final (Ive + Alencar intercalados)
+- [ ] Video com personas (imagens Ive + Alencar)
 - [ ] Legendas SRT/VTT
-- [ ] Thumbnails para Shorts/Reels e YouTube
 - [ ] Background music (royalty-free, instrumental, baixa)
 
 ## CTA Padrao (descricao)
@@ -134,7 +127,7 @@ formato: "Video-aula para Marketplace + YouTube"
 
 ## Tags
 
-AcademIA, Nexus HUB57, IA para afiliados, LLM, RAG, agents, voice AI, multimodal, marketplace, certificacao
+AcademIA, Nexus HUB57, IA para afiliados, LLM, RAG, agents, voice AI, multimodal, marketplace, certificacao, Sra Nexus Ive, Sir Nexus Alencar
 
 ---
 

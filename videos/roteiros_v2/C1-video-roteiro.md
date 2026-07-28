@@ -1,131 +1,124 @@
 ---
 titulo: "Curso Pratico: RAG do Zero a Producao"
 codigo: "C1"
-persona: "shakespeare-atualidade"
-voz: "male-qn-qingse"
+personas:
+  - nome: "Sra. Nexus Ive"
+    role: "Anfitria Estrategica"
+    voz: "Portuguese_SereneWoman"
+    tom: "Sereno, acolhedor, sensual sutil, autoridade firme"
+  - nome: "Sir. Nexus Alencar"
+    role: "Mentor Tecnico"
+    voz: "Portuguese_Deep-VoicedGentleman"
+    tom: "Maduro, sereno, sabedoria, autoridade intelectual"
+formato: "Co-atuacao Ive + Alencar (5 cenas)"
 duracao_alvo: "3 minutos"
-data_criacao: "2026-07-08"
+data_criacao: "2026-07-22"
 autor: "Shakespeare da Atualidade - PHD nivel Harvard do Universo AI"
 editora: "AcademIA - Nexus HUB57"
-formato: "Video-aula para Marketplace + YouTube"
+referencias: "personas/ive/voice_guidelines.md, personas/alencar/identity.md, personas/dupla/interaction_guidelines.md"
 ---
 
 # Curso Pratico: RAG do Zero a Producao
 
 **Codigo:** C1  
-**Persona:** shakespeare-atualidade  
-**Voz TTS:** male-qn-qingse  
-**Duracao alvo:** 3 minutos (720 palavras, 240 wpm)  
-**Formato:** video vertical 9:16 para Shorts/Reels + horizontal 16:9 para YouTube
+**Personas:** Sra. Nexus Ive + Sir. Nexus Alencar (co-atuacao)  
+**Vozes TTS oficiais:** Portuguese_SereneWoman (Ive) + Portuguese_Deep-VoicedGentleman (Alencar)  
+**Duracao alvo:** 3 minutos (~720 palavras, 240 wpm)
 
 ---
 
-## Cenas e Tempo
+## Cenas (Co-atuacao)
 
-### Cena 1: Hook - 3 RAG pipelines reais em 8 horas
+### Cena 1: [Ive] Ive
 
-**Tipo:** Hook  
-**Duracao:** 15s  
-**Palavras:** 40
+**Persona:** Sra. Nexus Ive  
+**Voz TTS:** `Portuguese_SereneWoman`  
+**Duracao:** ~14s  
+**Palavras:** 56
 
 **Narracao:**
 
-> RAG e o caso de uso numero um de LLM em producao. E em 8 horas, voce vai construir 3 pipelines funcionando. Nao e tutorial. Nao e toy. E o Curso Pratico de RAG do Zero a Producao da AcademIA.
+> Ola. Eu sou a Sra. Nexus Ive. Hoje vou te mostrar algo extraordinario. Em oito horas, voce vai construir tres pipelines RAG funcionando. Nao e tutorial. Nao e toy. E o Curso Pratico de RAG do Zero a Producao da AcademIA. Compreenda: RAG e o caso de uso numero um de LLM em producao em 2026.
 
-**Visual sugerido:**
-
-> Fundo gradiente escuro com texto bold aparecendo. Imagem da apostila em destaque.
-
-**B-roll / inserts:** icones de LLM, vector DB, agents, multi-modal (conforme cenario)
+**Visual sugerido:** Persona em tela, com B-roll do curso ao fundo. Transicoes suaves entre cenas.
 
 ---
 
-### Cena 2: O problema dos RAGs caseiros
+### Cena 2: [Alencar] Alencar
 
-**Tipo:** Problema  
-**Duracao:** 30s  
-**Palavras:** 41
+**Persona:** Sir. Nexus Alencar  
+**Voz TTS:** `Portuguese_Deep-VoicedGentleman`  
+**Duracao:** ~12s  
+**Palavras:** 49
 
 **Narracao:**
 
-> Voce tenta montar um RAG. Acha o LangChain. Copia o exemplo. Roda. Funciona. Mas quando vai para producao, alucinacoes explodem. Respostas sem contexto. Latencia alta. Custos altos. Voce nao sabe se o sistema esta bom. Nao tem metricas. Nao tem eval.
+> O problema e que a maioria tenta montar RAG sozinha, Sra. Ive. Acha o LangChain. Copia o exemplo. Roda. Funciona. Mas quando vai para producao, alucinacoes explodem. Respostas sem contexto. Latencia alta. Custos imprevisiveis. E o pior: sem metricas, sem eval, voce nao sabe se esta bom ou ruim.
 
-**Visual sugerido:**
-
-> Mockup de ChatGPT com respostas genericas. Relogio mostrando horas perdidas. Tom azulado, levemente frustrado.
-
-**B-roll / inserts:** icones de LLM, vector DB, agents, multi-modal (conforme cenario)
+**Visual sugerido:** Persona em tela, com B-roll do curso ao fundo. Transicoes suaves entre cenas.
 
 ---
 
-### Cena 3: A solucao: curso 100% hands-on
+### Cena 3: [Ive] Ive
 
-**Tipo:** Solucao  
-**Duracao:** 60s  
-**Palavras:** 66
+**Persona:** Sra. Nexus Ive  
+**Voz TTS:** `Portuguese_SereneWoman`  
+**Duracao:** ~12s  
+**Palavras:** 46
 
 **Narracao:**
 
-> O curso tem 7 modulos praticos. Fundamentos de RAG. Indexacao e chunking. Embeddings e vector store. Retrieval e geracao. Hybrid search com RRF. Agentic RAG com LangGraph. Avaliacao com RAGAS. Cada modulo e um pedaco do pipeline. Voce sai com 3 sistemas completos rodando. FAQ Bot pessoal. Multi-source RAG com integracao de FAQ, documentacao, e tickets anteriores. Agentic RAG onde o agente decide quando检索 cada fonte.
+> O curso tem sete modulos praticos, Sir. Alencar. Fundamentos de RAG. Indexacao e chunking. Embeddings e vector store. Retrieval e geracao. Hybrid search com RRF. Agentic RAG com LangGraph. Avaliacao com RAGAS. Cada modulo e um pedaco do pipeline. Voce sai com tres sistemas completos rodando.
 
-**Visual sugerido:**
-
-> Screenshot do curriculo da apostila. Modulos aparecendo progressivamente. Tom verde esperanca.
-
-**B-roll / inserts:** icones de LLM, vector DB, agents, multi-modal (conforme cenario)
+**Visual sugerido:** Persona em tela, com B-roll do curso ao fundo. Transicoes suaves entre cenas.
 
 ---
 
-### Cena 4: Para quem e este curso
+### Cena 4: [Alencar] Alencar
 
-**Tipo:** Conteudo  
-**Duracao:** 60s  
-**Palavras:** 48
+**Persona:** Sir. Nexus Alencar  
+**Voz TTS:** `Portuguese_Deep-VoicedGentleman`  
+**Duracao:** ~14s  
+**Palavras:** 55
 
 **Narracao:**
 
-> Devs e engenheiros que querem construir RAG em producao sem meses de estudo. Voce precisa de Python basico. Nada mais. Sem GPU. Stack 100% via API. Custo total do projeto: menos de R$ 30. Preco do curso: R$ 497, ou 12 vezes de R$ 49,70. Link na descricao.
+> Os tres sistemas: FAQ Bot pessoal, Multi-source RAG integrando FAQ, documentacao, e tickets anteriores, e Agentic RAG onde o agente decide quando检索 cada fonte. Stack 100 por cento via API. Sem GPU. Custo total do projeto: menos de 30 reais. Voce precisa de Python basico. Nada mais. Investimento: 497 reais ou doze vezes de 49,70.
 
-**Visual sugerido:**
-
-> Mockup do projeto integrador. Numeros e metricas em destaque. Tom corporativo.
-
-**B-roll / inserts:** icones de LLM, vector DB, agents, multi-modal (conforme cenario)
+**Visual sugerido:** Persona em tela, com B-roll do curso ao fundo. Transicoes suaves entre cenas.
 
 ---
 
-### Cena 5: CTA final
+### Cena 5: [Ive] Ive
 
-**Tipo:** CTA  
-**Duracao:** 15s  
-**Palavras:** 14
+**Persona:** Sra. Nexus Ive  
+**Voz TTS:** `Portuguese_SereneWoman`  
+**Duracao:** ~5s  
+**Palavras:** 19
 
 **Narracao:**
 
-> Clique no link, comece a construir. Shakespeare da Atualidade, nos vemos na proxima aula.
+> Clique no link, comece a construir, e nos vemos na primeira aula. AcademIA e Shakespeare da Atualidade aguardam voce.
 
-**Visual sugerido:**
-
-> Logo da AcademIA. Botao de CTA pulsando. URL grande no centro.
-
-**B-roll / inserts:** icones de LLM, vector DB, agents, multi-modal (conforme cenario)
+**Visual sugerido:** Persona em tela, com B-roll do curso ao fundo. Transicoes suaves entre cenas.
 
 ---
 
 ## Metricas de Producao
 
-- **Total de palavras:** 209
-- **Duracao estimada:** 0.9 min (52s)
-- **Persona autoral:** shakespeare-atualidade
-- **Voz:** male-qn-qingse (calmo, didatico, autoridade)
-- **Tom:** educativo + inspiracional + CTA forte
+- **Total de palavras:** 225
+- **Duracao estimada:** 0.9 min (56s)
+- **Persona 1 (Ive):** Portuguese_SereneWoman (serene woman)
+- **Persona 2 (Alencar):** Portuguese_Deep-VoicedGentleman (deep-voiced gentleman)
+- **Formato:** Co-atuacao seguindo diretrizes de personas/dupla/interaction_guidelines.md
 
 ## Assets Necessarios
 
-- [ ] Capa do video (1080x1920 vertical ou 1920x1080 horizontal)
-- [ ] Audio TTS em portugues brasileiro
+- [ ] Audio TTS Ive (Portuguese_SereneWoman)
+- [ ] Audio TTS Alencar (Portuguese_Deep-VoicedGentleman)
+- [ ] Mixagem final (Ive + Alencar intercalados)
+- [ ] Video com personas (imagens Ive + Alencar)
 - [ ] Legendas SRT/VTT
-- [ ] Thumbnails para Shorts/Reels e YouTube
 - [ ] Background music (royalty-free, instrumental, baixa)
 
 ## CTA Padrao (descricao)
@@ -134,7 +127,7 @@ formato: "Video-aula para Marketplace + YouTube"
 
 ## Tags
 
-AcademIA, Nexus HUB57, IA para afiliados, LLM, RAG, agents, voice AI, multimodal, marketplace, certificacao
+AcademIA, Nexus HUB57, IA para afiliados, LLM, RAG, agents, voice AI, multimodal, marketplace, certificacao, Sra Nexus Ive, Sir Nexus Alencar
 
 ---
 

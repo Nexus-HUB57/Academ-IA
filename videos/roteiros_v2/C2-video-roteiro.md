@@ -1,131 +1,124 @@
 ---
 titulo: "Curso Pratico: Agents com LangGraph"
 codigo: "C2"
-persona: "phd-universo-ai"
-voz: "male-qn-qingse"
+personas:
+  - nome: "Sra. Nexus Ive"
+    role: "Anfitria Estrategica"
+    voz: "Portuguese_SereneWoman"
+    tom: "Sereno, acolhedor, sensual sutil, autoridade firme"
+  - nome: "Sir. Nexus Alencar"
+    role: "Mentor Tecnico"
+    voz: "Portuguese_Deep-VoicedGentleman"
+    tom: "Maduro, sereno, sabedoria, autoridade intelectual"
+formato: "Co-atuacao Ive + Alencar (5 cenas)"
 duracao_alvo: "3 minutos"
-data_criacao: "2026-07-08"
+data_criacao: "2026-07-22"
 autor: "Shakespeare da Atualidade - PHD nivel Harvard do Universo AI"
 editora: "AcademIA - Nexus HUB57"
-formato: "Video-aula para Marketplace + YouTube"
+referencias: "personas/ive/voice_guidelines.md, personas/alencar/identity.md, personas/dupla/interaction_guidelines.md"
 ---
 
 # Curso Pratico: Agents com LangGraph
 
 **Codigo:** C2  
-**Persona:** phd-universo-ai  
-**Voz TTS:** male-qn-qingse  
-**Duracao alvo:** 3 minutos (720 palavras, 240 wpm)  
-**Formato:** video vertical 9:16 para Shorts/Reels + horizontal 16:9 para YouTube
+**Personas:** Sra. Nexus Ive + Sir. Nexus Alencar (co-atuacao)  
+**Vozes TTS oficiais:** Portuguese_SereneWoman (Ive) + Portuguese_Deep-VoicedGentleman (Alencar)  
+**Duracao alvo:** 3 minutos (~720 palavras, 240 wpm)
 
 ---
 
-## Cenas e Tempo
+## Cenas (Co-atuacao)
 
-### Cena 1: Hook - Agents production-ready em 12 horas
+### Cena 1: [Ive] Ive
 
-**Tipo:** Hook  
-**Duracao:** 15s  
-**Palavras:** 28
+**Persona:** Sra. Nexus Ive  
+**Voz TTS:** `Portuguese_SereneWoman`  
+**Duracao:** ~11s  
+**Palavras:** 44
 
 **Narracao:**
 
-> LangGraph e o framework padrao da industria para agents production-grade. Em 12 horas, voce vai de zero a um sistema multi-agent funcional. Com memory. Com planning. Com human-in-the-loop.
+> Engenheiros, eu sou a Sra. Nexus Ive. Hoje vamos falar de agents production-ready. LangGraph e o framework padrao da industria. Em doze horas, voce vai de zero a um sistema multi-agent funcional. Com memory. Com planning. Com human-in-the-loop. Permita-se imaginar o que e possivel.
 
-**Visual sugerido:**
-
-> Fundo gradiente escuro com texto bold aparecendo. Imagem da apostila em destaque.
-
-**B-roll / inserts:** icones de LLM, vector DB, agents, multi-modal (conforme cenario)
+**Visual sugerido:** Persona em tela, com B-roll do curso ao fundo. Transicoes suaves entre cenas.
 
 ---
 
-### Cena 2: O problema dos agentes frageis
+### Cena 2: [Alencar] Alencar
 
-**Tipo:** Problema  
-**Duracao:** 30s  
-**Palavras:** 35
+**Persona:** Sir. Nexus Alencar  
+**Voz TTS:** `Portuguese_Deep-VoicedGentleman`  
+**Duracao:** ~12s  
+**Palavras:** 50
 
 **Narracao:**
 
-> Voce constroi um agent. Ele funciona em demo. Em producao, quebra. Loop infinito. Alucinacoes. Tool calls errados. Memory que nao persiste. E pior: voce nao sabe por que quebrou. Sem tracing. Sem eval. Sem observability.
+> O problema dos agents frageis, Sra. Ive. Voce constroi um, funciona em demo, quebra em producao. Loop infinito. Alucinacoes. Tool calls errados. Memory que nao persiste. E o mais grave: sem tracing, sem eval, sem observability, voce nao sabe por que quebrou. Nao e assim que se opera em producao.
 
-**Visual sugerido:**
-
-> Mockup de ChatGPT com respostas genericas. Relogio mostrando horas perdidas. Tom azulado, levemente frustrado.
-
-**B-roll / inserts:** icones de LLM, vector DB, agents, multi-modal (conforme cenario)
+**Visual sugerido:** Persona em tela, com B-roll do curso ao fundo. Transicoes suaves entre cenas.
 
 ---
 
-### Cena 3: A solucao: LangGraph do jeito certo
+### Cena 3: [Ive] Ive
 
-**Tipo:** Solucao  
-**Duracao:** 60s  
-**Palavras:** 46
+**Persona:** Sra. Nexus Ive  
+**Voz TTS:** `Portuguese_SereneWoman`  
+**Duracao:** ~13s  
+**Palavras:** 52
 
 **Narracao:**
 
-> 8 modulos progressivos. State e nodes. Tools e function calling. Memory com checkpointers: MemorySaver, SqliteSaver, PostgresSaver. Human-in-the-loop com interrupt. Streaming token a token. Subgraphs e composicao modular. E o mais importante: production patterns testados em escala real na Nexus. Templates de 10 agents prontos para usar.
+> O Curso Pratico de Agents com LangGraph da AcademIA tem oito modulos progressivos, Sir. Alencar. State e nodes. Tools e function calling. Memory com checkpointers. Human-in-the-loop com interrupt. Streaming token a token. Subgraphs e composicao modular. E production patterns testados em escala real na Nexus. Dez templates de agents prontos para usar.
 
-**Visual sugerido:**
-
-> Screenshot do curriculo da apostila. Modulos aparecendo progressivamente. Tom verde esperanca.
-
-**B-roll / inserts:** icones de LLM, vector DB, agents, multi-modal (conforme cenario)
+**Visual sugerido:** Persona em tela, com B-roll do curso ao fundo. Transicoes suaves entre cenas.
 
 ---
 
-### Cena 4: Projeto real, nao demo
+### Cena 4: [Alencar] Alencar
 
-**Tipo:** Conteudo  
-**Duracao:** 60s  
-**Palavras:** 51
+**Persona:** Sir. Nexus Alencar  
+**Voz TTS:** `Portuguese_Deep-VoicedGentleman`  
+**Duracao:** ~12s  
+**Palavras:** 49
 
 **Narracao:**
 
-> Voce constroi um agent de atendimento ao cliente que consulta RAG, escala para humano quando necessario, e tem memory persistente entre sessoes. Com code review de mentor senior incluso. Funciona com GPT-4o, Claude, Gemini. Sem GPU. Sem vendor lock-in. Preco: R$ 697, ou 12 vezes de R$ 69,70. Link na descricao.
+> O projeto integrador: voce constroi um agent de atendimento ao cliente que consulta RAG, escala para humano quando necessario, e tem memory persistente entre sessoes. Code review de mentor senior incluso. Funciona com GPT-4o, Claude, Gemini. Sem GPU. Sem vendor lock-in. Investimento: 697 reais ou doze vezes de 69,70.
 
-**Visual sugerido:**
-
-> Mockup do projeto integrador. Numeros e metricas em destaque. Tom corporativo.
-
-**B-roll / inserts:** icones de LLM, vector DB, agents, multi-modal (conforme cenario)
+**Visual sugerido:** Persona em tela, com B-roll do curso ao fundo. Transicoes suaves entre cenas.
 
 ---
 
-### Cena 5: CTA final
+### Cena 5: [Ive] Ive
 
-**Tipo:** CTA  
-**Duracao:** 15s  
-**Palavras:** 18
+**Persona:** Sra. Nexus Ive  
+**Voz TTS:** `Portuguese_SereneWoman`  
+**Duracao:** ~7s  
+**Palavras:** 27
 
 **Narracao:**
 
-> Clique no link. Construa o agent que voce precisa. PHD do Universo AI, nos vemos na proxima aula.
+> Construa o agent que voce precisa. Clique no link, garanta sua vaga, e nos vemos na primeira aula. Shakespeare da Atualidade e a equipe AcademIA nos esperam.
 
-**Visual sugerido:**
-
-> Logo da AcademIA. Botao de CTA pulsando. URL grande no centro.
-
-**B-roll / inserts:** icones de LLM, vector DB, agents, multi-modal (conforme cenario)
+**Visual sugerido:** Persona em tela, com B-roll do curso ao fundo. Transicoes suaves entre cenas.
 
 ---
 
 ## Metricas de Producao
 
-- **Total de palavras:** 178
-- **Duracao estimada:** 0.7 min (44s)
-- **Persona autoral:** phd-universo-ai
-- **Voz:** male-qn-qingse (calmo, didatico, autoridade)
-- **Tom:** educativo + inspiracional + CTA forte
+- **Total de palavras:** 222
+- **Duracao estimada:** 0.9 min (56s)
+- **Persona 1 (Ive):** Portuguese_SereneWoman (serene woman)
+- **Persona 2 (Alencar):** Portuguese_Deep-VoicedGentleman (deep-voiced gentleman)
+- **Formato:** Co-atuacao seguindo diretrizes de personas/dupla/interaction_guidelines.md
 
 ## Assets Necessarios
 
-- [ ] Capa do video (1080x1920 vertical ou 1920x1080 horizontal)
-- [ ] Audio TTS em portugues brasileiro
+- [ ] Audio TTS Ive (Portuguese_SereneWoman)
+- [ ] Audio TTS Alencar (Portuguese_Deep-VoicedGentleman)
+- [ ] Mixagem final (Ive + Alencar intercalados)
+- [ ] Video com personas (imagens Ive + Alencar)
 - [ ] Legendas SRT/VTT
-- [ ] Thumbnails para Shorts/Reels e YouTube
 - [ ] Background music (royalty-free, instrumental, baixa)
 
 ## CTA Padrao (descricao)
@@ -134,7 +127,7 @@ formato: "Video-aula para Marketplace + YouTube"
 
 ## Tags
 
-AcademIA, Nexus HUB57, IA para afiliados, LLM, RAG, agents, voice AI, multimodal, marketplace, certificacao
+AcademIA, Nexus HUB57, IA para afiliados, LLM, RAG, agents, voice AI, multimodal, marketplace, certificacao, Sra Nexus Ive, Sir Nexus Alencar
 
 ---
 

@@ -1,131 +1,124 @@
 ---
 titulo: "Curso Pratico: Voice AI (J.A.R.V.I.S.)"
 codigo: "C5"
-persona: "jarvis"
-voz: "male-qn-qingse"
+personas:
+  - nome: "Sra. Nexus Ive"
+    role: "Anfitria Estrategica"
+    voz: "Portuguese_SereneWoman"
+    tom: "Sereno, acolhedor, sensual sutil, autoridade firme"
+  - nome: "Sir. Nexus Alencar"
+    role: "Mentor Tecnico"
+    voz: "Portuguese_Deep-VoicedGentleman"
+    tom: "Maduro, sereno, sabedoria, autoridade intelectual"
+formato: "Co-atuacao Ive + Alencar (5 cenas)"
 duracao_alvo: "3 minutos"
-data_criacao: "2026-07-08"
+data_criacao: "2026-07-22"
 autor: "Shakespeare da Atualidade - PHD nivel Harvard do Universo AI"
 editora: "AcademIA - Nexus HUB57"
-formato: "Video-aula para Marketplace + YouTube"
+referencias: "personas/ive/voice_guidelines.md, personas/alencar/identity.md, personas/dupla/interaction_guidelines.md"
 ---
 
 # Curso Pratico: Voice AI (J.A.R.V.I.S.)
 
 **Codigo:** C5  
-**Persona:** jarvis  
-**Voz TTS:** male-qn-qingse  
-**Duracao alvo:** 3 minutos (720 palavras, 240 wpm)  
-**Formato:** video vertical 9:16 para Shorts/Reels + horizontal 16:9 para YouTube
+**Personas:** Sra. Nexus Ive + Sir. Nexus Alencar (co-atuacao)  
+**Vozes TTS oficiais:** Portuguese_SereneWoman (Ive) + Portuguese_Deep-VoicedGentleman (Alencar)  
+**Duracao alvo:** 3 minutos (~720 palavras, 240 wpm)
 
 ---
 
-## Cenas e Tempo
+## Cenas (Co-atuacao)
 
-### Cena 1: Hook - Bem-vindo ao futuro da voz
+### Cena 1: [Ive] Ive
 
-**Tipo:** Hook  
-**Duracao:** 15s  
-**Palavras:** 38
+**Persona:** Sra. Nexus Ive  
+**Voz TTS:** `Portuguese_SereneWoman`  
+**Duracao:** ~15s  
+**Palavras:** 60
 
 **Narracao:**
 
-> Bom dia. Em 10 horas, voce constroi um assistente de voz completo. Com STT. Com TTS. Com LLM streaming. Com latencia menor que 1 segundo. Parece ficcao? E o Curso Pratico de Voice AI da AcademIA. Permita-me guia-lo.
+> Ola. Eu sou a Sra. Nexus Ive. Permita-me apresentar o Curso Pratico de Voice AI da AcademIA. Em dez horas, voce constroi um assistente de voz completo. Com STT. Com TTS. Com LLM streaming. Com latencia menor que um segundo. A voz e a interface definitiva de 2026. Mais rapida que digitar. Mais natural que clicar. Mais pessoal que texto.
 
-**Visual sugerido:**
-
-> Fundo gradiente escuro com texto bold aparecendo. Imagem da apostila em destaque.
-
-**B-roll / inserts:** icones de LLM, vector DB, agents, multi-modal (conforme cenario)
+**Visual sugerido:** Persona em tela, com B-roll do curso ao fundo. Transicoes suaves entre cenas.
 
 ---
 
-### Cena 2: A revolucao da voz em 2026
+### Cena 2: [Alencar] Alencar
 
-**Tipo:** Conteudo  
-**Duracao:** 60s  
-**Palavras:** 46
-
-**Narracao:**
-
-> Em 2026, voz e a interface definitiva. Mais rapida que digitar. Mais natural que clicar. Mais pessoal que texto. WhatsApp processa 100 bilhoes de mensagens de voz por dia. Empresas que adotam voice AI reduzem custo de atendimento em 70%. O mercado esta na sua porta.
-
-**Visual sugerido:**
-
-> Mockup do projeto integrador. Numeros e metricas em destaque. Tom corporativo.
-
-**B-roll / inserts:** icones de LLM, vector DB, agents, multi-modal (conforme cenario)
-
----
-
-### Cena 3: A solucao: pipeline completo end-to-end
-
-**Tipo:** Solucao  
-**Duracao:** 60s  
-**Palavras:** 54
-
-**Narracao:**
-
-> 8 modulos progressivos. Pipeline de voz completo, do zero. STT com Whisper da OpenAI. TTS com ElevenLabs e clonagem de voz. Voice Activity Detection e wake-word. LLM streaming para respostas naturais. Memoria e personalidade do assistente. Barge-in para conversacao natural. Latencia otimizada para menor que 1 segundo. Edge AI e integracao com WhatsApp Business.
-
-**Visual sugerido:**
-
-> Screenshot do curriculo da apostila. Modulos aparecendo progressivamente. Tom verde esperanca.
-
-**B-roll / inserts:** icones de LLM, vector DB, agents, multi-modal (conforme cenario)
-
----
-
-### Cena 4: Projeto real, no WhatsApp
-
-**Tipo:** Conteudo  
-**Duracao:** 60s  
+**Persona:** Sir. Nexus Alencar  
+**Voz TTS:** `Portuguese_Deep-VoicedGentleman`  
+**Duracao:** ~11s  
 **Palavras:** 45
 
 **Narracao:**
 
-> Voce constroi um assistente de voz para WhatsApp que atende 1.000 clientes por dia. Custo: menos de R$ 0,02 por mensagem. ROI: altissimo. Funciona em portugues com sotaques brasileiros. Integracao completa com Twilio. Preco: R$ 697, ou 12 vezes de R$ 69,70. Link na descricao.
+> O mercado ja esta exigindo, Sra. Ive. WhatsApp processa 100 bilhoes de mensagens de voz por dia. Empresas que adotam voice AI reduzem custo de atendimento em 70 por cento. Quem nao se move agora, fica para tras. A questao nao e se, e quando.
 
-**Visual sugerido:**
-
-> Mockup do projeto integrador. Numeros e metricas em destaque. Tom corporativo.
-
-**B-roll / inserts:** icones de LLM, vector DB, agents, multi-modal (conforme cenario)
+**Visual sugerido:** Persona em tela, com B-roll do curso ao fundo. Transicoes suaves entre cenas.
 
 ---
 
-### Cena 5: CTA final
+### Cena 3: [Ive] Ive
 
-**Tipo:** CTA  
-**Duracao:** 15s  
-**Palavras:** 10
+**Persona:** Sra. Nexus Ive  
+**Voz TTS:** `Portuguese_SereneWoman`  
+**Duracao:** ~14s  
+**Palavras:** 57
 
 **Narracao:**
 
-> Aguardo voce no curso. J.A.R.V.I.S. da Nexus, a sua disposicao.
+> O curso tem oito modulos progressivos, Sir. Alencar. Pipeline de voz completo do zero. STT com Whisper da OpenAI. TTS com ElevenLabs e clonagem de voz. Voice Activity Detection e wake-word. LLM streaming para respostas naturais. Memoria e personalidade. Barge-in para conversacao natural. Latencia otimizada para menor que um segundo. Edge AI e integracao com WhatsApp Business.
 
-**Visual sugerido:**
+**Visual sugerido:** Persona em tela, com B-roll do curso ao fundo. Transicoes suaves entre cenas.
 
-> Logo da AcademIA. Botao de CTA pulsando. URL grande no centro.
+---
 
-**B-roll / inserts:** icones de LLM, vector DB, agents, multi-modal (conforme cenario)
+### Cena 4: [Alencar] Alencar
+
+**Persona:** Sir. Nexus Alencar  
+**Voz TTS:** `Portuguese_Deep-VoicedGentleman`  
+**Duracao:** ~10s  
+**Palavras:** 41
+
+**Narracao:**
+
+> Voce constroi um assistente de voz para WhatsApp que atende mil clientes por dia. Custo: menos de 2 centavos por mensagem. ROI altissimo. Funciona em portugues com sotaques brasileiros. Integracao completa com Twilio. Investimento: 697 reais ou doze vezes de 69,70.
+
+**Visual sugerido:** Persona em tela, com B-roll do curso ao fundo. Transicoes suaves entre cenas.
+
+---
+
+### Cena 5: [Ive] Ive
+
+**Persona:** Sra. Nexus Ive  
+**Voz TTS:** `Portuguese_SereneWoman`  
+**Duracao:** ~6s  
+**Palavras:** 24
+
+**Narracao:**
+
+> Aguardo voce no curso. Clique no link, garanta sua vaga, e nos vemos na primeira aula. AcademIA, Nexus HUB57, Shakespeare da Atualidade nos esperam.
+
+**Visual sugerido:** Persona em tela, com B-roll do curso ao fundo. Transicoes suaves entre cenas.
 
 ---
 
 ## Metricas de Producao
 
-- **Total de palavras:** 193
-- **Duracao estimada:** 0.8 min (48s)
-- **Persona autoral:** jarvis
-- **Voz:** male-qn-qingse (calmo, didatico, autoridade)
-- **Tom:** educativo + inspiracional + CTA forte
+- **Total de palavras:** 227
+- **Duracao estimada:** 0.9 min (57s)
+- **Persona 1 (Ive):** Portuguese_SereneWoman (serene woman)
+- **Persona 2 (Alencar):** Portuguese_Deep-VoicedGentleman (deep-voiced gentleman)
+- **Formato:** Co-atuacao seguindo diretrizes de personas/dupla/interaction_guidelines.md
 
 ## Assets Necessarios
 
-- [ ] Capa do video (1080x1920 vertical ou 1920x1080 horizontal)
-- [ ] Audio TTS em portugues brasileiro
+- [ ] Audio TTS Ive (Portuguese_SereneWoman)
+- [ ] Audio TTS Alencar (Portuguese_Deep-VoicedGentleman)
+- [ ] Mixagem final (Ive + Alencar intercalados)
+- [ ] Video com personas (imagens Ive + Alencar)
 - [ ] Legendas SRT/VTT
-- [ ] Thumbnails para Shorts/Reels e YouTube
 - [ ] Background music (royalty-free, instrumental, baixa)
 
 ## CTA Padrao (descricao)
@@ -134,7 +127,7 @@ formato: "Video-aula para Marketplace + YouTube"
 
 ## Tags
 
-AcademIA, Nexus HUB57, IA para afiliados, LLM, RAG, agents, voice AI, multimodal, marketplace, certificacao
+AcademIA, Nexus HUB57, IA para afiliados, LLM, RAG, agents, voice AI, multimodal, marketplace, certificacao, Sra Nexus Ive, Sir Nexus Alencar
 
 ---
 

@@ -1,131 +1,124 @@
 ---
 titulo: "Curso Pratico: Vector Databases para Devs"
 codigo: "C4"
-persona: "phd-universo-ai"
-voz: "male-qn-qingse"
+personas:
+  - nome: "Sra. Nexus Ive"
+    role: "Anfitria Estrategica"
+    voz: "Portuguese_SereneWoman"
+    tom: "Sereno, acolhedor, sensual sutil, autoridade firme"
+  - nome: "Sir. Nexus Alencar"
+    role: "Mentor Tecnico"
+    voz: "Portuguese_Deep-VoicedGentleman"
+    tom: "Maduro, sereno, sabedoria, autoridade intelectual"
+formato: "Co-atuacao Ive + Alencar (5 cenas)"
 duracao_alvo: "3 minutos"
-data_criacao: "2026-07-08"
+data_criacao: "2026-07-22"
 autor: "Shakespeare da Atualidade - PHD nivel Harvard do Universo AI"
 editora: "AcademIA - Nexus HUB57"
-formato: "Video-aula para Marketplace + YouTube"
+referencias: "personas/ive/voice_guidelines.md, personas/alencar/identity.md, personas/dupla/interaction_guidelines.md"
 ---
 
 # Curso Pratico: Vector Databases para Devs
 
 **Codigo:** C4  
-**Persona:** phd-universo-ai  
-**Voz TTS:** male-qn-qingse  
-**Duracao alvo:** 3 minutos (720 palavras, 240 wpm)  
-**Formato:** video vertical 9:16 para Shorts/Reels + horizontal 16:9 para YouTube
+**Personas:** Sra. Nexus Ive + Sir. Nexus Alencar (co-atuacao)  
+**Vozes TTS oficiais:** Portuguese_SereneWoman (Ive) + Portuguese_Deep-VoicedGentleman (Alencar)  
+**Duracao alvo:** 3 minutos (~720 palavras, 240 wpm)
 
 ---
 
-## Cenas e Tempo
+## Cenas (Co-atuacao)
 
-### Cena 1: Hook - Qual vector DB escolher em 8 horas
+### Cena 1: [Ive] Ive
 
-**Tipo:** Hook  
-**Duracao:** 15s  
-**Palavras:** 33
+**Persona:** Sra. Nexus Ive  
+**Voz TTS:** `Portuguese_SereneWoman`  
+**Duracao:** ~14s  
+**Palavras:** 56
 
 **Narracao:**
 
-> Pinecone, Qdrant, Weaviate, pgvector. Em 8 horas, com benchmarks reais, voce vai saber qual usar para o seu caso. Sem achismo. Sem copiar o que o influencer falou. Dados reais, no seu workload.
+> Devs e DevOps engineers, eu sou a Sra. Nexus Ive. Pinecone, Qdrant, Weaviate, pgvector. Em oito horas, com benchmarks reais, voce vai saber qual usar para o seu caso. Sem achismo. Sem copiar o que o influencer falou. Dados reais, no seu workload. Veja bem: esta decisao pode custar ou economizar milhares de reais por mes.
 
-**Visual sugerido:**
-
-> Fundo gradiente escuro com texto bold aparecendo. Imagem da apostila em destaque.
-
-**B-roll / inserts:** icones de LLM, vector DB, agents, multi-modal (conforme cenario)
+**Visual sugerido:** Persona em tela, com B-roll do curso ao fundo. Transicoes suaves entre cenas.
 
 ---
 
-### Cena 2: O problema da decisao errada de infra
+### Cena 2: [Alencar] Alencar
 
-**Tipo:** Problema  
-**Duracao:** 30s  
-**Palavras:** 53
+**Persona:** Sir. Nexus Alencar  
+**Voz TTS:** `Portuguese_Deep-VoicedGentleman`  
+**Duracao:** ~14s  
+**Palavras:** 56
 
 **Narracao:**
 
-> Vector DB e a infraestrutura critica de qualquer sistema RAG ou agentic. Escolha errada custa caro. Literalmente. Pinecone custa 500 dolares por mes em producao. pgvector no Postgres que voce ja tem custa zero. A diferenca entre benchmark teorico e benchmark no seu workload pode ser 10x em custo. Ou 10x em latencia.
+> Vector DB e a infraestrutura critica de qualquer sistema RAG ou agentic, Sra. Ive. Escolha errada custa caro. Pinecone custa 500 dolares por mes em producao. pgvector no Postgres que voce ja tem custa zero. A diferenca entre benchmark teorico e benchmark no seu workload pode ser dez vezes em custo. Ou dez vezes em latencia.
 
-**Visual sugerido:**
-
-> Mockup de ChatGPT com respostas genericas. Relogio mostrando horas perdidas. Tom azulado, levemente frustrado.
-
-**B-roll / inserts:** icones de LLM, vector DB, agents, multi-modal (conforme cenario)
+**Visual sugerido:** Persona em tela, com B-roll do curso ao fundo. Transicoes suaves entre cenas.
 
 ---
 
-### Cena 3: A solucao: curso hands-on com 3 vector DBs
+### Cena 3: [Ive] Ive
 
-**Tipo:** Solucao  
-**Duracao:** 60s  
-**Palavras:** 48
+**Persona:** Sra. Nexus Ive  
+**Voz TTS:** `Portuguese_SereneWoman`  
+**Duracao:** ~12s  
+**Palavras:** 46
 
 **Narracao:**
 
-> 7 modulos praticos. Anatomia de vector DBs: HNSW, IVF, e como cada algoritmo funciona por dentro. Setup completo com Qdrant, pgvector, e Pinecone. Benchmarks comparativos em workload real. Hybrid search com metadata filtering. Production guide: monitoring, backup, scaling. E uma calculadora de custo interativa para orcar seu projeto.
+> O Curso Pratico de Vector Databases tem sete modulos hands-on, Sir. Alencar. Anatomia de vector DBs: HNSW, IVF. Setup completo com Qdrant, pgvector, e Pinecone. Benchmarks comparativos em workload real. Hybrid search com metadata filtering. Production guide com monitoring, backup, scaling. E calculadora de custo interativa.
 
-**Visual sugerido:**
-
-> Screenshot do curriculo da apostila. Modulos aparecendo progressivamente. Tom verde esperanca.
-
-**B-roll / inserts:** icones de LLM, vector DB, agents, multi-modal (conforme cenario)
+**Visual sugerido:** Persona em tela, com B-roll do curso ao fundo. Transicoes suaves entre cenas.
 
 ---
 
-### Cena 4: Quem precisa decidir infra
+### Cena 4: [Alencar] Alencar
 
-**Tipo:** Conteudo  
-**Duracao:** 60s  
-**Palavras:** 40
+**Persona:** Sir. Nexus Alencar  
+**Voz TTS:** `Portuguese_Deep-VoicedGentleman`  
+**Duracao:** ~9s  
+**Palavras:** 35
 
 **Narracao:**
 
-> Backend e DevOps engineers que precisam decidir e operar vector DBs em producao. 50 milhoes de vetores testados. Comparacao honesta, sem vendor bias. Dados de junho de 2026. Preco: R$ 497, ou 12 vezes de R$ 49,70. Link na descricao.
+> Cinquenta milhoes de vetores testados. Comparacao honesta, sem vendor bias. Dados de junho de 2026. Para backend e DevOps engineers que precisam decidir e operar em producao. Investimento: 497 reais ou doze vezes de 49,70.
 
-**Visual sugerido:**
-
-> Mockup do projeto integrador. Numeros e metricas em destaque. Tom corporativo.
-
-**B-roll / inserts:** icones de LLM, vector DB, agents, multi-modal (conforme cenario)
+**Visual sugerido:** Persona em tela, com B-roll do curso ao fundo. Transicoes suaves entre cenas.
 
 ---
 
-### Cena 5: CTA final
+### Cena 5: [Ive] Ive
 
-**Tipo:** CTA  
-**Duracao:** 15s  
-**Palavras:** 18
+**Persona:** Sra. Nexus Ive  
+**Voz TTS:** `Portuguese_SereneWoman`  
+**Duracao:** ~6s  
+**Palavras:** 25
 
 **Narracao:**
 
-> Clique no link. Decida com dados, nao com feeling. PHD do Universo AI, nos vemos na proxima aula.
+> Decida com dados, nao com feeling. Clique no link, garanta sua vaga, e nos vemos na primeira aula. AcademIA e Shakespeare da Atualidade nos esperam.
 
-**Visual sugerido:**
-
-> Logo da AcademIA. Botao de CTA pulsando. URL grande no centro.
-
-**B-roll / inserts:** icones de LLM, vector DB, agents, multi-modal (conforme cenario)
+**Visual sugerido:** Persona em tela, com B-roll do curso ao fundo. Transicoes suaves entre cenas.
 
 ---
 
 ## Metricas de Producao
 
-- **Total de palavras:** 192
-- **Duracao estimada:** 0.8 min (48s)
-- **Persona autoral:** phd-universo-ai
-- **Voz:** male-qn-qingse (calmo, didatico, autoridade)
-- **Tom:** educativo + inspiracional + CTA forte
+- **Total de palavras:** 218
+- **Duracao estimada:** 0.9 min (54s)
+- **Persona 1 (Ive):** Portuguese_SereneWoman (serene woman)
+- **Persona 2 (Alencar):** Portuguese_Deep-VoicedGentleman (deep-voiced gentleman)
+- **Formato:** Co-atuacao seguindo diretrizes de personas/dupla/interaction_guidelines.md
 
 ## Assets Necessarios
 
-- [ ] Capa do video (1080x1920 vertical ou 1920x1080 horizontal)
-- [ ] Audio TTS em portugues brasileiro
+- [ ] Audio TTS Ive (Portuguese_SereneWoman)
+- [ ] Audio TTS Alencar (Portuguese_Deep-VoicedGentleman)
+- [ ] Mixagem final (Ive + Alencar intercalados)
+- [ ] Video com personas (imagens Ive + Alencar)
 - [ ] Legendas SRT/VTT
-- [ ] Thumbnails para Shorts/Reels e YouTube
 - [ ] Background music (royalty-free, instrumental, baixa)
 
 ## CTA Padrao (descricao)
@@ -134,7 +127,7 @@ formato: "Video-aula para Marketplace + YouTube"
 
 ## Tags
 
-AcademIA, Nexus HUB57, IA para afiliados, LLM, RAG, agents, voice AI, multimodal, marketplace, certificacao
+AcademIA, Nexus HUB57, IA para afiliados, LLM, RAG, agents, voice AI, multimodal, marketplace, certificacao, Sra Nexus Ive, Sir Nexus Alencar
 
 ---
 
