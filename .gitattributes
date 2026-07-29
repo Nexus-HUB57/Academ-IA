@@ -1,0 +1,47 @@
+# Git LFS / Binary handling
+# Mantém WAVs/MP4s/MP3s/PNGs grandes fora do diff normal
+
+# Audio
+*.wav binary
+*.mp3 binary
+*.m4a binary
+*.ogg binary
+*.flac binary
+
+# Video
+*.mp4 binary
+*.mov binary
+*.avi binary
+*.webm binary
+*.mkv binary
+
+# Imagens
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.avif binary
+
+# Documentos
+*.pdf binary
+*.docx binary
+*.pptx binary
+*.xlsx binary
+
+# Arquivos de áudio das personas oficiais
+marca/personas/alencar/audio/* binary
+marca/personas/ive/audio/* binary
+marca/personas/dupla/audio/* binary
+
+# Normalização de finais de linha
+*.md text eol=lf
+*.html text eol=lf
+*.css text eol=lf
+*.js text eol=lf
+*.ts text eol=lf
+*.py text eol=lf
+*.sh text eol=lf
+*.json text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf

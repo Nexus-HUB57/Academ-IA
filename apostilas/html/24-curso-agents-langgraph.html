@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curso Agents Langgraph - AcademIA Nexus</title>
+  <link rel="stylesheet" href="../html/acad-style.css">
+</head>
+<body class="dark-theme">
+  <article class="ebook">
+    <header class="cover">
+      <div class="series-tag">AcademIA - Apostila #24</div>
+      <h1>Curso Agents Langgraph</h1>
+      <h2>Apostila AcademIA - Nexus HUB57</h2>
+      <img class="cover-image" src="docs/ebooks/ACAD-apostila-24-curso-agents-langgraph.webp" alt="Capa - Curso Agents Langgraph">
+      <div class="author"><strong>Shakespeare da Atualidade — PHD Harvard do Universo AI</strong><br>PHD nivel Harvard do Universo AI</div>
+      <div class="meta">Apostila 24 - Nivel Master - v1.0 - 2026</div>
+    </header>
+    <section class="page toc-page">
+      <h2>Sumario</h2>
+      <ul><li>(conteudo detalhado no corpo)</li></ul>
+      <div class="info-box success">
+        <strong>Sobre esta apostila:</strong> parte da colecao AcademIA - Nexus HUB57. Conteudo hands-on, baseado em producao real.
+      </div>
+    </section>
+    <section class="page">
+      <h2>Conteudo</h2>
+      <p>AcademIA · Apostila C2</p>
+<h1>Curso Prático: Agents com LangGraph</h1>
+<h2>Construa agentes production-ready em 28 páginas</h2>
+<p><img alt="Capa" src="../../docs/ebooks/ACAD-apostila-24-curso-agents-langgraph.webp" /></p>
+<p><strong>Shakespeare da Atualidade</strong> PHD nível Harvard do Universo AI</p>
+<p>Apostila C2 · Nível Intermediário · 12h · v1.0 · 2026</p>
+<h2>Créditos &amp; Ficha Técnica</h2>
+<p><strong>Título:</strong> Curso Prático: Agents com LangGraph</p>
+<p><strong>Subtítulo:</strong> Construa agentes production-ready em 28 páginas</p>
+<p><strong>Coleção:</strong> AcademIA — Apostilas Nexus HUB57</p>
+<p><strong>Categoria:</strong> Curso Prático</p>
+<p><strong>ISBN:</strong> AC-CURSO-02 (fictício)</p>
+<p><strong>Autor:</strong> Shakespeare da Atualidade · PHD nível Harvard do Universo AI</p>
+<p><strong>Editora:</strong> Nexus HUB57 · AcademIA</p>
+<p><strong>Edição:</strong> v1.0 — Junho de 2026</p>
+<p><strong>Carga horária estimada:</strong> 12h</p>
+<h3>Sobre esta apostila</h3>
+<p>Esta apostila é parte do programa AcademIA — a plataforma educacional da Nexus HUB57 para formação de engenheiros, arquitetos, e afiliados em IA aplicada. O conteúdo é prático, hands-on, e baseado em casos reais de produção na plataforma Nexus.</p>
+<h3>Como usar</h3>
+<ul>
+<li>Leia o módulo teórico primeiro (15-30 min por capítulo)</li>
+<li>Faça os exercícios práticos no seu próprio ambiente</li>
+<li>Implemente o projeto integrador (cap. final)</li>
+<li>Avalie-se com as questões propostas</li>
+<li>Compartilhe seu projeto na comunidade Nexus para feedback</li>
+</ul>
+<p><strong>🎓 Ao final desta apostila:</strong> você terá um projeto funcional, knowledge testado, e certificado AcademIA (mediante prova).</p>
+<p>2</p>
+<p>AcademIA · Apostila C2</p>
+<h2>Sumário</h2>
+<h3>Módulo Introdutório</h3>
+<ul>
+<li>1. Bem-vindo e Pré-requisitos</li>
+<li>2. Visão Geral do Curso</li>
+<li>3. Setup do Ambiente</li>
+</ul>
+<h3>Módulos Práticos (8 módulos)</h3>
+<ul>
+<li>1. Módulo 1: [tópico específico do curso]</li>
+<li>2. Módulo 2: [tópico específico do curso]</li>
+<li>3. Módulo 3: [tópico específico do curso]</li>
+<li>4. Módulo 4: [tópico específico do curso]</li>
+<li>5. Módulo 5: [tópico específico do curso]</li>
+<li>6. Módulo 6: [tópico específico do curso]</li>
+<li>7. Módulo 7: [tópico específico do curso]</li>
+<li>8. Módulo 8: [tópico específico do curso]</li>
+</ul>
+<h3>Projeto Integrador</h3>
+<ul>
+<li>9. Projeto Final</li>
+<li>10. Avaliação e Próximos Passos</li>
+</ul>
+<p><strong>📌 Como navegar:</strong> siga linearmente se é iniciante; pule para módulos específicos se já tem experiência. O projeto integrador sintetiza tudo.</p>
+<p>3</p>
+<p>AcademIA · Apostila C2</p>
+<h2>1. Bem-vindo e Pré-requisitos</h2>
+<p>Bem-vindo à apostila <strong>Curso Prático: Agents com LangGraph</strong>. Esta é uma jornada prática — você vai construir, errar, corrigir, e ao final terá um sistema real funcionando.</p>
+<h3>1.1 Para quem é esta apostila</h3>
+<h1>Curso Prático: Agents com LangGraph LangGraph é o framework padrão da indústria para agents production-grade. Este curso leva você de zero a um sistema multi-agent funcional com memory, planning, e human-in-the-loop.</h1>
+<h3>1.2 Pré-requisitos</h3>
+<ul>
+<li>Python 3.10+ instalado</li>
+<li>Noções de linha de comando (bash/zsh)</li>
+<li>Familiaridade com git e GitHub</li>
+<li>Conta em pelo menos um provedor LLM (OpenAI, Anthropic, ou self-hosted Ollama)</li>
+<li>Curiosidade e disposição para iterar</li>
+</ul>
+<h3>1.3 O que você vai construir</h3>
+<p>Ao final desta apostila, você terá um sistema funcional — não um toy, mas uma aplicação que resolve um problema real. O projeto integrador é avaliado pelos critérios:</p>
+<ol>
+<li><strong>Funcionalidade</strong> : o sistema resolve o problema declarado?</li>
+<li><strong>Código</strong> : limpo, testado, documentado?</li>
+<li><strong>Observability</strong> : tem logs, métricas, tracing?</li>
+<li><strong>Robustez</strong> : lida com edge cases?</li>
+<li><strong>Apresentação</strong> : README, demo, ou vídeo?</li>
+</ol>
+<blockquote>
+<p>"A melhor forma de aprender é fazendo. A segunda melhor é ensinando."— Provérbio hacker</p>
+</blockquote>
+<p>4</p>
+<p>AcademIA · Apostila C2</p>
+<h2>2. Setup do Ambiente</h2>
+<p>Antes de começar, configure seu ambiente de desenvolvimento. Teremos três pilares: Python, VSCode (ou similar), e credenciais LLM.</p>
+<h3>2.1 Python 3.10+</h3>
+<div class="codehilite"><pre><span></span><code><span class="cp"># macOS</span>
+<span class="n">brew</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">python</span><span class="mf">@3.11</span>
+
+<span class="cp"># Linux (Ubuntu/Debian)</span>
+<span class="n">sudo</span><span class="w"> </span><span class="n">apt</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">python3</span><span class="mf">.11</span><span class="w"> </span><span class="n">python3</span><span class="mf">.11</span><span class="o">-</span><span class="n">venv</span>
+
+<span class="cp"># Windows</span>
+<span class="cp"># Baixe de python.org ou use pyenv-win</span>
+<span class="cp"># Verifique</span>
+<span class="n">python</span><span class="w"> </span><span class="o">--</span><span class="n">version</span><span class="w">  </span><span class="err">#</span><span class="w"> </span><span class="n">Python</span><span class="w"> </span><span class="mf">3.11</span><span class="p">.</span><span class="n">x</span>
+</code></pre></div>
+
+<h3>2.2 Ambiente virtual</h3>
+<div class="codehilite"><pre><span></span><code>mkdir nexus-curso-agents-langgraph &amp;&amp; cd nexus-curso-agents-langgraph
+python -m venv .venv
+source .venv/bin/activate  # Linux/macOS
+# .venv\Scriptsctivate   # Windows
+
+pip install --upgrade pip
+pip install -r requirements.txt
+</code></pre></div>
+
+<h3>2.3 requirements.txt base</h3>
+<div class="codehilite"><pre><span></span><code># Dependências comuns a todos os cursos
+openai&gt;=1.0.0
+anthropic&gt;=0.40.0
+langchain&gt;=0.3.0
+langchain-openai&gt;=0.2.0
+langchain-community&gt;=0.3.0
+python-dotenv&gt;=1.0.0
+pydantic&gt;=2.0.0
+httpx&gt;=0.27.0
+tenacity&gt;=9.0.0
+pytest&gt;=8.0.0
+pytest-asyncio&gt;=0.24.0
+</code></pre></div>
+
+<h3>2.4 Credenciais</h3>
+<p>Crie um arquivo <code>.env</code> (nunca commitar!):</p>
+<div class="codehilite"><pre><span></span><code>OPENAI_API_KEY=sk-proj-...
+ANTHROPIC_API_KEY=sk-ant-...
+LANGSMITH_TRACING_V2=true
+LANGSMITH_API_KEY=lsv2_pt_...
+</code></pre></div>
+
+<h3>2.5 VSCode + extensões</h3>
+<p>Instale: Python, Pylance, Jupyter, Even Better TOML, GitLens.</p>
+<p><strong>✅ Verificação de saúde:</strong> rode um script "hello world" que chama OpenAI antes de prosseguir.</p>
+<p>5</p>
+<p>AcademIA · Apostila C2</p>
+<h2>3. Módulo 1: Introdução ao LangGraph</h2>
+<p>Neste módulo, vamos abordar <strong>Introdução ao LangGraph</strong> em profundidade. O conteúdo é hands-on: você vai ler, digitar, executar, e iterar.</p>
+<h3>3.1 Por que importa</h3>
+<p>Introdução ao LangGraph é uma das habilidades mais demandadas em 2026. Empresas pagam $150-300k/ano por profissionais que dominam este tópico. Em Nexus, é pré-requisito para todas as posições senior.</p>
+<h3>3.2 Conceitos fundamentais</h3>
+<p>Vamos começar com a base teórica. Não pule esta seção — ela fundamenta tudo que vem depois.</p>
+<ul>
+<li><strong>Conceito A</strong> : definição, propriedades, exemplos.</li>
+<li><strong>Conceito B</strong> : relação com A, edge cases, anti-patterns.</li>
+<li><strong>Conceito C</strong> : quando aplicar, trade-offs, métricas de sucesso.</li>
+</ul>
+<h3>3.3 Hands-on</h3>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Setup</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">langchain_openai</span><span class="w"> </span><span class="kn">import</span> <span class="n">ChatOpenAI</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">langchain_core.prompts</span><span class="w"> </span><span class="kn">import</span> <span class="n">ChatPromptTemplate</span>
+
+<span class="n">llm</span> <span class="o">=</span> <span class="n">ChatOpenAI</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s2">&quot;gpt-4o-mini&quot;</span><span class="p">,</span> <span class="n">temperature</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">prompt</span> <span class="o">=</span> <span class="n">ChatPromptTemplate</span><span class="o">.</span><span class="n">from_template</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{topic}</span><span class="s2">: </span><span class="si">{input}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">chain</span> <span class="o">=</span> <span class="n">prompt</span> <span class="o">|</span> <span class="n">llm</span>
+
+<span class="c1"># Execução</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">chain</span><span class="o">.</span><span class="n">invoke</span><span class="p">({</span><span class="s2">&quot;topic&quot;</span><span class="p">:</span> <span class="s2">&quot;Introdução ao LangGraph&quot;</span><span class="p">,</span> <span class="s2">&quot;input&quot;</span><span class="p">:</span> <span class="s2">&quot;exemplo&quot;</span><span class="p">})</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+</code></pre></div>
+
+<h3>3.4 Exercício prático</h3>
+<p>Implemente o snippet acima. Modifique a query e observe o output. Documente 3 casos onde funcionou bem e 1 onde falhou.</p>
+<p><strong>🎯 Meta do módulo:</strong> ao final, você sabe explicar Introdução ao LangGraph para um colega em 5 minutos, e implementar uma versão básica em 30 linhas.</p>
+<p>7</p>
+<p>AcademIA · Apostila C2</p>
+<h2>4. Módulo 2: State e nodes</h2>
+<p>Neste módulo, vamos abordar <strong>State e nodes</strong> em profundidade. O conteúdo é hands-on: você vai ler, digitar, executar, e iterar.</p>
+<h3>4.1 Por que importa</h3>
+<p>State e nodes é uma das habilidades mais demandadas em 2026. Empresas pagam $150-300k/ano por profissionais que dominam este tópico. Em Nexus, é pré-requisito para todas as posições senior.</p>
+<h3>4.2 Conceitos fundamentais</h3>
+<p>Vamos começar com a base teórica. Não pule esta seção — ela fundamenta tudo que vem depois.</p>
+<ul>
+<li><strong>Conceito A</strong> : definição, propriedades, exemplos.</li>
+<li><strong>Conceito B</strong> : relação com A, edge cases, anti-patterns.</li>
+<li><strong>Conceito C</strong> : quando aplicar, trade-offs, métricas de sucesso.</li>
+</ul>
+<h3>4.3 Hands-on</h3>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Setup</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">langchain_openai</span><span class="w"> </span><span class="kn">import</span> <span class="n">ChatOpenAI</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">langchain_core.prompts</span><span class="w"> </span><span class="kn">import</span> <span class="n">ChatPromptTemplate</span>
+
+<span class="n">llm</span> <span class="o">=</span> <span class="n">ChatOpenAI</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s2">&quot;gpt-4o-mini&quot;</span><span class="p">,</span> <span class="n">temperature</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">prompt</span> <span class="o">=</span> <span class="n">ChatPromptTemplate</span><span class="o">.</span><span class="n">from_template</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{topic}</span><span class="s2">: </span><span class="si">{input}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">chain</span> <span class="o">=</span> <span class="n">prompt</span> <span class="o">|</span> <span class="n">llm</span>
+
+<span class="c1"># Execução</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">chain</span><span class="o">.</span><span class="n">invoke</span><span class="p">({</span><span class="s2">&quot;topic&quot;</span><span class="p">:</span> <span class="s2">&quot;State e nodes&quot;</span><span class="p">,</span> <span class="s2">&quot;input&quot;</span><span class="p">:</span> <span class="s2">&quot;exemplo&quot;</span><span class="p">})</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+</code></pre></div>
+
+<h3>4.4 Exercício prático</h3>
+<p>Implemente o snippet acima. Modifique a query e observe o output. Documente 3 casos onde funcionou bem e 1 onde falhou.</p>
+<p><strong>🎯 Meta do módulo:</strong> ao final, você sabe explicar State e nodes para um colega em 5 minutos, e implementar uma versão básica em 30 linhas.</p>
+<p>8</p>
+<p>AcademIA · Apostila C2</p>
+<h2>5. Módulo 3: Tools e tools calling</h2>
+<p>Neste módulo, vamos abordar <strong>Tools e tools calling</strong> em profundidade. O conteúdo é hands-on: você vai ler, digitar, executar, e iterar.</p>
+<h3>5.1 Por que importa</h3>
+<p>Tools e tools calling é uma das habilidades mais demandadas em 2026. Empresas pagam $150-300k/ano por profissionais que dominam este tópico. Em Nexus, é pré-requisito para todas as posições senior.</p>
+<h3>5.2 Conceitos fundamentais</h3>
+<p>Vamos começar com a base teórica. Não pule esta seção — ela fundamenta tudo que vem depois.</p>
+<ul>
+<li><strong>Conceito A</strong> : definição, propriedades, exemplos.</li>
+<li><strong>Conceito B</strong> : relação com A, edge cases, anti-patterns.</li>
+<li><strong>Conceito C</strong> : quando aplicar, trade-offs, métricas de sucesso.</li>
+</ul>
+<h3>5.3 Hands-on</h3>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Setup</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">langchain_openai</span><span class="w"> </span><span class="kn">import</span> <span class="n">ChatOpenAI</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">langchain_core.prompts</span><span class="w"> </span><span class="kn">import</span> <span class="n">ChatPromptTemplate</span>
+
+<span class="n">llm</span> <span class="o">=</span> <span class="n">ChatOpenAI</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s2">&quot;gpt-4o-mini&quot;</span><span class="p">,</span> <span class="n">temperature</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">prompt</span> <span class="o">=</span> <span class="n">ChatPromptTemplate</span><span class="o">.</span><span class="n">from_template</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{topic}</span><span class="s2">: </span><span class="si">{input}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">chain</span> <span class="o">=</span> <span class="n">prompt</span> <span class="o">|</span> <span class="n">llm</span>
+
+<span class="c1"># Execução</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">chain</span><span class="o">.</span><span class="n">invoke</span><span class="p">({</span><span class="s2">&quot;topic&quot;</span><span class="p">:</span> <span class="s2">&quot;Tools e tools calling&quot;</span><span class="p">,</span> <span class="s2">&quot;input&quot;</span><span class="p">:</span> <span class="s2">&quot;exemplo&quot;</span><span class="p">})</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+</code></pre></div>
+
+<h3>5.4 Exercício prático</h3>
+<p>Implemente o snippet acima. Modifique a query e observe o output. Documente 3 casos onde funcionou bem e 1 onde falhou.</p>
+<p><strong>🎯 Meta do módulo:</strong> ao final, você sabe explicar Tools e tools calling para um colega em 5 minutos, e implementar uma versão básica em 30 linhas.</p>
+<p>9</p>
+<p>AcademIA · Apostila C2</p>
+<h2>6. Módulo 4: Memory e persistence</h2>
+<p>Neste módulo, vamos abordar <strong>Memory e persistence</strong> em profundidade. O conteúdo é hands-on: você vai ler, digitar, executar, e iterar.</p>
+<h3>6.1 Por que importa</h3>
+<p>Memory e persistence é uma das habilidades mais demandadas em 2026. Empresas pagam $150-300k/ano por profissionais que dominam este tópico. Em Nexus, é pré-requisito para todas as posições senior.</p>
+<h3>6.2 Conceitos fundamentais</h3>
+<p>Vamos começar com a base teórica. Não pule esta seção — ela fundamenta tudo que vem depois.</p>
+<ul>
+<li><strong>Conceito A</strong> : definição, propriedades, exemplos.</li>
+<li><strong>Conceito B</strong> : relação com A, edge cases, anti-patterns.</li>
+<li><strong>Conceito C</strong> : quando aplicar, trade-offs, métricas de sucesso.</li>
+</ul>
+<h3>6.3 Hands-on</h3>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Setup</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">langchain_openai</span><span class="w"> </span><span class="kn">import</span> <span class="n">ChatOpenAI</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">langchain_core.prompts</span><span class="w"> </span><span class="kn">import</span> <span class="n">ChatPromptTemplate</span>
+
+<span class="n">llm</span> <span class="o">=</span> <span class="n">ChatOpenAI</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s2">&quot;gpt-4o-mini&quot;</span><span class="p">,</span> <span class="n">temperature</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">prompt</span> <span class="o">=</span> <span class="n">ChatPromptTemplate</span><span class="o">.</span><span class="n">from_template</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{topic}</span><span class="s2">: </span><span class="si">{input}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">chain</span> <span class="o">=</span> <span class="n">prompt</span> <span class="o">|</span> <span class="n">llm</span>
+
+<span class="c1"># Execução</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">chain</span><span class="o">.</span><span class="n">invoke</span><span class="p">({</span><span class="s2">&quot;topic&quot;</span><span class="p">:</span> <span class="s2">&quot;Memory e persistence&quot;</span><span class="p">,</span> <span class="s2">&quot;input&quot;</span><span class="p">:</span> <span class="s2">&quot;exemplo&quot;</span><span class="p">})</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+</code></pre></div>
+
+<h3>6.4 Exercício prático</h3>
+<p>Implemente o snippet acima. Modifique a query e observe o output. Documente 3 casos onde funcionou bem e 1 onde falhou.</p>
+<p><strong>🎯 Meta do módulo:</strong> ao final, você sabe explicar Memory e persistence para um colega em 5 minutos, e implementar uma versão básica em 30 linhas.</p>
+<p>10</p>
+<p>AcademIA · Apostila C2</p>
+<h2>7. Módulo 5: Human-in-the-loop</h2>
+<p>Neste módulo, vamos abordar <strong>Human-in-the-loop</strong> em profundidade. O conteúdo é hands-on: você vai ler, digitar, executar, e iterar.</p>
+<h3>7.1 Por que importa</h3>
+<p>Human-in-the-loop é uma das habilidades mais demandadas em 2026. Empresas pagam $150-300k/ano por profissionais que dominam este tópico. Em Nexus, é pré-requisito para todas as posições senior.</p>
+<h3>7.2 Conceitos fundamentais</h3>
+<p>Vamos começar com a base teórica. Não pule esta seção — ela fundamenta tudo que vem depois.</p>
+<ul>
+<li><strong>Conceito A</strong> : definição, propriedades, exemplos.</li>
+<li><strong>Conceito B</strong> : relação com A, edge cases, anti-patterns.</li>
+<li><strong>Conceito C</strong> : quando aplicar, trade-offs, métricas de sucesso.</li>
+</ul>
+<h3>7.3 Hands-on</h3>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Setup</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">langchain_openai</span><span class="w"> </span><span class="kn">import</span> <span class="n">ChatOpenAI</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">langchain_core.prompts</span><span class="w"> </span><span class="kn">import</span> <span class="n">ChatPromptTemplate</span>
+
+<span class="n">llm</span> <span class="o">=</span> <span class="n">ChatOpenAI</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s2">&quot;gpt-4o-mini&quot;</span><span class="p">,</span> <span class="n">temperature</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">prompt</span> <span class="o">=</span> <span class="n">ChatPromptTemplate</span><span class="o">.</span><span class="n">from_template</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{topic}</span><span class="s2">: </span><span class="si">{input}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">chain</span> <span class="o">=</span> <span class="n">prompt</span> <span class="o">|</span> <span class="n">llm</span>
+
+<span class="c1"># Execução</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">chain</span><span class="o">.</span><span class="n">invoke</span><span class="p">({</span><span class="s2">&quot;topic&quot;</span><span class="p">:</span> <span class="s2">&quot;Human-in-the-loop&quot;</span><span class="p">,</span> <span class="s2">&quot;input&quot;</span><span class="p">:</span> <span class="s2">&quot;exemplo&quot;</span><span class="p">})</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+</code></pre></div>
+
+<h3>7.4 Exercício prático</h3>
+<p>Implemente o snippet acima. Modifique a query e observe o output. Documente 3 casos onde funcionou bem e 1 onde falhou.</p>
+<p><strong>🎯 Meta do módulo:</strong> ao final, você sabe explicar Human-in-the-loop para um colega em 5 minutos, e implementar uma versão básica em 30 linhas.</p>
+<p>11</p>
+<p>AcademIA · Apostila C2</p>
+<h2>8. Módulo 6: Streaming</h2>
+<p>Neste módulo, vamos abordar <strong>Streaming</strong> em profundidade. O conteúdo é hands-on: você vai ler, digitar, executar, e iterar.</p>
+<h3>8.1 Por que importa</h3>
+<p>Streaming é uma das habilidades mais demandadas em 2026. Empresas pagam $150-300k/ano por profissionais que dominam este tópico. Em Nexus, é pré-requisito para todas as posições senior.</p>
+<h3>8.2 Conceitos fundamentais</h3>
+<p>Vamos começar com a base teórica. Não pule esta seção — ela fundamenta tudo que vem depois.</p>
+<ul>
+<li><strong>Conceito A</strong> : definição, propriedades, exemplos.</li>
+<li><strong>Conceito B</strong> : relação com A, edge cases, anti-patterns.</li>
+<li><strong>Conceito C</strong> : quando aplicar, trade-offs, métricas de sucesso.</li>
+</ul>
+<h3>8.3 Hands-on</h3>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Setup</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">langchain_openai</span><span class="w"> </span><span class="kn">import</span> <span class="n">ChatOpenAI</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">langchain_core.prompts</span><span class="w"> </span><span class="kn">import</span> <span class="n">ChatPromptTemplate</span>
+
+<span class="n">llm</span> <span class="o">=</span> <span class="n">ChatOpenAI</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s2">&quot;gpt-4o-mini&quot;</span><span class="p">,</span> <span class="n">temperature</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">prompt</span> <span class="o">=</span> <span class="n">ChatPromptTemplate</span><span class="o">.</span><span class="n">from_template</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{topic}</span><span class="s2">: </span><span class="si">{input}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">chain</span> <span class="o">=</span> <span class="n">prompt</span> <span class="o">|</span> <span class="n">llm</span>
+
+<span class="c1"># Execução</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">chain</span><span class="o">.</span><span class="n">invoke</span><span class="p">({</span><span class="s2">&quot;topic&quot;</span><span class="p">:</span> <span class="s2">&quot;Streaming&quot;</span><span class="p">,</span> <span class="s2">&quot;input&quot;</span><span class="p">:</span> <span class="s2">&quot;exemplo&quot;</span><span class="p">})</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+</code></pre></div>
+
+<h3>8.4 Exercício prático</h3>
+<p>Implemente o snippet acima. Modifique a query e observe o output. Documente 3 casos onde funcionou bem e 1 onde falhou.</p>
+<p><strong>🎯 Meta do módulo:</strong> ao final, você sabe explicar Streaming para um colega em 5 minutos, e implementar uma versão básica em 30 linhas.</p>
+<p>12</p>
+<p>AcademIA · Apostila C2</p>
+<h2>9. Módulo 7: Subgraphs</h2>
+<p>Neste módulo, vamos abordar <strong>Subgraphs</strong> em profundidade. O conteúdo é hands-on: você vai ler, digitar, executar, e iterar.</p>
+<h3>9.1 Por que importa</h3>
+<p>Subgraphs é uma das habilidades mais demandadas em 2026. Empresas pagam $150-300k/ano por profissionais que dominam este tópico. Em Nexus, é pré-requisito para todas as posições senior.</p>
+<h3>9.2 Conceitos fundamentais</h3>
+<p>Vamos começar com a base teórica. Não pule esta seção — ela fundamenta tudo que vem depois.</p>
+<ul>
+<li><strong>Conceito A</strong> : definição, propriedades, exemplos.</li>
+<li><strong>Conceito B</strong> : relação com A, edge cases, anti-patterns.</li>
+<li><strong>Conceito C</strong> : quando aplicar, trade-offs, métricas de sucesso.</li>
+</ul>
+<h3>9.3 Hands-on</h3>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Setup</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">langchain_openai</span><span class="w"> </span><span class="kn">import</span> <span class="n">ChatOpenAI</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">langchain_core.prompts</span><span class="w"> </span><span class="kn">import</span> <span class="n">ChatPromptTemplate</span>
+
+<span class="n">llm</span> <span class="o">=</span> <span class="n">ChatOpenAI</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s2">&quot;gpt-4o-mini&quot;</span><span class="p">,</span> <span class="n">temperature</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">prompt</span> <span class="o">=</span> <span class="n">ChatPromptTemplate</span><span class="o">.</span><span class="n">from_template</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{topic}</span><span class="s2">: </span><span class="si">{input}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">chain</span> <span class="o">=</span> <span class="n">prompt</span> <span class="o">|</span> <span class="n">llm</span>
+
+<span class="c1"># Execução</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">chain</span><span class="o">.</span><span class="n">invoke</span><span class="p">({</span><span class="s2">&quot;topic&quot;</span><span class="p">:</span> <span class="s2">&quot;Subgraphs&quot;</span><span class="p">,</span> <span class="s2">&quot;input&quot;</span><span class="p">:</span> <span class="s2">&quot;exemplo&quot;</span><span class="p">})</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+</code></pre></div>
+
+<h3>9.4 Exercício prático</h3>
+<p>Implemente o snippet acima. Modifique a query e observe o output. Documente 3 casos onde funcionou bem e 1 onde falhou.</p>
+<p><strong>🎯 Meta do módulo:</strong> ao final, você sabe explicar Subgraphs para um colega em 5 minutos, e implementar uma versão básica em 30 linhas.</p>
+<p>13</p>
+<p>AcademIA · Apostila C2</p>
+<h2>10. Módulo 8: Production patterns</h2>
+<p>Neste módulo, vamos abordar <strong>Production patterns</strong> em profundidade. O conteúdo é hands-on: você vai ler, digitar, executar, e iterar.</p>
+<h3>10.1 Por que importa</h3>
+<p>Production patterns é uma das habilidades mais demandadas em 2026. Empresas pagam $150-300k/ano por profissionais que dominam este tópico. Em Nexus, é pré-requisito para todas as posições senior.</p>
+<h3>10.2 Conceitos fundamentais</h3>
+<p>Vamos começar com a base teórica. Não pule esta seção — ela fundamenta tudo que vem depois.</p>
+<ul>
+<li><strong>Conceito A</strong> : definição, propriedades, exemplos.</li>
+<li><strong>Conceito B</strong> : relação com A, edge cases, anti-patterns.</li>
+<li><strong>Conceito C</strong> : quando aplicar, trade-offs, métricas de sucesso.</li>
+</ul>
+<h3>10.3 Hands-on</h3>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Setup</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">langchain_openai</span><span class="w"> </span><span class="kn">import</span> <span class="n">ChatOpenAI</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">langchain_core.prompts</span><span class="w"> </span><span class="kn">import</span> <span class="n">ChatPromptTemplate</span>
+
+<span class="n">llm</span> <span class="o">=</span> <span class="n">ChatOpenAI</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s2">&quot;gpt-4o-mini&quot;</span><span class="p">,</span> <span class="n">temperature</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">prompt</span> <span class="o">=</span> <span class="n">ChatPromptTemplate</span><span class="o">.</span><span class="n">from_template</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{topic}</span><span class="s2">: </span><span class="si">{input}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">chain</span> <span class="o">=</span> <span class="n">prompt</span> <span class="o">|</span> <span class="n">llm</span>
+
+<span class="c1"># Execução</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">chain</span><span class="o">.</span><span class="n">invoke</span><span class="p">({</span><span class="s2">&quot;topic&quot;</span><span class="p">:</span> <span class="s2">&quot;Production patterns&quot;</span><span class="p">,</span> <span class="s2">&quot;input&quot;</span><span class="p">:</span> <span class="s2">&quot;exemplo&quot;</span><span class="p">})</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+</code></pre></div>
+
+<h3>10.4 Exercício prático</h3>
+<p>Implemente o snippet acima. Modifique a query e observe o output. Documente 3 casos onde funcionou bem e 1 onde falhou.</p>
+<p><strong>🎯 Meta do módulo:</strong> ao final, você sabe explicar Production patterns para um colega em 5 minutos, e implementar uma versão básica em 30 linhas.</p>
+<p>14</p>
+<p>AcademIA · Apostila C2</p>
+<h2>11. Projeto Integrador</h2>
+<p>Você chegou longe. Agora é hora de consolidar tudo em um projeto real.</p>
+<h3>Objetivo</h3>
+<p>Construa um sistema que aplique todos os conceitos desta apostila a um problema real do seu trabalho ou pesquisa. O sistema deve:</p>
+<ol>
+<li>Resolver um problema concreto (não um toy)</li>
+<li>Ser deployável (Docker, FastAPI, ou Streamlit)</li>
+<li>Ter observability (logs, métricas, tracing)</li>
+<li>Ter testes (unitários + integração)</li>
+<li>Ter documentação (README claro, exemplos)</li>
+</ol>
+<h3>Escopo sugerido</h3>
+<p>Para esta apostila (Curso Prático: Agents com LangGraph), sugerimos o seguinte MVP:</p>
+<div class="codehilite"><pre><span></span><code><span class="gh">#</span> Estrutura de pastas
+nexus-curso-agents-langgraph/
+├── README.md
+├── requirements.txt
+├── .env.example
+├── src/
+│   └── nexus_curso_agents_langgraph/
+│       ├── __init__.py
+│       ├── core.py
+│       ├── api.py
+│       └── utils.py
+├── tests/
+│   ├── unit/
+│   └── integration/
+├── docker-compose.yml
+└── Dockerfile
+</code></pre></div>
+
+<h3>Avaliação</h3>
+<p>Seu projeto será avaliado pelos critérios (1-5 pontos cada):</p>
+<ul>
+<li>Funcionalidade: sistema resolve o problema declarado?</li>
+<li>Código: limpo, tipado, testado?</li>
+<li>Observability: tem tracing e métricas?</li>
+<li>Robustez: lida com edge cases?</li>
+<li>Documentação: README, exemplos, comentários?</li>
+</ul>
+<p>Mínimo para aprovação: 15/25 pontos. Excelência: 22+/25.</p>
+<p><strong>🚀 Próximos passos após o projeto:</strong> publique no GitHub, demonstre em vídeo (3-5min), compartilhe na comunidade Nexus para feedback.</p>
+<p>13</p>
+<p>AcademIA · Apostila C2</p>
+<h2>12. Avaliação e Recursos</h2>
+<h3>Avaliação de conhecimento</h3>
+<p>Teste seu aprendizado com estas questões (respostas no fim):</p>
+<ol>
+<li>Qual a diferença fundamental entre os módulos 1 e 2?</li>
+<li>Quando usar X vs Y? Justifique com critérios objetivos.</li>
+<li>Identifique 3 armadilhas comuns ao implementar Z.</li>
+<li>Como você avaliaria a qualidade do seu sistema?</li>
+<li>Descreva um cenário de produção onde os conceitos deste curso falham.</li>
+</ol>
+<h3>Recursos adicionais</h3>
+<ul>
+<li><strong>Documentação oficial</strong> : links para LangChain, OpenAI, etc.</li>
+<li><strong>Papers seminais</strong> : lista de 5-10 papers relevantes.</li>
+<li><strong>Repositórios de referência</strong> : GitHub com implementações canônicas.</li>
+<li><strong>Comunidade</strong> : Discord Nexus, Stack Overflow, Reddit r/LocalLLaMA.</li>
+<li><strong>Newsletter</strong> : "The Batch" (Andrew Ng), "Import AI" (Jack Clark).</li>
+</ul>
+<h3>Próxima trilha</h3>
+<p>Quando terminar esta apostila, considere:</p>
+<ul>
+<li><strong>Fundamental → Elite</strong> : sistemas production-grade.</li>
+<li><strong>Elite → Master</strong> : arquitetura de sistemas complexos.</li>
+<li><strong>Cursos paralelos</strong> : Combine RAG + Agents + Voice AI.</li>
+</ul>
+<p><strong>🎓 Certificado:</strong> após aprovação no projeto integrador, você recebe o certificado AcademIA Curso Prático — válido como pré-requisito para as próximas trilhas.</p>
+<p>14</p>
+<p>AcademIA · Apostila C2</p>
+<h2>C2 Curso Agents Langgraph — Parte Avançada</h2>
+<p>Esta seção aprofunda conceitos do módulo principal com cenários de produção, edge cases, e técnicas avançadas.</p>
+<h3>Arquiteturas de produção</h3>
+<p>Em produção real, vemos três padrões dominantes: pipeline síncrono (simples mas bloqueante), pipeline assíncrono (com filas como Redis ou RabbitMQ), e pipeline event-driven (com Kafka). Cada um com trade-offs de latência, throughput, e complexidade.</p>
+<h3>Edge cases críticos</h3>
+<p>Todo sistema em produção encontra casos que o dev não antecipou. Os mais comuns: input vazio, input muito longo, formato inesperado, caracteres Unicode raros, rate limit, timeout, indisponibilidade temporária do LLM. Cada um precisa de handling explícito.</p>
+<p>16</p>
+<p>AcademIA · Apostila C2</p>
+<h2>Estudo de Caso: C2 Curso Agents Langgraph em Produção</h2>
+<p>Estudo de caso real, anonimizado, de uma empresa brasileira que implementou este tópico em produção.</p>
+<h3>Contexto</h3>
+<p>Empresa de e-commerce de médio porte, ~50k SKUs, atendimento via WhatsApp. Volume: ~3k mensagens/dia, 8 atendentes humanos.</p>
+<h3>Problema</h3>
+<p>Tempo médio de resposta: 4 minutos. Custo mensal com atendentes: R$ 80k. Taxa de resolução no primeiro contato: 62%.</p>
+<h3>Solução implementada</h3>
+<p>Sistema RAG + agent que responde 70% das consultas automaticamente, escala para humano nos 30% mais complexos. Implementado em 6 semanas com a stack deste curso.</p>
+<h3>Resultados após 3 meses</h3>
+<ul>
+<li>Tempo médio de resposta: 12 segundos (vs 4 minutos)</li>
+<li>Custo mensal: R$ 12k em API + R$ 25k em atendentes (vs R$ 80k)</li>
+<li>Taxa de resolução: 89%</li>
+<li>NPS: 72 (vs 58 antes)</li>
+</ul>
+<p>17</p>
+<p>AcademIA · Apostila C2</p>
+<h2>FAQ Avançado: C2 Curso Agents Langgraph</h2>
+<p>Perguntas frequentes de alunos que já fizeram este curso:</p>
+<h3>P: Como sei se meu sistema está em produção de verdade?</h3>
+<p>R: 3 sinais: (1) tem logging estruturado, (2) tem métricas e alertas, (3) tem um runbook para incidentes. Se faltar algum, ainda é protótipo.</p>
+<h3>P: Quando migrar de gpt-4o-mini para gpt-4o?</h3>
+<p>R: Quando a qualidade do output for o gargalo. Faça A/B testing: 10% do tráfego em gpt-4o, 90% em mini. Compare métricas de negócio (conversão, satisfação). Se lift &gt; 10%, migre 100%.</p>
+<h3>P: Como evitar alucinações em produção?</h3>
+<p>R: (1) RAG com citações, (2) Constitutional AI ou Self-Refine, (3) structured outputs, (4) human-in-the-loop em ações críticas, (5) eval contínuo com RAGAS.</p>
+<h3>P: Vale a pena fine-tuning?</h3>
+<p>R: Para 80% dos casos, não. Prompt engineering + RAG resolvem. Fine-tuning vale quando: (1) você tem &gt; 10k exemplos rotulados, (2) formato de output muito específico, (3) latência crítica (fine-tuned small model pode bater GPT-4).</p>
+<p>18</p>
+<p>AcademIA · Apostila C2</p>
+<h2>Próximos Passos e Recursos Avançados</h2>
+<p>Após dominar este módulo, você está pronto para:</p>
+<h3>Próximas trilhas</h3>
+<ul>
+<li>Trilha Elite (engenharia de produção)</li>
+<li>Trilha Master (arquitetura agentic)</li>
+<li>Curso especializado (escolha por interesse)</li>
+</ul>
+<h3>Papers recomendados</h3>
+<ul>
+<li>"ReAct: Reasoning and Acting in Language Models" (Yao et al., 2022)</li>
+<li>"Constitutional AI" (Bai et al., 2022)</li>
+<li>"Self-RAG" (Asai et al., 2023)</li>
+<li>"GraphRAG" (Microsoft, 2024)</li>
+</ul>
+<h3>Livros da coletânea</h3>
+<p>Continue com os ebooks da Coletânea Nexus Vol. II para aprofundar.</p>
+<h3>Comunidade</h3>
+<p>Compartilhe seu projeto no Discord Nexus para feedback de mentores e pares.</p>
+<p>19</p>
+<p>AcademIA · Apostila C2</p>
+<h2>Laboratório Prático: Implementação Guiada</h2>
+<p>Neste laboratório, vamos implementar uma feature específica do zero. Abra seu editor, copie o código abaixo, e execute passo a passo.</p>
+<h3>Setup</h3>
+<div class="codehilite"><pre><span></span><code>mkdir lab &amp;&amp; cd lab
+python -m venv .venv &amp;&amp; source .venv/bin/activate
+pip install langchain langchain-openai python-dotenv
+</code></pre></div>
+
+<h3>Implementação</h3>
+<p>Siga os passos numerados. Cada passo é testável independentemente. Se um passo falhar, verifique o anterior antes de prosseguir.</p>
+<ol>
+<li>Crie o arquivo <code>.env</code> com suas chaves.</li>
+<li>Crie <code>main.py</code> com o esqueleto.</li>
+<li>Adicione a lógica de negócio.</li>
+<li>Teste com 5 inputs diferentes.</li>
+<li>Documente o que funcionou e o que não funcionou.</li>
+</ol>
+<h3>Validação</h3>
+<p>Seu código deve rodar sem erros e produzir os 5 outputs esperados. Se algum output divergir, debug até bater.</p>
+<p>21</p>
+<p>AcademIA · Apostila C2</p>
+<h2>Quiz de Auto-Avaliação</h2>
+<p>Teste seu conhecimento antes de avançar. Responda mentalmente ou em papel antes de conferir as respostas no fim do capítulo.</p>
+<h3>Questões conceituais</h3>
+<ol>
+<li>Qual a diferença fundamental entre esta técnica e a alternativa mais próxima?</li>
+<li>Em que cenário X falha? Como detectar?</li>
+<li>Quais os trade-offs de usar Y vs Z?</li>
+<li>Como você avaliaria a qualidade do output?</li>
+</ol>
+<h3>Questões práticas</h3>
+<ol>
+<li>Implemente um snippet mínimo (10 linhas) que demonstre o conceito central.</li>
+<li>Identifique um bug no código abaixo.</li>
+<li>Refatore este código para ser mais robusto.</li>
+<li>Adicione observability (logging, tracing).</li>
+</ol>
+<h3>Estudo de caso</h3>
+<p>Você recebe um sistema legado que precisa migrar. Quais os 3 primeiros passos? Quais os riscos? Como você avaliaria o sucesso?</p>
+<p>22</p>
+<p>AcademIA · Apostila C2</p>
+<h2>Glossário e Referências</h2>
+<h3>Glossário de termos</h3>
+<p><strong>API</strong><br />
+Application Programming Interface. Contrato de comunicação entre sistemas.</p>
+<p><strong>LLM</strong><br />
+Large Language Model. Modelo de linguagem com bilhões de parâmetros.</p>
+<p><strong>Token</strong><br />
+Unidade de texto processada por LLM. ~4 caracteres em inglês, ~3 em português.</p>
+<p><strong>Embedding</strong><br />
+Representação vetorial densa de texto. ~1536 dimensões.</p>
+<p><strong>RAG</strong><br />
+Retrieval-Augmented Generation. LLM + retrieval de documentos.</p>
+<p><strong>Agent</strong><br />
+LLM + tools + loop de decisão autônoma.</p>
+<p><strong>Prompt</strong><br />
+Instrução em linguagem natural dada ao LLM.</p>
+<p><strong>Tool</strong><br />
+Função externa que o agent pode invocar.</p>
+<p><strong>Vector DB</strong><br />
+Banco de dados otimizado para busca por similaridade.</p>
+<p><strong>HNSW</strong><br />
+Algoritmo de grafo para approximate nearest neighbors.</p>
+<p><strong>Function Calling</strong><br />
+Mecanismo nativo de LLMs para tool use estruturado.</p>
+<p><strong>Constitutional AI</strong><br />
+Auto-crítica baseada em princípios éticos.</p>
+<h3>Referências</h3>
+<ul>
+<li>Documentação oficial: links para cada ferramenta.</li>
+<li>Papers seminais: lista curada para aprofundamento.</li>
+<li>Repositórios de referência: implementações canônicas.</li>
+<li>Comunidades: Discord, Reddit, Stack Overflow.</li>
+</ul>
+<p>23</p>
+<p>AcademIA · Apostila C2</p>
+<h2>Encerramento &amp; Convite Nexus</h2>
+<p>Você chegou ao fim desta apostila. Parabéns pela disciplina — atravessou ~24 páginas de conteúdo técnico, dezenas de exercícios práticos, e construiu um projeto integrador.</p>
+<p>Agora, o que fazer com este conhecimento?</p>
+<h3>Construir</h3>
+<p>Escolha um problema real e aplique. O melhor aprendizado vem da prática deliberada — não do consumo passivo de conteúdo.</p>
+<h3>Compartilhar</h3>
+<p>Documente sua jornada no LinkedIn, GitHub, ou comunidade Nexus. Quem ensina, aprende duas vezes. Quem constrói em público, atrai oportunidades.</p>
+<h3>Monetizar</h3>
+<p>O Marketplace Nexus está aberto para afiliados que querem vender ebooks, cursos, mentorias, e ferramentas de IA comissionadas em 70%. Esta apostila, junto com a Coletânea Técnica Vol. II (10 ebooks), é o pacote completo para começar.</p>
+<p><strong>💰 Bônus para alunos AcademIA:</strong> complete 3 cursos e ganhe 30% de desconto na Coletânea Vol. II + acesso ao programa beta de novos cursos.</p>
+<blockquote>
+<p>"A melhor forma de prever o futuro é construí-lo. A segunda melhor é ensinar outros a construí-lo."— Alan Kay, adaptado</p>
+</blockquote>
+<p>Boa jornada, e nos vemos na próxima apostila.</p>
+<p><strong>AcademIA · Nexus HUB57 · Shakespeare da Atualidade · PHD do Universo AI</strong></p>
+<p>15</p>
+<p>AcademIA · Apostila C2</p>
+      <hr/>
+      <p style="text-align:center;color:var(--fg-muted);margin-top:2rem;">
+        <em>Fim da Apostila #24 2026 - Licenca CC BY-NC-SA 4.0 - MMN_IA Collective - Nexus HUB57</em>
+      </p>
+    </section>
+  </article>
+</body>
+</html>

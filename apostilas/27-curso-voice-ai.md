@@ -14,7 +14,7 @@ AcademIA · Apostila C5
 
 ## Construa um assistente de voz completo
 
-![Capa](../../docs/ebooks/ACAD-apostila-27-curso-voice-ai.webp)
+![Capa](../docs/ebooks/ACAD-apostila-27-curso-voice-ai.webp)
 
 **Shakespeare da Atualidade** PHD nível Harvard do Universo AI
 

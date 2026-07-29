@@ -1,0 +1,40 @@
+{
+  "publish_plan_total": 15,
+  "uploaded_count": 10,
+  "ready_to_upload_count": 5,
+  "other_status_count": 0,
+  "description_count": 15,
+  "thumb_png_count": 15,
+  "thumb_jpg_count": 15,
+  "teaser_count": 13,
+  "videos_root_mp4_count": 23,
+  "onda49_720_count": 19,
+  "onda49_narrated_count": 19,
+  "onda49_v2_count": 19,
+  "upload_errors_total": 73,
+  "upload_limit_errors": 72,
+  "invalid_description_errors": 1,
+  "other_upload_errors": 0,
+  "ready_codes": [
+    "09",
+    "10",
+    "11",
+    "12",
+    "13"
+  ],
+  "uploaded_codes": [
+    "00",
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "14"
+  ],
+  "invalid_description_codes": [
+    "10"
+  ]
+}

@@ -8,7 +8,7 @@ tags: [academia, cases, orquestracao, autonomia, resultados]
 pattern: "MMN_IA"
 ---
 
-![Capa — Cases Reais de Orquestração Autônoma](../../assets/ebook_covers/ACAD-apostila-02-cases-orquestracao-autonoma.webp)
+![Capa — Cases Reais de Orquestração Autônoma](../docs/ebooks/ACAD-apostila-02-cases-orquestracao-autonoma.webp)
 
 **Cases Reais de Orquestração Autônoma**
 
@@ -37,7 +37,7 @@ Os cases que você vai ler são reais. Nomes foram trocados, mas os números sã
 
 ---
 
-![Ilustração — Sucesso de Afiliados com IA](../../assets/ebook_covers/ACAD-ilustracao-02-cases-sucesso.png)
+![Ilustração — Sucesso de Afiliados com IA](../docs/ebooks/ACAD-ilustracao-02-cases-sucesso.png)
 
 **1. Case 01 — Marina (afiliada solo, nicho saúde)**
 

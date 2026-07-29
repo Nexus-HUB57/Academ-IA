@@ -14,7 +14,7 @@ AcademIA · Apostila T1
 
 ## Do Zero ao Primeiro Agente de Vendas em 20 Horas
 
-![Capa](../../docs/ebooks/ACAD-apostila-16-trilha-fundamental-ia.webp)
+![Capa](../docs/ebooks/ACAD-apostila-16-trilha-fundamental-ia.webp)
 
 **Shakespeare da Atualidade** PHD nível Harvard do Universo AI
 

@@ -14,7 +14,7 @@ AcademIA · Apostila C3
 
 ## Da arte à ciência em 22 páginas
 
-![Capa](../../docs/ebooks/ACAD-apostila-25-curso-prompt-engineering.webp)
+![Capa](../docs/ebooks/ACAD-apostila-25-curso-prompt-engineering.webp)
 
 **Shakespeare da Atualidade** PHD nível Harvard do Universo AI
 

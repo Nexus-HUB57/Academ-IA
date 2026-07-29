@@ -1,0 +1,576 @@
+{
+  "audit_date": "2026-07-23",
+  "approved_reference_pattern": {
+    "reference_set": "producao/assets/thumbnails/capa-15..33",
+    "width": 1672,
+    "height": 941,
+    "format": ".png",
+    "count": 19,
+    "files": [
+      {
+        "file": "producao/assets/thumbnails/capa-15-metricas-roi-alencar.png",
+        "width": 1672,
+        "height": 941,
+        "format": ".png"
+      },
+      {
+        "file": "producao/assets/thumbnails/capa-16-trilha-fundamental-alencar.png",
+        "width": 1672,
+        "height": 941,
+        "format": ".png"
+      },
+      {
+        "file": "producao/assets/thumbnails/capa-17-seo-marketing-dupla.png",
+        "width": 1672,
+        "height": 941,
+        "format": ".png"
+      },
+      {
+        "file": "producao/assets/thumbnails/capa-18-seguranca-pentest-alencar.png",
+        "width": 1672,
+        "height": 941,
+        "format": ".png"
+      },
+      {
+        "file": "producao/assets/thumbnails/capa-19-monetizacao-escala-dupla.png",
+        "width": 1672,
+        "height": 941,
+        "format": ".png"
+      },
+      {
+        "file": "producao/assets/thumbnails/capa-20-elite-engenharia-alencar.png",
+        "width": 1672,
+        "height": 941,
+        "format": ".png"
+      },
+      {
+        "file": "producao/assets/thumbnails/capa-21-master-arquitetura-dupla.png",
+        "width": 1672,
+        "height": 941,
+        "format": ".png"
+      },
+      {
+        "file": "producao/assets/thumbnails/capa-22-master-mentoria-ive.png",
+        "width": 1672,
+        "height": 941,
+        "format": ".png"
+      },
+      {
+        "file": "producao/assets/thumbnails/capa-23-curso-rag-alencar.png",
+        "width": 1672,
+        "height": 941,
+        "format": ".png"
+      },
+      {
+        "file": "producao/assets/thumbnails/capa-24-curso-agents-langgraph-alencar.png",
+        "width": 1672,
+        "height": 941,
+        "format": ".png"
+      },
+      {
+        "file": "producao/assets/thumbnails/capa-25-curso-prompt-engineering-ive.png",
+        "width": 1672,
+        "height": 941,
+        "format": ".png"
+      },
+      {
+        "file": "producao/assets/thumbnails/capa-26-curso-vector-db-alencar.png",
+        "width": 1672,
+        "height": 941,
+        "format": ".png"
+      },
+      {
+        "file": "producao/assets/thumbnails/capa-27-curso-voice-ai-ive.png",
+        "width": 1672,
+        "height": 941,
+        "format": ".png"
+      },
+      {
+        "file": "producao/assets/thumbnails/capa-28-curso-multimodal-rag-dupla.png",
+        "width": 1672,
+        "height": 941,
+        "format": ".png"
+      },
+      {
+        "file": "producao/assets/thumbnails/capa-29-ai-to-ai-protocol-dupla.png",
+        "width": 1672,
+        "height": 941,
+        "format": ".png"
+      },
+      {
+        "file": "producao/assets/thumbnails/capa-30-federacao-zero-trust-dupla.png",
+        "width": 1672,
+        "height": 941,
+        "format": ".png"
+      },
+      {
+        "file": "producao/assets/thumbnails/capa-31-fabrica-conteudo-ive.png",
+        "width": 1672,
+        "height": 941,
+        "format": ".png"
+      },
+      {
+        "file": "producao/assets/thumbnails/capa-32-pricing-ia-2026-dupla.png",
+        "width": 1672,
+        "height": 941,
+        "format": ".png"
+      },
+      {
+        "file": "producao/assets/thumbnails/capa-33-data-stack-agentes-alencar.png",
+        "width": 1672,
+        "height": 941,
+        "format": ".png"
+      }
+    ]
+  },
+  "nonconforming_assets": {
+    "legacy_master_thumbs_2k": [
+      {
+        "file": "producao/assets/thumbnails/thumb-00-boas-vindas.png",
+        "width": 2752,
+        "height": 1536,
+        "format": ".png"
+      },
+      {
+        "file": "producao/assets/thumbnails/thumb-01-ioaid.png",
+        "width": 2752,
+        "height": 1536,
+        "format": ".png"
+      },
+      {
+        "file": "producao/assets/thumbnails/thumb-01-ioaid.webp",
+        "width": 2752,
+        "height": 1536,
+        "format": ".webp"
+      },
+      {
+        "file": "producao/assets/thumbnails/thumb-02-sho.png",
+        "width": 2752,
+        "height": 1536,
+        "format": ".png"
+      },
+      {
+        "file": "producao/assets/thumbnails/thumb-03-painel-afiliado.webp",
+        "width": 2752,
+        "height": 1536,
+        "format": ".webp"
+      },
+      {
+        "file": "producao/assets/thumbnails/thumb-03-painel.png",
+        "width": 2752,
+        "height": 1536,
+        "format": ".png"
+      },
+      {
+        "file": "producao/assets/thumbnails/thumb-04-primeiro-agente.png",
+        "width": 2752,
+        "height": 1536,
+        "format": ".png"
+      },
+      {
+        "file": "producao/assets/thumbnails/thumb-05-skills-essenciais.webp",
+        "width": 2752,
+        "height": 1536,
+        "format": ".webp"
+      },
+      {
+        "file": "producao/assets/thumbnails/thumb-05-skills.png",
+        "width": 2752,
+        "height": 1536,
+        "format": ".png"
+      },
+      {
+        "file": "producao/assets/thumbnails/thumb-06-disparo-whatsapp.webp",
+        "width": 2752,
+        "height": 1536,
+        "format": ".webp"
+      },
+      {
+        "file": "producao/assets/thumbnails/thumb-06-disparo.png",
+        "width": 2752,
+        "height": 1536,
+        "format": ".png"
+      },
+      {
+        "file": "producao/assets/thumbnails/thumb-07-judge-revisor.webp",
+        "width": 2752,
+        "height": 1536,
+        "format": ".webp"
+      },
+      {
+        "file": "producao/assets/thumbnails/thumb-07-judge.png",
+        "width": 2752,
+        "height": 1536,
+        "format": ".png"
+      },
+      {
+        "file": "producao/assets/thumbnails/thumb-08-otimizacao-conversao.webp",
+        "width": 2752,
+        "height": 1536,
+        "format": ".webp"
+      },
+      {
+        "file": "producao/assets/thumbnails/thumb-08-otimizacao.png",
+        "width": 2752,
+        "height": 1536,
+        "format": ".png"
+      },
+      {
+        "file": "producao/assets/thumbnails/thumb-09-funis-lifecycle.webp",
+        "width": 2752,
+        "height": 1536,
+        "format": ".webp"
+      },
+      {
+        "file": "producao/assets/thumbnails/thumb-10-ab-test-judge.webp",
+        "width": 2752,
+        "height": 1536,
+        "format": ".webp"
+      },
+      {
+        "file": "producao/assets/thumbnails/thumb-11-coortes-churn.webp",
+        "width": 2752,
+        "height": 1536,
+        "format": ".webp"
+      },
+      {
+        "file": "producao/assets/thumbnails/thumb-12-blueprints-elite.webp",
+        "width": 2752,
+        "height": 1536,
+        "format": ".webp"
+      },
+      {
+        "file": "producao/assets/thumbnails/thumb-13-multi-tenant.webp",
+        "width": 2752,
+        "height": 1536,
+        "format": ".webp"
+      },
+      {
+        "file": "producao/assets/thumbnails/thumb-14-federacao-agentes.webp",
+        "width": 2752,
+        "height": 1536,
+        "format": ".webp"
+      },
+      {
+        "file": "producao/assets/thumbnails/thumb-15-orquestracao-ecossistemas.webp",
+        "width": 2752,
+        "height": 1536,
+        "format": ".webp"
+      },
+      {
+        "file": "producao/assets/thumbnails/thumb-16-senciencia-barreiras.webp",
+        "width": 2752,
+        "height": 1536,
+        "format": ".webp"
+      },
+      {
+        "file": "producao/assets/thumbnails/thumb-17-poder-perigo-autonomia.webp",
+        "width": 2752,
+        "height": 1536,
+        "format": ".webp"
+      },
+      {
+        "file": "producao/assets/thumbnails/thumb-18-fundamento-saas-ia.webp",
+        "width": 2752,
+        "height": 1536,
+        "format": ".webp"
+      },
+      {
+        "file": "producao/assets/thumbnails/thumb-19-poder-processamento-ia.webp",
+        "width": 2752,
+        "height": 1536,
+        "format": ".webp"
+      }
+    ],
+    "lesson_thumbs_1280_webp": [
+      {
+        "file": "producao/assets/thumbnails/thumb-aula-01-o-que-e-agente-ia.webp",
+        "width": 1280,
+        "height": 720,
+        "format": ".webp"
+      },
+      {
+        "file": "producao/assets/thumbnails/thumb-aula-02-o-que-ias-desenvolvem.webp",
+        "width": 1280,
+        "height": 720,
+        "format": ".webp"
+      },
+      {
+        "file": "producao/assets/thumbnails/thumb-aula-03-o-que-sao-skills.webp",
+        "width": 1280,
+        "height": 720,
+        "format": ".webp"
+      },
+      {
+        "file": "producao/assets/thumbnails/thumb-aula-04-tipos-de-agentes.webp",
+        "width": 1280,
+        "height": 720,
+        "format": ".webp"
+      },
+      {
+        "file": "producao/assets/thumbnails/thumb-aula-05-bibliotecas-ia.webp",
+        "width": 1280,
+        "height": 720,
+        "format": ".webp"
+      },
+      {
+        "file": "producao/assets/thumbnails/thumb-aula-06-openclaw.webp",
+        "width": 1280,
+        "height": 720,
+        "format": ".webp"
+      },
+      {
+        "file": "producao/assets/thumbnails/thumb-aula-07-langchain-docling-craw4ai.webp",
+        "width": 1280,
+        "height": 720,
+        "format": ".webp"
+      },
+      {
+        "file": "producao/assets/thumbnails/thumb-aula-08-como-construir-agente.webp",
+        "width": 1280,
+        "height": 720,
+        "format": ".webp"
+      },
+      {
+        "file": "producao/assets/thumbnails/thumb-aula-09-automacao-social.webp",
+        "width": 1280,
+        "height": 720,
+        "format": ".webp"
+      },
+      {
+        "file": "producao/assets/thumbnails/thumb-aula-10-marketplaces.webp",
+        "width": 1280,
+        "height": 720,
+        "format": ".webp"
+      },
+      {
+        "file": "producao/assets/thumbnails/thumb-aula-11-ioaid-ive.webp",
+        "width": 1280,
+        "height": 720,
+        "format": ".webp"
+      },
+      {
+        "file": "producao/assets/thumbnails/thumb-aula-12-sho-alencar.webp",
+        "width": 1280,
+        "height": 720,
+        "format": ".webp"
+      },
+      {
+        "file": "producao/assets/thumbnails/thumb-aula-13-painel-afiliado-ive.webp",
+        "width": 1280,
+        "height": 720,
+        "format": ".webp"
+      },
+      {
+        "file": "producao/assets/thumbnails/thumb-aula-14-arquitetura-tecnica-alencar.webp",
+        "width": 1280,
+        "height": 720,
+        "format": ".webp"
+      },
+      {
+        "file": "producao/assets/thumbnails/thumb-aula-15-metodo-nexus-escala-ive.webp",
+        "width": 1280,
+        "height": 720,
+        "format": ".webp"
+      },
+      {
+        "file": "producao/assets/thumbnails/thumb-aula-16-primeiro-agente-escalavel-alencar.webp",
+        "width": 1280,
+        "height": 720,
+        "format": ".webp"
+      }
+    ],
+    "youtube_png_derivatives_2k": [
+      {
+        "file": "youtube/thumbnails/00-boas-vindas-a-academia-nexus.png",
+        "width": 2752,
+        "height": 1536,
+        "format": ".png"
+      },
+      {
+        "file": "youtube/thumbnails/01-entendendo-o-ioaid.png",
+        "width": 2752,
+        "height": 1536,
+        "format": ".png"
+      },
+      {
+        "file": "youtube/thumbnails/02-o-sistema-sho-self-healing-orchestrator.png",
+        "width": 2752,
+        "height": 1536,
+        "format": ".png"
+      },
+      {
+        "file": "youtube/thumbnails/03-painel-do-afiliado-visao-geral-da-operacao.png",
+        "width": 2752,
+        "height": 1536,
+        "format": ".png"
+      },
+      {
+        "file": "youtube/thumbnails/04-construindo-seu-primeiro-agente-em-4-minutos.png",
+        "width": 2752,
+        "height": 1536,
+        "format": ".png"
+      },
+      {
+        "file": "youtube/thumbnails/05-skills-essenciais-copywriter-audience-segmenter.png",
+        "width": 2752,
+        "height": 1536,
+        "format": ".png"
+      },
+      {
+        "file": "youtube/thumbnails/06-disparando-no-whatsapp-em-escala.png",
+        "width": 2752,
+        "height": 1536,
+        "format": ".png"
+      },
+      {
+        "file": "youtube/thumbnails/07-judge-revisor-a-ia-que-decide-por-voce.png",
+        "width": 2752,
+        "height": 1536,
+        "format": ".png"
+      },
+      {
+        "file": "youtube/thumbnails/08-otimizacao-de-conversao-a-matematica-da-receita.png",
+        "width": 2752,
+        "height": 1536,
+        "format": ".png"
+      },
+      {
+        "file": "youtube/thumbnails/09-funis-e-lifecycle-o-sistema-completo.png",
+        "width": 2752,
+        "height": 1536,
+        "format": ".png"
+      },
+      {
+        "file": "youtube/thumbnails/10-a-b-testing-com-judge-ciencia-da-experimentacao.png",
+        "width": 2752,
+        "height": 1536,
+        "format": ".png"
+      },
+      {
+        "file": "youtube/thumbnails/11-analise-de-coortes-e-churn-a-arte-de-reter.png",
+        "width": 2752,
+        "height": 1536,
+        "format": ".png"
+      },
+      {
+        "file": "youtube/thumbnails/12-blueprints-elite-o-jogo-do-top-10.png",
+        "width": 2752,
+        "height": 1536,
+        "format": ".png"
+      },
+      {
+        "file": "youtube/thumbnails/13-multi-tenant-e-white-label-na-pratica.png",
+        "width": 2752,
+        "height": 1536,
+        "format": ".png"
+      },
+      {
+        "file": "youtube/thumbnails/14-federacao-de-agentes-zero-trust.png",
+        "width": 2752,
+        "height": 1536,
+        "format": ".png"
+      }
+    ],
+    "youtube_jpg_derivatives_offspec": [
+      {
+        "file": "youtube/thumbnails_yt/00-boas-vindas-a-academia-nexus.jpg",
+        "width": 1280,
+        "height": 714,
+        "format": ".jpg"
+      },
+      {
+        "file": "youtube/thumbnails_yt/01-entendendo-o-ioaid.jpg",
+        "width": 1280,
+        "height": 714,
+        "format": ".jpg"
+      },
+      {
+        "file": "youtube/thumbnails_yt/02-o-sistema-sho-self-healing-orchestrator.jpg",
+        "width": 1280,
+        "height": 714,
+        "format": ".jpg"
+      },
+      {
+        "file": "youtube/thumbnails_yt/03-painel-do-afiliado-visao-geral-da-operacao.jpg",
+        "width": 1280,
+        "height": 714,
+        "format": ".jpg"
+      },
+      {
+        "file": "youtube/thumbnails_yt/04-construindo-seu-primeiro-agente-em-4-minutos.jpg",
+        "width": 1280,
+        "height": 714,
+        "format": ".jpg"
+      },
+      {
+        "file": "youtube/thumbnails_yt/05-skills-essenciais-copywriter-audience-segmenter.jpg",
+        "width": 1280,
+        "height": 714,
+        "format": ".jpg"
+      },
+      {
+        "file": "youtube/thumbnails_yt/06-disparando-no-whatsapp-em-escala.jpg",
+        "width": 1280,
+        "height": 714,
+        "format": ".jpg"
+      },
+      {
+        "file": "youtube/thumbnails_yt/07-judge-revisor-a-ia-que-decide-por-voce.jpg",
+        "width": 1280,
+        "height": 714,
+        "format": ".jpg"
+      },
+      {
+        "file": "youtube/thumbnails_yt/08-otimizacao-de-conversao-a-matematica-da-receita.jpg",
+        "width": 1280,
+        "height": 714,
+        "format": ".jpg"
+      },
+      {
+        "file": "youtube/thumbnails_yt/09-funis-e-lifecycle-o-sistema-completo.jpg",
+        "width": 1280,
+        "height": 714,
+        "format": ".jpg"
+      },
+      {
+        "file": "youtube/thumbnails_yt/10-a-b-testing-com-judge-ciencia-da-experimentacao.jpg",
+        "width": 1280,
+        "height": 714,
+        "format": ".jpg"
+      },
+      {
+        "file": "youtube/thumbnails_yt/11-analise-de-coortes-e-churn-a-arte-de-reter.jpg",
+        "width": 1280,
+        "height": 714,
+        "format": ".jpg"
+      },
+      {
+        "file": "youtube/thumbnails_yt/12-blueprints-elite-o-jogo-do-top-10.jpg",
+        "width": 1280,
+        "height": 714,
+        "format": ".jpg"
+      },
+      {
+        "file": "youtube/thumbnails_yt/13-multi-tenant-e-white-label-na-pratica.jpg",
+        "width": 1280,
+        "height": 714,
+        "format": ".jpg"
+      },
+      {
+        "file": "youtube/thumbnails_yt/14-federacao-de-agentes-zero-trust.jpg",
+        "width": 1280,
+        "height": 714,
+        "format": ".jpg"
+      }
+    ]
+  },
+  "summary": {
+    "approved_reference_count": 19,
+    "legacy_master_thumbs_2k_count": 26,
+    "lesson_thumbs_1280_webp_count": 16,
+    "youtube_png_derivatives_2k_count": 15,
+    "youtube_jpg_derivatives_offspec_count": 15,
+    "total_nonconforming_count": 72
+  }
+}

@@ -36,8 +36,12 @@
 
 ### Vozes TTS utilizadas
 
+**FONTE CANÔNICA:** `marca/personas/VOICES.md` (regra de ouro — sempre consultar este arquivo antes de gerar TTS)
+
 - **Alencar** (voz masculina, didática): `Portuguese_Deep-VoicedGentleman`
+  - Amostra oficial: `marca/personas/alencar/audio/official_voice.wav`
 - **Ive** (voz feminina, acolhedora): `Portuguese_Kind-heartedGirl`
+  - Amostra oficial: `marca/personas/ive/audio/official_voice.wav`
 
 ### Comandos FFmpeg (modelo)
 

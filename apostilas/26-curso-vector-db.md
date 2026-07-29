@@ -14,7 +14,7 @@ AcademIA · Apostila C4
 
 ## Pinecone, Qdrant, Weaviate — benchmarks reais
 
-![Capa](../../docs/ebooks/ACAD-apostila-26-curso-vector-db.webp)
+![Capa](../docs/ebooks/ACAD-apostila-26-curso-vector-db.webp)
 
 **Shakespeare da Atualidade** PHD nível Harvard do Universo AI
 

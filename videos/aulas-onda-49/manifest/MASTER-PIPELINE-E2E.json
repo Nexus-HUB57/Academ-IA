@@ -1,0 +1,1082 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-23",
+  "generated_by": "Mavis ✓ Opus",
+  "hub": "MMN AI-to-AI",
+  "repo": "Nexus-HUB57/Academ-IA",
+  "branch": "main",
+  "head_sha_before": "71355d1",
+  "onda_atual": "Onda-50 (renders 19/19)",
+  "stats": {
+    "videos_full_mp4": 23,
+    "renders_onda_49_720p": 19,
+    "capas_youtube_onda_50": 19,
+    "slides_png_onda_49": 0,
+    "wrappers_html_onda_50": 95,
+    "roteiros_full": 22,
+    "apostilas_total": 36,
+    "apostilas_html": 0,
+    "apostilas_pdf": 0,
+    "webinars_md": 19,
+    "tutoriais_md": 36,
+    "playbooks_md": 14,
+    "treinamentos_md": 9,
+    "hubs_html": 11,
+    "tts_full_wav": 15,
+    "frames_png": 60,
+    "thumbnails_onda_47": 26
+  },
+  "apostilas": [
+    {
+      "n": 15,
+      "slug": "15-metricas-roi-ecossistema",
+      "title": "Métricas & ROI do Ecossistema",
+      "persona": "alencar",
+      "trilha": "Fundamental",
+      "path_md": "apostilas/15-metricas-roi-ecossistema.md",
+      "path_html": null,
+      "path_pdf": null,
+      "size_md_bytes": 11714,
+      "lines": 315,
+      "stub": false
+    },
+    {
+      "n": 16,
+      "slug": "16-trilha-fundamental-ia",
+      "title": "Trilha Fundamental IA",
+      "persona": "alencar",
+      "trilha": "Fundamental",
+      "path_md": "apostilas/16-trilha-fundamental-ia.md",
+      "path_html": null,
+      "path_pdf": null,
+      "size_md_bytes": 40048,
+      "lines": 1128,
+      "stub": false
+    },
+    {
+      "n": 17,
+      "slug": "17-seo-marketing-conteudo-ia",
+      "title": "SEO & Marketing Conteúdo IA",
+      "persona": "dupla",
+      "trilha": "Master",
+      "path_md": "apostilas/17-seo-marketing-conteudo-ia.md",
+      "path_html": null,
+      "path_pdf": null,
+      "size_md_bytes": 14282,
+      "lines": 372,
+      "stub": true
+    },
+    {
+      "n": 18,
+      "slug": "18-seguranca-ofensiva-pentest-agentes-ia",
+      "title": "Segurança Ofensiva & Pentest",
+      "persona": "alencar",
+      "trilha": "Elite",
+      "path_md": "apostilas/18-seguranca-ofensiva-pentest-agentes-ia.md",
+      "path_html": null,
+      "path_pdf": null,
+      "size_md_bytes": 17040,
+      "lines": 540,
+      "stub": true
+    },
+    {
+      "n": 19,
+      "slug": "19-monetizacao-avancada-escala",
+      "title": "Monetização Avançada em Escala",
+      "persona": "dupla",
+      "trilha": "Elite",
+      "path_md": "apostilas/19-monetizacao-avancada-escala.md",
+      "path_html": null,
+      "path_pdf": null,
+      "size_md_bytes": 9169,
+      "lines": 221,
+      "stub": false
+    },
+    {
+      "n": 20,
+      "slug": "20-trilha-elite-engenharia",
+      "title": "Elite Engenharia",
+      "persona": "alencar",
+      "trilha": "Elite",
+      "path_md": "apostilas/20-trilha-elite-engenharia.md",
+      "path_html": null,
+      "path_pdf": null,
+      "size_md_bytes": 28713,
+      "lines": 861,
+      "stub": false
+    },
+    {
+      "n": 21,
+      "slug": "21-trilha-master-arquitetura",
+      "title": "Master Arquitetura",
+      "persona": "dupla",
+      "trilha": "Master",
+      "path_md": "apostilas/21-trilha-master-arquitetura.md",
+      "path_html": null,
+      "path_pdf": null,
+      "size_md_bytes": 32199,
+      "lines": 949,
+      "stub": false
+    },
+    {
+      "n": 22,
+      "slug": "22-trilha-master-mentoria",
+      "title": "Master Mentoria",
+      "persona": "ive",
+      "trilha": "Master",
+      "path_md": "apostilas/22-trilha-master-mentoria.md",
+      "path_html": null,
+      "path_pdf": null,
+      "size_md_bytes": 28455,
+      "lines": 887,
+      "stub": false
+    },
+    {
+      "n": 23,
+      "slug": "23-curso-rag-pratico",
+      "title": "Curso RAG Prático",
+      "persona": "alencar",
+      "trilha": "Master",
+      "path_md": "apostilas/23-curso-rag-pratico.md",
+      "path_html": null,
+      "path_pdf": null,
+      "size_md_bytes": 26329,
+      "lines": 843,
+      "stub": false
+    },
+    {
+      "n": 24,
+      "slug": "24-curso-agents-langgraph",
+      "title": "Curso Agents LangGraph",
+      "persona": "alencar",
+      "trilha": "Master",
+      "path_md": "apostilas/24-curso-agents-langgraph.md",
+      "path_html": null,
+      "path_pdf": null,
+      "size_md_bytes": 27710,
+      "lines": 887,
+      "stub": false
+    },
+    {
+      "n": 25,
+      "slug": "25-curso-prompt-engineering",
+      "title": "Curso Prompt Engineering",
+      "persona": "ive",
+      "trilha": "Master",
+      "path_md": "apostilas/25-curso-prompt-engineering.md",
+      "path_html": null,
+      "path_pdf": null,
+      "size_md_bytes": 26346,
+      "lines": 843,
+      "stub": false
+    },
+    {
+      "n": 26,
+      "slug": "26-curso-vector-db",
+      "title": "Curso Vector DB",
+      "persona": "alencar",
+      "trilha": "Master",
+      "path_md": "apostilas/26-curso-vector-db.md",
+      "path_html": null,
+      "path_pdf": null,
+      "size_md_bytes": 26139,
+      "lines": 843,
+      "stub": false
+    },
+    {
+      "n": 27,
+      "slug": "27-curso-voice-ai",
+      "title": "Curso Voice AI",
+      "persona": "ive",
+      "trilha": "Master",
+      "path_md": "apostilas/27-curso-voice-ai.md",
+      "path_html": null,
+      "path_pdf": null,
+      "size_md_bytes": 27610,
+      "lines": 887,
+      "stub": false
+    },
+    {
+      "n": 28,
+      "slug": "28-curso-multimodal-rag",
+      "title": "Curso Multimodal RAG",
+      "persona": "dupla",
+      "trilha": "Master",
+      "path_md": "apostilas/28-curso-multimodal-rag.md",
+      "path_html": null,
+      "path_pdf": null,
+      "size_md_bytes": 27782,
+      "lines": 887,
+      "stub": false
+    },
+    {
+      "n": 29,
+      "slug": "29-ai-to-ai-protocol",
+      "title": "AI-to-AI Protocol (A2A)",
+      "persona": "dupla",
+      "trilha": "Elite",
+      "path_md": "apostilas/29-ai-to-ai-protocol.md",
+      "path_html": null,
+      "path_pdf": null,
+      "size_md_bytes": 13385,
+      "lines": 470,
+      "stub": false
+    },
+    {
+      "n": 30,
+      "slug": "30-federacao-zero-trust",
+      "title": "Federação Zero-Trust",
+      "persona": "dupla",
+      "trilha": "Elite",
+      "path_md": "apostilas/30-federacao-zero-trust.md",
+      "path_html": null,
+      "path_pdf": null,
+      "size_md_bytes": 11482,
+      "lines": 373,
+      "stub": false
+    },
+    {
+      "n": 31,
+      "slug": "31-fabrica-conteudo-ia",
+      "title": "Fábrica de Conteúdo IA",
+      "persona": "ive",
+      "trilha": "Master",
+      "path_md": "apostilas/31-fabrica-conteudo-ia.md",
+      "path_html": null,
+      "path_pdf": null,
+      "size_md_bytes": 16788,
+      "lines": 688,
+      "stub": false
+    },
+    {
+      "n": 32,
+      "slug": "32-pricing-ia-2026",
+      "title": "Pricing IA 2026",
+      "persona": "dupla",
+      "trilha": "Elite",
+      "path_md": "apostilas/32-pricing-ia-2026.md",
+      "path_html": null,
+      "path_pdf": null,
+      "size_md_bytes": 23523,
+      "lines": 782,
+      "stub": true
+    },
+    {
+      "n": 33,
+      "slug": "33-data-stack-agentes-ia",
+      "title": "Data Stack Agentes IA",
+      "persona": "alencar",
+      "trilha": "Elite",
+      "path_md": "apostilas/33-data-stack-agentes-ia.md",
+      "path_html": null,
+      "path_pdf": null,
+      "size_md_bytes": 28514,
+      "lines": 831,
+      "stub": true
+    }
+  ],
+  "roteiros_videos_full": [
+    {
+      "filename": "00-boas-vindas-academia-roteiro.md",
+      "size_bytes": 4573
+    },
+    {
+      "filename": "01-entendendo-ioaid-roteiro.md",
+      "size_bytes": 4464
+    },
+    {
+      "filename": "01-ioaid-infraestrutura-distribuida-roteiro.md",
+      "size_bytes": 7883
+    },
+    {
+      "filename": "02-sho-sistema-imune-roteiro.md",
+      "size_bytes": 6060
+    },
+    {
+      "filename": "03-painel-afiliado-roteiro.md",
+      "size_bytes": 5878
+    },
+    {
+      "filename": "03-painel-afiliado-visao-geral-roteiro.md",
+      "size_bytes": 7214
+    },
+    {
+      "filename": "04-primeiro-agente-roteiro.md",
+      "size_bytes": 6333
+    },
+    {
+      "filename": "05-skills-essenciais-copywriter-roteiro.md",
+      "size_bytes": 7757
+    },
+    {
+      "filename": "06-disparo-whatsapp-escala-roteiro.md",
+      "size_bytes": 8056
+    },
+    {
+      "filename": "07-judge-revisor-decisoes-roteiro.md",
+      "size_bytes": 8629
+    },
+    {
+      "filename": "08-otimizacao-conversao-master-roteiro.md",
+      "size_bytes": 9391
+    },
+    {
+      "filename": "09-funis-lifecycle-roteiro.md",
+      "size_bytes": 9262
+    },
+    {
+      "filename": "10-ab-test-judge-roteiro.md",
+      "size_bytes": 10248
+    },
+    {
+      "filename": "11-coortes-churn-roteiro.md",
+      "size_bytes": 9719
+    },
+    {
+      "filename": "12-blueprints-elite-roteiro.md",
+      "size_bytes": 10826
+    },
+    {
+      "filename": "13-multi-tenant-whitelabel-roteiro.md",
+      "size_bytes": 10624
+    },
+    {
+      "filename": "14-federacao-agentes-roteiro.md",
+      "size_bytes": 12293
+    },
+    {
+      "filename": "15-orquestracao-ecossistemas-roteiro.md",
+      "size_bytes": 4904
+    },
+    {
+      "filename": "16-senciencia-barreiras-roteiro.md",
+      "size_bytes": 4799
+    },
+    {
+      "filename": "17-poder-perigo-autonomia-roteiro.md",
+      "size_bytes": 5666
+    },
+    {
+      "filename": "18-fundamento-saas-ia-roteiro.md",
+      "size_bytes": 5528
+    },
+    {
+      "filename": "19-poder-processamento-ia-roteiro.md",
+      "size_bytes": 5560
+    }
+  ],
+  "videos_full_mp4": [
+    {
+      "filename": "video-00-boas-vindas-a-academia-nexus-full.mp4",
+      "size_bytes": 1220755,
+      "format": "mp4 1080p"
+    },
+    {
+      "filename": "video-00-boas-vindas-poc.mp4",
+      "size_bytes": 2062121,
+      "format": "PoC/poc"
+    },
+    {
+      "filename": "video-00-boas-vindas-renderizado.mp4",
+      "size_bytes": 6619399,
+      "format": "PoC/poc"
+    },
+    {
+      "filename": "video-00-boas-vindas.mp4",
+      "size_bytes": 2062121,
+      "format": "PoC/poc"
+    },
+    {
+      "filename": "video-01-entendendo-o-ioaid-full.mp4",
+      "size_bytes": 829640,
+      "format": "mp4 1080p"
+    },
+    {
+      "filename": "video-02-o-sistema-sho-full.mp4",
+      "size_bytes": 978657,
+      "format": "mp4 1080p"
+    },
+    {
+      "filename": "video-03-painel-do-afiliado-full.mp4",
+      "size_bytes": 964724,
+      "format": "mp4 1080p"
+    },
+    {
+      "filename": "video-04-primeiro-agente-full.mp4",
+      "size_bytes": 871104,
+      "format": "mp4 1080p"
+    },
+    {
+      "filename": "video-05-skills-assembly.mp4",
+      "size_bytes": 1636688,
+      "format": "PoC/poc"
+    },
+    {
+      "filename": "video-05-skills-essenciais-full.mp4",
+      "size_bytes": 1037368,
+      "format": "mp4 1080p"
+    },
+    {
+      "filename": "video-06-disparo-whatsapp-em-escala-full.mp4",
+      "size_bytes": 971084,
+      "format": "mp4 1080p"
+    },
+    {
+      "filename": "video-07-judge-revisor-full.mp4",
+      "size_bytes": 915182,
+      "format": "mp4 1080p"
+    },
+    {
+      "filename": "video-07-judge-scales.mp4",
+      "size_bytes": 1333060,
+      "format": "PoC/poc"
+    },
+    {
+      "filename": "video-08-otimizacao-de-conversao-full.mp4",
+      "size_bytes": 1040152,
+      "format": "mp4 1080p"
+    },
+    {
+      "filename": "video-09-funis-e-lifecycle-full.mp4",
+      "size_bytes": 906724,
+      "format": "mp4 1080p"
+    },
+    {
+      "filename": "video-10-a-b-testing-com-judge-full.mp4",
+      "size_bytes": 863430,
+      "format": "mp4 1080p"
+    },
+    {
+      "filename": "video-11-coortes-e-churn-full.mp4",
+      "size_bytes": 914444,
+      "format": "mp4 1080p"
+    },
+    {
+      "filename": "video-12-blueprints-elite-full.mp4",
+      "size_bytes": 933942,
+      "format": "mp4 1080p"
+    },
+    {
+      "filename": "video-13-multi-tenant-e-white-label-full.mp4",
+      "size_bytes": 894030,
+      "format": "mp4 1080p"
+    },
+    {
+      "filename": "video-14-federacao-de-agentes-full.mp4",
+      "size_bytes": 932100,
+      "format": "mp4 1080p"
+    },
+    {
+      "filename": "video-elite-federacao.mp4",
+      "size_bytes": 1106375,
+      "format": "PoC/poc"
+    },
+    {
+      "filename": "video-hero-jornada.mp4",
+      "size_bytes": 3155245,
+      "format": "PoC/poc"
+    },
+    {
+      "filename": "video-master-otimizacao.mp4",
+      "size_bytes": 1672707,
+      "format": "PoC/poc"
+    }
+  ],
+  "renders_onda_49_720p": [
+    "aula-15-metricas-roi-ecossistema-720p.mp4",
+    "aula-16-trilha-fundamental-ia-720p.mp4",
+    "aula-17-seo-marketing-conteudo-ia-720p.mp4",
+    "aula-18-seguranca-ofensiva-pentest-720p.mp4",
+    "aula-19-monetizacao-avancada-escala-720p.mp4",
+    "aula-20-trilha-elite-engenharia-720p.mp4",
+    "aula-21-trilha-master-arquitetura-720p.mp4",
+    "aula-22-trilha-master-mentoria-720p.mp4",
+    "aula-23-curso-rag-pratico-720p.mp4",
+    "aula-24-curso-agents-langgraph-720p.mp4",
+    "aula-25-curso-prompt-engineering-720p.mp4",
+    "aula-26-curso-vector-db-720p.mp4",
+    "aula-27-curso-voice-ai-720p.mp4",
+    "aula-28-curso-multimodal-rag-720p.mp4",
+    "aula-29-ai-to-ai-protocol-720p.mp4",
+    "aula-30-federacao-zero-trust-720p.mp4",
+    "aula-31-fabrica-conteudo-ia-720p.mp4",
+    "aula-32-pricing-ia-2026-720p.mp4",
+    "aula-33-data-stack-agentes-ia-720p.mp4"
+  ],
+  "capas_youtube_onda_50": [
+    "capa-15-metricas-roi-alencar.png",
+    "capa-16-trilha-fundamental-alencar.png",
+    "capa-17-seo-marketing-dupla.png",
+    "capa-18-seguranca-pentest-alencar.png",
+    "capa-19-monetizacao-escala-dupla.png",
+    "capa-20-elite-engenharia-alencar.png",
+    "capa-21-master-arquitetura-dupla.png",
+    "capa-22-master-mentoria-ive.png",
+    "capa-23-curso-rag-alencar.png",
+    "capa-24-curso-agents-langgraph-alencar.png",
+    "capa-25-curso-prompt-engineering-ive.png",
+    "capa-26-curso-vector-db-alencar.png",
+    "capa-27-curso-voice-ai-ive.png",
+    "capa-28-curso-multimodal-rag-dupla.png",
+    "capa-29-ai-to-ai-protocol-dupla.png",
+    "capa-30-federacao-zero-trust-dupla.png",
+    "capa-31-fabrica-conteudo-ive.png",
+    "capa-32-pricing-ia-2026-dupla.png",
+    "capa-33-data-stack-agentes-alencar.png"
+  ],
+  "slides_png_onda_49": [
+    {
+      "aula": "aula-15-metricas-roi-ecossistema",
+      "cenas": 5,
+      "files": [
+        "cena-01-hero.png",
+        "cena-02-stats.png",
+        "cena-03-cards.png",
+        "cena-04-pyramid.png",
+        "cena-05-cta.png"
+      ]
+    },
+    {
+      "aula": "aula-16-trilha-fundamental-ia",
+      "cenas": 5,
+      "files": [
+        "cena-01-hero.png",
+        "cena-02-stats.png",
+        "cena-03-cards.png",
+        "cena-04-pyramid.png",
+        "cena-05-cta.png"
+      ]
+    },
+    {
+      "aula": "aula-17-seo-marketing-conteudo-ia",
+      "cenas": 5,
+      "files": [
+        "cena-01-hero.png",
+        "cena-02-stats.png",
+        "cena-03-cards.png",
+        "cena-04-pyramid.png",
+        "cena-05-cta.png"
+      ]
+    },
+    {
+      "aula": "aula-18-seguranca-ofensiva-pentest",
+      "cenas": 5,
+      "files": [
+        "cena-01-hero.png",
+        "cena-02-stats.png",
+        "cena-03-cards.png",
+        "cena-04-pyramid.png",
+        "cena-05-cta.png"
+      ]
+    },
+    {
+      "aula": "aula-19-monetizacao-avancada-escala",
+      "cenas": 5,
+      "files": [
+        "cena-01-hero.png",
+        "cena-02-stats.png",
+        "cena-03-cards.png",
+        "cena-04-pyramid.png",
+        "cena-05-cta.png"
+      ]
+    },
+    {
+      "aula": "aula-20-trilha-elite-engenharia",
+      "cenas": 5,
+      "files": [
+        "cena-01-hero.png",
+        "cena-02-stats.png",
+        "cena-03-cards.png",
+        "cena-04-pyramid.png",
+        "cena-05-cta.png"
+      ]
+    },
+    {
+      "aula": "aula-21-trilha-master-arquitetura",
+      "cenas": 5,
+      "files": [
+        "cena-01-hero.png",
+        "cena-02-stats.png",
+        "cena-03-cards.png",
+        "cena-04-pyramid.png",
+        "cena-05-cta.png"
+      ]
+    },
+    {
+      "aula": "aula-22-trilha-master-mentoria",
+      "cenas": 5,
+      "files": [
+        "cena-01-hero.png",
+        "cena-02-stats.png",
+        "cena-03-cards.png",
+        "cena-04-pyramid.png",
+        "cena-05-cta.png"
+      ]
+    },
+    {
+      "aula": "aula-23-curso-rag-pratico",
+      "cenas": 5,
+      "files": [
+        "cena-01-hero.png",
+        "cena-02-stats.png",
+        "cena-03-cards.png",
+        "cena-04-pyramid.png",
+        "cena-05-cta.png"
+      ]
+    },
+    {
+      "aula": "aula-24-curso-agents-langgraph",
+      "cenas": 5,
+      "files": [
+        "cena-01-hero.png",
+        "cena-02-stats.png",
+        "cena-03-cards.png",
+        "cena-04-pyramid.png",
+        "cena-05-cta.png"
+      ]
+    },
+    {
+      "aula": "aula-25-curso-prompt-engineering",
+      "cenas": 5,
+      "files": [
+        "cena-01-hero.png",
+        "cena-02-stats.png",
+        "cena-03-cards.png",
+        "cena-04-pyramid.png",
+        "cena-05-cta.png"
+      ]
+    },
+    {
+      "aula": "aula-26-curso-vector-db",
+      "cenas": 5,
+      "files": [
+        "cena-01-hero.png",
+        "cena-02-stats.png",
+        "cena-03-cards.png",
+        "cena-04-pyramid.png",
+        "cena-05-cta.png"
+      ]
+    },
+    {
+      "aula": "aula-27-curso-voice-ai",
+      "cenas": 5,
+      "files": [
+        "cena-01-hero.png",
+        "cena-02-stats.png",
+        "cena-03-cards.png",
+        "cena-04-pyramid.png",
+        "cena-05-cta.png"
+      ]
+    },
+    {
+      "aula": "aula-28-curso-multimodal-rag",
+      "cenas": 5,
+      "files": [
+        "cena-01-hero.png",
+        "cena-02-stats.png",
+        "cena-03-cards.png",
+        "cena-04-pyramid.png",
+        "cena-05-cta.png"
+      ]
+    },
+    {
+      "aula": "aula-29-ai-to-ai-protocol",
+      "cenas": 5,
+      "files": [
+        "cena-01-hero.png",
+        "cena-02-stats.png",
+        "cena-03-cards.png",
+        "cena-04-pyramid.png",
+        "cena-05-cta.png"
+      ]
+    },
+    {
+      "aula": "aula-30-federacao-zero-trust",
+      "cenas": 5,
+      "files": [
+        "cena-01-hero.png",
+        "cena-02-stats.png",
+        "cena-03-cards.png",
+        "cena-04-pyramid.png",
+        "cena-05-cta.png"
+      ]
+    },
+    {
+      "aula": "aula-31-fabrica-conteudo-ia",
+      "cenas": 5,
+      "files": [
+        "cena-01-hero.png",
+        "cena-02-stats.png",
+        "cena-03-cards.png",
+        "cena-04-pyramid.png",
+        "cena-05-cta.png"
+      ]
+    },
+    {
+      "aula": "aula-32-pricing-ia-2026",
+      "cenas": 5,
+      "files": [
+        "cena-01-hero.png",
+        "cena-02-stats.png",
+        "cena-03-cards.png",
+        "cena-04-pyramid.png",
+        "cena-05-cta.png"
+      ]
+    },
+    {
+      "aula": "aula-33-data-stack-agentes-ia",
+      "cenas": 5,
+      "files": [
+        "cena-01-hero.png",
+        "cena-02-stats.png",
+        "cena-03-cards.png",
+        "cena-04-pyramid.png",
+        "cena-05-cta.png"
+      ]
+    }
+  ],
+  "wrappers_html_onda_50": [
+    {
+      "aula": "aula-15-metricas-roi-ecossistema",
+      "cenas": 5,
+      "files": [
+        "cena-01-hero.html",
+        "cena-02-stats.html",
+        "cena-03-cards.html",
+        "cena-04-pyramid.html",
+        "cena-05-cta.html"
+      ]
+    },
+    {
+      "aula": "aula-16-trilha-fundamental-ia",
+      "cenas": 5,
+      "files": [
+        "cena-01-hero.html",
+        "cena-02-stats.html",
+        "cena-03-cards.html",
+        "cena-04-pyramid.html",
+        "cena-05-cta.html"
+      ]
+    },
+    {
+      "aula": "aula-17-seo-marketing-conteudo-ia",
+      "cenas": 5,
+      "files": [
+        "cena-01-hero.html",
+        "cena-02-stats.html",
+        "cena-03-cards.html",
+        "cena-04-pyramid.html",
+        "cena-05-cta.html"
+      ]
+    },
+    {
+      "aula": "aula-18-seguranca-ofensiva-pentest",
+      "cenas": 5,
+      "files": [
+        "cena-01-hero.html",
+        "cena-02-stats.html",
+        "cena-03-cards.html",
+        "cena-04-pyramid.html",
+        "cena-05-cta.html"
+      ]
+    },
+    {
+      "aula": "aula-19-monetizacao-avancada-escala",
+      "cenas": 5,
+      "files": [
+        "cena-01-hero.html",
+        "cena-02-stats.html",
+        "cena-03-cards.html",
+        "cena-04-pyramid.html",
+        "cena-05-cta.html"
+      ]
+    },
+    {
+      "aula": "aula-20-trilha-elite-engenharia",
+      "cenas": 5,
+      "files": [
+        "cena-01-hero.html",
+        "cena-02-stats.html",
+        "cena-03-cards.html",
+        "cena-04-pyramid.html",
+        "cena-05-cta.html"
+      ]
+    },
+    {
+      "aula": "aula-21-trilha-master-arquitetura",
+      "cenas": 5,
+      "files": [
+        "cena-01-hero.html",
+        "cena-02-stats.html",
+        "cena-03-cards.html",
+        "cena-04-pyramid.html",
+        "cena-05-cta.html"
+      ]
+    },
+    {
+      "aula": "aula-22-trilha-master-mentoria",
+      "cenas": 5,
+      "files": [
+        "cena-01-hero.html",
+        "cena-02-stats.html",
+        "cena-03-cards.html",
+        "cena-04-pyramid.html",
+        "cena-05-cta.html"
+      ]
+    },
+    {
+      "aula": "aula-23-curso-rag-pratico",
+      "cenas": 5,
+      "files": [
+        "cena-01-hero.html",
+        "cena-02-stats.html",
+        "cena-03-cards.html",
+        "cena-04-pyramid.html",
+        "cena-05-cta.html"
+      ]
+    },
+    {
+      "aula": "aula-24-curso-agents-langgraph",
+      "cenas": 5,
+      "files": [
+        "cena-01-hero.html",
+        "cena-02-stats.html",
+        "cena-03-cards.html",
+        "cena-04-pyramid.html",
+        "cena-05-cta.html"
+      ]
+    },
+    {
+      "aula": "aula-25-curso-prompt-engineering",
+      "cenas": 5,
+      "files": [
+        "cena-01-hero.html",
+        "cena-02-stats.html",
+        "cena-03-cards.html",
+        "cena-04-pyramid.html",
+        "cena-05-cta.html"
+      ]
+    },
+    {
+      "aula": "aula-26-curso-vector-db",
+      "cenas": 5,
+      "files": [
+        "cena-01-hero.html",
+        "cena-02-stats.html",
+        "cena-03-cards.html",
+        "cena-04-pyramid.html",
+        "cena-05-cta.html"
+      ]
+    },
+    {
+      "aula": "aula-27-curso-voice-ai",
+      "cenas": 5,
+      "files": [
+        "cena-01-hero.html",
+        "cena-02-stats.html",
+        "cena-03-cards.html",
+        "cena-04-pyramid.html",
+        "cena-05-cta.html"
+      ]
+    },
+    {
+      "aula": "aula-28-curso-multimodal-rag",
+      "cenas": 5,
+      "files": [
+        "cena-01-hero.html",
+        "cena-02-stats.html",
+        "cena-03-cards.html",
+        "cena-04-pyramid.html",
+        "cena-05-cta.html"
+      ]
+    },
+    {
+      "aula": "aula-29-ai-to-ai-protocol",
+      "cenas": 5,
+      "files": [
+        "cena-01-hero.html",
+        "cena-02-stats.html",
+        "cena-03-cards.html",
+        "cena-04-pyramid.html",
+        "cena-05-cta.html"
+      ]
+    },
+    {
+      "aula": "aula-30-federacao-zero-trust",
+      "cenas": 5,
+      "files": [
+        "cena-01-hero.html",
+        "cena-02-stats.html",
+        "cena-03-cards.html",
+        "cena-04-pyramid.html",
+        "cena-05-cta.html"
+      ]
+    },
+    {
+      "aula": "aula-31-fabrica-conteudo-ia",
+      "cenas": 5,
+      "files": [
+        "cena-01-hero.html",
+        "cena-02-stats.html",
+        "cena-03-cards.html",
+        "cena-04-pyramid.html",
+        "cena-05-cta.html"
+      ]
+    },
+    {
+      "aula": "aula-32-pricing-ia-2026",
+      "cenas": 5,
+      "files": [
+        "cena-01-hero.html",
+        "cena-02-stats.html",
+        "cena-03-cards.html",
+        "cena-04-pyramid.html",
+        "cena-05-cta.html"
+      ]
+    },
+    {
+      "aula": "aula-33-data-stack-agentes-ia",
+      "cenas": 5,
+      "files": [
+        "cena-01-hero.html",
+        "cena-02-stats.html",
+        "cena-03-cards.html",
+        "cena-04-pyramid.html",
+        "cena-05-cta.html"
+      ]
+    }
+  ],
+  "webinars": [
+    "README.md",
+    "WB-2026-01-lancamento-ioaid.md",
+    "WB-2026-02-sho-em-producao.md",
+    "WB-2026-03-academia-open-house.md",
+    "WB-2026-04-skills-em-producao.md",
+    "WB-2026-05-multi-tenant.md",
+    "WB-2026-06-ab-test-estatistico.md",
+    "WB-2026-07-lgpd-ia.md",
+    "WB-2026-08-financeiro-ia.md",
+    "WB-2026-09-agentes-autonomos-prod.md",
+    "WB-2026-10-seo-vs-ia-generativa.md",
+    "WB-2026-11-burnout-afiliados.md",
+    "WB-2026-12-ia-to-ia-federation.md",
+    "WB-2026-13-criacao-conteudo-ia.md",
+    "WB-2026-14-pricing-ia-tempo-real.md",
+    "WB-2026-15-data-stack-ia.md",
+    "WB-2026-16-deploy-continuo-ia.md",
+    "WB-2026-17-conversa-vende-ia.md",
+    "debate-futuro-ia.md"
+  ],
+  "tutoriais": [
+    "01-ativar-2fa.md",
+    "02-configurar-dispatcher.md",
+    "03-ler-relatorio-autonomia.md",
+    "04-criar-primeiro-agente.md",
+    "05-aprovar-sugestao-judge.md",
+    "06-disparar-campanha-whatsapp.md",
+    "07-convidar-afiliado-rede.md",
+    "08-primeiro-ab-test.md",
+    "09-ler-tabela-coorte.md",
+    "10-webhook-hotmart.md",
+    "11-auditoria-skills-master.md",
+    "11-instancia-multitenant.md",
+    "12-configurar-ab-test-judge.md",
+    "12-federa#U00e7#U00e3o-2-nos.md",
+    "12-federação-2-nos.md",
+    "13-deploy-multi-tenant-elite.md",
+    "13-federa#U00e7#U00e3o-3-nos-mtls-pinned.md",
+    "13-federação-3-nos-mtls-pinned.md",
+    "14-agente-federado-elite.md",
+    "14-ler-skill-manifest.md",
+    "15-auditoria-lgpd-automatizada.md",
+    "15-debugar-agente-lento.md",
+    "16-criar-skill-customizada.md",
+    "16-pipeline-rag-end-to-end.md",
+    "17-integrar-meta-ads.md",
+    "17-rag-hybrid-search-bm25.md",
+    "18-configurar-backup-automatico.md",
+    "18-whisper-transcricao-audio.md",
+    "19-ler-metricas-sho.md",
+    "19-prompt-engineering-metodo-ctr.md",
+    "20-exportar-relatorio-mensal.md",
+    "20-fine-tuning-openai-api.md",
+    "21-deploy-api-ia-producao.md",
+    "21-monitorar-metricas-tempo-real.md",
+    "22-criar-playbook-do-zero.md",
+    "README.md"
+  ],
+  "playbooks": [
+    "PB-CRISES-gestao-crise-autonomia.md",
+    "PB-CRISES-gestao-crise-ban-whatsapp.md",
+    "PB-CRISES-gestao-crise-data-loss.md",
+    "PB-EMAIL-operacao-diaria.md",
+    "PB-FEDERATION-operacao-cross-region.md",
+    "PB-FINANCEIRO-decisao-investimento.md",
+    "PB-LANCAMENTO-black-friday.md",
+    "PB-LANCAMENTO-lancamento-7-dias.md",
+    "PB-LGPD-avancado-data-subjects.md",
+    "PB-LGPD-direitos-titular.md",
+    "PB-ONBOARDING-novo-afiliado.md",
+    "PB-WHATSAPP-operacao-diaria.md",
+    "README.md",
+    "otimizacao-campanhas-sho.md"
+  ],
+  "treinamentos": [
+    "README.md",
+    "WS-01-oficina-copy-persuasivo.md",
+    "WS-02-oficina-funil-completo.md",
+    "WS-03-oficina-webhook-integracao.md",
+    "WS-04-oficina-sho-avancado.md",
+    "WS-05-oficina-federacao-agentes.md",
+    "WS-06-oficina-automacao-conteudo.md",
+    "treinamento-dupla-escala.md",
+    "workshop-escala-ia.md"
+  ],
+  "hubs_html": [
+    "apostilas.html",
+    "cursos.html",
+    "index.html",
+    "lab.html",
+    "landing.html",
+    "lib.html",
+    "playbooks.html",
+    "player.html",
+    "trilhas.html",
+    "tutoriais.html",
+    "webinars.html"
+  ],
+  "stubs_identified": [
+    {
+      "type": "apostila",
+      "n": 17,
+      "path_md": "apostilas/17-seo-marketing-conteudo-ia.md"
+    },
+    {
+      "type": "apostila",
+      "n": 18,
+      "path_md": "apostilas/18-seguranca-ofensiva-pentest-agentes-ia.md"
+    },
+    {
+      "type": "apostila",
+      "n": 32,
+      "path_md": "apostilas/32-pricing-ia-2026.md"
+    },
+    {
+      "type": "apostila",
+      "n": 33,
+      "path_md": "apostilas/33-data-stack-agentes-ia.md"
+    }
+  ],
+  "renders_onda_49_missing": [],
+  "commits_this_turn": [
+    {
+      "sha_pending": "TBD",
+      "msg": "feat(academia): ONDA-49 — 10 MP4s 720p + render script",
+      "files": [
+        "renders/aula-15..25-720p.mp4",
+        "scripts/render_missing_onda49.sh",
+        "manifest/MASTER-PIPELINE-E2E.json"
+      ]
+    }
+  ]
+}

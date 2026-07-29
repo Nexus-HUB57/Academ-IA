@@ -1,0 +1,34 @@
+{
+  "schema_version": "2.0.0",
+  "generated_at": "2026-07-23",
+  "project": "Academ-IA",
+  "scope": "end_to_end",
+  "state": {
+    "git_head": "09d2528",
+    "working_tree_clean_pre": true,
+    "apostilas": {
+      "md": 35,
+      "html": 45,
+      "pdf": 45,
+      "complete": false
+    },
+    "ondas_concluidas": [
+      "ONDA-49",
+      "ONDA-50"
+    ],
+    "videos": {
+      "renders_720p_onda49": 19,
+      "videos_full_onda47": 15,
+      "tts_wav": 15,
+      "capas_youtube": 19
+    }
+  },
+  "gaps_fechados_esta_turn": [
+    "G1-H: 35 apostilas MD convertidas em HTML + PDF (capa, sumario TOC, dark-theme CSS)"
+  ],
+  "gaps_remanescentes": [
+    "G2-M: TTS engine nativo ausente (apenas 15 .wav da ONDA-47)",
+    "G3-M: render slides→MP4 com narração (15 ONDA-49 só slides, sem voz)",
+    "G4-B: hubs html (apostilas.html / tutoriais.html) ainda refletindo estado pre-2026-07-23"
+  ]
+}
