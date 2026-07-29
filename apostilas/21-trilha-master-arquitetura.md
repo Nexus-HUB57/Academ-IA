@@ -14,7 +14,7 @@ AcademIA · Apostila T3
 
 ## Do MVP ao Sistema Multi-Agente em Produção
 
-![Capa](../../docs/ebooks/ACAD-apostila-21-trilha-master-arquitetura.webp)
+![Capa](../docs/ebooks/ACAD-apostila-21-trilha-master-arquitetura.webp)
 
 **Shakespeare da Atualidade** PHD nível Harvard do Universo AI
 

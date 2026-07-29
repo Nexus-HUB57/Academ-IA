@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>04 · RAG em Produção: Da Teoria à Escala</title>
+  <style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+{ counter-reset: source-line 0; }
+pre.numberSource code > span
+{ position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+{ content: counter(source-line);
+position: relative; left: -1em; text-align: right; vertical-align: baseline;
+border: none; display: inline-block;
+-webkit-touch-callout: none; -webkit-user-select: none;
+-khtml-user-select: none; -moz-user-select: none;
+-ms-user-select: none; user-select: none;
+padding: 0 4px; width: 4em;
+color: #aaaaaa;
+}
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa; padding-left: 4px; }
+div.sourceCode
+{ }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } 
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.at { color: #7d9029; } 
+code span.bn { color: #40a070; } 
+code span.bu { color: #008000; } 
+code span.cf { color: #007020; font-weight: bold; } 
+code span.ch { color: #4070a0; } 
+code span.cn { color: #880000; } 
+code span.co { color: #60a0b0; font-style: italic; } 
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.do { color: #ba2121; font-style: italic; } 
+code span.dt { color: #902000; } 
+code span.dv { color: #40a070; } 
+code span.er { color: #ff0000; font-weight: bold; } 
+code span.ex { } 
+code span.fl { color: #40a070; } 
+code span.fu { color: #06287e; } 
+code span.im { color: #008000; font-weight: bold; } 
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.kw { color: #007020; font-weight: bold; } 
+code span.op { color: #666666; } 
+code span.ot { color: #007020; } 
+code span.pp { color: #bc7a00; } 
+code span.sc { color: #4070a0; } 
+code span.ss { color: #bb6688; } 
+code span.st { color: #4070a0; } 
+code span.va { color: #19177c; } 
+code span.vs { color: #4070a0; } 
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } 
+</style>
+  <style type="text/css">
+:root {
+
+--bg: #0f0f1a;
+--bg-card: #1a1a2e;
+--bg-elev: #252540;
+--fg: #e0e0e8;
+--fg-muted: #9ca3af;
+--accent: #06b6d4;
+--accent-purple: #7c3aed;
+--accent-gold: #f59e0b;
+--accent-green: #10b981;
+--accent-red: #ef4444;
+--border: #2a2a4a;
+--code-bg: #0a0a14;
+--shadow: rgba(0, 0, 0, 0.4);
+}
+
+body.light-theme {
+--bg: #fafafa;
+--bg-card: #ffffff;
+--bg-elev: #f3f4f6;
+--fg: #1a1a1a;
+--fg-muted: #6b7280;
+--accent: #0891b2;
+--accent-purple: #6d28d9;
+--accent-gold: #d97706;
+--border: #e5e7eb;
+--code-bg: #f9fafb;
+--shadow: rgba(0, 0, 0, 0.08);
+}
+html {
+line-height: 1.7;
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+font-size: 17px;
+color: var(--fg);
+background-color: var(--bg);
+scroll-behavior: smooth;
+}
+body {
+margin: 0 auto;
+max-width: 900px;
+padding: 40px 30px 100px;
+hyphens: auto;
+overflow-wrap: break-word;
+text-rendering: optimizeLegibility;
+position: relative;
+}
+
+.reading-progress {
+position: fixed;
+top: 0;
+left: 0;
+height: 3px;
+background: linear-gradient(90deg, var(--accent), var(--accent-purple), var(--accent-gold));
+z-index: 9999;
+width: 0%;
+transition: width 0.1s linear;
+box-shadow: 0 0 8px var(--accent);
+}
+
+.floating-actions {
+position: fixed;
+top: 16px;
+right: 16px;
+display: flex;
+flex-direction: column;
+gap: 8px;
+z-index: 9998;
+}
+.fab {
+width: 40px;
+height: 40px;
+border-radius: 50%;
+background: var(--bg-card);
+border: 1px solid var(--border);
+color: var(--fg);
+display: flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+font-size: 1.1rem;
+transition: all 0.2s ease;
+box-shadow: 0 2px 8px var(--shadow);
+text-decoration: none;
+}
+.fab:hover {
+background: var(--accent);
+color: #fff;
+transform: scale(1.1);
+}
+.fab-tooltip {
+position: relative;
+}
+.fab-tooltip::before {
+content: attr(data-tip);
+position: absolute;
+right: 50px;
+top: 50%;
+transform: translateY(-50%);
+background: var(--bg-elev);
+color: var(--fg);
+padding: 4px 10px;
+border-radius: 4px;
+font-size: 0.75rem;
+white-space: nowrap;
+opacity: 0;
+pointer-events: none;
+transition: opacity 0.2s ease;
+}
+.fab-tooltip:hover::before {
+opacity: 1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+color: #fff;
+margin-top: 1.8em;
+margin-bottom: 0.6em;
+line-height: 1.3;
+font-weight: 700;
+scroll-margin-top: 60px;
+}
+body.light-theme h1, body.light-theme h2, body.light-theme h3 {
+color: #1a1a1a;
+}
+h1 {
+font-size: 2.2em;
+background: linear-gradient(135deg, var(--accent), var(--accent-purple));
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+border-bottom: 2px solid var(--accent);
+padding-bottom: 0.3em;
+}
+h2 {
+font-size: 1.6em;
+color: var(--accent);
+border-bottom: 1px solid var(--border);
+padding-bottom: 0.3em;
+}
+h3 {
+font-size: 1.3em;
+color: var(--accent-purple);
+}
+h4 {
+font-size: 1.1em;
+color: var(--fg);
+}
+
+a {
+color: var(--accent);
+text-decoration: none;
+transition: color 0.2s ease;
+}
+a:hover {
+color: var(--accent-purple);
+text-decoration: underline;
+}
+
+p {
+margin: 0 0 1em 0;
+}
+
+code {
+font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+font-size: 0.9em;
+background: var(--code-bg);
+padding: 2px 6px;
+border-radius: 3px;
+color: var(--accent);
+border: 1px solid var(--border);
+}
+pre {
+background: var(--code-bg);
+border: 1px solid var(--border);
+border-radius: 6px;
+padding: 16px;
+overflow-x: auto;
+line-height: 1.5;
+margin: 1.5em 0;
+position: relative;
+}
+pre code {
+background: transparent;
+border: none;
+padding: 0;
+color: var(--fg);
+font-size: 0.85em;
+}
+
+blockquote {
+border-left: 4px solid var(--accent);
+padding: 12px 20px;
+margin: 1.5em 0;
+background: var(--bg-card);
+border-radius: 0 6px 6px 0;
+color: var(--fg);
+font-style: italic;
+}
+body.light-theme blockquote {
+background: var(--bg-elev);
+}
+
+ul, ol {
+padding-left: 1.5em;
+margin: 1em 0;
+}
+li {
+margin: 0.3em 0;
+}
+
+table {
+width: 100%;
+border-collapse: collapse;
+margin: 1.5em 0;
+background: var(--bg-card);
+border-radius: 6px;
+overflow: hidden;
+}
+th, td {
+padding: 10px 14px;
+text-align: left;
+border-bottom: 1px solid var(--border);
+}
+th {
+background: var(--bg-elev);
+color: var(--accent);
+font-weight: 700;
+}
+body.light-theme th {
+color: var(--accent);
+}
+tr:hover {
+background: var(--bg-elev);
+}
+
+img {
+max-width: 100%;
+height: auto;
+border-radius: 6px;
+display: block;
+margin: 1.5em auto;
+box-shadow: 0 4px 12px var(--shadow);
+}
+
+hr {
+border: none;
+height: 1px;
+background: linear-gradient(90deg, transparent, var(--accent), transparent);
+margin: 2em 0;
+}
+
+strong {
+color: var(--accent-gold);
+font-weight: 700;
+}
+body.light-theme strong {
+color: #d97706;
+}
+em {
+color: var(--accent-purple);
+font-style: italic;
+}
+body.light-theme em {
+color: #6d28d9;
+}
+
+kbd {
+display: inline-block;
+padding: 2px 6px;
+background: var(--bg-elev);
+border: 1px solid var(--border);
+border-radius: 3px;
+font-family: "JetBrains Mono", monospace;
+font-size: 0.85em;
+box-shadow: 0 1px 0 var(--border);
+}
+
+.breadcrumb {
+font-size: 0.85rem;
+color: var(--fg-muted);
+margin-bottom: 24px;
+padding: 8px 12px;
+background: var(--bg-card);
+border-radius: 6px;
+border: 1px solid var(--border);
+}
+.breadcrumb a {
+color: var(--fg-muted);
+text-decoration: none;
+}
+.breadcrumb a:hover {
+color: var(--accent);
+text-decoration: underline;
+}
+.breadcrumb-sep {
+margin: 0 8px;
+color: var(--fg-muted);
+}
+
+.callout {
+padding: 16px 20px;
+margin: 1.5em 0;
+border-radius: 6px;
+border-left: 4px solid;
+background: var(--bg-card);
+}
+.callout-info { border-color: var(--accent); }
+.callout-success { border-color: var(--accent-green); }
+.callout-warning { border-color: var(--accent-gold); }
+.callout-danger { border-color: var(--accent-red); }
+.callout-title {
+font-weight: 700;
+margin-bottom: 6px;
+text-transform: uppercase;
+font-size: 0.85em;
+letter-spacing: 1px;
+}
+.callout-info .callout-title { color: var(--accent); }
+.callout-success .callout-title { color: var(--accent-green); }
+.callout-warning .callout-title { color: var(--accent-gold); }
+.callout-danger .callout-title { color: var(--accent-red); }
+
+input[type="checkbox"]:not(:checked), input[type="checkbox"]:checked {
+appearance: none;
+width: 18px;
+height: 18px;
+border: 2px solid var(--accent);
+border-radius: 3px;
+display: inline-block;
+vertical-align: middle;
+margin-right: 8px;
+position: relative;
+cursor: pointer;
+transition: all 0.2s ease;
+}
+input[type="checkbox"]:checked {
+background: var(--accent);
+}
+input[type="checkbox"]:checked::after {
+content: '✓';
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+color: var(--bg);
+font-weight: 700;
+font-size: 14px;
+}
+
+#TOC {
+background: var(--bg-card);
+border: 1px solid var(--border);
+border-radius: 8px;
+padding: 20px 24px;
+margin: 1.5em 0 2em;
+position: sticky;
+top: 16px;
+z-index: 10;
+max-height: 70vh;
+overflow-y: auto;
+}
+#TOC > ul {
+list-style: none;
+padding-left: 0;
+}
+#TOC a {
+color: var(--fg-muted);
+font-size: 0.9em;
+display: block;
+padding: 4px 0;
+text-decoration: none;
+transition: color 0.2s ease;
+}
+#TOC a:hover {
+color: var(--accent);
+padding-left: 4px;
+}
+#TOC a.active {
+color: var(--accent);
+border-left: 2px solid var(--accent);
+padding-left: 8px;
+font-weight: 600;
+}
+
+details {
+background: var(--bg-card);
+border: 1px solid var(--border);
+border-radius: 6px;
+padding: 12px 16px;
+margin: 1em 0;
+}
+summary {
+cursor: pointer;
+font-weight: 600;
+color: var(--accent);
+outline: none;
+}
+summary:hover {
+color: var(--accent-purple);
+}
+
+.footer {
+margin-top: 60px;
+padding: 24px 0;
+border-top: 1px solid var(--border);
+text-align: center;
+color: var(--fg-muted);
+font-size: 0.85rem;
+}
+.footer a {
+color: var(--accent);
+}
+
+@media (max-width: 768px) {
+body {
+padding: 24px 16px 80px;
+font-size: 16px;
+}
+h1 { font-size: 1.8em; }
+h2 { font-size: 1.4em; }
+h3 { font-size: 1.2em; }
+.floating-actions {
+top: 8px;
+right: 8px;
+}
+.fab {
+width: 36px;
+height: 36px;
+font-size: 1rem;
+}
+pre {
+font-size: 0.8em;
+padding: 12px;
+}
+#TOC {
+position: relative;
+top: 0;
+max-height: none;
+}
+}
+
+@keyframes fadeIn {
+from { opacity: 0; transform: translateY(10px); }
+to { opacity: 1; transform: translateY(0); }
+}
+body > * {
+animation: fadeIn 0.3s ease;
+}
+
+@media print {
+.floating-actions, .reading-progress { display: none; }
+body { padding: 0; max-width: 100%; }
+pre { page-break-inside: avoid; }
+h1, h2, h3 { page-break-after: avoid; }
+}</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">04 · RAG em Produção: Da Teoria à Escala</h1>
+</header>
+<h1 id="rag-em-produção-da-teoria-à-escala">🔍 04 · RAG em Produção: Da
+Teoria à Escala</h1>
+<blockquote>
+<p><strong>Tempo:</strong> 120 min · <strong>Nível:</strong> Master ·
+<strong>Pré-requisito:</strong> 03 - Coortes e Churn</p>
+</blockquote>
+<h2 id="por-que-rag-virou-padrão-em-2026">Por que RAG virou padrão em
+2026</h2>
+<p>Em 2026, <strong>Retrieval-Augmented Generation (RAG)</strong> é a
+arquitetura dominante para IA corporativa. Motivos:</p>
+<ul>
+<li><strong>Sem treinar modelo</strong>: economiza US$ 10k-100k vs
+fine-tuning</li>
+<li><strong>Atualização em tempo real</strong>: ingere documento novo em
+segundos</li>
+<li><strong>Auditável</strong>: você sabe exatamente o que fundamentou
+cada resposta</li>
+<li><strong>Compliance-friendly</strong>: LGPD, EU AI Act, HIPAA ficam
+mais simples</li>
+</ul>
+<p>RAG resolve 90% dos casos de IA aplicada em produção.</p>
+<h2 id="anatomia-de-um-pipeline-rag">Anatomia de um Pipeline RAG</h2>
+<pre><code>         ┌──────────────────────────────────────────────┐
+         │  Documentos → Chunking → Embeddings         │
+         │       ↓                                     │
+         │  Vector Store (Chroma / Pinecone / Qdrant)  │
+         │       ↓                                     │
+         │  Pergunta → Retrieval (top-K)               │
+         │       ↓                                     │
+         │  Contexto + Prompt → LLM → Resposta          │
+         │       ↓                                     │
+         │  Avaliação (RAGAS) + Observabilidade         │
+         └──────────────────────────────────────────────┘</code></pre>
+<h2 id="componentes-chave">Componentes-Chave</h2>
+<h3 id="chunking-a-decisão-mais-importante">1. Chunking: a decisão mais
+importante</h3>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> langchain.text_splitter <span class="im">import</span> RecursiveCharacterTextSplitter</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>splitter <span class="op">=</span> RecursiveCharacterTextSplitter(</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    chunk_size<span class="op">=</span><span class="dv">500</span>,      <span class="co"># 300-500 é o sweet spot</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    chunk_overlap<span class="op">=</span><span class="dv">80</span>,    <span class="co"># 10-20% do chunk_size</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    separators<span class="op">=</span>[<span class="st">&quot;</span><span class="ch">\\</span><span class="st">n</span><span class="ch">\\</span><span class="st">n&quot;</span>, <span class="st">&quot;</span><span class="ch">\\</span><span class="st">n&quot;</span>, <span class="st">&quot;. &quot;</span>, <span class="st">&quot; &quot;</span>],</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>chunks <span class="op">=</span> splitter.split_documents(documents)</span></code></pre></div>
+<p><strong>Trade-offs</strong>: - <strong>Chunks pequenos</strong>
+(200-300): mais precisão, mais vetores, mais retrieval - <strong>Chunks
+médios</strong> (500-800): balanço ideal para a maioria dos casos -
+<strong>Chunks grandes</strong> (1000+): menos precisão, mais contexto,
+mais custo LLM</p>
+<h3 id="embeddings-o-coração-semântico">2. Embeddings: o coração
+semântico</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Modelo</th>
+<th>Dimensão</th>
+<th>Preço</th>
+<th>Quando usar</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>text-embedding-3-small</code></td>
+<td>1536</td>
+<td>$0.02/1M</td>
+<td>Padrão, custo-benefício</td>
+</tr>
+<tr class="even">
+<td><code>text-embedding-3-large</code></td>
+<td>3072</td>
+<td>$0.13/1M</td>
+<td>Máxima qualidade</td>
+</tr>
+<tr class="odd">
+<td><code>voyage-3</code></td>
+<td>1024</td>
+<td>$0.06/1M</td>
+<td>Multilíngue + retrieval</td>
+</tr>
+<tr class="even">
+<td><code>bge-m3</code></td>
+<td>1024</td>
+<td>self-host</td>
+<td>Open-source, multilíngue</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> langchain_openai <span class="im">import</span> OpenAIEmbeddings</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>embeddings <span class="op">=</span> OpenAIEmbeddings(model<span class="op">=</span><span class="st">&quot;text-embedding-3-large&quot;</span>)</span></code></pre></div>
+<h3 id="vector-stores">3. Vector Stores</h3>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>DB</th>
+<th>Tipo</th>
+<th>Quando usar</th>
+<th>Custo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Chroma</strong></td>
+<td>Embedded</td>
+<td>Dev, protótipos</td>
+<td>Grátis</td>
+</tr>
+<tr class="even">
+<td><strong>Pinecone</strong></td>
+<td>Managed</td>
+<td>Produção, escala</td>
+<td>$70/mês+</td>
+</tr>
+<tr class="odd">
+<td><strong>Weaviate</strong></td>
+<td>Self-host/managed</td>
+<td>Open-source + escala</td>
+<td>Self: grátis</td>
+</tr>
+<tr class="even">
+<td><strong>Qdrant</strong></td>
+<td>Rust, rápido</td>
+<td>Performance</td>
+<td>$25/mês+</td>
+</tr>
+<tr class="odd">
+<td><strong>pgvector</strong></td>
+<td>Postgres</td>
+<td>Já tem Postgres</td>
+<td>Incluso</td>
+</tr>
+<tr class="even">
+<td><strong>LanceDB</strong></td>
+<td>Embedded + serverless</td>
+<td>Moderno, serverless</td>
+<td>Grátis até 1M vetores</td>
+</tr>
+</tbody>
+</table>
+<h3 id="retrieval-pure-vs-hybrid-vs-hybridreranking">4. Retrieval: pure
+vs hybrid vs hybrid+reranking</h3>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Pure embeddings (baseline)</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>retriever <span class="op">=</span> vectorstore.as_retriever(search_kwargs<span class="op">=</span>{<span class="st">&quot;k&quot;</span>: <span class="dv">5</span>})</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Hybrid search (BM25 + embeddings)</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> langchain.retrievers <span class="im">import</span> BM25Retriever, EnsembleRetriever</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>bm25_retriever <span class="op">=</span> BM25Retriever.from_documents(chunks)</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>hybrid <span class="op">=</span> EnsembleRetriever(</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    retrievers<span class="op">=</span>[bm25_retriever, vectorstore.as_retriever(k<span class="op">=</span><span class="dv">5</span>)],</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    weights<span class="op">=</span>[<span class="fl">0.4</span>, <span class="fl">0.6</span>],</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Hybrid + Reranking (estado da arte 2026)</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sentence_transformers <span class="im">import</span> CrossEncoder</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>reranker <span class="op">=</span> CrossEncoder(<span class="st">&quot;BAAI/bge-reranker-v2-m3&quot;</span>)</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> reranked_retrieve(query, k_initial<span class="op">=</span><span class="dv">20</span>, k_final<span class="op">=</span><span class="dv">5</span>):</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>    candidates <span class="op">=</span> hybrid.invoke(query)[:k_initial]</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>    pairs <span class="op">=</span> [(query, c.page_content) <span class="cf">for</span> c <span class="kw">in</span> candidates]</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>    scores <span class="op">=</span> reranker.predict(pairs)</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>    ranked <span class="op">=</span> <span class="bu">sorted</span>(<span class="bu">zip</span>(scores, candidates), key<span class="op">=</span><span class="kw">lambda</span> x: <span class="op">-</span>x[<span class="dv">0</span>])</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> [doc <span class="cf">for</span> _, doc <span class="kw">in</span> ranked[:k_final]]</span></code></pre></div>
+<p><strong>Performance medido (RAGAS, dataset BEIR)</strong>: - Pure
+embeddings: 0.72 nDCG@10 - Hybrid: 0.84 nDCG@10 - Hybrid + Reranking:
+<strong>0.91 nDCG@10</strong></p>
+<h3 id="geração-prompt-engineering-é-tudo">5. Geração: prompt
+engineering é tudo</h3>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>PROMPT <span class="op">=</span> <span class="st">&quot;&quot;&quot;Você é um assistente técnico especializado.</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="st"># Regras</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="st">1. Use APENAS o contexto abaixo para responder.</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="st">2. Se a resposta não estiver no contexto, diga &quot;Não encontrei essa</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="st">   informação nos documentos fornecidos.&quot;</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="st">3. Cite as fontes no formato [1], [2], etc.</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="st">4. Responda em português, técnico e conciso.</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="st"># Contexto</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="sc">{context}</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="st"># Pergunta</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="sc">{question}</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="st"># Resposta&quot;&quot;&quot;</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> langchain.chains <span class="im">import</span> RetrievalQA</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> langchain_openai <span class="im">import</span> ChatOpenAI</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> langchain.prompts <span class="im">import</span> PromptTemplate</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>qa <span class="op">=</span> RetrievalQA.from_chain_type(</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>    llm<span class="op">=</span>ChatOpenAI(model<span class="op">=</span><span class="st">&quot;gpt-4o-mini&quot;</span>, temperature<span class="op">=</span><span class="dv">0</span>),</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>    retriever<span class="op">=</span>reranked_retriever,</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>    chain_type_kwargs<span class="op">=</span>{<span class="st">&quot;prompt&quot;</span>: PromptTemplate.from_template(PROMPT)},</span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>    return_source_documents<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<h2 id="avaliação-com-ragas">Avaliação com RAGAS</h2>
+<p>Não dá pra melhorar o que não se mede. Use RAGAS como padrão:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> ragas <span class="im">import</span> evaluate</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> ragas.metrics <span class="im">import</span> (</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    faithfulness,         <span class="co"># Resposta fiel ao contexto?</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    answer_relevancy,     <span class="co"># Resposta relevante à pergunta?</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    context_precision,    <span class="co"># Chunks certos recuperados?</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    context_recall,       <span class="co"># Recuperou todos os chunks necessários?</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Dataset de teste (50-100 perguntas)</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>test_dataset <span class="op">=</span> Dataset.from_list([</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>    {</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;question&quot;</span>: <span class="st">&quot;Qual a política de reembolso?&quot;</span>,</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;answer&quot;</span>: <span class="st">&quot;30 dias para produtos não usados.&quot;</span>,</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;contexts&quot;</span>: [<span class="st">&quot;doc1.md: política é 30 dias...&quot;</span>],</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;ground_truth&quot;</span>: <span class="st">&quot;30 dias&quot;</span>,</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>    },</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>    <span class="co"># ... 99 mais</span></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>])</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> evaluate(test_dataset, metrics<span class="op">=</span>[</span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>    faithfulness, answer_relevancy, context_precision, context_recall</span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>])</span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(result)</span></code></pre></div>
+<p><strong>Metas de produção</strong>: - Faithfulness &gt;
+<strong>0.95</strong> (alucinação zero) - Context Recall &gt;
+<strong>0.85</strong> - Answer Relevancy &gt; <strong>0.80</strong></p>
+<h2 id="custo-típico-1m-queriesmês">Custo Típico (1M queries/mês)</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Componente</th>
+<th>Custo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Embeddings (text-embedding-3-large)</td>
+<td>$130</td>
+</tr>
+<tr class="even">
+<td>Vector DB (Pinecone Serverless)</td>
+<td>$70</td>
+</tr>
+<tr class="odd">
+<td>LLM (gpt-4o-mini, 2k ctx avg)</td>
+<td>$500-1500</td>
+</tr>
+<tr class="even">
+<td>Reranking (BGE local)</td>
+<td>$0 (self-host)</td>
+</tr>
+<tr class="odd">
+<td><strong>Total</strong></td>
+<td><strong>$700-1700/mês</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Compare: - Fine-tuning mensal: US$ 10k+ - Atendimento humano: US$
+50k+ - RAG é 10-30x mais barato</p>
+<h2 id="patterns-avançados">Patterns Avançados</h2>
+<h3 id="self-rag-auto-crítica">Self-RAG (auto-crítica)</h3>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> self_rag_answer(question, k<span class="op">=</span><span class="dv">5</span>):</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 1. Retrieval inicial</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    chunks <span class="op">=</span> retriever.invoke(question)[:k]</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    context <span class="op">=</span> <span class="st">&quot;</span><span class="ch">\\</span><span class="st">n</span><span class="ch">\\</span><span class="st">n&quot;</span>.join([c.page_content <span class="cf">for</span> c <span class="kw">in</span> chunks])</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 2. Critique: o contexto é relevante?</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    critique <span class="op">=</span> llm.invoke(<span class="ss">f&quot;&quot;&quot;Avalie se o contexto abaixo é suficiente</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="ss">para responder a pergunta. Responda &#39;SUFICIENTE&#39; ou &#39;INSUFICIENTE&#39; +</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="ss">quais informações faltam.</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="ss">Contexto: </span><span class="sc">{</span>context<span class="sc">}</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="ss">Pergunta: </span><span class="sc">{</span>question<span class="sc">}</span><span class="ss">&quot;&quot;&quot;</span>)</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="st">&quot;INSUFICIENTE&quot;</span> <span class="kw">in</span> critique:</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 3. Retrieval expandido (mais chunks, ou query reformulada)</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>        chunks <span class="op">=</span> retriever.invoke(question <span class="op">+</span> <span class="st">&quot; &quot;</span> <span class="op">+</span> critique)[:k<span class="op">*</span><span class="dv">2</span>]</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>        context <span class="op">=</span> <span class="st">&quot;</span><span class="ch">\\</span><span class="st">n</span><span class="ch">\\</span><span class="st">n&quot;</span>.join([c.page_content <span class="cf">for</span> c <span class="kw">in</span> chunks])</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 4. Geração</span></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> qa.invoke({<span class="st">&quot;query&quot;</span>: question, <span class="st">&quot;context&quot;</span>: context})</span></code></pre></div>
+<h3 id="hyde-hypothetical-document-embeddings">HyDE (Hypothetical
+Document Embeddings)</h3>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> hyde_retrieve(question, k<span class="op">=</span><span class="dv">5</span>):</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Gera resposta hipotética</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    hypo <span class="op">=</span> llm.invoke(<span class="ss">f&quot;Gere uma resposta detalhada para: </span><span class="sc">{</span>question<span class="sc">}</span><span class="ss">&quot;</span>)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Busca com a resposta hipotética (geralmente melhor que com a pergunta)</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> vectorstore.similarity_search(hypo, k<span class="op">=</span>k)</span></code></pre></div>
+<h3 id="agentic-rag-multi-agent">Agentic RAG (multi-agent)</h3>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> crewai <span class="im">import</span> Agent, Task, Crew</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>researcher <span class="op">=</span> Agent(</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    role<span class="op">=</span><span class="st">&quot;Pesquisador&quot;</span>,</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    goal<span class="op">=</span><span class="st">&quot;Encontrar informação precisa nos documentos&quot;</span>,</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    backstory<span class="op">=</span><span class="st">&quot;Especialista em recuperar dados relevantes&quot;</span>,</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>    tools<span class="op">=</span>[retriever_tool],</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>writer <span class="op">=</span> Agent(</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>    role<span class="op">=</span><span class="st">&quot;Redator&quot;</span>,</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>    goal<span class="op">=</span><span class="st">&quot;Escrever resposta clara e bem fundamentada&quot;</span>,</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>    backstory<span class="op">=</span><span class="st">&quot;Especialista em comunicação técnica&quot;</span>,</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>crew <span class="op">=</span> Crew(agents<span class="op">=</span>[researcher, writer], tasks<span class="op">=</span>[...])</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> crew.kickoff()</span></code></pre></div>
+<h2 id="checklist-de-produção">Checklist de Produção</h2>
+<ul class="task-list">
+<li><label><input type="checkbox"></input>Chunking testado com seus dados (não
+copie de blog)</label></li>
+<li><label><input type="checkbox"></input>Embeddings atualizados
+(text-embedding-3-large ou superior)</label></li>
+<li><label><input type="checkbox"></input>Hybrid search habilitado (BM25 +
+embeddings)</label></li>
+<li><label><input type="checkbox"></input>Reranking cross-encoder no
+top-20</label></li>
+<li><label><input type="checkbox"></input>Metadata filtering (data, autor,
+categoria)</label></li>
+<li><label><input type="checkbox"></input>Prompt com instrução “se não souber,
+diga”</label></li>
+<li><label><input type="checkbox"></input>Avaliação RAGAS &gt; 0.85 em
+produção</label></li>
+<li><label><input type="checkbox"></input>Logs de retrieval para
+debugging</label></li>
+<li><label><input type="checkbox"></input>Cache de perguntas
+frequentes</label></li>
+<li><label><input type="checkbox"></input>Rate limiting +
+autenticação</label></li>
+<li><label><input type="checkbox"></input>LGPD: opt-out, retenção,
+criptografia</label></li>
+</ul>
+<h2 id="próximos-passos">Próximos Passos</h2>
+<ul>
+<li><strong>Deploy</strong>: curso 05 - Deploy em Produção de
+Modelos</li>
+<li><strong>Segurança</strong>: curso 06 - Segurança e Jailbreaks</li>
+<li><strong>Multi-modal RAG</strong>: curso elite 04 (próximo)</li>
+</ul>
+<h2 id="recursos">Recursos</h2>
+<ul>
+<li>LangChain: <a href="https://python.langchain.com" class="uri">https://python.langchain.com</a></li>
+<li>RAGAS: <a href="https://docs.ragas.io" class="uri">https://docs.ragas.io</a></li>
+<li>BGE Reranker: <a href="https://huggingface.co/BAAI/bge-reranker-v2-m3" class="uri">https://huggingface.co/BAAI/bge-reranker-v2-m3</a></li>
+<li>Paper RAG: <a href="https://arxiv.org/abs/2005.11401" class="uri">https://arxiv.org/abs/2005.11401</a></li>
+</ul>
+</body>
+</html>

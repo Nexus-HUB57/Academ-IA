@@ -1,0 +1,193 @@
+{
+  "summary": {
+    "date": "2026-07-24",
+    "canonical_source_dir": "producao/assets/thumbnails",
+    "modules_total": 15,
+    "official_cover_exists_total": 15,
+    "video_thumb_exists_total": 15,
+    "resolution_standard": "1672x941",
+    "decision": "capas prontas e aprovadas passam a ser a fonte canônica de capa para o rebuild 00-14"
+  },
+  "modules": [
+    {
+      "code": "00",
+      "title": "Boas-vindas à AcademIA Nexus",
+      "official_cover_png": "capa-00-boas-vindas-ive.png",
+      "official_cover_exists": true,
+      "official_cover_dimensions": "1672x941",
+      "video_thumb_asset": "thumb-00-boas-vindas.png",
+      "video_thumb_exists": true,
+      "video_thumb_dimensions": "1672x941",
+      "canonical_source_dir": "producao/assets/thumbnails",
+      "decision": "reusar_no_rebuild"
+    },
+    {
+      "code": "01",
+      "title": "Entendendo o IOAID",
+      "official_cover_png": "capa-01-entendendo-ioaid-dupla.png",
+      "official_cover_exists": true,
+      "official_cover_dimensions": "1672x941",
+      "video_thumb_asset": "thumb-01-ioaid.png",
+      "video_thumb_exists": true,
+      "video_thumb_dimensions": "1672x941",
+      "canonical_source_dir": "producao/assets/thumbnails",
+      "decision": "reusar_no_rebuild"
+    },
+    {
+      "code": "02",
+      "title": "O Sistema SHO (Self-Healing Orchestrator)",
+      "official_cover_png": "capa-02-sistema-sho-dupla.png",
+      "official_cover_exists": true,
+      "official_cover_dimensions": "1672x941",
+      "video_thumb_asset": "thumb-02-sho.png",
+      "video_thumb_exists": true,
+      "video_thumb_dimensions": "1672x941",
+      "canonical_source_dir": "producao/assets/thumbnails",
+      "decision": "reusar_no_rebuild"
+    },
+    {
+      "code": "03",
+      "title": "Painel do Afiliado — Visão Geral da Operação",
+      "official_cover_png": "capa-03-painel-afiliado-ive.png",
+      "official_cover_exists": true,
+      "official_cover_dimensions": "1672x941",
+      "video_thumb_asset": "thumb-03-painel.png",
+      "video_thumb_exists": true,
+      "video_thumb_dimensions": "1672x941",
+      "canonical_source_dir": "producao/assets/thumbnails",
+      "decision": "reusar_no_rebuild"
+    },
+    {
+      "code": "04",
+      "title": "Construindo Seu Primeiro Agente em 4 Minutos",
+      "official_cover_png": "capa-04-primeiro-agente-dupla.png",
+      "official_cover_exists": true,
+      "official_cover_dimensions": "1672x941",
+      "video_thumb_asset": "thumb-04-primeiro-agente.png",
+      "video_thumb_exists": true,
+      "video_thumb_dimensions": "1672x941",
+      "canonical_source_dir": "producao/assets/thumbnails",
+      "decision": "reusar_no_rebuild"
+    },
+    {
+      "code": "05",
+      "title": "Skills Essenciais — Copywriter + Audience-Segmenter",
+      "official_cover_png": "capa-05-skills-essenciais-alencar.png",
+      "official_cover_exists": true,
+      "official_cover_dimensions": "1672x941",
+      "video_thumb_asset": "thumb-05-skills.png",
+      "video_thumb_exists": true,
+      "video_thumb_dimensions": "1672x941",
+      "canonical_source_dir": "producao/assets/thumbnails",
+      "decision": "reusar_no_rebuild"
+    },
+    {
+      "code": "06",
+      "title": "Disparando no WhatsApp em Escala",
+      "official_cover_png": "capa-06-disparo-whatsapp-alencar.png",
+      "official_cover_exists": true,
+      "official_cover_dimensions": "1672x941",
+      "video_thumb_asset": "thumb-06-disparo.png",
+      "video_thumb_exists": true,
+      "video_thumb_dimensions": "1672x941",
+      "canonical_source_dir": "producao/assets/thumbnails",
+      "decision": "reusar_no_rebuild"
+    },
+    {
+      "code": "07",
+      "title": "Judge Revisor — A IA que Decide por Você",
+      "official_cover_png": "capa-07-judge-revisor-alencar.png",
+      "official_cover_exists": true,
+      "official_cover_dimensions": "1672x941",
+      "video_thumb_asset": "thumb-07-judge.png",
+      "video_thumb_exists": true,
+      "video_thumb_dimensions": "1672x941",
+      "canonical_source_dir": "producao/assets/thumbnails",
+      "decision": "reusar_no_rebuild"
+    },
+    {
+      "code": "08",
+      "title": "Otimização de Conversão — A Matemática da Receita",
+      "official_cover_png": "capa-08-otimizacao-conversao-dupla.png",
+      "official_cover_exists": true,
+      "official_cover_dimensions": "1672x941",
+      "video_thumb_asset": "thumb-08-otimizacao.png",
+      "video_thumb_exists": true,
+      "video_thumb_dimensions": "1672x941",
+      "canonical_source_dir": "producao/assets/thumbnails",
+      "decision": "reusar_no_rebuild"
+    },
+    {
+      "code": "09",
+      "title": "Funis e Lifecycle — O Sistema Completo",
+      "official_cover_png": "capa-09-funis-lifecycle-dupla.png",
+      "official_cover_exists": true,
+      "official_cover_dimensions": "1672x941",
+      "video_thumb_asset": "thumb-09-funis-lifecycle.webp",
+      "video_thumb_exists": true,
+      "video_thumb_dimensions": "1672x941",
+      "canonical_source_dir": "producao/assets/thumbnails",
+      "decision": "reusar_no_rebuild"
+    },
+    {
+      "code": "10",
+      "title": "A/B Testing com Judge — Ciência da Experimentação",
+      "official_cover_png": "capa-10-ab-testing-judge-dupla.png",
+      "official_cover_exists": true,
+      "official_cover_dimensions": "1672x941",
+      "video_thumb_asset": "thumb-10-ab-test-judge.webp",
+      "video_thumb_exists": true,
+      "video_thumb_dimensions": "1672x941",
+      "canonical_source_dir": "producao/assets/thumbnails",
+      "decision": "reusar_no_rebuild"
+    },
+    {
+      "code": "11",
+      "title": "Análise de Coortes e Churn — A Arte de Reter",
+      "official_cover_png": "capa-11-coortes-churn-dupla.png",
+      "official_cover_exists": true,
+      "official_cover_dimensions": "1672x941",
+      "video_thumb_asset": "thumb-11-coortes-churn.webp",
+      "video_thumb_exists": true,
+      "video_thumb_dimensions": "1672x941",
+      "canonical_source_dir": "producao/assets/thumbnails",
+      "decision": "reusar_no_rebuild"
+    },
+    {
+      "code": "12",
+      "title": "Blueprints Elite — O Jogo do Top 10%",
+      "official_cover_png": "capa-12-blueprints-elite-dupla.png",
+      "official_cover_exists": true,
+      "official_cover_dimensions": "1672x941",
+      "video_thumb_asset": "thumb-12-blueprints-elite.webp",
+      "video_thumb_exists": true,
+      "video_thumb_dimensions": "1672x941",
+      "canonical_source_dir": "producao/assets/thumbnails",
+      "decision": "reusar_no_rebuild"
+    },
+    {
+      "code": "13",
+      "title": "Multi-Tenant e White-Label na Prática",
+      "official_cover_png": "capa-13-multi-tenant-dupla.png",
+      "official_cover_exists": true,
+      "official_cover_dimensions": "1672x941",
+      "video_thumb_asset": "thumb-13-multi-tenant.webp",
+      "video_thumb_exists": true,
+      "video_thumb_dimensions": "1672x941",
+      "canonical_source_dir": "producao/assets/thumbnails",
+      "decision": "reusar_no_rebuild"
+    },
+    {
+      "code": "14",
+      "title": "Federação de Agentes Zero-Trust",
+      "official_cover_png": "capa-14-federacao-agentes-dupla.png",
+      "official_cover_exists": true,
+      "official_cover_dimensions": "1672x941",
+      "video_thumb_asset": "thumb-14-federacao-agentes.webp",
+      "video_thumb_exists": true,
+      "video_thumb_dimensions": "1672x941",
+      "canonical_source_dir": "producao/assets/thumbnails",
+      "decision": "reusar_no_rebuild"
+    }
+  ]
+}

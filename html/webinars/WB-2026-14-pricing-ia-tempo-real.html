@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="description" content="Como implementar pricing dinâmico, preditivo e personalizado em 30 dias — sem ser ‘maluco’ ou anti-ético" />
+  <title>WB-2026-14 · Pricing com IA em Tempo Real</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="/workspace/Academ-IA/html/acad-style.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">WB-2026-14 · Pricing com IA em Tempo Real</h1>
+</header>
+<p><strong>WB-2026-14 · Pricing com IA em Tempo Real</strong></p>
+<p><em>Como afiliados e infoprodutores estão usando IA para precificar
+produtos em tempo real, com aumento médio de 30% em receita.</em></p>
+<p><strong>Por Otto Cardoso · Academ’IA</strong></p>
+<p>Nexus Affil’IA’te · 2026</p>
+<hr />
+<h1 id="sumário">🎯 Sumário</h1>
+<blockquote>
+<p><strong>•</strong> 1. O que é pricing dinâmico (e o que não é)
+<strong>•</strong> 2. Por que 90% das PMEs têm o preço errado
+<strong>•</strong> 3. Os 4 modelos de pricing com IA <strong>•</strong>
+4. Pricing dinâmico simples em 1 semana <strong>•</strong> 5. Pricing
+preditivo em 30 dias <strong>•</strong> 6. Case: afiliada dobrou ticket
+médio <strong>•</strong> 7. Case: SaaS de R$ 99 a R$ 4.999 dinâmico
+<strong>•</strong> 8. Como evitar backlash do cliente <strong>•</strong>
+9. Compliance e ética <strong>•</strong> 10. Q&amp;A com Otto +
+convidado Hotmart</p>
+</blockquote>
+<hr />
+<p><strong>1. O que é pricing dinâmico (e o que não é)</strong></p>
+<p><strong>Pricing dinâmico</strong> é ajustar o preço automaticamente
+baseado em: - Demanda atual - Comportamento do visitante - Horário, dia,
+estação - Segmento do cliente</p>
+<p><strong>O que NÃO é:</strong> - ❌ Manipular preço pra cliente que
+“parece rico” ver mais caro (anti-ético) - ❌ Aumentar preço sem
+critério (gera churn) - ❌ Pricing dinâmico SEM TESTE (pode destruir
+valor da marca)</p>
+<p><strong>O que É:</strong> - ✅ Pricing baseado em valor percebido +
+elasticidade - ✅ Pricing que maximiza <strong>receita total</strong>,
+não só conversão - ✅ Pricing que o cliente acharia
+<strong>justo</strong> se soubesse</p>
+<hr />
+<p><strong>2. Por que 90% das PMEs têm o preço errado</strong></p>
+<p>Pesquisa de 2025 (Deloitte): - <strong>62%</strong> dos pequenos
+negócios nunca testaram preço diferente - <strong>89%</strong> definem
+preço baseado em “achismo” ou cópia do concorrente -
+<strong>94%</strong> não sabem a elasticidade do próprio produto</p>
+<p><strong>Resultado:</strong> perdem em média <strong>20-30% de receita
+potencial</strong>.</p>
+<hr />
+<p><strong>3. Os 4 modelos de pricing com IA</strong></p>
+<p><strong>Modelo 1 — Pricing estático + A/B testing</strong> - Preço
+fixo, mas testa 2-3 variantes mensalmente -
+<strong>Complexidade:</strong> baixa - <strong>Ganho típico:</strong>
+5-15%</p>
+<p><strong>Modelo 2 — Pricing dinâmico simples (horário + dia)</strong>
+- Preço muda por horário/dia baseado em demanda histórica -
+<strong>Complexidade:</strong> média - <strong>Ganho típico:</strong>
+10-25%</p>
+<p><strong>Modelo 3 — Pricing comportamental (segmentação)</strong> -
+Preço muda por segmento (novo, recorrente, high-value) -
+<strong>Complexidade:</strong> alta - <strong>Ganho típico:</strong>
+20-40%</p>
+<p><strong>Modelo 4 — Pricing preditivo (ML)</strong> - Preço prevê
+demanda futura e ajusta proativamente - <strong>Complexidade:</strong>
+muito alta - <strong>Ganho típico:</strong> 30-60%</p>
+<hr />
+<p><strong>4. Pricing dinâmico simples em 1 semana</strong></p>
+<p><strong>Stack:</strong> Google Sheets + Apps Script + Stripe +
+webhook</p>
+<p><strong>Passo a passo:</strong></p>
+<ol type="1">
+<li>Colete dados de vendas dos últimos 90 dias</li>
+<li>Identifique padrões (horário, dia, mês)</li>
+<li>Defina 2-3 “faixas” de preço</li>
+<li>Configure no gateway de pagamento (Stripe, Hotmart, etc)</li>
+<li>Crie Apps Script que ajusta preço baseado em horário</li>
+<li>Ative e monitore</li>
+</ol>
+<p><strong>Investimento:</strong> R$ 0 (só tempo)</p>
+<p><strong>Resultado esperado em 30 dias:</strong> +8-15% em receita</p>
+<hr />
+<p><strong>5. Pricing preditivo em 30 dias</strong></p>
+<p><strong>Stack:</strong> Python + scikit-learn + Postgres + API do
+gateway</p>
+<p><strong>Passo a passo:</strong></p>
+<ol type="1">
+<li>Colete 12+ meses de dados (mínimo)</li>
+<li>Identifique features (preço, dia, tráfego, sazonalidade)</li>
+<li>Treine modelo (Gradient Boosting ou XGBoost)</li>
+<li>Valide com holdout (3 meses de teste)</li>
+<li>Implemente como “sugestão” (humano aprova)</li>
+<li>Após 30 dias, automatize</li>
+</ol>
+<p><strong>Investimento:</strong> R$ 500-2000 (dev freelancer ou
+IA-assisted)</p>
+<p><strong>Resultado esperado em 90 dias:</strong> +25-40% em
+receita</p>
+<hr />
+<p><strong>6. Case: afiliada dobrou ticket médio</strong></p>
+<p><strong>Perfil:</strong> Marina, afiliada de nutrição, 5.000
+leads/mês</p>
+<p><strong>Antes:</strong> preço fixo R$ 297</p>
+<p><strong>Depois (com pricing dinâmico):</strong> - Madrugada (0h-6h):
+R$ 197 - Manhã (6h-12h): R$ 297 - Tarde (12h-18h): R$ 247 - Noite
+(18h-24h): R$ 397 (horário nobre)</p>
+<p><strong>Resultado:</strong> - Conversão geral: -3% (caiu um pouco) -
+Ticket médio: +35% - <strong>Receita total: +32%</strong></p>
+<p><strong>Por que funcionou:</strong> Horário nobre tem demanda alta
+(elasticidade baixa), permite cobrar mais. Madrugada tem demanda baixa
+(elasticidade alta), precisa reduzir pra converter.</p>
+<hr />
+<p><strong>7. Case: SaaS de R$ 99 a R$ 4.999 dinâmico</strong></p>
+<p><strong>Perfil:</strong> Ferramenta de marketing, 2.000 clientes</p>
+<p><strong>Antes:</strong> R$ 99/mês fixo (todos pagavam igual)</p>
+<p><strong>Depois (pricing personalizado):</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th>Segmento</th>
+<th>Preço</th>
+<th>Features</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Micro (1-3 pessoas)</td>
+<td>R$ 99</td>
+<td>Básico</td>
+</tr>
+<tr class="even">
+<td>Pequeno (4-15)</td>
+<td>R$ 299</td>
+<td>+ Relatórios</td>
+</tr>
+<tr class="odd">
+<td>Médio (16-50)</td>
+<td>R$ 999</td>
+<td>+ API</td>
+</tr>
+<tr class="even">
+<td>Enterprise (50+)</td>
+<td>R$ 4.999</td>
+<td>+ White-label + SLA</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Como identifica:</strong> IA analisa # funcionários, receita
+(LinkedIn), tráfego, etc.</p>
+<p><strong>Resultado:</strong> - Receita média por cliente: +85% -
+Churn: -22% (cada um vê preço justo pro seu tamanho) - <strong>Receita
+total: +112%</strong></p>
+<hr />
+<p><strong>8. Como evitar backlash do cliente</strong></p>
+<p><strong>Regra de ouro:</strong> o cliente precisa achar o preço
+<strong>justo</strong>, mesmo se descobrir que pagou mais que outro.</p>
+<p><strong>5 práticas:</strong></p>
+<ol type="1">
+<li><strong>Justificativa visível</strong> — mostre “por que esse preço”
+(features, suporte, etc)</li>
+<li><strong>Não expor diferença</strong> — não mostre “você pagou R$ 99,
+fulano pagou R$ 297”</li>
+<li><strong>Oferecer upgrade claro</strong> — quem pagou menos sabe o
+que ganha pagando mais</li>
+<li><strong>Política de transparência</strong> — “nosso preço é baseado
+em valor para seu tamanho”</li>
+<li><strong>Atendimento humano</strong> — para casos extremos (“mas eu
+vi mais barato!”)</li>
+</ol>
+<hr />
+<p><strong>9. Compliance e ética</strong></p>
+<p><strong>No Brasil (2026):</strong> - CDC proíbe preços abusivos ou
+discriminatórios - LGPD exige consentimento pra pricing personalizado -
+Ibramercos proíbe publicidade enganosa</p>
+<p><strong>Como navegar:</strong> - ✅ Pricing dinâmico é legal SE
+baseado em critérios objetivos (horário, demanda, segmento) - ❌ Pricing
+baseado em raça, gênero, classe social é ilegal - ⚠️ Pricing por “perfil
+socioeconômico inferido” é zona cinzenta</p>
+<p><strong>Recomendação:</strong> documente os critérios. Se
+questionado, consiga explicar <strong>justificativa técnica</strong> do
+preço.</p>
+<hr />
+<p><strong>10. Q&amp;A com Otto + convidado Hotmart</strong></p>
+<p>Otto + convidado da Hotmart responderão: - Quando NÃO vale a pena
+pricing dinâmico - Como o Stripe/Hotmart lida com pricing dinâmico -
+Caso de bug (preço = 0 ou = 1Milhão) — como evitar - Pricing para
+white-label - Pricing para infoproduto perpétuo vs lançamento - Próximos
+passos práticos (templates de planilha)</p>
+<hr />
+<p><em>WB-2026-14 · Pricing com IA em Tempo Real · Dezembro
+2026</em></p>
+<p><em>Por MMN AI-to-AI · 2026 · Licença: CC BY-SA 4.0</em></p>
+<p><em>“O preço é o melhor lugar pra IA trabalhar. É a única alavanca
+que não tem custo e tem efeito direto na receita.”</em></p>
+<script src="../enhance.js"></script>
+</body>
+</html>

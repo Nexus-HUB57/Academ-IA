@@ -15,7 +15,7 @@ pattern: "MMN_IA"
 
 Nexus Affil'IA'te · 2026
 
-![Capa — Fábrica de Conteúdo com IA](../../docs/ebooks/ACAD-apostila-31-fabrica-conteudo-ia.webp)
+![Capa — Fábrica de Conteúdo com IA](../docs/ebooks/ACAD-apostila-31-fabrica-conteudo-ia.webp)
 
 **Sobre esta apostila**
 

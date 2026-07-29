@@ -98,7 +98,7 @@ ebook_origem: "NEXUS_AFFIL_IA_TECH_VOL_04"
 - **Personas:** Ive (estratégia + multi-tenancy + compliance + CTA) · Alencar (camadas + SLA + loop + CTA)
 - **Tom híbrido:** executivo + técnico + operacional
 - **CTA:** ebook completo + decisão de produto
-- **Thumbnail:** `thumb-18-fundamento-saas-ia.webp` (2K, 16:9)
+- **Thumbnail:** `../thumbnails/thumb-18-fundamento-saas-ia.webp` (2K, 16:9)
 
 ---
 

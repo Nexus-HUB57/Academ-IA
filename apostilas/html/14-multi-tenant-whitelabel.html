@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi-Tenant & White-Label — Como Escalar a Nexus Para Parceiros - AcademIA Nexus</title>
+  <link rel="stylesheet" href="../html/acad-style.css">
+</head>
+<body class="dark-theme">
+  <article class="ebook">
+    <header class="cover">
+      <div class="series-tag">AcademIA - Apostila #14</div>
+      <h1>Multi-Tenant & White-Label — Como Escalar a Nexus Para Parceiros</h1>
+      <h2>O Manual Técnico-Comercial para Operar Múltiplos Clientes em Uma Única Plataforma</h2>
+      <img class="cover-image" src="docs/ebooks/ACAD-apostila-14-multi-tenant-whitelabel.webp" alt="Capa - Multi-Tenant & White-Label — Como Escalar a Nexus Para Parceiros">
+      <div class="author"><strong>MMN_IA Collective</strong><br>PHD nivel Harvard do Universo AI</div>
+      <div class="meta">Apostila 14 - Nivel Master - v1.0.0 - 2026</div>
+    </header>
+    <section class="page toc-page">
+      <h2>Sumario</h2>
+      <ul><li>(conteudo detalhado no corpo)</li></ul>
+      <div class="info-box success">
+        <strong>Sobre esta apostila:</strong> parte da colecao AcademIA - Nexus HUB57. Conteudo hands-on, baseado em producao real.
+      </div>
+    </section>
+    <section class="page">
+      <h2>Conteudo</h2>
+      <p><strong>Multi-Tenant &amp; White-Label — Como Escalar a Nexus Para Parceiros</strong></p>
+<p><em>O Manual Técnico-Comercial para Operar Múltiplos Clientes em Uma Única Plataforma</em></p>
+<p><strong>Por MMN_IA Collective · Academ'IA</strong></p>
+<p>Nexus Affil'IA'te · 2026</p>
+<p><strong>Sobre este documento</strong></p>
+<p>O modo como a Nexus escala <strong>horizontalmente</strong> é através de multi-tenancy e white-label. Em vez de construir uma plataforma nova para cada parceiro regional, <strong>reutilizamos o IOAID</strong> (vide Apostila 12) e criamos camadas de isolamento e customização. Este documento é o guia técnico-comercial para quem opera, vende ou implementa esses modelos. Se você é head de operações, arquiteto de soluções, parceiro regional ou consultor de implementação, comece aqui.</p>
+<p><strong>Sumário</strong></p>
+<blockquote>
+<p><strong>•</strong> 1. Multi-tenant vs white-label: qual a diferença
+<strong>•</strong> 2. Os 4 modelos de tenancy na Nexus
+<strong>•</strong> 3. Modelo 1 — Single-tenant dedicado (enterprise)
+<strong>•</strong> 4. Modelo 2 — Multi-tenant compartilhado (afiliados padrão)
+<strong>•</strong> 5. Modelo 3 — White-label regional (parceiros)
+<strong>•</strong> 6. Modelo 4 — White-label full-stack (operadoras)
+<strong>•</strong> 7. Isolamento de dados: como funciona
+<strong>•</strong> 8. Customização: o que pode e o que não pode
+<strong>•</strong> 9. Pricing de white-label (o que a Nexus cobra)
+<strong>•</strong> 10. SLA por modelo
+<strong>•</strong> 11. Onboarding de novo white-label
+<strong>•</strong> 12. Operação do dia-a-dia
+<strong>•</strong> 13. Compliance multi-jurisdicional
+<strong>•</strong> 14. Casos: 3 white-labels em produção em 2026
+<strong>•</strong> 15. Roadmap
+<strong>•</strong> 16. Glossário</p>
+</blockquote>
+<hr />
+<p><strong>1. Multi-tenant vs white-label: qual a diferença</strong></p>
+<p><strong>Multi-tenant</strong> = múltiplos clientes compartilham a mesma instância técnica, mas com isolamento lógico de dados.</p>
+<p><strong>White-label</strong> = o cliente vê a plataforma com <strong>sua marca</strong>, <strong>seu domínio</strong>, <strong>suas cores</strong>, <strong>seus usuários finais</strong> — sem saber (ou sem se importar) que está usando o IOAID da Nexus.</p>
+<p>Em 2026, <strong>todo white-label é multi-tenant</strong>, mas nem todo multi-tenant é white-label. White-label é um <strong>plus comercial</strong>, multi-tenancy é uma <strong>decisão de arquitetura</strong>.</p>
+<p><strong>2. Os 4 modelos de tenancy na Nexus</strong></p>
+<p>A Nexus suporta <strong>4 modelos</strong>, cada um com trade-offs próprios:</p>
+<table>
+<thead>
+<tr>
+<th>Modelo</th>
+<th>Isolamento</th>
+<th>Customização</th>
+<th>Custo</th>
+<th>Tempo de setup</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Single-tenant</strong></td>
+<td>Físico</td>
+<td>Total</td>
+<td>Alto</td>
+<td>4-8 semanas</td>
+</tr>
+<tr>
+<td><strong>Multi-tenant padrão</strong></td>
+<td>Lógico</td>
+<td>Limitada</td>
+<td>Baixo</td>
+<td>Instantâneo</td>
+</tr>
+<tr>
+<td><strong>White-label regional</strong></td>
+<td>Lógico + namespace</td>
+<td>Ampla</td>
+<td>Médio</td>
+<td>2-4 semanas</td>
+</tr>
+<tr>
+<td><strong>White-label full-stack</strong></td>
+<td>Lógico + API dedicada</td>
+<td>Quase total</td>
+<td>Alto</td>
+<td>6-12 semanas</td>
+</tr>
+</tbody>
+</table>
+<p><strong>3. Modelo 1 — Single-tenant dedicado (enterprise)</strong></p>
+<p><strong>Para quem:</strong> clientes enterprise que precisam de <strong>isolamento físico total</strong> (banco, região, ops).</p>
+<p><strong>Casos típicos:</strong>
+- Bancos e seguradoras.
+- Operadoras de saúde.
+- Governo.
+- Empresas em indústrias altamente reguladas.</p>
+<p><strong>Customização:</strong> total. Cliente pode modificar tudo, incluindo o IOAID.</p>
+<p><strong>Custo:</strong> a partir de <strong>R$50k/mês + setup</strong>.</p>
+<p><strong>SLA:</strong> 99.99%, dedicado, suporte 24/7 com on-call sênior.</p>
+<p><strong>Quando escolher:</strong> dados sensíveis, latência crítica, compliance severo.</p>
+<p><strong>4. Modelo 2 — Multi-tenant compartilhado (afiliados padrão)</strong></p>
+<p><strong>Para quem:</strong> afiliados Nexus individuais, pequenas agências, freelancers.</p>
+<p><strong>Casos típicos:</strong>
+- 12.000+ afiliados ativos.
+- Afiliados com 1-100 clientes finais.
+- Operadores solo ou em dupla.</p>
+<p><strong>Customização:</strong> limitada. Logo customizável no perfil, mas UI/UX é a padrão.</p>
+<p><strong>Custo:</strong> plano free + R$99-499/mês conforme tier.</p>
+<p><strong>SLA:</strong> 99.95%, compartilhado, suporte em horário comercial + SLA para SEV-3.</p>
+<p><strong>Quando escolher:</strong> maioria dos casos. É o <strong>default</strong>.</p>
+<p><strong>5. Modelo 3 — White-label regional (parceiros)</strong></p>
+<p><strong>Para quem:</strong> parceiros regionais que querem <strong>oferecer Nexus com sua marca</strong> em um país ou estado.</p>
+<p><strong>Casos típicos:</strong>
+- Agências digitais que revendem.
+- Franquias de marketing.
+- Operadores regionais.</p>
+<p><strong>Customização:</strong> ampla. Logo, domínio, cores, idioma, skills permitidas, políticas locais.</p>
+<p><strong>Custo:</strong> R$2-10k/mês + Revenue share (15-25%) sobre uso da plataforma.</p>
+<p><strong>SLA:</strong> 99.95%, com prioridade para white-label.</p>
+<p><strong>Quando escolher:</strong> quando o parceiro <strong>tem base de clientes própria</strong> e quer oferecer "sua plataforma".</p>
+<p><strong>6. Modelo 4 — White-label full-stack (operadoras)</strong></p>
+<p><strong>Para quem:</strong> grandes operadoras (telecom, varejo, bancos digitais) que querem <strong>integrar Nexus como serviço embedded</strong> em seu app.</p>
+<p><strong>Casos típicos:</strong>
+- Apps de banco com "assistente de marketing" powered by Nexus.
+- Plataformas de e-commerce com "IA para afiliados" embutida.
+- Operadoras com base de lojistas.</p>
+<p><strong>Customização:</strong> quase total. API dedicada, white-label completo, integração profunda.</p>
+<p><strong>Custo:</strong> R$20-100k/mês + revenue share + setup fee.</p>
+<p><strong>SLA:</strong> 99.99%, dedicado, integração técnica com time Nexus.</p>
+<p><strong>Quando escolher:</strong> quando o parceiro <strong>tem marca própria forte</strong> e quer Nexus invisível dentro dela.</p>
+<p><strong>7. Isolamento de dados: como funciona</strong></p>
+<p>Quatro mecanismos:</p>
+<p><strong>a) Row Level Security (RLS) no Postgres:</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="n">POLICY</span><span class="w"> </span><span class="n">tenant_isolation</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">skills</span>
+<span class="w">  </span><span class="k">USING</span><span class="w"> </span><span class="p">(</span><span class="n">tenant_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">current_setting</span><span class="p">(</span><span class="s1">&#39;app.current_tenant&#39;</span><span class="p">)::</span><span class="n">uuid</span><span class="p">);</span>
+</code></pre></div>
+
+<p>Toda query automaticamente filtra por tenant_id.</p>
+<p><strong>b) Namespace isolation:</strong>
+- Cada tenant tem namespace próprio em Redis.
+- Skills, memória, configs — tudo isolado por namespace.</p>
+<p><strong>c) Encryption per-tenant:</strong>
+- Chaves de criptografia únicas por tenant.
+- KMS gerencia rotação automática.
+- Tenant não pode acessar dados de outro tenant nem com privilégios elevados.</p>
+<p><strong>d) Audit log por tenant:</strong>
+- Toda ação é logada com tenant_id.
+- Logs retidos por 7 anos (compliance).
+- Tenant pode ver apenas seus próprios logs.</p>
+<p><strong>8. Customização: o que pode e o que não pode</strong></p>
+<table>
+<thead>
+<tr>
+<th>Camada</th>
+<th>Single-tenant</th>
+<th>Multi-tenant</th>
+<th>WL regional</th>
+<th>WL full-stack</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Logo</strong></td>
+<td>✓ Total</td>
+<td>✓ Perfil</td>
+<td>✓ Total</td>
+<td>✓ Total</td>
+</tr>
+<tr>
+<td><strong>Domínio</strong></td>
+<td>✓ Próprio</td>
+<td>✗</td>
+<td>✓ Próprio</td>
+<td>✓ Próprio</td>
+</tr>
+<tr>
+<td><strong>Cores/UI</strong></td>
+<td>✓ Total</td>
+<td>✗</td>
+<td>✓ Template</td>
+<td>✓ Total</td>
+</tr>
+<tr>
+<td><strong>Idioma</strong></td>
+<td>✓ Qualquer</td>
+<td>✓ 11 idiomas</td>
+<td>✓ 11 idiomas</td>
+<td>✓ Qualquer</td>
+</tr>
+<tr>
+<td><strong>Skills</strong></td>
+<td>✓ Todas + custom</td>
+<td>✓ Marketplace padrão</td>
+<td>✓ Subset curado</td>
+<td>✓ Todas + custom</td>
+</tr>
+<tr>
+<td><strong>Modelos</strong></td>
+<td>✓ Qualquer</td>
+<td>✓ Padrão</td>
+<td>✓ Curado</td>
+<td>✓ Qualquer</td>
+</tr>
+<tr>
+<td><strong>IOAID</strong></td>
+<td>✓ Customizável</td>
+<td>✗</td>
+<td>✗</td>
+<td>✗</td>
+</tr>
+<tr>
+<td><strong>SHO</strong></td>
+<td>✓ Configurável</td>
+<td>✓ Padrão</td>
+<td>✓ Padrão</td>
+<td>✓ Configurável</td>
+</tr>
+<tr>
+<td><strong>Audit log</strong></td>
+<td>✓ Próprio</td>
+<td>✓ Filtrado</td>
+<td>✓ Próprio</td>
+<td>✓ Próprio</td>
+</tr>
+<tr>
+<td><strong>Região de dados</strong></td>
+<td>✓ Qualquer</td>
+<td>✗ Auto</td>
+<td>✓ Configurável</td>
+<td>✓ Configurável</td>
+</tr>
+</tbody>
+</table>
+<p><strong>9. Pricing de white-label (o que a Nexus cobra)</strong></p>
+<p><strong>Componentes:</strong></p>
+<ol>
+<li><strong>Setup fee</strong> — R$5-50k conforme complexidade.</li>
+<li><strong>Mensalidade base</strong> — R$2-20k conforme tier.</li>
+<li><strong>Revenue share</strong> — 15-25% sobre uso da plataforma.</li>
+<li><strong>Custo de API</strong> — repassado + 10% (modelos LLM, etc.).</li>
+<li><strong>Suporte premium</strong> — opcional, R$3-10k/mês.</li>
+</ol>
+<p><strong>Exemplo real (white-label regional):</strong>
+- Setup: R$8k (one-time).
+- Mensalidade: R$3k.
+- Revenue share: 20% sobre R$50k de uso = R$10k.
+- Total mensal: R$13k.</p>
+<p><strong>Cliente típico:</strong> agência regional com 200-500 usuários finais, faturando R$80-150k/mês em serviços para eles.</p>
+<p><strong>10. SLA por modelo</strong></p>
+<table>
+<thead>
+<tr>
+<th>Modelo</th>
+<th>Uptime</th>
+<th>Latência p99</th>
+<th>MTTR</th>
+<th>Suporte</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Single-tenant</td>
+<td>99.99%</td>
+<td>&lt;100ms</td>
+<td>&lt;30min</td>
+<td>24/7 sênior</td>
+</tr>
+<tr>
+<td>Multi-tenant</td>
+<td>99.95%</td>
+<td>&lt;200ms</td>
+<td>&lt;1h</td>
+<td>horário comercial + on-call</td>
+</tr>
+<tr>
+<td>WL regional</td>
+<td>99.95%</td>
+<td>&lt;200ms</td>
+<td>&lt;1h</td>
+<td>horário estendido</td>
+</tr>
+<tr>
+<td>WL full-stack</td>
+<td>99.99%</td>
+<td>&lt;150ms</td>
+<td>&lt;30min</td>
+<td>24/7 sênior</td>
+</tr>
+</tbody>
+</table>
+<p><strong>11. Onboarding de novo white-label</strong></p>
+<p><strong>Fase 1 — Descoberta (semana 1):</strong>
+- Reunião de kickoff.
+- Levantamento de requisitos.
+- Definição de modelo e pricing.
+- Assinatura de contrato.</p>
+<p><strong>Fase 2 — Setup técnico (semanas 2-4):</strong>
+- Provisionamento de tenant.
+- Configuração de branding.
+- Setup de domínio e SSL.
+- Integração com sistemas do parceiro.</p>
+<p><strong>Fase 3 — Validação (semana 5):</strong>
+- Testes de aceitação.
+- Testes de carga.
+- Compliance check (LGPD, etc.).
+- Go/No-Go.</p>
+<p><strong>Fase 4 — Go-live (semana 6):</strong>
+- Deploy em produção.
+- Suporte intensificado nas primeiras 72h.
+- Hypercare por 30 dias.</p>
+<p><strong>Fase 5 — Operação regular (semana 10+):</strong>
+- Operação normal.
+- Reviews mensais.
+- Otimizações trimestrais.</p>
+<p><strong>12. Operação do dia-a-dia</strong></p>
+<p><strong>White-label operator</strong> (função no parceiro) tem:</p>
+<ul>
+<li>Acesso ao painel admin (<code>/admin</code>).</li>
+<li>Gestão de usuários finais.</li>
+<li>Visualização de billing.</li>
+<li>Configuração de skills permitidas.</li>
+<li>Customização de templates de comunicação.</li>
+<li>Relatórios de uso.</li>
+</ul>
+<p><strong>Nexus</strong> (função no provedor) tem:</p>
+<ul>
+<li>Monitoramento 24/7 do tenant.</li>
+<li>Suporte L1/L2.</li>
+<li>Incident response.</li>
+<li>Updates e patches.</li>
+</ul>
+<p><strong>Comunicação:</strong>
+- Slack Connect dedicado por tenant.
+- Status page por tenant.
+- Review semanal (15min) com stakeholder.</p>
+<p><strong>13. Compliance multi-jurisdicional</strong></p>
+<p>Cada white-label pode ter requisitos específicos:</p>
+<ul>
+<li><strong>Brasil (LGPD)</strong> — DPO nomeado, base legal explícita.</li>
+<li><strong>Europa (GDPR)</strong> — data residency na UE, opt-in explícito.</li>
+<li><strong>EUA (CCPA)</strong> — right to know, right to delete.</li>
+<li><strong>Saúde (HIPAA)</strong> — BAA obrigatório, encryption adicional.</li>
+<li><strong>Financeira (SOX)</strong> — audit trail completo, segregação.</li>
+</ul>
+<p>A Nexus suporta <strong>todas</strong> como configurações de tenant. Compliance officer valida caso a caso.</p>
+<p><strong>14. Casos: 3 white-labels em produção em 2026</strong></p>
+<p><strong>Caso A — AgênciaRegional (white-label regional):</strong>
+- Modelo: regional.
+- Volume: 450 usuários finais.
+- Vertical: e-commerce.
+- Diferencial: skills customizadas para moda.
+- Faturamento do parceiro: R$120k/mês.
+- Receita Nexus: R$18k/mês.</p>
+<p><strong>Caso B — BancoX (white-label full-stack):</strong>
+- Modelo: full-stack.
+- Volume: 2.3M clientes do banco.
+- Vertical: educação financeira + marketing.
+- Diferencial: IA integrada no app do banco.
+- Faturamento: não divulgado.
+- Receita Nexus: R$80k/mês + share.</p>
+<p><strong>Caso C — OperadoraY (single-tenant):</strong>
+- Modelo: enterprise single-tenant.
+- Volume: 50k lojistas.
+- Vertical: telecom.
+- Diferencial: SLA 99.99% dedicado.
+- Faturamento: R$2M/mês de fee.
+- Receita Nexus: R$180k/mês.</p>
+<p><strong>15. Roadmap</strong></p>
+<p><strong>Q3 2026:</strong>
+- Tenant Analytics Dashboard (visão consolidada de uso por tenant).
+- Auto-scaling de tenants baseado em padrões de uso.
+- Self-service onboarding para white-label regional.</p>
+<p><strong>Q4 2026:</strong>
+- Custom domain SSL automatizado via ACME.
+- Tenant-level feature flags.
+- Marketplace privado por tenant (skill library própria).</p>
+<p><strong>Q1 2027:</strong>
+- Multi-region ativo-ativo para white-label full-stack.
+- Tenant-level AI customization (fine-tune próprio).
+- Compliance framework unificado (LGPD + GDPR + HIPAA).</p>
+<p><strong>16. Glossário</strong></p>
+<table>
+<thead>
+<tr>
+<th>Termo</th>
+<th>Definição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tenant</strong></td>
+<td>Cliente dentro de uma plataforma multi-tenant</td>
+</tr>
+<tr>
+<td><strong>Multi-tenant</strong></td>
+<td>Múltiplos clientes no mesmo deployment</td>
+</tr>
+<tr>
+<td><strong>Single-tenant</strong></td>
+<td>Um cliente por deployment</td>
+</tr>
+<tr>
+<td><strong>White-label</strong></td>
+<td>Plataforma com marca do parceiro</td>
+</tr>
+<tr>
+<td><strong>RLS</strong></td>
+<td>Row Level Security</td>
+</tr>
+<tr>
+<td><strong>Namespace</strong></td>
+<td>Espaço lógico isolado</td>
+</tr>
+<tr>
+<td><strong>KMS</strong></td>
+<td>Key Management Service</td>
+</tr>
+<tr>
+<td><strong>Audit log</strong></td>
+<td>Registro imutável de ações</td>
+</tr>
+<tr>
+<td><strong>Onboarding</strong></td>
+<td>Processo de setup de novo cliente</td>
+</tr>
+<tr>
+<td><strong>Hypercare</strong></td>
+<td>Suporte intensificado pós go-live</td>
+</tr>
+<tr>
+<td><strong>Go-live</strong></td>
+<td>Início de operação em produção</td>
+</tr>
+<tr>
+<td><strong>MTTR</strong></td>
+<td>Mean Time To Recover</td>
+</tr>
+<tr>
+<td><strong>SLA</strong></td>
+<td>Service Level Agreement</td>
+</tr>
+<tr>
+<td><strong>Revenue share</strong></td>
+<td>Participação na receita</td>
+</tr>
+<tr>
+<td><strong>Embedded</strong></td>
+<td>Serviço integrado dentro de outro produto</td>
+</tr>
+<tr>
+<td><strong>BAA</strong></td>
+<td>Business Associate Agreement (HIPAA)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><em>© 2026 Nexus HUB57 · Academ'IA · Todos os direitos reservados</em>
+<em>Versão 1.0.0 · Junho 2026 · Apostila Academ'IA #14 — Multi-Tenant &amp; White-Label</em></p>
+      <hr/>
+      <p style="text-align:center;color:var(--fg-muted);margin-top:2rem;">
+        <em>Fim da Apostila #14 2026 - Licenca CC BY-NC-SA 4.0 - MMN_IA Collective - Nexus HUB57</em>
+      </p>
+    </section>
+  </article>
+</body>
+</html>

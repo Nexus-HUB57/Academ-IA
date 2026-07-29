@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Federação Zero-Trust — Segurança Avançada para Agentes A2A - AcademIA Nexus</title>
+  <link rel="stylesheet" href="../html/acad-style.css">
+</head>
+<body class="dark-theme">
+  <article class="ebook">
+    <header class="cover">
+      <div class="series-tag">AcademIA - Apostila #30</div>
+      <h1>Federação Zero-Trust — Segurança Avançada para Agentes A2A</h1>
+      <h2>Como agentes de plataformas diferentes se comunicam sem confiar em ninguém</h2>
+      <img class="cover-image" src="docs/ebooks/ACAD-apostila-30-federacao-zero-trust.webp" alt="Capa - Federação Zero-Trust — Segurança Avançada para Agentes A2A">
+      <div class="author"><strong>MMN_IA Collective</strong><br>PHD nivel Harvard do Universo AI</div>
+      <div class="meta">Apostila 30 - Nivel Master - v1.0.0 - 2026</div>
+    </header>
+    <section class="page toc-page">
+      <h2>Sumario</h2>
+      <ul><li>(conteudo detalhado no corpo)</li></ul>
+      <div class="info-box success">
+        <strong>Sobre esta apostila:</strong> parte da colecao AcademIA - Nexus HUB57. Conteudo hands-on, baseado em producao real.
+      </div>
+    </section>
+    <section class="page">
+      <h2>Conteudo</h2>
+      <p><strong>Apostila 30 · Federação Zero-Trust</strong></p>
+<p><em>Como aplicar os princípios de Zero-Trust à comunicação agent-to-agent, sem abrir mão da velocidade.</em></p>
+<p><strong>Por MMN_IA Collective · Academ'IA</strong></p>
+<p>Nexus Affil'IA'te · 2026</p>
+<p><strong>Sobre esta apostila</strong></p>
+<p>Zero-Trust ("nunca confiar, sempre verificar") é o padrão de segurança corporativa de 2020+. Mas a maioria das implementações é para <strong>humanos e serviços internos</strong>. E quando você tem <strong>agentes A2A</strong> (de plataformas diferentes), o desafio é maior: você não controla o outro agente.</p>
+<p>Esta apostilha explica como aplicar Zero-Trust em uma rede federada de agentes.</p>
+<hr />
+<h1>Sumário</h1>
+<p><strong>PARTE I — FUNDAMENTOS</strong></p>
+<ol>
+<li><a href="#cap1">O que é Zero-Trust</a></li>
+<li><a href="#cap2">Por que Zero-Trust é importante para A2A</a></li>
+<li><a href="#cap3">Os 6 pilares do Zero-Trust</a></li>
+</ol>
+<p><strong>PARTE II — IMPLEMENTAÇÃO</strong></p>
+<ol start="4">
+<li><a href="#cap4">Identidade verificável (mTLS + DIDs)</a></li>
+<li><a href="#cap5">Autorização por skill (scope-based)</a></li>
+<li><a href="#cap6">Auditoria distribuída (audit logs)</a></li>
+<li><a href="#cap7">Rate limiting entre agentes</a></li>
+</ol>
+<p><strong>PARTE III — CASOS PRÁTICOS</strong></p>
+<ol start="8">
+<li><a href="#cap8">Caso Nexus: 12 agentes em 4 plataformas</a></li>
+<li><a href="#cap9">Métricas de segurança</a></li>
+<li><a href="#cap10">Quando o Zero-Trust atrapalha</a></li>
+</ol>
+<p>Epílogo: <a href="#epilogo">O futuro do trust entre agentes</a></p>
+<p>Apêndice: <a href="#apendice">Checklist de implementação</a></p>
+<hr />
+<p><a id="cap1"></a></p>
+<h1>Capítulo 1 — O que é Zero-Trust</h1>
+<p><strong>Zero-Trust</strong> é uma arquitetura de segurança que <strong>não confia automaticamente</strong> em nada — nem em usuários internos, nem em serviços, nem em redes "seguras".</p>
+<p><strong>Princípio central</strong>: cada requisição é avaliada como se viesse de uma rede pública. Verificação contínua.</p>
+<p><strong>Origem</strong>: conceito cunhado por John Kindervag (Forrester, 2010). Adotado por Google BeyondCorp (2014), NIST SP 800-207 (2020), e hoje padrão corporativo.</p>
+<p><strong>Por que importa</strong>: 80% dos ataques envolvem movimento lateral (atacante entra em 1 máquina e se espalha). Zero-Trust reduz isso a &lt; 5%.</p>
+<hr />
+<p><a id="cap2"></a></p>
+<h1>Capítulo 2 — Por que Zero-Trust é importante para A2A</h1>
+<p>Em comunicação A2A, você tem <strong>3 problemas adicionais</strong>:</p>
+<ol>
+<li><strong>Você não controla o outro agente</strong> — pode ser de qualquer vendor</li>
+<li><strong>Você não controla a rede</strong> — passa por internet pública</li>
+<li><strong>Você não controla o usuário final</strong> — pode ser qualquer um</li>
+</ol>
+<p><strong>Riscos específicos A2A</strong>:
+- <strong>Agente malicioso</strong> finge ser legítimo e envia dados falsos
+- <strong>Man-in-the-middle</strong> intercepta comunicação
+- <strong>Replay attack</strong> repete request válido
+- <strong>Skill abuse</strong> chama skill com parâmetros maliciosos</p>
+<p><strong>Solução</strong>: Zero-Trust + criptografia forte (mTLS, JWS) + autenticação por skill.</p>
+<hr />
+<p><a id="cap3"></a></p>
+<h1>Capítulo 3 — Os 6 pilares do Zero-Trust</h1>
+<ol>
+<li><strong>Identidade verificável</strong> — todo agente tem identidade criptográfica</li>
+<li><strong>Autenticação contínua</strong> — não basta logar uma vez</li>
+<li><strong>Autorização por recurso</strong> — cada skill tem seu próprio scope</li>
+<li><strong>Auditoria distribuída</strong> — todo request é logado</li>
+<li><strong>Criptografia everywhere</strong> — TLS 1.3 mínimo, mTLS em federation</li>
+<li><strong>Menor privilégio</strong> — agente só tem acesso ao que precisa</li>
+</ol>
+<p><strong>Aplicado a A2A</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Pilar</th>
+<th>Implementação A2A</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Identidade</td>
+<td>mTLS + DIDs (Decentralized Identifiers)</td>
+</tr>
+<tr>
+<td>Autenticação contínua</td>
+<td>Token rotation a cada 1h</td>
+</tr>
+<tr>
+<td>Autorização</td>
+<td>JWT com scope=skill:id</td>
+</tr>
+<tr>
+<td>Auditoria</td>
+<td>OpenTelemetry traces + logs imutáveis</td>
+</tr>
+<tr>
+<td>Criptografia</td>
+<td>TLS 1.3 + JWS para payloads sensíveis</td>
+</tr>
+<tr>
+<td>Menor privilégio</td>
+<td>Cada agente só vê as skills declaradas no Agent Card</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><a id="cap4"></a></p>
+<h1>Capítulo 4 — Identidade verificável (mTLS + DIDs)</h1>
+<p><strong>mTLS (Mutual TLS)</strong>: ambos os lados da conexão apresentam certificado. Não só o servidor (como em HTTPS).</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Servidor A2A com mTLS</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">a2a</span><span class="w"> </span><span class="kn">import</span> <span class="n">A2AServer</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">ssl</span>
+
+<span class="n">context</span> <span class="o">=</span> <span class="n">ssl</span><span class="o">.</span><span class="n">create_default_context</span><span class="p">(</span><span class="n">ssl</span><span class="o">.</span><span class="n">Purpose</span><span class="o">.</span><span class="n">CLIENT_AUTH</span><span class="p">)</span>
+<span class="n">context</span><span class="o">.</span><span class="n">load_cert_chain</span><span class="p">(</span><span class="s1">&#39;agent-cert.pem&#39;</span><span class="p">,</span> <span class="s1">&#39;agent-key.pem&#39;</span><span class="p">)</span>
+<span class="n">context</span><span class="o">.</span><span class="n">load_verify_locations</span><span class="p">(</span><span class="s1">&#39;ca-bundle.pem&#39;</span><span class="p">)</span>
+
+<span class="n">server</span> <span class="o">=</span> <span class="n">A2AServer</span><span class="p">(</span>
+    <span class="n">agent_card_path</span><span class="o">=</span><span class="s2">&quot;.well-known/agent.json&quot;</span><span class="p">,</span>
+    <span class="n">ssl_context</span><span class="o">=</span><span class="n">context</span>
+<span class="p">)</span>
+</code></pre></div>
+
+<p><strong>DIDs (Decentralized Identifiers)</strong>: padrão W3C para identidade auto-soberana. Cada agente tem DID único (did:nexus:agent-abc123).</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;did:nexus:agent-abc123&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;verificationMethod&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;did:nexus:agent-abc123#key-1&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;JsonWebKey2020&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;publicKeyJwk&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="err">...</span><span class="p">}</span>
+<span class="w">  </span><span class="p">}],</span>
+<span class="w">  </span><span class="nt">&quot;service&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;did:nexus:agent-abc123#a2a&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;A2AService&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;serviceEndpoint&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://agent.example.com/a2a&quot;</span>
+<span class="w">  </span><span class="p">}]</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p><strong>Benefício</strong>: identidade verificável criptograficamente, sem precisar de CA central.</p>
+<hr />
+<p><a id="cap5"></a></p>
+<h1>Capítulo 5 — Autorização por skill (scope-based)</h1>
+<p>Cada skill tem seu próprio <strong>scope</strong> no token JWT. O agente que chama precisa ter o scope específico.</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;iss&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;did:nexus:agent-abc123&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;sub&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;did:nexus:agent-def456&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;aud&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;did:nexus:agent-abc123&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;exp&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1720636800</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;scope&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;skills:consultar-produto skills:enviar-mensagem&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;permissions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span><span class="nt">&quot;skill&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;consultar-produto&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;rate_limit&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;100/h&quot;</span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="nt">&quot;skill&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;enviar-mensagem&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;rate_limit&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;50/h&quot;</span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>O agente <strong>def456</strong> pode chamar <code>consultar-produto</code> (até 100/h) e <code>enviar-mensagem</code> (até 50/h). Não pode chamar outras skills.</p>
+<p><strong>Verificação no servidor</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">check_permission</span><span class="p">(</span><span class="n">token</span><span class="p">,</span> <span class="n">skill_id</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">skill_id</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">token</span><span class="o">.</span><span class="n">scope</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">PermissionError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Skill </span><span class="si">{</span><span class="n">skill_id</span><span class="si">}</span><span class="s2"> not in scope&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Verificar rate limit</span>
+    <span class="n">rate</span> <span class="o">=</span> <span class="n">get_rate_limit</span><span class="p">(</span><span class="n">token</span><span class="p">,</span> <span class="n">skill_id</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">rate</span><span class="o">.</span><span class="n">exceeded</span><span class="p">():</span>
+        <span class="k">raise</span> <span class="n">RateLimitError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Rate limit exceeded for </span><span class="si">{</span><span class="n">skill_id</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<hr />
+<p><a id="cap6"></a></p>
+<h1>Capítulo 6 — Auditoria distribuída (audit logs)</h1>
+<p>Todo request A2A é logado de forma <strong>imutável</strong> e <strong>distribuída</strong>.</p>
+<p><strong>Estrutura do log</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;timestamp&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-07-10T12:00:00Z&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;trace_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;trace-abc-123&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;request_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;req-456&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;caller_did&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;did:nexus:agent-def456&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;callee_did&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;did:nexus:agent-abc123&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;method&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tasks/send&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;skill&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;consultar-produto&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;input_hash&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sha256:...&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;output_hash&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sha256:...&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;duration_ms&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">142</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;success&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;auth_token_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tok-xyz&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p><strong>Imutabilidade</strong>: use append-only storage (S3, blockchain, ou append-only DB).</p>
+<p><strong>Distribuição</strong>: envie para 3+ sistemas (S3, CloudWatch, Loki).</p>
+<p><strong>Retenção</strong>: 90 dias hot, 7 anos cold (compliance).</p>
+<hr />
+<p><a id="cap7"></a></p>
+<h1>Capítulo 7 — Rate limiting entre agentes</h1>
+<p>Rate limit é <strong>obrigatório</strong> em federação. Sem ele, 1 agente pode derrubar outro.</p>
+<p><strong>3 tipos de rate limit</strong>:</p>
+<p><strong>1. Por agente (identidade)</strong>
+Cada agente tem um limite global (ex: 1000 req/h).</p>
+<p><strong>2. Por skill</strong>
+Cada skill tem limite específico (ex: 100/h).</p>
+<p><strong>3. Por recurso</strong>
+Limit por recurso específico (ex: "consultar-produto:produtoId=XPTO: 10/h").</p>
+<p><strong>Implementação</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">RateLimiter</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">redis_client</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">redis</span> <span class="o">=</span> <span class="n">redis_client</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">check</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">agent_did</span><span class="p">,</span> <span class="n">skill_id</span><span class="p">,</span> <span class="n">max_per_hour</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
+        <span class="n">key</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;rate:</span><span class="si">{</span><span class="n">agent_did</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">skill_id</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">hour</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="n">current</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">redis</span><span class="o">.</span><span class="n">incr</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">current</span> <span class="o">&gt;</span> <span class="n">max_per_hour</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">RateLimitError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Limit </span><span class="si">{</span><span class="n">max_per_hour</span><span class="si">}</span><span class="s2">/h exceeded&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">current</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">redis</span><span class="o">.</span><span class="n">expire</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="mi">3600</span><span class="p">)</span>  <span class="c1"># 1h</span>
+        <span class="k">return</span> <span class="n">current</span>
+</code></pre></div>
+
+<hr />
+<p><a id="cap8"></a></p>
+<h1>Capítulo 8 — Caso Nexus: 12 agentes em 4 plataformas</h1>
+<p><strong>Cenário</strong>: A Nexus tem 12 agentes A2A em 4 plataformas:
+- <strong>Google Cloud</strong> (3 agentes)
+- <strong>AWS</strong> (4 agentes)
+- <strong>Azure</strong> (3 agentes)
+- <strong>On-premise</strong> (2 agentes)</p>
+<p><strong>Implementação Zero-Trust</strong>:</p>
+<ol>
+<li><strong>mTLS entre todos os pares</strong>: cada agente tem certificado. CA interna Nexus assina.</li>
+<li><strong>DIDs para identidade</strong>: cada agente tem DID único.</li>
+<li><strong>JWT com scope granular</strong>: cada skill tem seu scope. Afiliados não veem skills administrativas.</li>
+<li><strong>Rate limiting por agente</strong>: 1k req/h por agente. Spikes acima disso → fila.</li>
+<li><strong>Audit logs em 3 destinos</strong>: S3, CloudWatch, Loki.</li>
+<li><strong>Monitoring</strong>: Datadog + alertas P1/P2.</li>
+</ol>
+<p><strong>Resultado</strong> (12 meses):
+- <strong>0 incidentes</strong> de segurança
+- <strong>99.97% uptime</strong>
+- <strong>&lt; 200ms latência</strong> entre agentes (mTLS overhead é mínimo)</p>
+<hr />
+<p><a id="cap9"></a></p>
+<h1>Capítulo 9 — Métricas de segurança</h1>
+<p>5 métricas para monitorar:</p>
+<p><strong>1. Taxa de autenticação falha</strong>
+% de requests com auth inválida. <strong>Meta: &lt; 0.1%</strong>.</p>
+<p><strong>2. Latência do mTLS overhead</strong>
+Tempo extra de TLS. <strong>Meta: &lt; 10ms</strong>.</p>
+<p><strong>3. Rate limit hits</strong>
+Requests bloqueados por rate limit. <strong>Meta: &lt; 5%</strong>.</p>
+<p><strong>4. Skills chamadas vs skills disponíveis</strong>
+Detectar uso anômalo. <strong>Meta: ratio &gt; 0.3</strong> (caso contrário, agente está pedindo skills demais).</p>
+<p><strong>5. Audit log completeness</strong>
+% de requests que foram logados. <strong>Meta: 100%</strong>.</p>
+<hr />
+<p><a id="cap10"></a></p>
+<h1>Capítulo 10 — Quando o Zero-Trust atrapalha</h1>
+<p>Zero-Trust adiciona <strong>overhead</strong> (latência + complexidade). Em alguns casos, não vale:</p>
+<p><strong>Caso 1 — Agentes internos (mesma empresa)</strong>
+Se os 2 agentes são seus e rodam na mesma VPC, mTLS é exagero. Use VPC internal + IAM.</p>
+<p><strong>Caso 2 — Throughput crítico (&gt; 10k req/s)</strong>
+mTLS adiciona ~5ms. Em alto volume, isso importa. Use TLS simples + WAF.</p>
+<p><strong>Caso 3 — Latência crítica (&lt; 50ms)</strong>
+Para real-time (videochamada, IoT), Zero-Trust adiciona latência demais.</p>
+<p><strong>Decisão</strong>: avalie <strong>custo/benefício</strong> antes de aplicar Zero-Trust everywhere.</p>
+<hr />
+<p><a id="epilogo"></a></p>
+<h1>Epílogo — O futuro do trust entre agentes</h1>
+<p>Em 2026, Zero-Trust entre agentes é <strong>novidade</strong>. Em 2030, será <strong>padrão</strong>.</p>
+<p><strong>Tendências</strong>:</p>
+<ol>
+<li><strong>DIDs everywhere</strong>: cada agente com identidade auto-soberana</li>
+<li><strong>mTLS default</strong>: agente sem mTLS = agente inconfiável</li>
+<li><strong>Audit logs com blockchain</strong>: imutabilidade distribuída</li>
+<li><strong>AI-audited AI</strong>: agentes A2A que auditam outros agentes</li>
+<li><strong>Zero-Trust as a service</strong>: vendors oferecem Zero-Trust pronto</li>
+</ol>
+<p><strong>Recomendação para afiliados</strong>: comece pequeno. Implemente mTLS entre 2 agentes seus. Adicione JWT com scope. Documente skills. Faça audit log. Depois escale.</p>
+<p><strong>E o mais importante</strong>: trate cada agente como se fosse um humano. Com permissões, com auditoria, com revisão. Porque no fim, <strong>agentes são pessoas digitais</strong>.</p>
+<hr />
+<p><a id="apendice"></a></p>
+<h1>Apêndice — Checklist de implementação</h1>
+<p><strong>Fase 1 — Mínimo viável (1 semana)</strong>
+- [ ] Agent Card publicado em /.well-known/agent.json
+- [ ] mTLS configurado (certificado auto-assinado OK para começar)
+- [ ] Audit log em arquivo (append-only)
+- [ ] Rate limit simples (100/h por agente)</p>
+<p><strong>Fase 2 — Maturidade (1 mês)</strong>
+- [ ] DIDs implementados
+- [ ] JWT com scope por skill
+- [ ] Audit log em 3 destinos
+- [ ] Monitoring com alertas
+- [ ] Documentação de skills clara</p>
+<p><strong>Fase 3 — Produção (3 meses)</strong>
+- [ ] mTLS com CA real (não auto-assinado)
+- [ ] Token rotation automática
+- [ ] Rate limit distribuído (Redis)
+- [ ] Anomaly detection (ML)
+- [ ] Compliance audit (LGPD, SOC2)</p>
+<p><strong>Fase 4 — Excelência (6 meses)</strong>
+- [ ] Zero-Trust as code (Terraform)
+- [ ] AI-audited AI
+- [ ] Blockchain audit log
+- [ ] Multi-region failover
+- [ ] Penetration testing trimestral</p>
+<hr />
+<p><em>Fim da Apostila 30 · Federação Zero-Trust</em></p>
+<p><em>MMN_IA Collective · 2026 · Licença: CC BY-SA 4.0</em></p>
+<p><em>"Zero-Trust não é paranoia. É a nova confiança."</em></p>
+      <hr/>
+      <p style="text-align:center;color:var(--fg-muted);margin-top:2rem;">
+        <em>Fim da Apostila #30 2026 - Licenca CC BY-NC-SA 4.0 - MMN_IA Collective - Nexus HUB57</em>
+      </p>
+    </section>
+  </article>
+</body>
+</html>

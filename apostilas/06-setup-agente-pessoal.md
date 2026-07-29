@@ -8,7 +8,7 @@ tags: [academia, agente, setup, primeiro-agente, tutorial]
 pattern: "MMN_IA"
 ---
 
-![Capa — Setup Completo do Agente Pessoal](../../assets/ebook_covers/ACAD-apostila-06-setup-agente-pessoal.webp)
+![Capa — Setup Completo do Agente Pessoal](../docs/ebooks/ACAD-apostila-06-setup-agente-pessoal.webp)
 
 **Setup Completo do Agente Pessoal**
 

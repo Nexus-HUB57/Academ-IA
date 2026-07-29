@@ -1,0 +1,137 @@
+[
+  {
+    "code": "00",
+    "slug": "video-00-boas-vindas-a-academia-nexus",
+    "canonical_teaser_file": "video-00-boas-vindas-a-academia-nexus.mp4",
+    "actual_teaser_file": "",
+    "actual_exists": false,
+    "canonical_exists": false,
+    "status": "missing"
+  },
+  {
+    "code": "01",
+    "slug": "video-01-entendendo-o-ioaid",
+    "canonical_teaser_file": "video-01-entendendo-o-ioaid.mp4",
+    "actual_teaser_file": "",
+    "actual_exists": false,
+    "canonical_exists": false,
+    "status": "missing"
+  },
+  {
+    "code": "02",
+    "slug": "video-02-o-sistema-sho-self-healing-orchestrator",
+    "canonical_teaser_file": "video-02-o-sistema-sho-self-healing-orchestrator.mp4",
+    "actual_teaser_file": "",
+    "actual_exists": false,
+    "canonical_exists": false,
+    "status": "missing"
+  },
+  {
+    "code": "03",
+    "slug": "video-03-painel-do-afiliado-visao-geral-da-operacao",
+    "canonical_teaser_file": "video-03-painel-do-afiliado-visao-geral-da-operacao.mp4",
+    "actual_teaser_file": "",
+    "actual_exists": false,
+    "canonical_exists": false,
+    "status": "missing"
+  },
+  {
+    "code": "04",
+    "slug": "video-04-construindo-seu-primeiro-agente-em-4-minutos",
+    "canonical_teaser_file": "video-04-construindo-seu-primeiro-agente-em-4-minutos.mp4",
+    "actual_teaser_file": "video-04-seu-primeiro-agente.mp4",
+    "actual_exists": true,
+    "canonical_exists": false,
+    "status": "mapped_alias"
+  },
+  {
+    "code": "05",
+    "slug": "video-05-skills-essenciais-copywriter-audience-segmenter",
+    "canonical_teaser_file": "video-05-skills-essenciais-copywriter-audience-segmenter.mp4",
+    "actual_teaser_file": "video-05-skills-essenciais.mp4",
+    "actual_exists": true,
+    "canonical_exists": false,
+    "status": "mapped_alias"
+  },
+  {
+    "code": "06",
+    "slug": "video-06-disparando-no-whatsapp-em-escala",
+    "canonical_teaser_file": "video-06-disparando-no-whatsapp-em-escala.mp4",
+    "actual_teaser_file": "video-06-disparo-no-whatsapp-em-escala.mp4",
+    "actual_exists": true,
+    "canonical_exists": false,
+    "status": "mapped_alias"
+  },
+  {
+    "code": "07",
+    "slug": "video-07-judge-revisor-a-ia-que-decide-por-voce",
+    "canonical_teaser_file": "video-07-judge-revisor-a-ia-que-decide-por-voce.mp4",
+    "actual_teaser_file": "video-07-judge-revisor.mp4",
+    "actual_exists": true,
+    "canonical_exists": false,
+    "status": "mapped_alias"
+  },
+  {
+    "code": "08",
+    "slug": "video-08-otimizacao-de-conversao-a-matematica-da-receita",
+    "canonical_teaser_file": "video-08-otimizacao-de-conversao-a-matematica-da-receita.mp4",
+    "actual_teaser_file": "video-08-otimizacao-de-conversao.mp4",
+    "actual_exists": true,
+    "canonical_exists": false,
+    "status": "mapped_alias"
+  },
+  {
+    "code": "09",
+    "slug": "video-09-funis-e-lifecycle-o-sistema-completo",
+    "canonical_teaser_file": "video-09-funis-e-lifecycle-o-sistema-completo.mp4",
+    "actual_teaser_file": "video-09-funis-e-lifecycle.mp4",
+    "actual_exists": true,
+    "canonical_exists": false,
+    "status": "mapped_alias"
+  },
+  {
+    "code": "10",
+    "slug": "video-10-a-b-testing-com-judge-ciencia-da-experimentacao",
+    "canonical_teaser_file": "video-10-a-b-testing-com-judge-ciencia-da-experimentacao.mp4",
+    "actual_teaser_file": "video-10-a-b-testing-com-judge.mp4",
+    "actual_exists": true,
+    "canonical_exists": false,
+    "status": "mapped_alias"
+  },
+  {
+    "code": "11",
+    "slug": "video-11-analise-de-coortes-e-churn-a-arte-de-reter",
+    "canonical_teaser_file": "video-11-analise-de-coortes-e-churn-a-arte-de-reter.mp4",
+    "actual_teaser_file": "video-11-coortes-e-churn.mp4",
+    "actual_exists": true,
+    "canonical_exists": false,
+    "status": "mapped_alias"
+  },
+  {
+    "code": "12",
+    "slug": "video-12-blueprints-elite-o-jogo-do-top-10",
+    "canonical_teaser_file": "video-12-blueprints-elite-o-jogo-do-top-10.mp4",
+    "actual_teaser_file": "video-12-blueprints-elite.mp4",
+    "actual_exists": true,
+    "canonical_exists": false,
+    "status": "mapped_alias"
+  },
+  {
+    "code": "13",
+    "slug": "video-13-multi-tenant-e-white-label-na-pratica",
+    "canonical_teaser_file": "video-13-multi-tenant-e-white-label-na-pratica.mp4",
+    "actual_teaser_file": "video-13-multi-tenant-e-white-label.mp4",
+    "actual_exists": true,
+    "canonical_exists": false,
+    "status": "mapped_alias"
+  },
+  {
+    "code": "14",
+    "slug": "video-14-federacao-de-agentes-zero-trust",
+    "canonical_teaser_file": "video-14-federacao-de-agentes-zero-trust.mp4",
+    "actual_teaser_file": "video-14-federacao-de-agentes-zero-trust.mp4",
+    "actual_exists": true,
+    "canonical_exists": true,
+    "status": "exact"
+  }
+]

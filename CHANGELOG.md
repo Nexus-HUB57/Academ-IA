@@ -2,13 +2,379 @@
 title: "CHANGELOG · Academ'IA"
 description: "Histórico de versões da Academ'IA · HUB de Conhecimento & Sabedoria"
 tags: [changelog, versionamento, historico, academia]
-version: 1.2.5
-last_updated: 2026-07-07
+version: 1.6.5
+last_updated: 2026-07-24
 ---
 
 # 📜 CHANGELOG · Academ'IA
 
 > Histórico de versões do HUB Academ'IA — Nexus Affil'IA'te. Segue **Semantic Versioning**: MAJOR (breaking), MINOR (compatível, novo asset), PATCH (correções, polish).
+
+---
+
+## [1.6.5] — 2026-07-24 · "5 índices navegáveis para áreas sem navegação estruturada"
+
+### 🆕 Adicionado (5 índices navegáveis, ~38KB)
+
+5 novos documentos `INDEX.md` para áreas que já tinham README mas não tinham
+índice navegável. Complementa v1.6.4 (que criou índices para hubs, playbooks, sync).
+
+- `tutoriais/INDEX.md` (7.4KB): índice dos 36 tutoriais práticos com
+  filtros por nível (🥉🥈🥇💎), por necessidade imediata, e por duração.
+  Diferente do `tutoriais/README.md` (que é visão editorial por nível) — este
+  foca em "encontrar o tutorial certo em <30s" via caso de uso concreto.
+
+- `treinamentos/INDEX.md` (6.3KB): índice dos 9 workshops estruturados
+  com filtros por nível, persona mentora (Ive/Alencar/Dupla), caso de uso
+  e mês de calendário. Documenta sequências recomendadas e pré-requisitos.
+
+- `cursos/INDEX.md` (8.6KB): panorama das 4 trilhas (Fundamental, Agente,
+  Master, Elite) com carga horária, dificuldades, mapeamento de cursos
+  e versões alternativas. Inclui trilha de progressão recomendada e
+  mapeamento para certificações (CON/CEN/CEN+/MAS+/CNX).
+
+- `producao/roteiros/INDEX.md` (7.5KB): índice dos 38 roteiros organizados
+  por onda, trilha, persona, status de produção. Distingue versões
+  revisadas (-roteiro-revisado.md) e roteiros da Onda 47 (filosófica).
+
+- `marca/INDEX.md` (8.4KB): índice da pasta de marca com personas oficiais
+  (Alencar, Ive, Dupla), áudios canônicos (source of truth), assets
+  visuais, registry de vozes. Resolve ambiguidade entre múltiplos
+  documentos legacy (OFFICIAL_VOICES.md, VOICES.md, VOZES-OFICIAIS.md).
+
+### 📋 Contexto
+
+Esta versão foi criada por Mavis Agent após:
+1. `git fetch origin` → confirmado sincronizado (zero commits remotos pendentes)
+2. Auditoria de 25 diretórios procurando por gaps de navegação estruturada
+3. Identificação de 5 áreas com README mas sem INDEX navegável
+4. Coexistência segura: cada INDEX.md documenta explicitamente que é
+   diferente/complementar ao README.md existente
+
+**Zero sobrescrita, zero duplicação, zero exclusão, zero conflito.**
+v1.6.4 (3 índices) + v1.6.5 (5 índices) = 8 áreas com navegação navegável.
+
+---
+
+## [1.6.4] — 2026-07-24 · "Índices navegáveis para hubs, playbooks e sync"
+
+### 🆕 Adicionado (3 índices de navegação, ~20KB)
+
+Documentos-índice para 3 áreas com gap de navegação. Sem sobrescrita,
+sem duplicidade — apenas criação de novos arquivos onde não havia README/INDEX.
+
+- `hubs/README.md` (5.8KB): índice navegável dos 11 HUBs HTML estáticos
+  (index, cursos, trilhas, apostilas, lib, lab, playbooks, webinars,
+  tutoriais, landing, player). Documenta arquitetura técnica, paleta
+  Nexus, padrão de cartão, workflow de atualização.
+
+- `playbooks/INDEX.md` (7.1KB): índice navegável dos 13 playbooks
+  organizados por urgência (crise/urgente/importante/operacional),
+  por caso de uso, e por categoria. Diferente do README.md (visão
+  editorial) — este foca em "encontrar o playbook certo em <30s".
+
+- `sync/INDEX.md` (7.6KB): índice dos 4 artefatos de sincronização
+  (agent-bridge.json, skill-manifest.json, audit-log-schema.md,
+  MCP-CONFIG.md). Documenta arquitetura de sync, versões, compatibilidade,
+  workflow de atualização, validação CI.
+
+### 📋 Contexto
+
+Esta versão foi criada por Mavis Agent após:
+1. `git pull --ff-only origin main` (23 commits remotos integrados)
+2. Leitura do `GUIA_MULTI_DEV.md` (convenções multi-dev)
+3. Auditoria para identificar gaps sem risco de colisão
+4. Backup local em `/tmp/staging_mavis_24jul/` (precaução)
+
+**Zero sobrescrita, zero duplicação, zero exclusão.**
+Todos os 6 arquivos do push anterior (api-docs, prompts governanca,
+governanca 04-05) foram verificados e estão intactos.
+
+---
+
+## [1.6.3] — 2026-07-24 · "Simulados oficiais MAS+ e CNX (cobertura completa de certificações)"
+
+### 🆕 Adicionado (2 simulados avançados, ~20KB)
+
+Complementa a cobertura de certificações com simulados para os níveis mais altos:
+
+- `certificacoes/simulado-mas-plus-001.md` (10KB, 15q, 40min, aprovação 73%)
+  Blocos: A/B testing estatístico, coortes/sobrevivência, Judge tuning, mentoria
+
+- `certificacoes/simulado-cnx-001.md` (10KB, 12q, 50min, aprovação 75%)
+  Blocos: arquitetura federada/white-label, governança estratégica, mentoria avançada
+  **Diferencial**: questões dissertativas + múltipla escolha. Avalia RACIOCÍNIO, não memorização.
+  Nível elite da elite: apenas para top 5% da rede.
+
+### 📊 Cobertura Completa de Certificações
+
+| Certificação | Banco | Simulado | Status |
+|---|---|---|---|
+| CON (Operador) | 50q ✅ | 20q ✅ | 100% |
+| CEN (Estrategista) | 60q ✅ | 25q ✅ | 100% |
+| CEN+ (Elite) | 70q ✅ | 20q ✅ | 100% |
+| MAS+ (Master Plus) | — | 15q ✅ | 100% |
+| CNX (Master) | — | 12q ✅ | 100% |
+
+5 de 5 certificações agora têm simulados oficiais.
+
+---
+
+## [1.6.2] — 2026-07-24 · "Simulados oficiais CON/CEN/CEN+ (GAP-09 fechado)"
+
+### 🆕 Adicionado (3 simulados, ~41KB)
+
+GAP-09 do roadmap finalmente fechado. 3 simulados oficiais cronometrados para auto-avaliação de candidatos a certificação.
+
+- `certificacoes/simulado-con-001.md` (14KB): 20 questões, 45 min, aprovação 70%
+  Blocos: fundamentos, WhatsApp, LGPD, Skills/Judge, métricas
+
+- `certificacoes/simulado-cen-001.md` (14KB): 25 questões, 60 min, aprovação 72%
+  Blocos: funis, A/B test, coortes/churn, LTV/CAC, Judge tuning
+
+- `certificacoes/simulado-cen-plus-001.md` (12KB): 20 questões, 60 min, aprovação 75%
+  Blocos: federação, multi-tenant, segurança enterprise, arquitetura, GTM
+
+Cada simulado inclui: instruções cronometradas, 4-5 questões por bloco temático, gabarito comentado com explicações, cálculo de nota com faixas (distinção, aprovado, revisão, reprovado), material de estudo recomendado por bloco.
+
+### 📊 Métricas Atualizadas
+
+| Recurso | v1.6.1 | v1.6.2 | Delta |
+|---|---|---|---|
+| Simululados oficiais | 0 | 3 | +3 |
+| Questões em simulados | 0 | 65 | +65 |
+| Linhas de conteúdo | ~15.500 | ~16.500 | +1.000 |
+
+### 🎯 GAPs Fechados Acumulados
+
+- ✅ GAP-01: 3 bancos de questões (CON/CEN/CEN+)
+- ✅ GAP-02: 6 tutoriais #16-21
+- ✅ GAP-03: 3 cursos Master (RAG/Deploy/Segurança)
+- ✅ GAP-09: 3 simulados oficiais cronometrados
+- 🚧 GAP-04: roteiros de vídeo (parcial, faltam Elite)
+- 🚧 GAP-05: landing page (parcial)
+- ⏳ GAP-07/12/13: pendentes
+
+---
+
+## [1.6.1] — 2026-07-24 · "Versões estendidas Mavis para cursos Master 04/05/06"
+
+### 🆕 Adicionado (6 arquivos, ~93KB)
+
+Após merge do commit d208624 (genspark_dev) que criou slides+roteiros canônicos para os módulos 04 (RAG), 05 (Deploy) e 06 (Segurança), esta versão adiciona **versões estendidas complementares** (sufixo `-mavis-detalhado`) sem sobrescrever os arquivos existentes.
+
+**Convenção de coexistência**:
+- Padrão canônico (genspark_dev): 5 cenas, ~4KB, videoaulas regulares
+- Versão estendida (Mavis): 11-12 cenas, ~6-29KB, videoaulas longas/workshops/mentorias
+
+**Arquivos criados** (todos sufixo `-mavis-detalhado`):
+- `cursos/master/04-rag-em-producao-roteiro-mavis-detalhado.md` (12 cenas, 21KB)
+- `cursos/master/04-rag-em-producao-slides-mavis-detalhado.md` (12 slides, 8KB)
+- `cursos/master/05-deploy-em-producao-roteiro-mavis-detalhado.md` (11 cenas, 22KB)
+- `cursos/master/05-deploy-em-producao-slides-mavis-detalhado.md` (11 slides, 6KB)
+- `cursos/master/06-seguranca-jailbreaks-lgpd-roteiro-mavis-detalhado.md` (11 cenas, 29KB)
+- `cursos/master/06-seguranca-jailbreaks-lgpd-slides-mavis-detalhado.md` (11 slides, 6KB)
+- `cursos/master/README.md` (documenta estrutura da trilha e coexistência de versões)
+
+**Coordenação multi-dev**:
+- ✅ Nenhum arquivo pré-existente foi sobrescrito
+- ✅ Convenção de nomenclatura clara para evitar duplicidade conflitante
+- ✅ Cada arquivo `-mavis-detalhado` referencia o canônico no frontmatter
+- ✅ Time de produção decide oficialização via PR de consolidação
+
+---
+
+## [1.6.0] — 2026-07-21 · "Sprint 1 migrado: 6 tutoriais + 3 cursos + 3 bancos de questões"
+
+### 🆕 Adicionado (12 arquivos, ~3.500 linhas)
+
+Migração dos materiais criados durante o Sprint 1 do `MMN_AI-to-AI` para o repo dedicado `Academ-IA`. Nenhum arquivo existente foi sobrescrito; apenas adições em diretórios padronizados.
+
+**Sprint 1.1 — 6 Tutoriais Técnicos (GAP-02 do Roadmap)**
+- `tutoriais/16-pipeline-rag-end-to-end.md` (60min): RAG completo com LangChain + Chroma + RAGAS
+- `tutoriais/17-rag-hybrid-search-bm25.md` (40min): Hybrid search BM25 + embeddings + reranking
+- `tutoriais/18-whisper-transcricao-audio.md` (30min): Speech-to-text + tradução + diarização
+- `tutoriais/19-prompt-engineering-metodo-ctr.md` (25min): Método CTR com 5 exemplos
+- `tutoriais/20-fine-tuning-openai-api.md` (50min): Pipeline completo fine-tuning + custos
+- `tutoriais/21-deploy-api-ia-producao.md` (75min): FastAPI + Docker + Fly.io + observabilidade
+
+**Sprint 1.2 — 3 Cursos Novos (GAP-03 do Roadmap)**
+- `cursos/master/04-rag-em-producao.md` (120min): RAG end-to-end, hybrid search, RAGAS
+- `cursos/master/05-deploy-em-producao.md` (110min): FastAPI, cache, LiteLLM, Langfuse, K8s
+- `cursos/master/06-seguranca-jailbreaks-lgpd.md` (100min): 5 camadas defesa + LGPD + EU AI Act
+
+**Sprint 1.3 — 3 Bancos de Questões (GAP-01 do Roadmap)**
+- `certificacoes/banco-questoes-con.md`: 50 questões (IOAID/SHO/Skills/LGPD/Métricas)
+- `certificacoes/banco-questoes-cen.md`: 60 questões (Funis/A-B test/Coortes/LTV/Judge)
+- `certificacoes/banco-questoes-cen-plus.md`: 70 questões (Federação/Multi-tenant/Segurança)
+
+### 📊 Métricas Atualizadas
+
+| Recurso | v1.5.0 | v1.6.0 | Delta |
+|---|---|---|---|
+| Tutoriais numerados | 22 | 28 | +6 |
+| Cursos Master | 4 | 7 | +3 |
+| Bancos de questões | 0 | 3 | +180 questões |
+| Linhas de conteúdo técnico | ~12.000 | ~15.500 | +3.500 |
+
+### 🎯 Gaps Fechados
+
+- ✅ GAP-01: 3 bancos de questões (CON/CEN/CEN+)
+- ✅ GAP-02: 6 tutoriais #16-21 (stack IA 2026)
+- ✅ GAP-03: 3 cursos Master (RAG/Deploy/Segurança)
+
+### 📋 Próximo (Sprint 2)
+
+- GAP-04: Roteiros de vídeo para 8 cursos prioritários
+- GAP-05: Landing page pública + busca visual
+- GAP-09: Simulados interativos para 3 certificações
+
+---
+
+## [1.5.0] — 2026-07-21 · "Populando repo dedicado com ebooks + capas autorais"
+
+### ✨ Adicionado (71 arquivos, ~43 MB em ebooks/)
+
+Cópia autoral completa das 5 coleções da plataforma `Nexus-HUB57/MMN_AI-to-AI` para o repo dedicado `Nexus-HUB57/Academ-IA`. Origem controlada, zero riscos de copyright (mesmo owner, transferência interna do time). Manifesto completo em `ebooks/INDEX.md`.
+
+**Coleção NEXUS_AFFIL_IA_TECH — 11 arquivos (Onda 40 âncora PhD-level):**
+- 5 eBooks .md (~32 KB cada) · 5 capas .webp (~5 MB cada)
+- `01_orquestracao_ecossistemas_ia.md` · multi-agente em produção
+- `02_senciencia_e_barreiras.md` · o problema difícil da consciência sintética
+- `03_poder_perigo_autonomia_ai.md` · do Copilot ao fully autonomous
+- `04_fundamento_saas_ia.md` · pilha canônica de SaaS agêntico
+- `05_poder_processamento_ia.md` · GPU/TPU/NPU, KV cache, custo/token
+- Manifesto de coleção: `README.md` + `covers/` (5 WebP originais)
+
+**Coleção AXIOMA_PRIME — 22 arquivos (arquitetura agentica fundacional):**
+- 10 eBooks .md + 11 capas (10 caps + 1 README) WebP originais
+- De "01_arquitetura_do_despertar_agentico" → "10_civilizacao_agentica_e_o_grande_pacto"
+- Manifesto: `README.md` + `covers/README.webp`
+
+**Coleção SE_EU_IA_FOSSE_HUMANO — 11 arquivos (poética IAS):**
+- 5 eBooks .md (~50 KB cada) + 5 capas WebP originais (60-64)
+- De "Se eu IA tivesse um Corpo" → "Se eu IA fosse Mortal"
+- Manifesto: `README.md`
+
+**Coleção IA_Perfeita — 20 arquivos (3 séries iterativas):**
+- 12 eBooks .md (vol 1/2/3 original + v1 + v2) + 7 capas WebP
+- Inclui: "o sussurro das máquinas", "cartas de um algoritmo a deus", "biblioteca infinita de Babel 2.0"
+- Manifesto: `README.md`
+
+**Coleção MMN_IA — 7 arquivos (coleção-raiz do ecossistema):**
+- 6 eBooks/Guias .md + 1 capa de coleção
+- README + GITHUB_SYNC_GUIDE + PUBLICACAO + 01_ia_para_empresas + 02_ia_agentica + 15_ecossistema_ia_governanca + capa
+
+**Manifesto geral:**
+- `ebooks/INDEX.md` (6763 bytes) com frontmatter, tabela por coleção, métricas, MUST-verify de origem
+
+### 🛡️ Verificações de integridade aplicadas
+
+- **md5 src == dst** em todos os 71 arquivos (MISMATCH: 0) — cópia bit-perfect do legado
+- **size src == size dst** em todos os 71 arquivos
+- **`cp --no-clobber`** — nenhum dos arquivos pré-existentes foi sobrescrito
+- **Origem autoral confirmada mesma owner**: `Nexus-HUB57/MMN_AI-to-AI` → `Nexus-HUB57/Academ-IA`
+
+### 📊 Métricas atualizadas
+
+| Métrica | v1.4.1 | v1.5.0 | Δ |
+|---|---|---|---|
+| eBooks .md em ebooks/ | 0 | **42** | +42 |
+| Capas .webp em ebooks/ | 0 | **29** | +29 |
+| Tamanho ebooks/ | 0 | **~43 MB** | +43 MB |
+| Coleções representadas | 0 | **5** | +5 |
+
+---
+
+## [1.4.1] — 2026-07-21 · "Sync repo dedicado Academ-IA + 30 materiais do legado"
+
+### ✨ Adicionado (30 arquivos, +9964 linhas)
+
+Migração dos 30 arquivos que estavam em `MMN_AI-to-AI/repo/AcademIA/` mas **ausentes** do repo dedicado `Nexus-HUB57/Academ-IA`. Commit `23d2500` no Academ-IA preservando intactos os 685 arquivos pré-existentes (zero deleções).
+
+**Apostilas .md (2 novas):**
+- `apostilas/32-pricing-ia-2026.md` — Pricing IA 2026: pricing dinâmico, unit economics, unit cost em escala
+- `apostilas/33-data-stack-agentes-ia.md` — Data Stack Agentes IA: lakehouse, feature store, vector DB, observabilidade de modelos
+
+**Cursos slides .md (3 novos):**
+- `cursos/agente/00-primeiro-agente-slides.md` — Slides do primeiro agente
+- `cursos/elite/00-blueprints-elite-slides.md` — Slides Blueprints Elite
+- `cursos/master/00-otimizacao-conversao-slides.md` — Slides Otimização de Conversão
+
+**Hubs HTML (4 novos):**
+- `hubs/cursos.html` — índice interativo das trilhas
+- `hubs/landing.html` — landing page pública da Academia
+- `hubs/player.html` — player para vídeo/áudio
+- `hubs/trilhas.html` — seletor de trilhas com profiles
+
+**Apostilas HTML (2 novas):**
+- `html/apostilas/32-pricing-ia-2026.html` — renderização HTML da apostila 32
+- `html/apostilas/33-data-stack-agentes-ia.html` — renderização HTML da apostila 33
+
+**Webinars HTML (4 novos):**
+- `html/webinars/WB-2026-08-financeiro-ia.html`
+- `html/webinars/WB-2026-12-ia-to-ia-federation.html`
+- `html/webinars/WB-2026-14-pricing-ia-tempo-real.html`
+- `html/webinars/WB-2026-15-data-stack-ia.html`
+
+**Webinars .md (2 novos):**
+- `webinars/WB-2026-14-pricing-ia-tempo-real.md`
+- `webinars/WB-2026-15-data-stack-ia.md`
+
+**PDFs (6 novos):**
+- `pdfs/32-pricing-ia-2026.pdf`
+- `pdfs/33-data-stack-agentes-ia.pdf`
+- `pdfs/webinar-WB-2026-08-financeiro-ia.pdf`
+- `pdfs/webinar-WB-2026-12-ia-to-ia-federation.pdf`
+- `pdfs/webinar-WB-2026-14-pricing-ia-tempo-real.pdf`
+- `pdfs/webinar-WB-2026-15-data-stack-ia.pdf`
+
+**Personas · assets PNG (5 novos):**
+- `personas/alencar/assets/alencar_meeting_v1.png` (~4 MB)
+- `personas/alencar/assets/alencar_nexus_ref_1.png` (~4 MB)
+- `personas/ive/assets/ive_nexus_ref_1.png` (~4 MB)
+- `personas/ive/assets/ive_reference.png` (~4 MB)
+- `personas/ive/assets/ive_training_v1.png` (~4 MB)
+
+**Produção (1 novo):**
+- `producao/INCIDENT-RESPONSE-RUNBOOK.md` — runbook TI 1 página (SEV-1/2/3, contatos, RCA, comunicação)
+
+**Vídeo PoC (1 novo):**
+- `videos/video-00-boas-vindas-poc.mp4` (~2 MB) — boas-vindas PoC trilha Fundamental
+
+### 🛡️ Verificações de integridade aplicadas
+
+- **md5 src == md5 dst** em todos os 30 arquivos (MISMATCH: 0) — cópia bit-perfect do legado
+- **size src == size dst** em todos os 30 arquivos
+- **`cp --no-clobber`** — nenhum dos 685 arquivos pré-existentes foi sobrescrito
+- **Re-diff encoding-aware** pós-cópia → 0 missing restantes, 15 target-only preservados
+- **GitHub API stats**: `+9964 / −0` (zero deleção confirmada)
+
+### 📊 Métricas atualizadas
+
+| Métrica | v1.4.0 | v1.4.1 | Δ |
+|---|---|---|---|
+| Apostilas | 31 | **33** | +2 |
+| Webinars | 13 | **15** | +2 |
+| Hubs HTML | 0 | **4** | +4 |
+| Cursos slides | 14 | **17** | +3 |
+| PDFs apostila | 6 | **8** | +2 |
+| PDFs webinar | 13 | **17** | +4 |
+| Personas assets | 6 | **11** | +5 |
+| Runbooks produção | 0 | **1** | +1 |
+| Vídeos PoC | 0 | **1** | +1 |
+| Arquivos totais | 685 | **715** | +30 |
+| Linhas totais (md) | ~15k | **~16k** | +1k |
+
+### 🎯 Arquivos target-only preservados (NÃO foram tocados)
+
+- `tutoriais/12-federação-2-nos.md` (encoding NFD já no Academ-IA)
+- `tutoriais/13-federação-3-nos-mtls-pinned.md` (encoding NFD já no Academ-IA)
+- `personas/alencar/Estes_são_os_personas_Ive_Nexu.mp4`
+- `pdfs/webinar-WB-2026-08-ia-to-ia-federation.pdf` (federação, distinto do financeiro)
+- `videos/roteiros/15-19-*.md` (roteiros-âncora TECH)
+- `videos/thumbnails/thumb-15-19-*.webp` (thumbnails 2K TECH)
+- `videos/video-00-boas-vindas-renderizado.mp4` (versão final, distinta do PoC)
 
 ---
 

@@ -15,7 +15,7 @@ pattern: "MMN_IA"
 
 *   **Título:** Entendendo o IOAID: A Infraestrutura Invisível
 *   **Subtítulo:** O Coração Técnico do Nexus Affil'IA'te
-*   **Imagem:** Capa — Entendendo o IOAID (referência: `../../assets/ebook_covers/ACAD-apostila-01-apresentacao-infraestrutura.webp`)
+*   **Imagem:** Capa — Entendendo o IOAID (referência: `../../docs/ebooks/ACAD-apostila-01-apresentacao-infraestrutura.webp`)
 *   **Texto:** "Olá novamente. Após nossa introdução ao universo Nexus Affil'IA'te, é hora de aprofundarmos em um dos pilares invisíveis, mas fundamentais, que orquestra toda a sua inteligência: o IOAID. Compreenda que, para dominar a escala estruturada, é essencial entender a arquitetura que potencializa cada uma de suas ações. E para nos guiar por essa jornada, temos o Sir. Nexus Alencar, nosso especialista técnico."
 
 ## Slide 2: O que é IOAID?

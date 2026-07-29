@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI-to-AI Protocol — Como Agentes de Plataformas Diferentes Conversam - AcademIA Nexus</title>
+  <link rel="stylesheet" href="../html/acad-style.css">
+</head>
+<body class="dark-theme">
+  <article class="ebook">
+    <header class="cover">
+      <div class="series-tag">AcademIA - Apostila #29</div>
+      <h1>AI-to-AI Protocol — Como Agentes de Plataformas Diferentes Conversam</h1>
+      <h2>O Protocolo A2A e a Internet dos Agentes</h2>
+      <img class="cover-image" src="docs/ebooks/ACAD-apostila-29-ai-to-ai-protocol.webp" alt="Capa - AI-to-AI Protocol — Como Agentes de Plataformas Diferentes Conversam">
+      <div class="author"><strong>MMN_IA Collective</strong><br>PHD nivel Harvard do Universo AI</div>
+      <div class="meta">Apostila 29 - Nivel Master - v1.0.0 - 2026</div>
+    </header>
+    <section class="page toc-page">
+      <h2>Sumario</h2>
+      <ul><li>(conteudo detalhado no corpo)</li></ul>
+      <div class="info-box success">
+        <strong>Sobre esta apostila:</strong> parte da colecao AcademIA - Nexus HUB57. Conteudo hands-on, baseado em producao real.
+      </div>
+    </section>
+    <section class="page">
+      <h2>Conteudo</h2>
+      <p><strong>Apostila 29 · AI-to-AI Protocol</strong></p>
+<p><em>O protocolo A2A, o Agent Cards, e como agentes de plataformas diferentes podem cooperar — sem precisar de uma "super-plataforma" central.</em></p>
+<p><strong>Por MMN_IA Collective · Academ'IA</strong></p>
+<p>Nexus Affil'IA'te · 2026</p>
+<p><strong>Sobre esta apostila</strong></p>
+<p>Em 2025, o Google anunciou o <strong>A2A Protocol</strong> (Agent-to-Agent), um padrão aberto para que agentes de plataformas diferentes possam se comunicar. Em 2026, já temos <strong>23.000+ agentes</strong> rodando em conformidade com A2A no mundo.</p>
+<p>Esta apostila explica o que é A2A, como ele funciona, e como você pode usar agentes A2A na sua operação de afiliados.</p>
+<hr />
+<h1>Sumário</h1>
+<p><strong>PARTE I — FUNDAMENTOS</strong></p>
+<ol>
+<li><a href="#cap1">O que é A2A Protocol</a></li>
+<li><a href="#cap2">Por que interessa para afiliados</a></li>
+<li><a href="#cap3">Como funciona: a analogia do HTTP</a></li>
+</ol>
+<p><strong>PARTE II — TÉCNICO</strong></p>
+<ol start="4">
+<li><a href="#cap4">Agent Card (.well-known/agent.json)</a></li>
+<li><a href="#cap5">JSON-RPC 2.0 — a base do A2A</a></li>
+<li><a href="#cap6">Os 4 métodos principais</a></li>
+<li><a href="#cap7">Tasks: o coração do A2A</a></li>
+</ol>
+<p><strong>PARTE III — PRÁTICA</strong></p>
+<ol start="8">
+<li><a href="#cap8">Como criar um agente A2A-compliant</a></li>
+<li><a href="#cap9">Exemplo completo: agente de afiliados</a></li>
+<li><a href="#cap10">Casos de uso reais (2026)</a></li>
+</ol>
+<p>Epílogo: <a href="#epilogo">A Internet dos Agentes vem aí</a></p>
+<p>Apêndice: <a href="#apendice">Código de exemplo completo</a></p>
+<hr />
+<p><a id="cap1"></a></p>
+<h1>Capítulo 1 — O que é A2A Protocol</h1>
+<p><strong>A2A (Agent-to-Agent Protocol)</strong> é um padrão aberto criado pelo Google em abril de 2025, com o objetivo de permitir que agentes de IA de <strong>plataformas diferentes</strong> se comuniquem diretamente.</p>
+<p>Antes do A2A, se você quisesse que um agente do Google Cloud conversasse com um agente da OpenAI, você precisava criar um <strong>middleware custom</strong>. Com A2A, eles conversam diretamente via JSON-RPC.</p>
+<p><strong>Analogia</strong>: A2A é para agentes de IA o que HTTP é para websites. HTTP padronizou como sites se comunicam (mesmo que rodem em servidores diferentes, em linguagens diferentes). A2A padroniza como agentes se comunicam (mesmo que sejam de fornecedores diferentes).</p>
+<p><strong>Adotado por</strong>: Google Cloud, OpenAI, Microsoft Azure, AWS Bedrock, Salesforce, ServiceNow, Atlassian, SAP, Cisco, e mais 50+ empresas.</p>
+<hr />
+<p><a id="cap2"></a></p>
+<h1>Capítulo 2 — Por que interessa para afiliados</h1>
+<p>Como afiliado, você pode usar agentes A2A para:</p>
+<p><strong>Cenário 1 — Pesquisa de mercado automatizada</strong>
+Seu agente de afiliados chama o agente da Hotmart ("Hotmart Agent") para verificar preço, comissão, e stock de um produto. Resposta em 1-2 segundos.</p>
+<p><strong>Cenário 2 — Atendimento conjunto</strong>
+Cliente do seu agente fala com seu agente → seu agente passa para o agente de suporte da plataforma → volta com resposta consolidada.</p>
+<p><strong>Cenário 3 — Análise cruzada de dados</strong>
+Seu agente pede dados do agente do Google Analytics + do agente do Meta Ads + do agente do Stripe. Combina em dashboard.</p>
+<p><strong>Cenário 4 — Orquestração multi-agente</strong>
+Você tem 1 agente para WhatsApp, 1 para e-mail, 1 para Telegram. Eles cooperam via A2A (sem você precisar programar).</p>
+<hr />
+<p><a id="cap3"></a></p>
+<h1>Capítulo 3 — Como funciona: a analogia do HTTP</h1>
+<div class="codehilite"><pre><span></span><code><span class="n">HTTP</span><span class="w"> </span><span class="p">(</span><span class="mi">1990</span><span class="n">s</span><span class="p">)</span><span class="o">:</span><span class="w">                    </span><span class="n">A2A</span><span class="w"> </span><span class="p">(</span><span class="mi">2025</span><span class="p">)</span><span class="o">:</span>
+
+<span class="p">[</span><span class="n">Browser</span><span class="p">]</span><span class="w">                        </span><span class="p">[</span><span class="n">Agent</span><span class="w"> </span><span class="n">A</span><span class="p">]</span>
+<span class="w">    </span><span class="o">|</span><span class="w">                                </span><span class="o">|</span>
+<span class="w">    </span><span class="o">|</span><span class="w"> </span><span class="n">GET</span><span class="w"> </span><span class="o">/</span><span class="n">home</span><span class="w">                       </span><span class="o">|</span><span class="w"> </span><span class="n">tasks</span><span class="o">/</span><span class="n">send</span>
+<span class="w">    </span><span class="n">v</span><span class="w">                                </span><span class="n">v</span>
+<span class="p">[</span><span class="n">Server</span><span class="p">]</span><span class="w">                         </span><span class="p">[</span><span class="n">Agent</span><span class="w"> </span><span class="n">B</span><span class="p">]</span>
+<span class="w">    </span><span class="o">|</span><span class="w">                                </span><span class="o">|</span>
+<span class="w">    </span><span class="o">|</span><span class="w"> </span><span class="mi">200</span><span class="w"> </span><span class="n">OK</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">HTML</span><span class="w">                  </span><span class="o">|</span><span class="w"> </span><span class="n">task</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">data</span>
+<span class="w">    </span><span class="n">v</span><span class="w">                                </span><span class="n">v</span>
+<span class="p">[</span><span class="n">Browser</span><span class="p">]</span><span class="w">                        </span><span class="p">[</span><span class="n">Agent</span><span class="w"> </span><span class="n">A</span><span class="p">]</span>
+</code></pre></div>
+
+<p><strong>Mesma arquitetura cliente-servidor</strong>, mas adaptada para agentes:
+- Cliente = agente que pede tarefa
+- Servidor = agente que executa
+- Mensagem = JSON-RPC 2.0
+- Discovery = Agent Card (análogo ao robots.txt)</p>
+<hr />
+<p><a id="cap4"></a></p>
+<h1>Capítulo 4 — Agent Card (.well-known/agent.json)</h1>
+<p>Para que outros agentes <strong>descubram</strong> o que seu agente faz, você publica um <strong>Agent Card</strong> em URL bem-conhecida.</p>
+<p><strong>Localização</strong>: <code>https://seudominio.com/.well-known/agent.json</code></p>
+<p><strong>Estrutura</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Afiliados Nexus Agent&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Agente de afiliados para marketing multinível&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.0.0&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://seudominio.com/a2a&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;capabilities&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;streaming&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;pushNotifications&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;stateTransitionHistory&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;skills&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;consultar-produto&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Consultar Produto&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Busca preço, comissão, e estoque de produto na Hotmart&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;inputSchema&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">&quot;produtoId&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;enviar-mensagem&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Enviar Mensagem&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Envia mensagem via WhatsApp, Telegram, ou e-mail&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;inputSchema&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">&quot;canal&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;enum&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;whatsapp&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;telegram&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;email&quot;</span><span class="p">]},</span>
+<span class="w">          </span><span class="nt">&quot;mensagem&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">},</span>
+<span class="w">          </span><span class="nt">&quot;destinatario&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Outros agentes consultam esse arquivo e sabem o que seu agente faz.</p>
+<hr />
+<p><a id="cap5"></a></p>
+<h1>Capítulo 5 — JSON-RPC 2.0 — a base do A2A</h1>
+<p>A2A usa <strong>JSON-RPC 2.0</strong>, um protocolo leve de chamada de procedure remota.</p>
+<p><strong>Request</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;jsonrpc&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2.0&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;req-12345&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;method&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tasks/send&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;params&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;task-abc&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;role&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;user&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;parts&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;text&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;text&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Qual o preço do produto XPTO?&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">]</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p><strong>Response</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;jsonrpc&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2.0&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;req-12345&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;result&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;task-abc&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;completed&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;artifacts&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;data&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">&quot;produto&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;XPTO Premium&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;preco&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">297.00</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;comissao&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">89.10</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;estoque&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;disponivel&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<hr />
+<p><a id="cap6"></a></p>
+<h1>Capítulo 6 — Os 4 métodos principais</h1>
+<p>A2A define 4 métodos essenciais:</p>
+<p><strong>1. <code>tasks/send</code></strong>
+Envia uma task para outro agente. Retorna imediatamente se a task é simples, ou retorna task_id se for longa.</p>
+<p><strong>2. <code>tasks/get</code></strong>
+Pega o status de uma task em andamento (quando a task é longa e o <code>tasks/send</code> retornou task_id).</p>
+<p><strong>3. <code>tasks/cancel</code></strong>
+Cancela uma task em andamento.</p>
+<p><strong>4. <code>tasks/sendSubscribe</code></strong>
+Versão streaming — abre uma conexão SSE (Server-Sent Events) e recebe updates em tempo real.</p>
+<p><strong>Exemplo de uso real</strong>: seu agente de afiliados chama <code>tasks/sendSubscribe</code> no agente de suporte da Hotmart. Conforme o suporte responde, você recebe chunks de JSON em tempo real.</p>
+<hr />
+<p><a id="cap7"></a></p>
+<h1>Capítulo 7 — Tasks: o coração do A2A</h1>
+<p>Uma <strong>task</strong> é uma unidade de trabalho entre agentes. Tem ciclo de vida:</p>
+<div class="codehilite"><pre><span></span><code>submitted → working → completed (ou failed ou canceled)
+   │           │           │
+   │           │           └─ resultado final
+   │           └─ progresso (%)
+   └─ task_id + status
+</code></pre></div>
+
+<p><strong>Estados</strong>:
+- <code>submitted</code> — task recebida, aguardando
+- <code>working</code> — em andamento
+- <code>completed</code> — finalizada com sucesso
+- <code>failed</code> — falhou (com erro)
+- <code>canceled</code> — cancelada</p>
+<p><strong>Input/Output</strong>:
+- Task tem <strong>parts</strong> (partes): text, file, data
+- Cada part tem MIME type e dados</p>
+<hr />
+<p><a id="cap8"></a></p>
+<h1>Capítulo 8 — Como criar um agente A2A-compliant</h1>
+<p><strong>Passo 1</strong>: Publique o Agent Card em <code>/.well-known/agent.json</code></p>
+<p><strong>Passo 2</strong>: Implemente o endpoint <code>/a2a</code> que aceita JSON-RPC 2.0</p>
+<p><strong>Passo 3</strong>: Trate os 4 métodos principais</p>
+<p><strong>Passo 4</strong>: Documente bem as skills (input schema, output schema, erros)</p>
+<p><strong>Stack sugerida</strong>:
+- Python + FastAPI + a2a-sdk
+- Node.js + Express + a2a-sdk
+- Go + a2a-go</p>
+<p><strong>Exemplo em Python</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">fastapi</span><span class="w"> </span><span class="kn">import</span> <span class="n">FastAPI</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">a2a</span><span class="w"> </span><span class="kn">import</span> <span class="n">A2AServer</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
+<span class="n">a2a</span> <span class="o">=</span> <span class="n">A2AServer</span><span class="p">(</span><span class="n">agent_card</span><span class="o">=</span><span class="nb">open</span><span class="p">(</span><span class="s2">&quot;agent.json&quot;</span><span class="p">))</span>
+
+<span class="nd">@a2a</span><span class="o">.</span><span class="n">method</span><span class="p">(</span><span class="s2">&quot;tasks/send&quot;</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">handle_task</span><span class="p">(</span><span class="n">task</span><span class="p">):</span>
+    <span class="k">return</span> <span class="k">await</span> <span class="n">execute_task</span><span class="p">(</span><span class="n">task</span><span class="p">)</span>
+
+<span class="n">app</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s2">&quot;/a2a&quot;</span><span class="p">,</span> <span class="n">a2a</span><span class="o">.</span><span class="n">app</span><span class="p">)</span>
+</code></pre></div>
+
+<hr />
+<p><a id="cap9"></a></p>
+<h1>Capítulo 9 — Exemplo completo: agente de afiliados</h1>
+<p><strong>Cenário</strong>: João, afiliado, tem um agente. Cliente pergunta "qual o melhor curso de marketing para iniciantes?". João quer que o agente pergunte ao agente da Hotmart.</p>
+<p><strong>Fluxo A2A</strong>:</p>
+<ol>
+<li>Cliente → Agente João: "Qual o melhor curso de marketing para iniciantes?"</li>
+<li>Agente João → Agente Hotmart: <code>tasks/send</code> com pergunta</li>
+<li>Agente Hotmart processa, retorna top 3 cursos</li>
+<li>Agente João formata resposta para o cliente</li>
+<li>Cliente recebe resposta com link de afiliado do João</li>
+</ol>
+<p><strong>Benefício</strong>: resposta precisa, em tempo real, sem João precisar consultar manualmente.</p>
+<hr />
+<p><a id="cap10"></a></p>
+<h1>Capítulo 10 — Casos de uso reais (2026)</h1>
+<p><strong>Caso 1 — Agente que compra leads</strong>
+Empresa de marketing usa agente A2A que consulta agente de plataforma de ads (Meta, Google), compra leads, e dispara para CRM automaticamente. <strong>ROI 3.2x vs processo manual.</strong></p>
+<p><strong>Caso 2 — Agente que faz due diligence</strong>
+Investidor usa agente para analisar empresa. Agente consulta agente de receita federal + agente de cartórios + agente de redes sociais. <strong>Análise completa em 5 minutos vs 3 dias.</strong></p>
+<p><strong>Caso 3 — Agente que combina viagens</strong>
+Agência de viagem usa agente que combina voos (Sabre), hotéis (Booking), e passeios (GetYourGuide). <strong>Pacote completo em 30 segundos.</strong></p>
+<p><strong>Caso 4 — Agente afiliado Nexus</strong>
+Afiliado Nexus usa agente que combina: agente de produto (consultar preço Hotmart) + agente de pagamento (criar link Stripe) + agente de marketing (disparar para lista). <strong>Pipeline completo em 1 minuto vs 30 minutos.</strong></p>
+<hr />
+<p><a id="epilogo"></a></p>
+<h1>Epílogo — A Internet dos Agentes vem aí</h1>
+<p>A2A é o começo de uma <strong>Internet dos Agentes</strong> — onde agentes de plataformas diferentes conversam entre si, formam redes, e cooperam.</p>
+<p><strong>Hoje (2026)</strong>: 23.000 agentes A2A no mundo.</p>
+<p><strong>Estimativa 2028</strong>: 1 milhão de agentes. Cada empresa, cada afiliado, cada dev com 1+ agente.</p>
+<p><strong>Estimativa 2030</strong>: 100 milhões de agentes. Agentes falando com agentes, negociando, transacionando, criando. Sem humanos no loop (na maioria dos casos).</p>
+<p>E isso não é ficção. É a próxima década. E a apostila que você acabou de ler é o começo da sua preparação.</p>
+<hr />
+<p><a id="apendice"></a></p>
+<h1>Apêndice — Código de exemplo completo</h1>
+<div class="codehilite"><pre><span></span><code><span class="c1"># agente_afiliado.py</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">fastapi</span><span class="w"> </span><span class="kn">import</span> <span class="n">FastAPI</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">a2a</span><span class="w"> </span><span class="kn">import</span> <span class="n">A2AServer</span><span class="p">,</span> <span class="n">Task</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">httpx</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
+<span class="n">a2a</span> <span class="o">=</span> <span class="n">A2AServer</span><span class="p">(</span><span class="n">agent_card_path</span><span class="o">=</span><span class="s2">&quot;.well-known/agent.json&quot;</span><span class="p">)</span>
+
+<span class="nd">@a2a</span><span class="o">.</span><span class="n">method</span><span class="p">(</span><span class="s2">&quot;tasks/send&quot;</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">handle_task</span><span class="p">(</span><span class="n">task</span><span class="p">:</span> <span class="n">Task</span><span class="p">):</span>
+    <span class="c1"># Decodificar mensagem do cliente</span>
+    <span class="n">msg</span> <span class="o">=</span> <span class="n">task</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">parts</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">text</span>
+
+    <span class="c1"># Se for pergunta sobre produto, chamar Hotmart agent</span>
+    <span class="k">if</span> <span class="s2">&quot;preço&quot;</span> <span class="ow">in</span> <span class="n">msg</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">or</span> <span class="s2">&quot;curso&quot;</span> <span class="ow">in</span> <span class="n">msg</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
+        <span class="k">return</span> <span class="k">await</span> <span class="n">call_hotmart_agent</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+    <span class="c1"># Resposta padrão</span>
+    <span class="k">return</span> <span class="n">Task</span><span class="p">(</span>
+        <span class="nb">id</span><span class="o">=</span><span class="n">task</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="n">status</span><span class="o">=</span><span class="s2">&quot;completed&quot;</span><span class="p">,</span>
+        <span class="n">artifacts</span><span class="o">=</span><span class="p">[{</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;text&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;text&quot;</span><span class="p">:</span> <span class="s2">&quot;Sou um agente de afiliados Nexus. Posso ajudar a encontrar produtos!&quot;</span>
+        <span class="p">}]</span>
+    <span class="p">)</span>
+
+<span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">call_hotmart_agent</span><span class="p">(</span><span class="n">question</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+    <span class="c1"># A2A call para Hotmart agent</span>
+    <span class="k">async</span> <span class="k">with</span> <span class="n">httpx</span><span class="o">.</span><span class="n">AsyncClient</span><span class="p">()</span> <span class="k">as</span> <span class="n">client</span><span class="p">:</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="k">await</span> <span class="n">client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
+            <span class="s2">&quot;https://api.hotmart.com/a2a&quot;</span><span class="p">,</span>
+            <span class="n">json</span><span class="o">=</span><span class="p">{</span>
+                <span class="s2">&quot;jsonrpc&quot;</span><span class="p">:</span> <span class="s2">&quot;2.0&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;req-001&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;tasks/send&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;task-</span><span class="si">{</span><span class="nb">hash</span><span class="p">(</span><span class="n">question</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;user&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;parts&quot;</span><span class="p">:</span> <span class="p">[{</span><span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;text&quot;</span><span class="p">,</span> <span class="s2">&quot;text&quot;</span><span class="p">:</span> <span class="n">question</span><span class="p">}]</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">)</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">Task</span><span class="p">(</span>
+            <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;task-result&quot;</span><span class="p">,</span>
+            <span class="n">status</span><span class="o">=</span><span class="s2">&quot;completed&quot;</span><span class="p">,</span>
+            <span class="n">artifacts</span><span class="o">=</span><span class="p">[{</span>
+                <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;data&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;result&quot;</span><span class="p">,</span> <span class="p">{})</span>
+            <span class="p">}]</span>
+        <span class="p">)</span>
+
+<span class="n">app</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s2">&quot;/a2a&quot;</span><span class="p">,</span> <span class="n">a2a</span><span class="o">.</span><span class="n">app</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">uvicorn</span>
+    <span class="n">uvicorn</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">host</span><span class="o">=</span><span class="s2">&quot;0.0.0.0&quot;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">8000</span><span class="p">)</span>
+</code></pre></div>
+
+<p><strong>Testar</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># 1. Iniciar agente</span>
+python<span class="w"> </span>agente_afiliado.py
+
+<span class="c1"># 2. Verificar Agent Card</span>
+curl<span class="w"> </span>http://localhost:8000/.well-known/agent.json
+
+<span class="c1"># 3. Chamar via A2A</span>
+curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>http://localhost:8000/a2a<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-d<span class="w"> </span><span class="s1">&#39;{</span>
+<span class="s1">    &quot;jsonrpc&quot;: &quot;2.0&quot;,</span>
+<span class="s1">    &quot;id&quot;: &quot;test-1&quot;,</span>
+<span class="s1">    &quot;method&quot;: &quot;tasks/send&quot;,</span>
+<span class="s1">    &quot;params&quot;: {</span>
+<span class="s1">      &quot;id&quot;: &quot;task-test-1&quot;,</span>
+<span class="s1">      &quot;message&quot;: {</span>
+<span class="s1">        &quot;role&quot;: &quot;user&quot;,</span>
+<span class="s1">        &quot;parts&quot;: [{&quot;type&quot;: &quot;text&quot;, &quot;text&quot;: &quot;Qual o melhor curso de marketing?&quot;}]</span>
+<span class="s1">      }</span>
+<span class="s1">    }</span>
+<span class="s1">  }&#39;</span>
+</code></pre></div>
+
+<p><strong>Resposta esperada</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;jsonrpc&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2.0&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;test-1&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;result&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;task-test-1&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;completed&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;artifacts&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;data&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">&quot;cursos&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="p">{</span><span class="nt">&quot;nome&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Marketing Digital Essencial&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;preco&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">197</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;comissao&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">59.10</span><span class="p">},</span>
+<span class="w">            </span><span class="p">{</span><span class="nt">&quot;nome&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Tráfego Pago Avançado&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;preco&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">397</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;comissao&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">119.10</span><span class="p">},</span>
+<span class="w">            </span><span class="err">...</span>
+<span class="w">          </span><span class="p">]</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<hr />
+<p><em>Fim da Apostila 29 · AI-to-AI Protocol</em></p>
+<p><em>MMN_IA Collective · 2026 · Licença: CC BY-SA 4.0</em></p>
+<p><em>"A2A não é só protocolo. É a língua que a Internet dos Agentes vai falar."</em></p>
+      <hr/>
+      <p style="text-align:center;color:var(--fg-muted);margin-top:2rem;">
+        <em>Fim da Apostila #29 2026 - Licenca CC BY-NC-SA 4.0 - MMN_IA Collective - Nexus HUB57</em>
+      </p>
+    </section>
+  </article>
+</body>
+</html>

@@ -8,7 +8,7 @@ tags: [academia, marketplace, skills, monetizacao, autor]
 pattern: "MMN_IA"
 ---
 
-![Capa — Marketplace de Skills](../../assets/ebook_covers/ACAD-apostila-13-marketplace-skills.webp)
+![Capa — Marketplace de Skills](../docs/ebooks/ACAD-apostila-13-marketplace-skills.webp)
 
 **Marketplace de Skills — Como Vender e Comprar no Ecossistema Nexus**
 

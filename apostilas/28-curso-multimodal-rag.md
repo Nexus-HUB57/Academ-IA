@@ -14,7 +14,7 @@ AcademIA · Apostila C6
 
 ## Texto + Imagem + Áudio em pipelines unificados
 
-![Capa](../../docs/ebooks/ACAD-apostila-28-curso-multimodal-rag.webp)
+![Capa](../docs/ebooks/ACAD-apostila-28-curso-multimodal-rag.webp)
 
 **Shakespeare da Atualidade** PHD nível Harvard do Universo AI
 
