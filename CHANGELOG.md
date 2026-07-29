@@ -2,13 +2,44 @@
 title: "CHANGELOG · Academ'IA"
 description: "Histórico de versões da Academ'IA · HUB de Conhecimento & Sabedoria"
 tags: [changelog, versionamento, historico, academia]
-version: 1.7.7
+version: 1.7.8
 last_updated: 2026-07-29
 ---
 
 # 📜 CHANGELOG · Academ'IA
 
 > Histórico de versões do HUB Academ'IA — Nexus Affil'IA'te. Segue **Semantic Versioning**: MAJOR (breaking), MINOR (compatível, novo asset), PATCH (correções, polish).
+
+---
+
+## [1.7.8] — 2026-07-29 · "3 novos treinamentos (WS-10/11/12)"
+
+### 🆕 Adicionado (3 treinamentos, ~8.3KB)
+
+Expandindo a trilha Master/Elite com 3 workshops práticos:
+
+- `treinamentos/WS-10-oficina-llm-eval.md` (2.7KB, 180min, Master)
+  Oficina completa de avaliação de LLMs: RAGAS, LLM-as-judge, dataset anotado,
+  pipeline CI/CD, dashboard Grafana. Métricas: Faithfulness, Recall, Precision.
+  Entregável: 100+ exemplos anotados + 3 evaluators rodando.
+
+- `treinamentos/WS-11-oficina-prompt-engineering-avancado.md` (3.0KB, 150min, Master)
+  7 técnicas avançadas: few-shot (+20%), CoT (+35%), ReAct (+50% agentic),
+  Tree-of-thoughts (+40% puzzles), Self-consistency (+15%), Chaining, Function calling.
+  Benchmark com 5 modelos. Templates por técnica.
+
+- `treinamentos/WS-12-oficina-arquitetura-multi-tenant.md` (2.7KB, 180min, Elite)
+  Arquitetura SaaS multi-tenant white-label: 3 modelos (Silo/Bridge/Pool),
+  PostgreSQL RLS, provisioner automatizado, whitelabel DNS, SLA 99.9%.
+  Trade-offs: custo 3-5x silo vs 1x pool.
+
+### 📊 Métricas Atualizadas
+
+| Recurso | v1.7.7 | v1.7.8 | Delta |
+|---|---|---|---|
+| Treinamentos (WS) | 9 | 12 | +3 |
+| Treinamentos Master | 2 | 3 | +1 |
+| Treinamentos Elite | 0 | 1 | +1 |
 
 ---
 
