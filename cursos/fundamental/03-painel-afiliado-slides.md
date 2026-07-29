@@ -15,7 +15,7 @@ pattern: "MMN_IA"
 
 *   **Título:** Painel do Afiliado: Seu Centro de Comando
 *   **Subtítulo:** Os Primeiros Passos para a Orquestração da Inteligência
-*   **Imagem:** Capa — Primeiros passos no Painel do Afiliado (referência: `../../assets/ebook_covers/ACAD-apostila-05-sete-telas-essenciais.webp`)
+*   **Imagem:** Capa — Primeiros passos no Painel do Afiliado (referência: `../../docs/ebooks/ACAD-apostila-05-sete-telas-essenciais.webp`)
 *   **Texto:** "Olá, futuro orquestrador de inteligência. Após desvendarmos a arquitetura invisível do IOAID e a resiliência do SHO, é hora de trazer todo esse conhecimento para a prática. Hoje, daremos os primeiros passos no seu centro de comando: o Painel do Afiliado. É aqui que suas estratégias ganham vida e seus resultados são monitorados. Sir. Alencar, poderia nos guiar por essa interface crucial?"
 
 ## Slide 2: Acesso e Primeiro Login

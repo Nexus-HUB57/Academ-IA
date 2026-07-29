@@ -20,7 +20,7 @@ pattern: "MMN_IA"
 
 ## 🎞️ CENA 1 — Abertura Cinematográfica (0:00-0:08)
 
-**[Visual: Sequência cinematográfica do `video-00-boas-vindas.mp4` gerado]**
+**[Visual: Sequência cinematográfica do sequência cinematográfica de boas-vindas já renderizada gerado]**
 - Câmera passando por uma rede neural holográfica
 - Expansão de partículas em 3D
 - Transição suave para o logo
@@ -146,7 +146,7 @@ ELITE (roxo)
 
 - [ ] Vídeo 1080p renderizado (versão longa 60-90s)
 - [ ] Versão vertical 9:16 para Shorts/Reels (60s)
-- [ ] Thumbnail 1280x720 (`thumb-00-boas-vindas.png` ✅)
+- [ ] Thumbnail 1280x720 (`../thumbnails/thumb-00-boas-vindas.png` ✅)
 - [ ] Arquivo .SRT de legendas
 - [ ] Descrição + tags para YouTube
 - [ ] End screen com link pro próximo vídeo

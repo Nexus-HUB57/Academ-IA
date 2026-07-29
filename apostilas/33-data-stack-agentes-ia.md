@@ -15,7 +15,7 @@ pattern: "MMN_IA"
 
 Nexus Affil'IA'te · 2026
 
-![Capa — Data Stack para Agentes IA](../../docs/ebooks/ACAD-apostila-33-data-stack-agentes-ia.webp)
+![Capa — Data Stack para Agentes IA](../docs/ebooks/ACAD-apostila-33-data-stack-agentes-ia.webp)
 
 **Sobre esta apostila**
 

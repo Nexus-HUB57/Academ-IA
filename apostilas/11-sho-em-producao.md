@@ -8,7 +8,7 @@ tags: [academia, sho, sistema-imunologico, resiliencia, sla]
 pattern: "MMN_IA"
 ---
 
-![Capa — SHO em Produção](../../assets/ebook_covers/ACAD-apostila-11-sho-em-producao.webp)
+![Capa — SHO em Produção](../docs/ebooks/ACAD-apostila-11-sho-em-producao.webp)
 
 **SHO em Produção — O Sistema Imunológico Operacional**
 

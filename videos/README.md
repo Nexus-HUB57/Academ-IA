@@ -90,7 +90,7 @@ AcademIA/videos/
 | 13 | Multi-Tenant e White-Label na Prática | ✅ | ✅ | 10-12 min |
 | 14 | Federação de Agentes Zero-Trust | ✅ | ✅ | 10-12 min |
 
-**Total:** 15 roteiros · 15 thumbnails · 0 vídeo renderizado · 100% escrito
+**Total:** 15 roteiros · 15 thumbnails · 15 descrições YouTube · 13 teasers locais · 10 uploads concluídos · 5 uploads prontos aguardando liberação do canal
 
 ## 🎨 Identidade Visual
 
@@ -150,10 +150,11 @@ AcademIA/videos/
 - [x] Estrutura de pastas organizada
 - [x] README atualizado
 
-### Fase 2 — Mínimo Viável (Próximo)
-- [ ] Renderizar vídeos 1-7 com narração ElevenLabs (1080p, 7-10min cada)
-- [ ] Versões verticais 9:16 (60s) para Shorts/Reels
-- [ ] Legendas .SRT em pt-BR
+### Fase 2 — Mínimo Viável (Atualizado)
+- [x] Roteiros, thumbnails e descrições-base consolidados
+- [x] Teasers locais criados para a faixa 04-14 (13 arquivos no repositório)
+- [ ] Normalizar aliases/nomenclatura dos teasers para 100% aderência ao publish plan
+- [ ] Legendas .SRT em pt-BR para todos os vídeos priorizados
 - [ ] Persona visual (avatar animado de Alencar + Ive)
 
 ### Fase 3 — Escala (Futuro)
@@ -191,7 +192,7 @@ Todos os roteiros seguem:
 
 # 🎬 Onda 49 · Vídeos Full com TTS voice-cloned PT-BR (2026-07-15)
 
-**Status:** 15/16 vídeos full renderizados (94%)
+**Status:** 15 vídeos full do lote base documentados localmente + 19 renders 720p + 19 narrated + 19 narrated-v2 na ONDA-49/50
 **Pipeline validado:** ROTEIRO (.md) → parse_roteiros.py → JSON cenas → TTS PT-BR → motion-graphics PIL → ffmpeg concat (libx264) → MP4
 
 ## 📦 Novos Artefatos (não duplicam nada existente)

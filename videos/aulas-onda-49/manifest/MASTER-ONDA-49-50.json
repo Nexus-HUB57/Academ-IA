@@ -1,0 +1,101 @@
+{
+  "schema_version": "2.0",
+  "gerado_em": "2026-07-23",
+  "gerado_por": "Nexus AI Pipeline (autonomous)",
+  "onda_master": "49+50",
+  "descricao": "Deliverables consolidados da ONDA-49 (videoaulas 15-33 com slides B2 + MP4 renders) e ONDA-50 (19 capas YouTube com personas validadas)",
+  "summary": {
+    "videoaulas_total": 19,
+    "aulas_range": "15-33",
+    "trilhas_cobertas": [
+      "Fundamental",
+      "Master",
+      "Elite",
+      "Agente"
+    ],
+    "capas_youtube": 19,
+    "slides_png": 95,
+    "renders_mp4": 9,
+    "roteiros_md": 19,
+    "manifests_json": 2,
+    "tamanho_total_mb": 124
+  },
+  "personas_usadas": {
+    "alencar_solo": {
+      "aulas": [
+        15,
+        16,
+        18,
+        20,
+        23,
+        24,
+        26,
+        33
+      ],
+      "total": 8,
+      "referencia_canonica": "Sessao Mavis 2026-07-23 — protegida"
+    },
+    "ive_solo": {
+      "aulas": [
+        22,
+        25,
+        27,
+        31
+      ],
+      "total": 4,
+      "referencia_canonica": "Sessao Mavis 2026-07-23 — protegida"
+    },
+    "dupla": {
+      "aulas": [
+        17,
+        19,
+        21,
+        28,
+        29,
+        30,
+        32
+      ],
+      "total": 7,
+      "referencia_canonica": "Sessao Mavis 2026-07-23 — protegida"
+    }
+  },
+  "correcoes_aplicadas": {
+    "onda50_correcoes": [
+      {
+        "aula": 15,
+        "issue": "Capa gerada inicialmente como Dupla (Ive + Alencar juntos)",
+        "fix": "prompt reforçado para Alencar solo; regenerada em 23/07/2026 11:38 UTC com referencia canonica",
+        "validacao": "understand_images: validate=true, 2 capas 2/2 passed"
+      },
+      {
+        "aula": 16,
+        "issue": "Capa gerada com persona fora do figurino canonico",
+        "fix": "regerada com image_urls=[/s/PI8rS0VM](referencia Sir Alencar) garantindo consistencia visual",
+        "validacao": "understand_images: validate=true, mesma referencia canonica"
+      }
+    ]
+  },
+  "auditoria_remoto": {
+    "ultimo_commit_main": "c1b514b ONDA-50 — 19 capas YouTube com personas validadas (squash-merge)",
+    "pr_numero": 2,
+    "pr_url": "https://github.com/Nexus-HUB57/Academ-IA/pull/2",
+    "branch_temp_deletada": "onda-50-thumbs-youtube",
+    "metodo_push": "squash via PUT /pulls/N/merge (repo tem allow_auto_merge=False)"
+  },
+  "blocos_seguintes": {
+    "renders_mp4_pendentes": {
+      "total_aulas": 19,
+      "renders_existentes": 9,
+      "pendentes": 10,
+      "motivo": "FAL_KEY nao localizada em nenhum canal acessivel (env, /opt, /mnt, sessao anterior). Required para TTS voice-clone MiniMax via fal-client."
+    },
+    "tarefas_admin_oneverso": {
+      "status": "standby",
+      "tarefas": [
+        "1. Corrigir cadastro admin (lucasmpthomaz2 vs lucasmpthomaz)",
+        "2. Liberar permissoes em Usuarios Bloqueados"
+      ],
+      "motivo_bloqueio": "token GitHub nao da acesso ao CMS OneVerso — admin URL oneverso.com.br/admin/* exige credenciais admin OneVerso (email+senha ou session_token ou DATABASE_URL)"
+    }
+  }
+}

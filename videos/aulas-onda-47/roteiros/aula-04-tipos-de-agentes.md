@@ -27,4 +27,4 @@ O aluno distingue 4 tipos de agentes e escolhe o adequado para cada caso do seu 
 > "Aula 5: as bibliotecas por trás dessas IAs — a caixa de ferramentas do orquestrador."
 
 ## 🎨 Assets
-- Thumb: `thumb-aula-04-tipos-de-agentes.webp`
+- Thumb: `../thumbs/thumb-aula-04-tipos-de-agentes.webp`

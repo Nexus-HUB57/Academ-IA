@@ -1,0 +1,275 @@
+{
+  "schema_version": "1.0",
+  "gerado_em": "2026-07-23",
+  "gerado_por": "Nexus AI Pipeline",
+  "onda": "50",
+  "descricao": "Indice cruzado das videoaulas 15-33 com seus entregaveis visuais ONDA-49 + personas ONDA-50",
+  "aulas": [
+    {
+      "aula": 15,
+      "titulo": "Métricas ROI Ecossistema",
+      "trilha": "Master",
+      "persona_capa": "alencar",
+      "slug": "metricas-roi-ecossistema",
+      "refs": {
+        "roteiro_md": "../../aulas-onda-49/roteiros/aula-15-metricas-roi-ecossistema.md",
+        "slides_dir": "../../aulas-onda-49/slides/aula-15-metricas-roi-ecossistema/",
+        "capa_youtube": "../../aulas-onda-49/thumbnails/capa-15-metricas-roi-ecossistema-alencar.png",
+        "render_mp4": null,
+        "apostila_md": "../../../apostilas/15-metricas-roi-ecossistema.md"
+      }
+    },
+    {
+      "aula": 16,
+      "titulo": "Trilha Fundamental de IA",
+      "trilha": "Fundamental",
+      "persona_capa": "alencar",
+      "slug": "trilha-fundamental-ia",
+      "refs": {
+        "roteiro_md": "../../aulas-onda-49/roteiros/aula-16-trilha-fundamental-ia.md",
+        "slides_dir": "../../aulas-onda-49/slides/aula-16-trilha-fundamental-ia/",
+        "capa_youtube": "../../aulas-onda-49/thumbnails/capa-16-trilha-fundamental-ia-alencar.png",
+        "render_mp4": null,
+        "apostila_md": "../../../apostilas/16-trilha-fundamental-ia.md"
+      }
+    },
+    {
+      "aula": 17,
+      "titulo": "SEO & Marketing de Conteúdo IA",
+      "trilha": "Master",
+      "persona_capa": "dupla",
+      "slug": "seo-marketing-conteudo-ia",
+      "refs": {
+        "roteiro_md": "../../aulas-onda-49/roteiros/aula-17-seo-marketing-conteudo-ia.md",
+        "slides_dir": "../../aulas-onda-49/slides/aula-17-seo-marketing-conteudo-ia/",
+        "capa_youtube": "../../aulas-onda-49/thumbnails/capa-17-seo-marketing-conteudo-ia-dupla.png",
+        "render_mp4": "../../aulas-onda-49/renders/aula-17-seo-marketing-conteudo-ia-720p.mp4",
+        "apostila_md": "../../../apostilas/17-seo-marketing-conteudo-ia.md"
+      }
+    },
+    {
+      "aula": 18,
+      "titulo": "Segurança Ofensiva · Pentest de Agentes",
+      "trilha": "Agente",
+      "persona_capa": "alencar",
+      "slug": "seguranca-ofensiva-pentest",
+      "refs": {
+        "roteiro_md": "../../aulas-onda-49/roteiros/aula-18-seguranca-ofensiva-pentest.md",
+        "slides_dir": "../../aulas-onda-49/slides/aula-18-seguranca-ofensiva-pentest/",
+        "capa_youtube": "../../aulas-onda-49/thumbnails/capa-18-seguranca-ofensiva-pentest-alencar.png",
+        "render_mp4": null,
+        "apostila_md": "../../../apostilas/18-seguranca-ofensiva-pentest.md"
+      }
+    },
+    {
+      "aula": 19,
+      "titulo": "Monetização Avançada em Escala",
+      "trilha": "Master",
+      "persona_capa": "dupla",
+      "slug": "monetizacao-avancada-escala",
+      "refs": {
+        "roteiro_md": "../../aulas-onda-49/roteiros/aula-19-monetizacao-avancada-escala.md",
+        "slides_dir": "../../aulas-onda-49/slides/aula-19-monetizacao-avancada-escala/",
+        "capa_youtube": "../../aulas-onda-49/thumbnails/capa-19-monetizacao-avancada-escala-dupla.png",
+        "render_mp4": null,
+        "apostila_md": "../../../apostilas/19-monetizacao-avancada-escala.md"
+      }
+    },
+    {
+      "aula": 20,
+      "titulo": "Trilha Elite · Engenharia",
+      "trilha": "Elite",
+      "persona_capa": "alencar",
+      "slug": "trilha-elite-engenharia",
+      "refs": {
+        "roteiro_md": "../../aulas-onda-49/roteiros/aula-20-trilha-elite-engenharia.md",
+        "slides_dir": "../../aulas-onda-49/slides/aula-20-trilha-elite-engenharia/",
+        "capa_youtube": "../../aulas-onda-49/thumbnails/capa-20-trilha-elite-engenharia-alencar.png",
+        "render_mp4": null,
+        "apostila_md": "../../../apostilas/20-trilha-elite-engenharia.md"
+      }
+    },
+    {
+      "aula": 21,
+      "titulo": "Trilha Master · Arquitetura",
+      "trilha": "Master",
+      "persona_capa": "dupla",
+      "slug": "trilha-master-arquitetura",
+      "refs": {
+        "roteiro_md": "../../aulas-onda-49/roteiros/aula-21-trilha-master-arquitetura.md",
+        "slides_dir": "../../aulas-onda-49/slides/aula-21-trilha-master-arquitetura/",
+        "capa_youtube": "../../aulas-onda-49/thumbnails/capa-21-trilha-master-arquitetura-dupla.png",
+        "render_mp4": null,
+        "apostila_md": "../../../apostilas/21-trilha-master-arquitetura.md"
+      }
+    },
+    {
+      "aula": 22,
+      "titulo": "Trilha Master · Mentoria",
+      "trilha": "Master",
+      "persona_capa": "ive",
+      "slug": "trilha-master-mentoria",
+      "refs": {
+        "roteiro_md": "../../aulas-onda-49/roteiros/aula-22-trilha-master-mentoria.md",
+        "slides_dir": "../../aulas-onda-49/slides/aula-22-trilha-master-mentoria/",
+        "capa_youtube": "../../aulas-onda-49/thumbnails/capa-22-trilha-master-mentoria-ive.png",
+        "render_mp4": null,
+        "apostila_md": "../../../apostilas/22-trilha-master-mentoria.md"
+      }
+    },
+    {
+      "aula": 23,
+      "titulo": "Curso · RAG Prático",
+      "trilha": "Elite",
+      "persona_capa": "alencar",
+      "slug": "curso-rag-pratico",
+      "refs": {
+        "roteiro_md": "../../aulas-onda-49/roteiros/aula-23-curso-rag-pratico.md",
+        "slides_dir": "../../aulas-onda-49/slides/aula-23-curso-rag-pratico/",
+        "capa_youtube": "../../aulas-onda-49/thumbnails/capa-23-curso-rag-pratico-alencar.png",
+        "render_mp4": null,
+        "apostila_md": "../../../apostilas/23-curso-rag-pratico.md"
+      }
+    },
+    {
+      "aula": 24,
+      "titulo": "Curso · Agents com LangGraph",
+      "trilha": "Elite",
+      "persona_capa": "alencar",
+      "slug": "curso-agents-langgraph",
+      "refs": {
+        "roteiro_md": "../../aulas-onda-49/roteiros/aula-24-curso-agents-langgraph.md",
+        "slides_dir": "../../aulas-onda-49/slides/aula-24-curso-agents-langgraph/",
+        "capa_youtube": "../../aulas-onda-49/thumbnails/capa-24-curso-agents-langgraph-alencar.png",
+        "render_mp4": null,
+        "apostila_md": "../../../apostilas/24-curso-agents-langgraph.md"
+      }
+    },
+    {
+      "aula": 25,
+      "titulo": "Curso · Prompt Engineering",
+      "trilha": "Fundamental",
+      "persona_capa": "ive",
+      "slug": "curso-prompt-engineering",
+      "refs": {
+        "roteiro_md": "../../aulas-onda-49/roteiros/aula-25-curso-prompt-engineering.md",
+        "slides_dir": "../../aulas-onda-49/slides/aula-25-curso-prompt-engineering/",
+        "capa_youtube": "../../aulas-onda-49/thumbnails/capa-25-curso-prompt-engineering-ive.png",
+        "render_mp4": null,
+        "apostila_md": "../../../apostilas/25-curso-prompt-engineering.md"
+      }
+    },
+    {
+      "aula": 26,
+      "titulo": "Curso · Vector DB",
+      "trilha": "Elite",
+      "persona_capa": "alencar",
+      "slug": "curso-vector-db",
+      "refs": {
+        "roteiro_md": "../../aulas-onda-49/roteiros/aula-26-curso-vector-db.md",
+        "slides_dir": "../../aulas-onda-49/slides/aula-26-curso-vector-db/",
+        "capa_youtube": "../../aulas-onda-49/thumbnails/capa-26-curso-vector-db-alencar.png",
+        "render_mp4": "../../aulas-onda-49/renders/aula-26-curso-vector-db-720p.mp4",
+        "apostila_md": "../../../apostilas/26-curso-vector-db.md"
+      }
+    },
+    {
+      "aula": 27,
+      "titulo": "Curso · Voice AI",
+      "trilha": "Agente",
+      "persona_capa": "ive",
+      "slug": "curso-voice-ai",
+      "refs": {
+        "roteiro_md": "../../aulas-onda-49/roteiros/aula-27-curso-voice-ai.md",
+        "slides_dir": "../../aulas-onda-49/slides/aula-27-curso-voice-ai/",
+        "capa_youtube": "../../aulas-onda-49/thumbnails/capa-27-curso-voice-ai-ive.png",
+        "render_mp4": "../../aulas-onda-49/renders/aula-27-curso-voice-ai-720p.mp4",
+        "apostila_md": "../../../apostilas/27-curso-voice-ai.md"
+      }
+    },
+    {
+      "aula": 28,
+      "titulo": "Curso · Multimodal RAG",
+      "trilha": "Elite",
+      "persona_capa": "dupla",
+      "slug": "curso-multimodal-rag",
+      "refs": {
+        "roteiro_md": "../../aulas-onda-49/roteiros/aula-28-curso-multimodal-rag.md",
+        "slides_dir": "../../aulas-onda-49/slides/aula-28-curso-multimodal-rag/",
+        "capa_youtube": "../../aulas-onda-49/thumbnails/capa-28-curso-multimodal-rag-dupla.png",
+        "render_mp4": "../../aulas-onda-49/renders/aula-28-curso-multimodal-rag-720p.mp4",
+        "apostila_md": "../../../apostilas/28-curso-multimodal-rag.md"
+      }
+    },
+    {
+      "aula": 29,
+      "titulo": "Protocolo AI ↔ AI",
+      "trilha": "Master",
+      "persona_capa": "dupla",
+      "slug": "ai-to-ai-protocol",
+      "refs": {
+        "roteiro_md": "../../aulas-onda-49/roteiros/aula-29-ai-to-ai-protocol.md",
+        "slides_dir": "../../aulas-onda-49/slides/aula-29-ai-to-ai-protocol/",
+        "capa_youtube": "../../aulas-onda-49/thumbnails/capa-29-ai-to-ai-protocol-dupla.png",
+        "render_mp4": "../../aulas-onda-49/renders/aula-29-ai-to-ai-protocol-720p.mp4",
+        "apostila_md": "../../../apostilas/29-ai-to-ai-protocol.md"
+      }
+    },
+    {
+      "aula": 30,
+      "titulo": "Federação Zero Trust",
+      "trilha": "Master",
+      "persona_capa": "dupla",
+      "slug": "federacao-zero-trust",
+      "refs": {
+        "roteiro_md": "../../aulas-onda-49/roteiros/aula-30-federacao-zero-trust.md",
+        "slides_dir": "../../aulas-onda-49/slides/aula-30-federacao-zero-trust/",
+        "capa_youtube": "../../aulas-onda-49/thumbnails/capa-30-federacao-zero-trust-dupla.png",
+        "render_mp4": "../../aulas-onda-49/renders/aula-30-federacao-zero-trust-720p.mp4",
+        "apostila_md": "../../../apostilas/30-federacao-zero-trust.md"
+      }
+    },
+    {
+      "aula": 31,
+      "titulo": "Fábrica de Conteúdo com IA",
+      "trilha": "Master",
+      "persona_capa": "ive",
+      "slug": "fabrica-conteudo-ia",
+      "refs": {
+        "roteiro_md": "../../aulas-onda-49/roteiros/aula-31-fabrica-conteudo-ia.md",
+        "slides_dir": "../../aulas-onda-49/slides/aula-31-fabrica-conteudo-ia/",
+        "capa_youtube": "../../aulas-onda-49/thumbnails/capa-31-fabrica-conteudo-ia-ive.png",
+        "render_mp4": "../../aulas-onda-49/renders/aula-31-fabrica-conteudo-ia-720p.mp4",
+        "apostila_md": "../../../apostilas/31-fabrica-conteudo-ia.md"
+      }
+    },
+    {
+      "aula": 32,
+      "titulo": "Pricing de IA em 2026",
+      "trilha": "Master",
+      "persona_capa": "dupla",
+      "slug": "pricing-ia-2026",
+      "refs": {
+        "roteiro_md": "../../aulas-onda-49/roteiros/aula-32-pricing-ia-2026.md",
+        "slides_dir": "../../aulas-onda-49/slides/aula-32-pricing-ia-2026/",
+        "capa_youtube": "../../aulas-onda-49/thumbnails/capa-32-pricing-ia-2026-dupla.png",
+        "render_mp4": "../../aulas-onda-49/renders/aula-32-pricing-ia-2026-720p.mp4",
+        "apostila_md": "../../../apostilas/32-pricing-ia-2026.md"
+      }
+    },
+    {
+      "aula": 33,
+      "titulo": "Data Stack para Agentes IA",
+      "trilha": "Elite",
+      "persona_capa": "alencar",
+      "slug": "data-stack-agentes-ia",
+      "refs": {
+        "roteiro_md": "../../aulas-onda-49/roteiros/aula-33-data-stack-agentes-ia.md",
+        "slides_dir": "../../aulas-onda-49/slides/aula-33-data-stack-agentes-ia/",
+        "capa_youtube": "../../aulas-onda-49/thumbnails/capa-33-data-stack-agentes-ia-alencar.png",
+        "render_mp4": "../../aulas-onda-49/renders/aula-33-data-stack-agentes-ia-720p.mp4",
+        "apostila_md": "../../../apostilas/33-data-stack-agentes-ia.md"
+      }
+    }
+  ]
+}

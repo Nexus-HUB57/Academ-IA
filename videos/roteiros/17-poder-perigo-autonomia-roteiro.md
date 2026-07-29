@@ -100,7 +100,7 @@ ebook_origem: "NEXUS_AFFIL_IA_TECH_VOL_03"
 - **Personas:** Ive (abertura + fronteira moral + CTA) · Alencar (espectro + controles + CTA)
 - **Tom híbrido:** estratégico + tático + ético
 - **CTA:** ebook completo + decisão de design
-- **Thumbnail:** `thumb-17-poder-perigo-autonomia.webp` (2K, 16:9)
+- **Thumbnail:** `../thumbnails/thumb-17-poder-perigo-autonomia.webp` (2K, 16:9)
 
 ---
 

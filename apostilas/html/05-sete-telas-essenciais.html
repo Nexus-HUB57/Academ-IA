@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>As 7 Telas Essenciais do Dia a Dia - AcademIA Nexus</title>
+  <link rel="stylesheet" href="../html/acad-style.css">
+</head>
+<body class="dark-theme">
+  <article class="ebook">
+    <header class="cover">
+      <div class="series-tag">AcademIA - Apostila #05</div>
+      <h1>As 7 Telas Essenciais do Dia a Dia</h1>
+      <h2>O Guia Definitivo do Painel do Afiliado Nexus</h2>
+      <img class="cover-image" src="docs/ebooks/ACAD-apostila-05-sete-telas-essenciais.webp" alt="Capa - As 7 Telas Essenciais do Dia a Dia">
+      <div class="author"><strong>MMN_IA Collective</strong><br>PHD nivel Harvard do Universo AI</div>
+      <div class="meta">Apostila 05 - Nivel Master - v1.0.0 - 2026</div>
+    </header>
+    <section class="page toc-page">
+      <h2>Sumario</h2>
+      <ul><li>(conteudo detalhado no corpo)</li></ul>
+      <div class="info-box success">
+        <strong>Sobre esta apostila:</strong> parte da colecao AcademIA - Nexus HUB57. Conteudo hands-on, baseado em producao real.
+      </div>
+    </section>
+    <section class="page">
+      <h2>Conteudo</h2>
+      <p><strong>As 7 Telas Essenciais do Dia a Dia</strong></p>
+<p><em>O Guia Definitivo do Painel do Afiliado Nexus</em></p>
+<p><strong>Por MMN_IA Collective · Academ'IA</strong></p>
+<p>Nexus Affil'IA'te · 2026</p>
+<p><strong>Sobre este documento</strong></p>
+<p>O Painel do Afiliado Nexus tem 27 telas no total, mas a maioria dos afiliados produtivos usa apenas 7 no dia a dia. Este documento é o mapa detalhado dessas 7 telas: o que cada uma mostra, o que cada botão faz, quais são as armadilhas comuns, e — principalmente — como interpretar os números que aparecem nelas. Se você usar este guia como referência diária, em 30 dias você vai operar com mais segurança que 80% dos afiliados da rede.</p>
+<p><strong>Sumário</strong></p>
+<blockquote>
+<p><strong>•</strong> 1. Tela 01 — Dashboard Geral
+<strong>•</strong> 2. Tela 02 — Disparos e Campanhas
+<strong>•</strong> 3. Tela 03 — Base de Contatos e Coortes
+<strong>•</strong> 4. Tela 04 — Judge Revisor
+<strong>•</strong> 5. Tela 05 — Métricas de Negócio
+<strong>•</strong> 6. Tela 06 — Skills e Agentes
+<strong>•</strong> 7. Tela 07 — Autonomia e SHO
+<strong>•</strong> 8. Rotina diária recomendada (15 minutos)
+<strong>•</strong> 9. Indicadores de que algo está errado
+<strong>•</strong> 10. Atalhos e dicas de power user</p>
+</blockquote>
+<hr />
+<p><strong>1. Tela 01 — Dashboard Geral</strong></p>
+<p><strong>Caminho:</strong> <code>/dashboard</code></p>
+<p><strong>O que mostra:</strong>
+- Cards no topo: receita do dia, receita do mês, % de conversão média, latência média do agente.
+- Gráfico central: receita dos últimos 30 dias (linha do tempo).
+- Lista lateral: últimas 10 ações executadas pelo agente (com status de aprovação do Judge).
+- Banner superior: alertas do SHO (se houver).</p>
+<p><strong>Como interpretar:</strong>
+- <strong>Receita do dia caindo 3 dias seguidos</strong>: pode ser coorte fria, ou skill com problema.
+- <strong>Latência média &gt; 5s</strong>: problema de infraestrutura, abrir ticket.
+- <strong>Banner SHO vermelho</strong>: skill em quarentena, ação humana necessária.</p>
+<p><strong>Armadilha comum:</strong> ignorar o banner SHO. Ele está ali por motivo.</p>
+<p><strong>2. Tela 02 — Disparos e Campanhas</strong></p>
+<p><strong>Caminho:</strong> <code>/dashboard/dispatch</code></p>
+<p><strong>O que mostra:</strong>
+- Botão grande "Novo Disparo" no topo.
+- Tabela com campanhas ativas: nome, base, status (rodando/pausada/agendada), conversão.
+- Aba lateral "Histórico": últimos 50 disparos com taxa de resposta e Judge.</p>
+<p><strong>Como usar:</strong>
+1. Clique "Novo Disparo".
+2. Escolha a <strong>coorte</strong> (público) — pode usar as prontas ou criar nova.
+3. Escolha o <strong>template</strong> de mensagem (pode ser gerado pela skill copywriter).
+4. Defina <strong>horário e frequência</strong> (pode ser único ou recorrente).
+5. Revise o preview com Judge.
+6. Aprove.</p>
+<p><strong>Armadilha comum:</strong> disparar para coorte errada. Sempre confirme o tamanho da base antes de aprovar.</p>
+<p><strong>3. Tela 03 — Base de Contatos e Coortes</strong></p>
+<p><strong>Caminho:</strong> <code>/dashboard/contacts</code></p>
+<p><strong>O que mostra:</strong>
+- Tabela com todos os contatos: nome, telefone, última interação, coorte, status (ativo/frio/banido).
+- Filtros: por coorte, status, data de entrada, produto de interesse.
+- Botão "Importar" (CSV, XLSX, integração direta).
+- Botão "Criar Coorte" (regras: ex. "todos que compraram X nos últimos 90 dias").</p>
+<p><strong>Coortes padrão criadas automaticamente:</strong>
+- <strong>Novos</strong>: entraram na base nos últimos 7 dias.
+- <strong>Ativos</strong>: compraram nos últimos 30 dias.
+- <strong>Frios</strong>: 30-90 dias sem comprar.
+- <strong>Recompra</strong>: compraram, mas perfil sugere nova compra em 60-90 dias.</p>
+<p><strong>Como criar uma coorte custom:</strong>
+1. Clique "Criar Coorte".
+2. Defina nome e descrição.
+3. Adicione regras (ex: "comprou produto X" + "estado = SP" + "data entrada &gt; 2025-01-01").
+4. Teste com preview (mostra quantos contatos qualificam).
+5. Salve.</p>
+<p><strong>Armadilha comum:</strong> criar coorte com regra contraditória (ex: "comprou X" + "nunca comprou"). Resultado: base vazia.</p>
+<p><strong>4. Tela 04 — Judge Revisor</strong></p>
+<p><strong>Caminho:</strong> <code>/dashboard/judge</code></p>
+<p><strong>O que mostra:</strong>
+- Lista das últimas mensagens bloqueadas pelo Judge, com motivo.
+- Gráfico de pizza: % de mensagens aprovadas vs reprovadas, por motivo.
+- Aba "Configurar Judge": regras de bloqueio (LGPD, spam, claims não suportados, tom).</p>
+<p><strong>Como ler as reprovações:</strong>
+- 🟥 <strong>Bloqueado</strong> (alta gravidade): Judge impediu envio, ação humana necessária.
+- 🟨 <strong>Alerta</strong> (média): Judge enviou, mas marcou como suspeita pra revisão.
+- 🟩 <strong>Aprovado</strong>: Judge liberou, sem ressalvas.</p>
+<p><strong>Como ajustar o Judge:</strong>
+- Se reprovações estão <strong>muitas (&gt; 20%)</strong>: suas mensagens estão agressivas demais. Abaixe o tom.
+- Se reprovações estão <strong>poucas (&lt; 3%)</strong>: Judge pode estar calibrado frouxo. Revise as regras.</p>
+<p><strong>Armadilha comum:</strong> desativar o Judge. Não faça isso. O Judge é o que te protege de ban do WhatsApp.</p>
+<p><strong>5. Tela 05 — Métricas de Negócio</strong></p>
+<p><strong>Caminho:</strong> <code>/dashboard/metrics</code></p>
+<p><strong>O que mostra:</strong>
+- <strong>Receita por período</strong> (dia, semana, mês, ano).
+- <strong>CAC</strong> (custo de aquisição de cliente).
+- <strong>LTV</strong> (lifetime value).
+- <strong>Taxa de conversão</strong> por coorte e por produto.
+- <strong>Funil completo</strong>: impressões → cliques → leads → vendas.
+- <strong>Comparativo</strong> com mês anterior (verde = melhor, vermelho = pior).</p>
+<p><strong>Como ler:</strong>
+- <strong>CAC subindo e LTV caindo</strong>: você está pagando para trazer clientes que compram menos. Reveja coortes.
+- <strong>Conversão por coorte X é 5x maior que Y</strong>: pare de gastar com Y, escale X.
+- <strong>Funil com queda brusca em uma etapa</strong>: investigue a copy ou a oferta.</p>
+<p><strong>6. Tela 06 — Skills e Agentes</strong></p>
+<p><strong>Caminho:</strong> <code>/dashboard/skills</code></p>
+<p><strong>O que mostra:</strong>
+- Lista de skills instaladas, com descrição e custo por invocação.
+- Lista de agentes configurados, com quais skills cada um usa.
+- Botão "Adicionar Skill" (do marketplace).
+- Botão "Criar Agente" (assistente guiado).</p>
+<p><strong>Como adicionar uma skill:</strong>
+1. Clique "Adicionar Skill".
+2. Navegue pelo marketplace (27+ skills).
+3. Leia a descrição, custo, exemplos.
+4. Clique "Instalar" e escolha em qual agente usar.</p>
+<p><strong>Como criar um agente:</strong>
+1. Clique "Criar Agente".
+2. Dê nome e objetivo.
+3. Escolha skills (comece com 3).
+4. Configure Judge (pode usar template).
+5. Teste com base pequena (50 contatos).
+6. Publique.</p>
+<p><strong>Armadilha comum:</strong> instalar 10 skills no primeiro agente. Comece com 3.</p>
+<p><strong>7. Tela 07 — Autonomia e SHO</strong></p>
+<p><strong>Caminho:</strong> <code>/dashboard/autonomy</code></p>
+<p><strong>O que mostra:</strong>
+- <strong>% de autonomia</strong>: quanto das suas ações são executadas sem aprovação humana (meta: &gt; 70%).
+- <strong>Timeline de incidentes do SHO</strong>: anomalias detectadas, contenções aplicadas, quarentenas.
+- <strong>Botão "Modo Autonomia"</strong>: aumenta ou diminui a autonomia do agente.
+- <strong>Log de decisões</strong>: cada decisão tomada pelo SHO, com explicabilidade.</p>
+<p><strong>Como ler:</strong>
+- <strong>Autonomia &lt; 50%</strong>: você está aprovando tudo, o agente não está agregando valor.
+- <strong>Autonomia &gt; 90%</strong>: pode ser bom (confiança alta) ou ruim (Judge desativado). Confira.
+- <strong>SHO em contenção frequente</strong>: skill com problema, avalie substituir.</p>
+<p><strong>8. Rotina diária recomendada (15 minutos)</strong></p>
+<p>A rotina ideal de um afiliado produtivo leva 15 minutos por dia:</p>
+<ol>
+<li><strong>Minuto 0-3</strong>: Abra o Dashboard Geral. Veja receita, latência, banner SHO.</li>
+<li><strong>Minuto 3-6</strong>: Vá em Disparos. Aprove ou pause campanhas do dia.</li>
+<li><strong>Minuto 6-9</strong>: Vá em Judge. Revise as mensagens marcadas com 🟨 alerta.</li>
+<li><strong>Minuto 9-12</strong>: Vá em Métricas. Olhe a taxa de conversão por coorte. Identifique a top.</li>
+<li><strong>Minuto 12-15</strong>: Vá em Autonomia. Veja se há contenção do SHO. Resolva se houver.</li>
+</ol>
+<p><strong>9. Indicadores de que algo está errado</strong></p>
+<ul>
+<li><strong>Latência &gt; 10s</strong>: problema técnico, abrir ticket.</li>
+<li><strong>Receita do dia = 0 por 3 dias seguidos</strong>: skill ou coorte parou de performar.</li>
+<li><strong>Judge reprovando &gt; 30%</strong>: copy está inadequada, revise antes de escalar.</li>
+<li><strong>SHO em contenção permanente</strong>: skill com bug, substitua.</li>
+<li><strong>CAC dobrou em 7 dias</strong>: tráfego ou copy com problema, investigar.</li>
+</ul>
+<p><strong>10. Atalhos e dicas de power user</strong></p>
+<ul>
+<li><strong>Cmd/Ctrl + K</strong>: busca global de contatos, skills, campanhas.</li>
+<li><strong>Cmd/Ctrl + D</strong>: vai direto para Disparos.</li>
+<li><strong>Cmd/Ctrl + J</strong>: vai para Judge.</li>
+<li><strong>Click direito em contato</strong>: ações rápidas (mensagem, mover de coorte, banir).</li>
+<li><strong>Filtros salvos</strong>: salve coortes customizadas para reuso.</li>
+<li><strong>Modo escuro</strong>: disponível no canto superior direito.</li>
+<li><strong>Exportar tudo</strong>: <code>/dashboard/export</code> baixa CSV com tudo do seu nó (auditoria).</li>
+</ul>
+<p><strong>Truque de senior:</strong> assine o feed RSS do Judge em <code>/dashboard/judge.rss</code> pra receber reprovações graves por e-mail em vez de checar manualmente.</p>
+<hr />
+<p><strong>As 7 Telas Essenciais do Dia a Dia</strong> --- Por MMN_IA Collective</p>
+<hr />
+<h2>🎯 Exercícios Práticos Aprofundados — Apostila: As 7 Telas Essenciais</h2>
+<blockquote>
+<p><strong>Tempo sugerido:</strong> 2-4 horas (apostila é aprofundamento, não curso)
+<strong>Formato:</strong> individual ou em dupla, com consulta ao painel/ambiente real
+<strong>Entrega:</strong> resultados documentados em caderno/planilha/notion pessoal</p>
+</blockquote>
+<p><strong>Exercício 1 — Tour</strong></p>
+<p>Acesse o painel e identifique as 7 telas mencionadas. Anote o que cada uma mostra.</p>
+<p><strong>Exercício 2 — Customização</strong></p>
+<p>Personalize 3 telas com widgets relevantes ao seu nicho. Documente por quê cada widget importa.</p>
+<p><strong>Exercício 3 — Workflow</strong></p>
+<p>Defina 1 workflow de 'consulta matinal' (qual tela abre primeiro, em qual ordem).</p>
+<p><strong>Exercício 4 — Métricas</strong></p>
+<p>Para cada tela, identifique 1 métrica-chave que você monitora diariamente.</p>
+<p><strong>Exercício 5 — Compartilhamento</strong></p>
+<p>Crie 1 'snapshot' (screenshot) das suas telas favoritas. Compartilhe com 1 par/mentor.</p>
+<hr />
+<h2>✅ Checklist de Conclusão</h2>
+<p>Marque conforme for completando:</p>
+<ul>
+<li>[ ] Li a apostila inteira, sem pular seções.</li>
+<li>[ ] Completei os 5 exercícios práticos.</li>
+<li>[ ] Documentei cada exercício (resultados, decisões, próximos passos).</li>
+<li>[ ] Respondi às 7 questões de auto-avaliação (mentalmente, sem colar).</li>
+<li>[ ] Anotei 3 dúvidas que surgiram (para perguntar em webinar/fórum).</li>
+<li>[ ] Identifiquei 1 insight acionável que vou aplicar nas próximas 24h.</li>
+<li>[ ] Compartilhei 1 aprendizado com pelo menos 1 pessoa.</li>
+<li>[ ] Documentei o que essa apostila mudou na minha operação.</li>
+</ul>
+<hr />
+<h2>🧠 Auto-Avaliação Avançada (7 questões)</h2>
+<p>Tente responder <strong>sem consultar a apostila</strong>. Depois, valide:</p>
+<ol>
+<li>Quais são as 7 telas essenciais do painel?</li>
+<li>Qual a diferença entre 'tela operacional' e 'tela analítica'?</li>
+<li>Como configurar alertas visuais (cores, ícones)?</li>
+<li>Qual a frequência de atualização de cada tela?</li>
+<li>Como customizar widgets sem perder performance?</li>
+<li>O que é 'dashboard executivo' vs. 'dashboard operacional'?</li>
+<li>Como exportar dados das telas para análise externa?</li>
+</ol>
+<hr />
+<h2>🚀 Próximos Passos Recomendados</h2>
+<ol>
+<li><strong>Aplicar imediatamente:</strong> pegue 1 insight e aplique HOJE.</li>
+<li><strong>Medir em 7-30 dias:</strong> meça o impacto (qualitativo + quantitativo).</li>
+<li><strong>Documentar:</strong> escreva 1 página sobre o que aprendeu + o que mudou.</li>
+<li><strong>Compartilhar:</strong> publique 1 post/conteúdo sobre o tema.</li>
+<li>
+<p><strong>Avançar:</strong> siga para a próxima apostila da trilha.</p>
+</li>
+<li>
+<p><strong>Consultar materiais relacionados:</strong></p>
+</li>
+</ol>
+<p><em>MMN AI-to-AI · 2026 · Todos os direitos reservados</em></p>
+      <hr/>
+      <p style="text-align:center;color:var(--fg-muted);margin-top:2rem;">
+        <em>Fim da Apostila #05 2026 - Licenca CC BY-NC-SA 4.0 - MMN_IA Collective - Nexus HUB57</em>
+      </p>
+    </section>
+  </article>
+</body>
+</html>

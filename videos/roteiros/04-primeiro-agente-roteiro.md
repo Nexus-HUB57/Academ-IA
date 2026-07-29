@@ -212,7 +212,7 @@ AGENT: "Sim! Temos o XPTO por R$ 89,90. Quer que eu faça o pedido?"
 - [ ] Vídeo 1080p renderizado
 - [ ] Live-coding gravado em tela cheia
 - [ ] Overlays explicativos (4 partes, 5%, CTA)
-- [ ] Thumbnail (`thumb-04-primeiro-agente.png` ✅)
+- [ ] Thumbnail (`../thumbnails/thumb-04-primeiro-agente.png` ✅)
 - [ ] Legendas .SRT
 - [ ] Versão 60s resumida para Shorts (cenário 1 + 2 + CTA)
 - [ ] Repositório do código linkado na descrição
