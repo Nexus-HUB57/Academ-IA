@@ -1,0 +1,142 @@
+{
+  "date": "2026-07-26",
+  "total": 15,
+  "ok": 15,
+  "items": [
+    {
+      "code": "00",
+      "title": "Boas-vindas",
+      "track": "fundamental",
+      "persona": "Alencar",
+      "duration_s": 261.6,
+      "size_mb": 6.54,
+      "ok": true
+    },
+    {
+      "code": "01",
+      "title": "Entendendo o IOAID",
+      "track": "fundamental",
+      "persona": "Ive",
+      "duration_s": 118.73,
+      "size_mb": 3.82,
+      "ok": true
+    },
+    {
+      "code": "02",
+      "title": "Sistema SHO",
+      "track": "fundamental",
+      "persona": "Alencar",
+      "duration_s": 123.62,
+      "size_mb": 3.93,
+      "ok": true
+    },
+    {
+      "code": "03",
+      "title": "Painel do Afiliado",
+      "track": "fundamental",
+      "persona": "Ive",
+      "duration_s": 131.15,
+      "size_mb": 4.07,
+      "ok": true
+    },
+    {
+      "code": "04",
+      "title": "Primeiro Agente",
+      "track": "agente",
+      "persona": "Alencar",
+      "duration_s": 136.01,
+      "size_mb": 3.8,
+      "ok": true
+    },
+    {
+      "code": "05",
+      "title": "Skills Essenciais",
+      "track": "agente",
+      "persona": "Alencar",
+      "duration_s": 131.69,
+      "size_mb": 4.02,
+      "ok": true
+    },
+    {
+      "code": "06",
+      "title": "WhatsApp em Escala",
+      "track": "agente",
+      "persona": "Alencar",
+      "duration_s": 125.57,
+      "size_mb": 3.8,
+      "ok": true
+    },
+    {
+      "code": "07",
+      "title": "Judge Revisor",
+      "track": "agente",
+      "persona": "Alencar",
+      "duration_s": 167.22,
+      "size_mb": 4.88,
+      "ok": true
+    },
+    {
+      "code": "08",
+      "title": "Otimizacao de Conversao",
+      "track": "master",
+      "persona": "Ive",
+      "duration_s": 126.04,
+      "size_mb": 3.52,
+      "ok": true
+    },
+    {
+      "code": "09",
+      "title": "Funis e Lifecycle",
+      "track": "master",
+      "persona": "Ive",
+      "duration_s": 118.73,
+      "size_mb": 3.64,
+      "ok": true
+    },
+    {
+      "code": "10",
+      "title": "A/B Testing com Judge",
+      "track": "master",
+      "persona": "Ive",
+      "duration_s": 122.76,
+      "size_mb": 3.72,
+      "ok": true
+    },
+    {
+      "code": "11",
+      "title": "Coortes e Churn",
+      "track": "master",
+      "persona": "Ive",
+      "duration_s": 118.22,
+      "size_mb": 3.64,
+      "ok": true
+    },
+    {
+      "code": "12",
+      "title": "Blueprints Elite",
+      "track": "elite",
+      "persona": "Alencar",
+      "duration_s": 120.78,
+      "size_mb": 3.29,
+      "ok": true
+    },
+    {
+      "code": "13",
+      "title": "Multi-Tenant e White-Label",
+      "track": "elite",
+      "persona": "Alencar",
+      "duration_s": 119.05,
+      "size_mb": 3.69,
+      "ok": true
+    },
+    {
+      "code": "14",
+      "title": "Federacao Zero-Trust",
+      "track": "elite",
+      "persona": "Alencar",
+      "duration_s": 119.81,
+      "size_mb": 3.7,
+      "ok": true
+    }
+  ]
+}
