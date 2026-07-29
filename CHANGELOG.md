@@ -2,13 +2,54 @@
 title: "CHANGELOG · Academ'IA"
 description: "Histórico de versões da Academ'IA · HUB de Conhecimento & Sabedoria"
 tags: [changelog, versionamento, historico, academia]
-version: 1.7.2
+version: 1.7.7
 last_updated: 2026-07-29
 ---
 
 # 📜 CHANGELOG · Academ'IA
 
 > Histórico de versões do HUB Academ'IA — Nexus Affil'IA'te. Segue **Semantic Versioning**: MAJOR (breaking), MINOR (compatível, novo asset), PATCH (correções, polish).
+
+---
+
+## [1.7.7] — 2026-07-29 · "RECUPERACAO pos force-push: 7 tutoriais + producao/personas restaurados"
+
+### ⚠️ Incidente
+
+Em 2026-07-29, um force-push no remote sobrescreveu 6 commits locais (4 meus do dia + 2 herdados). Conteudo perdido foi recuperado via backup local em /tmp + branch `backup-minha-versao` (preservado por seguranca).
+
+### 🆕 Adicionado (8 arquivos, ~49KB)
+
+Conteudo recuperado e adicionado com sufixo `-mavis` para coexistir com os canonicos do remote (conforme `GUIA_MULTI_DEV.md`):
+
+- `tutoriais/24-implementar-rate-limiting-mavis.md` (4.6KB) - Coexiste com `24-redes-neurais-zero-hero.md`
+- `tutoriais/25-configurar-webhook-receiver-mavis.md` (6.1KB) - Sem canonico
+- `tutoriais/26-monitorar-com-sentry-mavis.md` (5.6KB) - Sem canonico
+- `tutoriais/27-criar-cli-python-typer-mavis.md` (6.7KB) - Sem canonico
+- `tutoriais/28-implementar-feature-flags-mavis.md` (9.5KB) - Sem canonico
+- `tutoriais/29-configurar-cdn-edge-cache-mavis.md` (6.9KB) - Sem canonico
+- `tutoriais/30-criar-dashboard-grafana-mavis.md` (8.9KB) - Sem canonico
+- `producao/personas/README.md` + 2 symlinks restaurados
+
+### 📋 Convencao Estabelecida
+
+Apos este incidente, reforcamos a convencao do `GUIA_MULTI_DEV.md`:
+- **NUNCA** sobrescrever arquivos existentes - sempre sufixo
+- **SEMPRE** verificar `git fetch` antes de `git pull`
+- **SEMPRE** manter branch de backup antes de operacoes destrutivas
+- **SEMPRE** documentar no CHANGELOG incidentes de recuperacao
+
+### 🛡️ Prevencao
+
+Adicionar ao workflow:
+1. `git stash --include-untracked` antes de qualquer reset/force
+2. `git branch backup-$(date +%Y%m%d)` antes de pull --rebase
+3. `git reflog` para auditoria de alteracoes
+4. NUNCA usar `git push --force` sem aviso previo no time
+
+---
+
+## [1.7.2] — 2026-07-29 · "3 novos materiais: apostila 44 (fiscal) + tutorial 24 (redes neurais) + PB-PRODUTO"
 
 ---
 
