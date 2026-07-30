@@ -2,13 +2,43 @@
 title: "CHANGELOG · Academ'IA"
 description: "Histórico de versões da Academ'IA · HUB de Conhecimento & Sabedoria"
 tags: [changelog, versionamento, historico, academia]
-version: 1.7.2
-last_updated: 2026-07-29
+version: 1.7.3
+last_updated: 2026-07-30
 ---
 
 # 📜 CHANGELOG · Academ'IA
 
 > Histórico de versões do HUB Academ'IA — Nexus Affil'IA'te. Segue **Semantic Versioning**: MAJOR (breaking), MINOR (compatível, novo asset), PATCH (correções, polish).
+
+---
+
+## [1.7.3] — 2026-07-30 · "3 novos materiais: apostila 45 (debug) + tutorial 25 (multimodal) + WS-10 (debug prod)"
+
+### 🆕 Adicionado (3 arquivos, ~73KB)
+
+Novos materiais cobrindo 3 áreas críticas para agentes em produção:
+
+- `apostilas/45-debugging-otimizacao-agentes-ia.md` (34KB) — Guia completo
+  de debug: observabilidade, tracing OpenTelemetry, profiling, debugging
+  de alucinações, otimização de custos/latência/qualidade, A/B testing
+  de modelos, feature flags, runbook de incidentes
+- `tutoriais/25-multimodal-ia-imagem-audio-video.md` (27KB) — Tutorial
+  prático de IA multimodal: GPT-4V/Claude Vision, Whisper STT, OpenAI TTS
+  + ElevenLabs, DALL-E 3 + Flux + Midjourney, Sora + Runway + HeyGen
+  para avatares, agente multimodal completo
+- `treinamentos/WS-10-oficina-debug-agentes-producao.md` (12KB) — Workshop
+  hands-on de 4h: debugar 5 agentes propositalmente quebrados (latência,
+  custo, alucinação, loop, cascading failure), tracing, Judge Revisor,
+  circuit breaker
+
+### 📋 Contexto
+Esta versão foi criada por Mavis Agent após:
+1. `git status` confirmou working tree clean
+2. Identificados 3 gaps técnicos profundos (debug, multimodal, prod)
+3. Criados 3 novos materiais (~73KB) complementando trilhas Master/Elite
+4. CHANGELOG bumpado para v1.7.3
+
+**Zero sobrescrita, zero duplicação, zero exclusão** de conteúdo existente.
 
 ---
 
