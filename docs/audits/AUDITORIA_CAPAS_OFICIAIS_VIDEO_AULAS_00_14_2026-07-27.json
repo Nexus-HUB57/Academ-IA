@@ -1,0 +1,159 @@
+{
+  "date": "2026-07-27",
+  "scope": "audit of first slide vs approved official cover for modules 00-14",
+  "pass_threshold_mean_abs_diff": 6.5,
+  "ok_count": 15,
+  "total": 15,
+  "results": [
+    {
+      "code": "00",
+      "title": "Boas-vindas à AcademIA Nexus",
+      "track": "fundamental",
+      "approved_cover": "producao/assets/thumbnails/capa-00-boas-vindas-ive.png",
+      "video": "materiais/video-aulas/fundamental/00-boas-vindas/rebuild/video-00-00-boas-vindas-a-academia-nexus-master.mp4",
+      "mean_abs_diff": 2.2881,
+      "official_cover_applied_to_first_slide": true,
+      "error": null
+    },
+    {
+      "code": "01",
+      "title": "Entendendo o IOAID",
+      "track": "fundamental",
+      "approved_cover": "producao/assets/thumbnails/capa-01-entendendo-ioaid-dupla.png",
+      "video": "materiais/video-aulas/fundamental/01-entendendo-ioaid/rebuild/video-01-01-entendendo-ioaid-master.mp4",
+      "mean_abs_diff": 2.7464,
+      "official_cover_applied_to_first_slide": true,
+      "error": null
+    },
+    {
+      "code": "02",
+      "title": "O Sistema SHO (Self-Healing Orchestrator)",
+      "track": "fundamental",
+      "approved_cover": "producao/assets/thumbnails/capa-02-sistema-sho-dupla.png",
+      "video": "materiais/video-aulas/fundamental/02-sistema-sho/rebuild/video-02-02-sistema-sho-master.mp4",
+      "mean_abs_diff": 2.6075,
+      "official_cover_applied_to_first_slide": true,
+      "error": null
+    },
+    {
+      "code": "03",
+      "title": "Painel do Afiliado — Visão Geral da Operação",
+      "track": "fundamental",
+      "approved_cover": "producao/assets/thumbnails/capa-03-painel-afiliado-ive.png",
+      "video": "materiais/video-aulas/fundamental/03-painel-afiliado/rebuild/video-03-03-painel-afiliado-master.mp4",
+      "mean_abs_diff": 2.4812,
+      "official_cover_applied_to_first_slide": true,
+      "error": null
+    },
+    {
+      "code": "04",
+      "title": "Construindo Seu Primeiro Agente em 4 Minutos",
+      "track": "agente",
+      "approved_cover": "producao/assets/thumbnails/capa-04-primeiro-agente-dupla.png",
+      "video": "materiais/video-aulas/agente/00-primeiro-agente/rebuild/video-04-00-primeiro-agente-master.mp4",
+      "mean_abs_diff": 2.7975,
+      "official_cover_applied_to_first_slide": true,
+      "error": null
+    },
+    {
+      "code": "05",
+      "title": "Skills Essenciais — Copywriter + Audience-Segmenter",
+      "track": "agente",
+      "approved_cover": "producao/assets/thumbnails/capa-05-skills-essenciais-alencar.png",
+      "video": "materiais/video-aulas/agente/01-skills-essenciais/rebuild/video-05-01-skills-essenciais-master.mp4",
+      "mean_abs_diff": 2.8288,
+      "official_cover_applied_to_first_slide": true,
+      "error": null
+    },
+    {
+      "code": "06",
+      "title": "Disparando no WhatsApp em Escala",
+      "track": "agente",
+      "approved_cover": "producao/assets/thumbnails/capa-06-disparo-whatsapp-alencar.png",
+      "video": "materiais/video-aulas/agente/02-disparo-whatsapp/rebuild/video-06-02-disparo-whatsapp-master.mp4",
+      "mean_abs_diff": 2.7138,
+      "official_cover_applied_to_first_slide": true,
+      "error": null
+    },
+    {
+      "code": "07",
+      "title": "Judge Revisor — A IA que Decide por Você",
+      "track": "agente",
+      "approved_cover": "producao/assets/thumbnails/capa-07-judge-revisor-alencar.png",
+      "video": "materiais/video-aulas/agente/03-judge-revisor/rebuild/video-07-03-judge-revisor-master.mp4",
+      "mean_abs_diff": 2.6929,
+      "official_cover_applied_to_first_slide": true,
+      "error": null
+    },
+    {
+      "code": "08",
+      "title": "Otimização de Conversão — A Matemática da Receita",
+      "track": "master",
+      "approved_cover": "producao/assets/thumbnails/capa-08-otimizacao-conversao-dupla.png",
+      "video": "materiais/video-aulas/master/00-otimizacao-conversao/rebuild/video-08-00-otimizacao-conversao-master.mp4",
+      "mean_abs_diff": 2.7706,
+      "official_cover_applied_to_first_slide": true,
+      "error": null
+    },
+    {
+      "code": "09",
+      "title": "Funis e Lifecycle — O Sistema Completo",
+      "track": "master",
+      "approved_cover": "producao/assets/thumbnails/capa-09-funis-lifecycle-dupla.png",
+      "video": "materiais/video-aulas/master/01-funis-lifecycle/rebuild/video-09-01-funis-lifecycle-master.mp4",
+      "mean_abs_diff": 2.8813,
+      "official_cover_applied_to_first_slide": true,
+      "error": null
+    },
+    {
+      "code": "10",
+      "title": "A/B Testing com Judge — Ciência da Experimentação",
+      "track": "master",
+      "approved_cover": "producao/assets/thumbnails/capa-10-ab-testing-judge-dupla.png",
+      "video": "materiais/video-aulas/master/02-ab-test-judge/rebuild/video-10-02-ab-test-judge-master.mp4",
+      "mean_abs_diff": 2.6368,
+      "official_cover_applied_to_first_slide": true,
+      "error": null
+    },
+    {
+      "code": "11",
+      "title": "Análise de Coortes e Churn — A Arte de Reter",
+      "track": "master",
+      "approved_cover": "producao/assets/thumbnails/capa-11-coortes-churn-dupla.png",
+      "video": "materiais/video-aulas/master/03-coortes-churn/rebuild/video-11-03-coortes-churn-master.mp4",
+      "mean_abs_diff": 2.5664,
+      "official_cover_applied_to_first_slide": true,
+      "error": null
+    },
+    {
+      "code": "12",
+      "title": "Blueprints Elite — O Jogo do Top 10%",
+      "track": "elite",
+      "approved_cover": "producao/assets/thumbnails/capa-12-blueprints-elite-dupla.png",
+      "video": "materiais/video-aulas/elite/00-blueprints-elite/rebuild/video-12-00-blueprints-elite-master.mp4",
+      "mean_abs_diff": 2.6644,
+      "official_cover_applied_to_first_slide": true,
+      "error": null
+    },
+    {
+      "code": "13",
+      "title": "Multi-Tenant e White-Label na Prática",
+      "track": "elite",
+      "approved_cover": "producao/assets/thumbnails/capa-13-multi-tenant-dupla.png",
+      "video": "materiais/video-aulas/elite/01-multi-tenant-whitelabel/rebuild/video-13-01-multi-tenant-whitelabel-master.mp4",
+      "mean_abs_diff": 2.8241,
+      "official_cover_applied_to_first_slide": true,
+      "error": null
+    },
+    {
+      "code": "14",
+      "title": "Federação de Agentes Zero-Trust",
+      "track": "elite",
+      "approved_cover": "producao/assets/thumbnails/capa-14-federacao-agentes-dupla.png",
+      "video": "materiais/video-aulas/elite/02-federacao-agentes/rebuild/video-14-02-federacao-agentes-master.mp4",
+      "mean_abs_diff": 2.669,
+      "official_cover_applied_to_first_slide": true,
+      "error": null
+    }
+  ]
+}
