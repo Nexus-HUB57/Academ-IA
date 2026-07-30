@@ -1,14 +1,19 @@
 ---
-title: "Vozes Oficiais · Personas AcademIA"
-description: "Guia canônico das vozes oficiais das personas — Alencar e Ive"
-tags: [personas, vozes, audio, tts, oficial]
+title: "Vozes Oficiais · Personas AcademIA (LEGACY v1.0.0)"
+description: "DEPRECATED - substituido por OFFICIAL_VOICES.md. Mantido para historico."
+tags: [personas, vozes, audio, tts, oficial, legacy]
+status: deprecated
 version: "1.0.0"
 last_updated: "2026-07-22"
+deprecated_at: "2026-07-29"
+replaced_by: "marca/personas/OFFICIAL_VOICES.md"
 ---
 
-# 🎙️ Vozes Oficiais · Personas AcademIA
+# 🎙️ Vozes Oficiais · Personas AcademIA (LEGACY v1.0.0)
 
-> **Este é o registro canônico das vozes oficiais das personas.** Todos os vídeos, áudios, podcasts, treinamentos e materiais da AcademIA DEVEM usar essas vozes como referência.
+> ⚠️ **DEPRECATED (2026-07-29):** Este documento foi **substituido** pela versao canonica mais detalhada em [`marca/personas/OFFICIAL_VOICES.md`](./OFFICIAL_VOICES.md). Ele e mantido aqui apenas para historico. **Para producao atual, use OFFICIAL_VOICES.md.**
+
+> **Este era o registro canônico das vozes oficiais das personas.** Todos os vídeos, áudios, podcasts, treinamentos e materiais da AcademIA DEVEM usar essas vozes como referência.
 
 ## 📍 Localização no Repo
 
