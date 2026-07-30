@@ -2,13 +2,50 @@
 title: "CHANGELOG · Academ'IA"
 description: "Histórico de versões da Academ'IA · HUB de Conhecimento & Sabedoria"
 tags: [changelog, versionamento, historico, academia]
-version: 1.7.3
+version: 1.7.4
 last_updated: 2026-07-30
 ---
 
 # 📜 CHANGELOG · Academ'IA
 
 > Histórico de versões do HUB Academ'IA — Nexus Affil'IA'te. Segue **Semantic Versioning**: MAJOR (breaking), MINOR (compatível, novo asset), PATCH (correções, polish).
+
+---
+
+## [1.7.4] — 2026-07-30 · "4 novos materiais: apostila 46 + tutoriais 31/32 + tool 06 (unit economics)"
+
+### 🆕 Adicionado (4 arquivos, ~107KB)
+
+Novos materiais cobrindo arquitetura e unit economics:
+
+- `apostilas/46-arquitetura-multi-tenant-2026.md` (37KB) — Guia completo
+  de multi-tenant: 3 modelos (DB/Schema/Row-Level), RLS, isolation,
+  rate limiting por tenant, circuit breaker isolado, billing metered,
+  observabilidade por tenant, federation cross-region
+- `tutoriais/31-circuit-breaker-padrao.md` (27KB) — Implementação
+  completa: 3 estados (CLOSED/OPEN/HALF_OPEN), métricas Prometheus,
+  integração FastAPI, libs (pybreaker), testes, casos de uso
+- `tutoriais/32-feature-flags-padrao.md` (22KB) — 4 tipos de FF (release,
+  experiment, ops, permission), implementação custom, integração
+  LaunchDarkly/Statsig/Unleash, A/B testing, kill switches
+- `Lab-Nexus/tools/financas/06-calculadora-unit-economy.md` (21KB) —
+  Calculadora de LTV/CAC/Payback/Magic Number/Burn Multiple, cohort
+  analysis, segmentação, dashboard, interpretação
+
+### 🔄 Renomeado
+- `treinamentos/WS-10-oficina-debug-agentes-producao.md` → `treinamentos/WS-13-oficina-debug-agentes-producao.md`
+  (renomeação para evitar colisão com `WS-10-oficina-llm-eval.md` criado
+  por outro dev)
+
+### 📋 Contexto
+- Outro dev (Mavis) criou WS-10/11/12 enquanto eu estava criando WS-10
+- Resolvi colisão renomeando para WS-13 (sigo numeração após o dele)
+- Mantive meu material (oficina de debug) — não sobrescrevi nada
+- Criei 4 novos materiais complementando trilhas Master/Elite
+- CHANGELOG bumpado para v1.7.4
+
+**Zero sobrescrita, zero duplicação, zero exclusão** de conteúdo existente.
+Meu WS-10 virou WS-13 (canônico coexistindo com o WS-10 do outro dev).
 
 ---
 
