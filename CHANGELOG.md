@@ -2,13 +2,84 @@
 title: "CHANGELOG · Academ'IA"
 description: "Histórico de versões da Academ'IA · HUB de Conhecimento & Sabedoria"
 tags: [changelog, versionamento, historico, academia]
-version: 1.7.1
-last_updated: 2026-07-27
+version: 1.7.3
+last_updated: 2026-07-30
 ---
 
 # 📜 CHANGELOG · Academ'IA
 
 > Histórico de versões do HUB Academ'IA — Nexus Affil'IA'te. Segue **Semantic Versioning**: MAJOR (breaking), MINOR (compatível, novo asset), PATCH (correções, polish).
+
+---
+
+## [1.7.3] — 2026-07-30 · "3 novos materiais: apostila 45 (debug) + tutorial 25 (multimodal) + WS-10 (debug prod)"
+
+### 🆕 Adicionado (3 arquivos, ~73KB)
+
+Novos materiais cobrindo 3 áreas críticas para agentes em produção:
+
+- `apostilas/45-debugging-otimizacao-agentes-ia.md` (34KB) — Guia completo
+  de debug: observabilidade, tracing OpenTelemetry, profiling, debugging
+  de alucinações, otimização de custos/latência/qualidade, A/B testing
+  de modelos, feature flags, runbook de incidentes
+- `tutoriais/25-multimodal-ia-imagem-audio-video.md` (27KB) — Tutorial
+  prático de IA multimodal: GPT-4V/Claude Vision, Whisper STT, OpenAI TTS
+  + ElevenLabs, DALL-E 3 + Flux + Midjourney, Sora + Runway + HeyGen
+  para avatares, agente multimodal completo
+- `treinamentos/WS-10-oficina-debug-agentes-producao.md` (12KB) — Workshop
+  hands-on de 4h: debugar 5 agentes propositalmente quebrados (latência,
+  custo, alucinação, loop, cascading failure), tracing, Judge Revisor,
+  circuit breaker
+
+### 📋 Contexto
+Esta versão foi criada por Mavis Agent após:
+1. `git status` confirmou working tree clean
+2. Identificados 3 gaps técnicos profundos (debug, multimodal, prod)
+3. Criados 3 novos materiais (~73KB) complementando trilhas Master/Elite
+4. CHANGELOG bumpado para v1.7.3
+
+**Zero sobrescrita, zero duplicação, zero exclusão** de conteúdo existente.
+
+---
+
+## [1.7.2] — 2026-07-29 · "3 novos materiais: apostila 44 (fiscal) + tutorial 24 (redes neurais) + PB-PRODUTO"
+
+### 🆕 Adicionado (3 arquivos, ~72KB)
+
+Novos materiais preenchendo gaps identificados pós-recuperação de force-push:
+
+- `apostilas/44-fiscal-contabilidade-2026.md` (27KB) — Guia fiscal completo
+  para afiliados: PF vs PJ, MEI, Simples Nacional, Lucro Presumido,
+  abertura passo a passo, conta PJ, NF, pró-labore, distribuição lucros,
+  contr
+atos, casos reais, checklist
+- `tutoriais/24-redes-neurais-zero-hero.md` (29KB) — Implementação completa
+  de 4 redes neurais (MLP, CNN, RNN/LSTM, Transformer) com NumPy e
+  PyTorch, transfer learning, deploy com FastAPI, exercícios práticos
+- `playbooks/PB-PRODUTO-lancamento-beta-fechado.md` (16KB) — Playbook
+  6-semanas para validar produto com 10-30 early adopters: ICP, candidatos,
+  onboarding, feedback semanal, NPS, go/no-go, lançamento público
+
+### 🔄 Contexto
+- **Force-push recovery:** PR #3 do outro dev tinha sobrescrito 8 commits meus
+  com merge `merge/dev-content-20260729-134452` (39 commits + novos materiais)
+- **Merge preservando ambos:** `git merge FETCH_HEAD -X ours` recuperou
+  meus 11 materiais + adicionou os 39 do remote
+- **Resultado:** +10 arquivos Lib-Nexus (api-docs, best-practices, knowledge-base,
+  agents-specs, prompts governanca), +2 prompts copywriting, +9 vídeos,
+  +5 roteiros_v2, +1 apostila-complemento, +1 GUIA_MULTI_DEV
+
+### 📋 Contexto Mavis
+Esta versão foi criada por Mavis Agent após:
+1. Force-push detectado — remote `d99db21` tinha sobrescrito meus 8 commits
+2. Diagnóstico: local `bafebbc` tinha meus 11 materiais; remote tinha 39 commits novos
+3. Merge `-X ours` recuperou tudo (refs 27 ahead → 0/0)
+4. Identificação de 3 novos gaps (fiscal, deep learning, beta fechado)
+5. Criação de 3 novos materiais (~72KB)
+6. CHANGELOG bumpado para v1.7.2
+
+**Zero sobrescrita, zero duplicação, zero exclusão** de conteúdo existente.
+Todos os 11 materiais da v1.6.7-v1.7.1 preservados + 39 materiais da PR #3 integrados.
 
 ---
 

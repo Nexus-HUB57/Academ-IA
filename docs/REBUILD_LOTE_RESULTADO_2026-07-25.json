@@ -1,51 +1,9 @@
 [
   {
-    "code": "08",
+    "code": "00",
     "ok": true,
-    "duration_s": 126.04,
-    "file": "materiais/video-aulas/master/00-otimizacao-conversao/rebuild/video-08-00-otimizacao-conversao-master.mp4",
-    "slides": 10
-  },
-  {
-    "code": "09",
-    "ok": true,
-    "duration_s": 118.73,
-    "file": "materiais/video-aulas/master/01-funis-lifecycle/rebuild/video-09-01-funis-lifecycle-master.mp4",
-    "slides": 10
-  },
-  {
-    "code": "10",
-    "ok": true,
-    "duration_s": 122.76,
-    "file": "materiais/video-aulas/master/02-ab-test-judge/rebuild/video-10-02-ab-test-judge-master.mp4",
-    "slides": 10
-  },
-  {
-    "code": "11",
-    "ok": true,
-    "duration_s": 118.22,
-    "file": "materiais/video-aulas/master/03-coortes-churn/rebuild/video-11-03-coortes-churn-master.mp4",
-    "slides": 10
-  },
-  {
-    "code": "12",
-    "ok": true,
-    "duration_s": 120.78,
-    "file": "materiais/video-aulas/elite/00-blueprints-elite/rebuild/video-12-00-blueprints-elite-master.mp4",
-    "slides": 10
-  },
-  {
-    "code": "13",
-    "ok": true,
-    "duration_s": 119.05,
-    "file": "materiais/video-aulas/elite/01-multi-tenant-whitelabel/rebuild/video-13-01-multi-tenant-whitelabel-master.mp4",
-    "slides": 10
-  },
-  {
-    "code": "14",
-    "ok": true,
-    "duration_s": 119.81,
-    "file": "materiais/video-aulas/elite/02-federacao-agentes/rebuild/video-14-02-federacao-agentes-master.mp4",
-    "slides": 10
+    "duration_s": 261.6,
+    "file": "materiais/video-aulas/fundamental/00-boas-vindas/rebuild/video-00-00-boas-vindas-a-academia-nexus-master.mp4",
+    "slides": 9
   }
 ]

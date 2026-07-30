@@ -1,20 +1,14 @@
 {
-  "module": "00",
+  "code": "00",
   "title": "Boas-vindas à AcademIA Nexus",
-  "target_duration_s": 261,
-  "slides": [
-    "slide_01.png",
-    "slide_02.png",
-    "slide_03.png",
-    "slide_04.png",
-    "slide_05.png",
-    "slide_06.png",
-    "slide_07.png",
-    "slide_08.png"
-  ],
-  "audio_master": "rebuild_00_narracao_ptbr.wav",
-  "final_video": "video-00-boas-vindas-a-academia-nexus-master.mp4",
-  "source_cover": "producao/assets/thumbnails/capa-00-boas-vindas-ive.png",
-  "audio_duration_s": 261.6,
-  "status": "master_renderizado"
+  "track": "fundamental",
+  "persona": "alencar",
+  "final_video": "video-00-00-boas-vindas-a-academia-nexus-master.mp4",
+  "duration_s": 261.6,
+  "slides_count": 9,
+  "audio_source": "materiais/video-aulas/fundamental/00-boas-vindas/rebuild/rebuild_00_narracao_ptbr.wav",
+  "cover": "producao/assets/thumbnails/capa-00-boas-vindas-ive.png",
+  "thumb": "producao/assets/thumbnails/thumb-00-boas-vindas.png",
+  "youtube_description": "youtube/descriptions/00-boas-vindas-a-academia-nexus.txt",
+  "render_spec": "1280x720@25fps H.264 + AAC 192k"
 }

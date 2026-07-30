@@ -12,7 +12,7 @@ import json
 import subprocess
 import sys
 from pathlib import Path
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageDraw, ImageFont, ImageFilter
 
 ROOT = Path('/home/user/repo/Academ-IA')
 MANIFEST_JSON = ROOT / 'docs' / 'MANIFESTO_REBUILD_VIDEO_AULAS_00_14_2026-07-24.json'
@@ -104,16 +104,53 @@ def parse_slides(slides_md: Path):
     return cleaned[:10]
 
 
-def render_slide(idx, title, subtitle, bullets, trilha, cover_path, style='default'):
+def paste_contain(bg: Image.Image, fg: Image.Image, box):
+    x1, y1, x2, y2 = box
+    bw, bh = x2 - x1, y2 - y1
+    iw, ih = fg.size
+    scale = min(bw / iw, bh / ih)
+    nw, nh = max(1, int(iw * scale)), max(1, int(ih * scale))
+    resized = fg.resize((nw, nh))
+    px = x1 + (bw - nw) // 2
+    py = y1 + (bh - nh) // 2
+    bg.paste(resized, (px, py))
+    return (px, py, px + nw, py + nh)
+
+
+def render_cover_opening(idx, trilha, cover_path):
     img = Image.new('RGB', (W, H), BG)
     d = ImageDraw.Draw(img)
+    d.rectangle([0, 0, W, H], fill=BG)
 
-    if style == 'cover' and cover_path and cover_path.exists():
-        bg = Image.open(cover_path).convert('RGB').resize((W, H))
-        img.paste(bg, (0, 0))
-        overlay = Image.new('RGBA', (W, H), (10, 15, 30, 150))
-        img = Image.alpha_composite(img.convert('RGBA'), overlay).convert('RGB')
+    if cover_path and cover_path.exists():
+        cover = Image.open(cover_path).convert('RGB')
+        bg = cover.resize((W, H)).filter(ImageFilter.GaussianBlur(radius=10))
+        dark = Image.new('RGBA', (W, H), (10, 15, 30, 155))
+        img = Image.alpha_composite(bg.convert('RGBA'), dark).convert('RGB')
+        frame_box = (56, 34, W - 56, H - 70)
+        pasted = paste_contain(img, cover, frame_box)
         d = ImageDraw.Draw(img)
+        pad = 10
+        d.rounded_rectangle([pasted[0] - pad, pasted[1] - pad, pasted[2] + pad, pasted[3] + pad], radius=28, outline=ACC, width=4)
+        d.rounded_rectangle([pasted[0] - pad - 10, pasted[1] - pad - 10, pasted[2] + pad + 10, pasted[3] + pad + 10], radius=36, outline=GOLD, width=2)
+
+    d.rectangle([0, 0, W, 6], fill=ACC)
+    d.rectangle([0, 0, 10, H], fill=ACC)
+    d.rounded_rectangle([40, 28, 300, 64], radius=16, fill=BG2, outline=ACC, width=2)
+    d.text((58, 38), f'TRILHA {trilha.upper()}', font=f_pill, fill=ACC)
+    d.rectangle([0, H - 44, W, H], fill=BG2)
+    d.text((70, H - 34), 'oneverso.com.br/academia · @NexusAffilIAte', font=f_small, fill=MUTED)
+    d.text((W - 230, H - 34), 'ACADEMIA NEXUS', font=f_pill, fill=GOLD)
+    d.text((W - 60, 40), str(idx), font=f_pill, fill=ACC)
+    return img
+
+
+def render_slide(idx, title, subtitle, bullets, trilha, cover_path, style='default'):
+    if style == 'cover':
+        return render_cover_opening(idx, trilha, cover_path)
+
+    img = Image.new('RGB', (W, H), BG)
+    d = ImageDraw.Draw(img)
 
     d.rectangle([0, 0, W, 6], fill=ACC)
     d.rectangle([0, 0, 10, H], fill=ACC)
@@ -227,7 +264,7 @@ def rebuild_module(mod):
     if r.returncode != 0:
         return {'code': code, 'ok': False, 'error': f'concat: {r.stderr[-300:]}'}
 
-    final_name = f"video-{code}-{mod['workspace_dir'].split('/')[-1]}-master.mp4"
+    final_name = mod.get('final_video_name') or f"video-{code}-{mod['workspace_dir'].split('/')[-1]}-master.mp4"
     final = work / final_name
     r = subprocess.run(['ffmpeg', '-y', '-i', str(silent), '-i', str(audio_src),
                         '-map', '0:v:0', '-map', '1:a:0',
