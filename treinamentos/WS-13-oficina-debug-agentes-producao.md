@@ -1,5 +1,5 @@
 ---
-title: "WS-10 · Oficina de Debug de Agentes em Produção"
+title: "WS-13 · Oficina de Debug de Agentes em Produção"
 subtitle: "Workshop hands-on: encontre e corrija 5 bugs reais em agentes implantados"
 author: "Equipo Nexus · Sir. Nexus Alencar + Ravi (CTO/AI)"
 duration: "4h"
