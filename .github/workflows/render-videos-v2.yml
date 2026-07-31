@@ -1,0 +1,167 @@
+name: render-videos-v2
+
+# ============================================================
+# Render Videos v2 (Ive + Alencar) — AcademIA
+# ============================================================
+#
+# OBJETIVO:
+#   Renderizar MP4 full dos 10 roteiros v2 (C1-C6 + T1-T4) usando
+#   ffmpeg + cover image + audio mix (Ive+Alencar).
+#
+# GATILHOS:
+#   - workflow_dispatch: manual (botão "Run workflow" no GitHub)
+#   - push to main se mudou roteiros_v2 ou audios_v2 (automatiza quando novos roteiros)
+#
+# SAÍDA:
+#   - artifacts: videos-v2-full (10 MP4 + 1 relatório)
+#   - (opcional) cria PR com os vídeos renderizados
+#
+# TEMPO ESTIMADO: ~35-45 min para 10 vídeos (preset superfast, CRF 28)
+#
+# CRIAÇÃO: 2026-07-31 (Mavis Agent, pós VIDEOS-V2-PLAN-2026-07-31.md)
+# ============================================================
+
+on:
+  workflow_dispatch:
+    inputs:
+      targets:
+        description: "Códigos a renderizar (vazio = todos C1-C6 T1-T4)"
+        required: false
+        default: ""
+        type: string
+      commit_to_branch:
+        description: "Fazer commit dos MP4 para uma branch?"
+        required: false
+        default: "false"
+        type: choice
+        options:
+          - "false"
+          - "true"
+
+  push:
+    branches: [main]
+    paths:
+      - "videos/roteiros_v2/**"
+      - "videos/audios_v2/**"
+      - "videos/clipes_hero_v2/**"
+      - "apostilas/imagens/**"
+      - "scripts/render_videos_v2.sh"
+
+permissions:
+  contents: write
+  checks: write
+
+# Evitar runs concorrentes (lock baseado em branch)
+concurrency:
+  group: render-videos-v2-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  render:
+    name: Render MP4 (ffmpeg)
+    runs-on: ubuntu-latest
+    timeout-minutes: 60  # 10 vídeos × ~3.5 min = ~35 min + margem
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup ffmpeg
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg bc
+          ffmpeg -version | head -1
+          ffprobe -version | head -1
+
+      - name: Setup Python (para awk fallback)
+        run: |
+          python3 --version
+
+      - name: Validar pré-requisitos
+        run: |
+          echo "== Audios v2 =="
+          find videos/audios_v2 -name "*.mp3" 2>/dev/null | wc -l
+          echo "== Clipes hero v2 =="
+          find videos/clipes_hero_v2 -name "*.mp4" 2>/dev/null | wc -l
+          echo "== Covers =="
+          ls apostilas/imagens/ 2>/dev/null
+          echo "== Roteiros v2 =="
+          ls videos/roteiros_v2/ 2>/dev/null
+
+      - name: Dry-run primeiro (sanity check)
+        run: |
+          bash scripts/render_videos_v2.sh --dry-run ${{ github.event.inputs.targets }} 2>&1 | tail -30
+
+      - name: Render (workflow_dispatch ou push)
+        run: |
+          # Log de início com timestamp
+          echo "🕐 Render started: $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          START_TIME=$(date +%s)
+
+          # Rodar script com alvos (se especificado) ou todos
+          if [ -n "${{ github.event.inputs.targets }}" ]; then
+            bash scripts/render_videos_v2.sh ${{ github.event.inputs.targets }} 2>&1 | tee /tmp/render.log
+          else
+            bash scripts/render_videos_v2.sh 2>&1 | tee /tmp/render.log
+          fi
+
+          # Calcular duração
+          END_TIME=$(date +%s)
+          DURATION=$((END_TIME - START_TIME))
+          echo "🕐 Render finished: $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          echo "⏱️  Total duration: ${DURATION}s ($((DURATION/60))m $((DURATION%60))s)"
+
+      - name: Listar outputs gerados
+        if: always()
+        run: |
+          echo "== Vídeos v2 full gerados =="
+          ls -lh videos/video-*-v2-full.mp4 2>/dev/null || echo "(nenhum)"
+
+      - name: Upload artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: videos-v2-full-${{ github.run_id }}
+          path: |
+            videos/video-*-v2-full.mp4
+            /tmp/render.log
+          retention-days: 7
+          if-no-files-found: warn
+
+      - name: Commit (se solicitado)
+        if: github.event.inputs.commit_to_branch == 'true' && success()
+        run: |
+          # Configurar git
+          git config user.name "Mavis Render Bot"
+          git config user.email "Mavis@nexus-affil-ia.local"
+
+          # Verificar se houve mudanças
+          if git status --porcelain | grep -q "video-.*-v2-full.mp4"; then
+            # Criar branch efêmera
+            BRANCH="render/videos-v2-${{ github.run_id }}"
+            git checkout -b "$BRANCH"
+            git add videos/video-*-v2-full.mp4
+            git commit -m "ci: render videos v2 (${{ github.event.inputs.targets || 'all' }})"
+            git push origin "$BRANCH"
+            echo "✅ Branch criada: $BRANCH"
+          else
+            echo "ℹ️  Nenhum vídeo novo para commitar (idempotente)"
+          fi
+
+  report:
+    name: Relatório de status
+    runs-on: ubuntu-latest
+    needs: render
+    if: always()
+    steps:
+      - name: Resumo
+        run: |
+          if [ "${{ needs.render.result }}" = "success" ]; then
+            echo "✅ Render bem-sucedido"
+            echo "📦 Artefatos disponíveis em: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          else
+            echo "❌ Render falhou - veja logs em: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          fi
