@@ -26,7 +26,7 @@ AcademIA/
 ├── INDEX.md              ← este arquivo (mapa completo)
 ├── README.md             ← overview público
 ├── CHANGELOG.md          ← histórico de mudanças
-├── RESUMO_EXECUTIVO.md   ← visão executiva
+├── docs/                 ← documentação (FAQ, resumo executivo, roadmap)
 │
 ├── cursos/               ← 4 trilhas oficiais (16 MB)
 │   ├── fundamental/      ← Trilha F (iniciante)

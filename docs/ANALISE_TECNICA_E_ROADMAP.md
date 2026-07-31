@@ -300,7 +300,7 @@ Ações de 1-2 horas cada, alto impacto:
    - Atualizar com 50+ termos novos
 4. ⬜ Criar `CHANGELOG v1.3` documentando adições recentes
 5. ⬜ Atualizar `INDEX.md` com link para landing page
-6. ⬜ Criar `FAQ.md` central em `AcademIA/`
+6. ⬜ Criar `docs/FAQ.md` central em `AcademIA/`
 7. ⬜ Adicionar badge "Atualizado 2026" em todos cursos vigentes
 8. ⬜ Criar template de "Card de Curso" para uso em marketing
 

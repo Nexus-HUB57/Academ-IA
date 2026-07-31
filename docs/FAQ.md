@@ -16,7 +16,7 @@ last_updated: 2026-06-28
 
 ### P1. Sou novo na rede. Por onde começo?
 
-**R.** Comece pelo [`INDEX.md`](INDEX.md) e leia o [`RESUMO_EXECUTIVO.md`](RESUMO_EXECUTIVO.md).
+**R.** Comece pelo [`INDEX.md`](INDEX.md) e leia o [`docs/RESUMO_EXECUTIVO.md`](docs/RESUMO_EXECUTIVO.md).
 Em seguida, faça o curso [`cursos/fundamental/00-boas-vindas.md`](cursos/fundamental/00-boas-vindas.md)
 (15 min) e os tutoriais `tutoriais/01-ativar-2fa.md` a `07-convidar-afiliado-rede.md`.
 
@@ -239,7 +239,7 @@ curso [`cursos/elite/02-federacao-agentes.md`](cursos/elite/02-federacao-agentes
 
 ### P30. Onde está o roadmap futuro da AcademIA?
 
-**R.** [`ANALISE_TECNICA_E_ROADMAP.md`](ANALISE_TECNICA_E_ROADMAP.md) — atualizado em 2026-06-28
+**R.** [`docs/ANALISE_TECNICA_E_ROADMAP.md`](docs/ANALISE_TECNICA_E_ROADMAP.md) — atualizado em 2026-06-28
 com 4 sprints de 90 dias.
 
 ---

@@ -21,7 +21,7 @@ referencias_canonicas_remoto:
   - GUIA_MULTI_DEV.md (convenções obrigatórias multi-dev)
   - CHANGELOG.md (v1.6.3)
   - INDEX.md
-  - GUIA_VOZES_OFICIAIS.md
+  - marca/personas/_legacy/GUIA_VOZES_OFICIAIS-legacy.md
   - marca/personas/voice_registry/OFFICIAL_VOICES_REGISTRY.md
 ---
 

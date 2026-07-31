@@ -255,7 +255,7 @@ curl https://oneverso.com.br/admin/academia
 
 - [ ] Email para base de alunos (template pronto em `Lab-Nexus/templates/email/`)
 - [ ] Post no LinkedIn / Instagram
-- [ ] Update em `RESUMO_EXECUTIVO.md` + `CHANGELOG.md`
+- [ ] Update em `docs/RESUMO_EXECUTIVO.md` + `CHANGELOG.md`
 - [ ] Slack #csuite (interno)
 - [ ] Notificação para C-Suite (Ravi, Helena, Otto, Otavio)
 

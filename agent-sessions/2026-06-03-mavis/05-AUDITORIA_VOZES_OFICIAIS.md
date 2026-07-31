@@ -19,7 +19,7 @@ referencias_canonicas_remoto:
   - marca/personas/OFFICIAL_VOICES.md
   - marca/personas/VOZES-OFICIAIS.md
   - marca/personas/VOICES.md
-  - GUIA_VOZES_OFICIAIS.md (raiz)
+  - marca/personas/_legacy/GUIA_VOZES_OFICIAIS-legacy.md (raiz)
   - GUIA_MULTI_DEV.md (convenções de coexistência multi-dev)
 ---
 
@@ -40,7 +40,7 @@ Há **4 documentos** que se declaram canônicos para vozes oficiais:
 2. `marca/personas/OFFICIAL_VOICES.md` — "Source of truth" (caminho antigo referenciado!)
 3. `marca/personas/VOZES-OFICIAIS.md` — "OFICIAL · VINCULANTE" (caminho correto)
 4. `marca/personas/VOICES.md` — "registro canônico" (caminho correto)
-5. `GUIA_VOZES_OFICIAIS.md` (raiz) — TL;DR para devs
+5. `marca/personas/_legacy/GUIA_VOZES_OFICIAIS-legacy.md` (raiz) — TL;DR para devs
 
 **Não é razoável ter 4 docs canônicos.** Isso é falha de governança documental. Veja a seção 2.
 
@@ -101,7 +101,7 @@ Este documento é uma **verificação cruzada feita por IA em 2026-07-24**, foca
 | `marca/personas/OFFICIAL_VOICES.md` | `personas/{alencar,ive}/audio/official_voice.wav` | ❌ **antigo** — mesmo problema |
 | `marca/personas/VOZES-OFICIAIS.md` | `marca/personas/{alencar,ive}/audio/official_voice.wav` | ✅ correto |
 | `marca/personas/VOICES.md` | `marca/personas/{alencar,ive}/audio/official_voice.wav` | ✅ correto |
-| `GUIA_VOZES_OFICIAIS.md` (raiz) | `personas/{alencar,ive}/audio/official_voice.wav` | ❌ **antigo** |
+| `marca/personas/_legacy/GUIA_VOZES_OFICIAIS-legacy.md` (raiz) | `personas/{alencar,ive}/audio/official_voice.wav` | ❌ **antigo** |
 
 **Diagnóstico:** 3 de 5 docs canônicos referenciam path **antigo** (sem `marca/`). Os arquivos reais estão em `marca/personas/`. Se um dev seguir o REGISTRY, **vai falhar ao procurar o arquivo** — `personas/alencar/audio/official_voice.wav` não existe mais (foi removido em `f29a0d3`).
 
@@ -200,7 +200,7 @@ Este documento é uma **verificação cruzada feita por IA em 2026-07-24**, foca
 ### 4.3 Médio prazo (próximo mês)
 
 - [ ] Implementar CI/CD que valida paths em docs contra paths reais
-- [ ] Migrar GUIA_VOZES_OFICIAIS.md para `governanca/` e marcar como secundário (já está OK)
+- [ ] Migrar marca/personas/_legacy/GUIA_VOZES_OFICIAIS-legacy.md para `governanca/` e marcar como secundário (já está OK)
 - [ ] Adicionar seção de "documentos relacionados" no REGISTRY (link cruzado com todos os 4 docs, com status de cada um)
 
 ---
@@ -226,10 +226,10 @@ cat Academ-IA/marca/personas/voice_registry/OFFICIAL_VOICES_REGISTRY.md
 cat Academ-IA/marca/personas/OFFICIAL_VOICES.md
 cat Academ-IA/marca/personas/VOZES-OFICIAIS.md
 cat Academ-IA/marca/personas/VOICES.md
-cat Academ-IA/GUIA_VOZES_OFICIAIS.md
+cat Academ-IA/marca/personas/_legacy/GUIA_VOZES_OFICIAIS-legacy.md
 
 # Validar paths declarados vs paths reais
-grep -rE "personas/[a-z]+/audio" Academ-IA/marca Academ-IA/GUIA_VOZES_OFICIAIS.md
+grep -rE "personas/[a-z]+/audio" Academ-IA/marca Academ-IA/marca/personas/_legacy/GUIA_VOZES_OFICIAIS-legacy.md
 ```
 
 ---

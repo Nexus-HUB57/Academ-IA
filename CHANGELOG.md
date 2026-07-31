@@ -788,7 +788,6 @@ Esta versão consolida as contribuições das duas branches paralelas:
 ---
 
 ## [1.2.0] — 2026-06-28 · "Expansão Master & Elite"
->>>>>>> origin/main
 
 ### ✨ Novos Materiais (8)
 
@@ -880,7 +879,7 @@ Esta versão consolida as contribuições das duas branches paralelas:
   - `webinars/WB-2026-03-academia-open-house.md` — Open House de 2026-06-15 (🟡 agendado)
 
 - 📑 **Novos documentos de governança**:
-  - `RESUMO_EXECUTIVO.md` — TL;DR de 1 página (entrada única)
+  - `docs/RESUMO_EXECUTIVO.md` — TL;DR de 1 página (entrada única)
   - `CHANGELOG.md` (este arquivo)
 
 ### 🩹 Correções
@@ -960,8 +959,8 @@ Esta versão consolida as contribuições das duas branches paralelas:
 
 ### 🆕 Novos Materiais
 
-- **`ANALISE_TECNICA_E_ROADMAP.md`**: auditoria completa + roadmap de 90 dias (4 sprints)
-- **`FAQ.md`**: 30 perguntas frequentes sobre AcademIA, cursos, certificações e operação
+- **`docs/ANALISE_TECNICA_E_ROADMAP.md`**: auditoria completa + roadmap de 90 dias (4 sprints)
+- **`docs/FAQ.md`**: 30 perguntas frequentes sobre AcademIA, cursos, certificações e operação
 - **`certificacoes/banco-questoes-con.md`**: 50 questões oficiais da certificação CON com gabarito comentado
 
 ### 🎯 Gaps Identificados (próximas sprints)

@@ -58,7 +58,7 @@ Adicione `conflito_multi_dev: NENHUM` se a criação do arquivo **não** sobresc
 | Sessão | Data | Agente | Modelo | Artefatos | Status |
 |--------|------|--------|--------|-----------|--------|
 | 2026-06-03-mavis | 2026-06-02 → 2026-06-03 | Mavis | MiniMax-M3 | [5 docs](./2026-06-03-mavis/) | re-migrado do repo legado em 2026-07-23 |
-| 2026-07-22-mavis | 2026-07-22 | Mavis | MiniMax-M3 | 1 doc na raiz (`../GUIA_VOZES_OFICIAIS.md`) | commit `9886e5b` (no legado) / trabalho continuou no canônico |
+| 2026-07-22-mavis | 2026-07-22 | Mavis | MiniMax-M3 | 1 doc na raiz (`../marca/personas/_legacy/GUIA_VOZES_OFICIAIS-legacy.md`) | commit `9886e5b` (no legado) / trabalho continuou no canônico |
 | 2026-07-24-mavis | 2026-07-24 | Mavis | MiniMax-M3 | 1 doc aqui (`./2026-06-03-mavis/05-AUDITORIA_VOZES_OFICIAIS.md`) | esta sessão, v2.0 da auditoria |
 
 ## Política de retenção
