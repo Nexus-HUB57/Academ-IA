@@ -2,13 +2,42 @@
 title: "CHANGELOG · Academ'IA"
 description: "Histórico de versões da Academ'IA · HUB de Conhecimento & Sabedoria"
 tags: [changelog, versionamento, historico, academia]
-version: 1.7.4
-last_updated: 2026-07-30
+version: 1.7.5
+last_updated: 2026-07-31
 ---
 
 # 📜 CHANGELOG · Academ'IA
 
 > Histórico de versões do HUB Academ'IA — Nexus Affil'IA'te. Segue **Semantic Versioning**: MAJOR (breaking), MINOR (compatível, novo asset), PATCH (correções, polish).
+
+---
+
+## [1.7.5] — 2026-07-31 · "3 novos materiais: apostila 47 (trabalho remoto) + tutorial 33 (GraphQL/REST) + WS-14 (event-driven)"
+
+### 🆕 Adicionado (3 arquivos, ~64KB)
+
+Novos materiais cobrindo organização de times e arquitetura:
+
+- `apostilas/47-trabalho-remoto-times-distribuidos.md` (24KB) — Guia
+  completo de trabalho remoto: 5 modelos (full remote, híbrido, async-first,
+  etc), cultura assíncrona, documentação, ferramentas, rituais, hiring,
+  onboarding, performance management, saúde mental, compliance/EoR
+- `tutoriais/33-graphql-vs-rest.md` (18KB) — Comparação definitiva:
+  implementação completa REST (FastAPI) e GraphQL (Strawberry), N+1
+  problem, DataLoader, persisted queries, gRPC, tRPC, WebSocket, BFF
+- `treinamentos/WS-14-oficina-arquitetura-event-driven.md` (22KB) — Workshop
+  hands-on de 4h: Kafka + FastAPI producer, consumer worker, saga pattern,
+  WebSocket dashboard, idempotency, exactly-once semantics
+
+### 📋 Contexto
+Esta versão foi criada por Mavis Agent após:
+1. `git fetch` → 1 commit remoto (auditoria P0)
+2. Merge preservando nosso v1.7.4 + integrou o do remote
+3. Identificados 3 gaps (organização, APIs, arquitetura async)
+4. Criados 3 novos materiais (~64KB)
+5. CHANGELOG bumpado para v1.7.5
+
+**Zero sobrescrita, zero duplicação, zero exclusão** de conteúdo existente.
 
 ---
 
