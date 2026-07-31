@@ -2,13 +2,52 @@
 title: "CHANGELOG · Academ'IA"
 description: "Histórico de versões da Academ'IA · HUB de Conhecimento & Sabedoria"
 tags: [changelog, versionamento, historico, academia]
-version: 1.7.5
+version: 1.7.6
 last_updated: 2026-07-31
 ---
 
 # 📜 CHANGELOG · Academ'IA
 
 > Histórico de versões do HUB Academ'IA — Nexus Affil'IA'te. Segue **Semantic Versioning**: MAJOR (breaking), MINOR (compatível, novo asset), PATCH (correções, polish).
+
+---
+
+## [1.7.6] — 2026-07-31 · "Script de renderização de vídeos v2 (Ive + Alencar) + plano de execução"
+
+### 🆕 Adicionado (1 script + 1 relatório, ~10KB)
+
+Diagnóstico dos 10 roteiros v2 (C1-C6 + T1-T4) que estão com áudios
+prontos mas sem MP4 final. Script de renderização criado usando
+ffmpeg + cover image + áudio mix (Ive+Alencar).
+
+- `scripts/render_videos_v2.sh` (274 linhas, 8.5KB): pipeline
+  oficial para renderizar MP4 full dos 10 vídeos v2. Aceita alvos
+  específicos (`bash scripts/render_videos_v2.sh C1 C2 T1`) ou
+  todos, com flag `--dry-run` para validação. Idempotente.
+
+- `reports/VIDEOS-V2-PLAN-2026-07-31.md` (7.3KB): diagnóstico
+  completo + plano de execução. Identifica gargalo de performance
+  (3-4 min/vídeo) e recomenda 4 opções de execução
+  (background/CI/preset/local).
+
+### 📋 Contexto
+
+Esta versão foi criada por Mavis Agent após:
+1. Status check completo (1.5GB de `.git/`, 161 commits, 2362 tracked)
+2. Identificação de gap real: 10 roteiros v2 com áudios mas sem MP4
+3. Validação de 30 áudios v2 (3 por roteiro: Ive, Alencar, mix)
+4. Validação de 6 clipes hero v2 (C1, C2, T1-T4) + 4 faltantes (C3-C6)
+5. Teste empírico de performance: 12s para 5s, 60s para 30s
+6. Criação do script + documentação do gargalo
+
+**Decisão de cautela:** Optou-se por NÃO renderizar MP4 nesta
+sessão (timeout do sandbox 120-180s < 3-4 min/vídeo necessários).
+Owner pode disparar em background ou CI quando apropriado.
+
+**Zero sobrescrita, zero duplicação, zero exclusão.**
+Script é adição pura em `scripts/`. Relatório é adição pura
+em `reports/`. Nenhum asset de persona, voz oficial ou vídeo
+canônico foi tocado.
 
 ---
 
