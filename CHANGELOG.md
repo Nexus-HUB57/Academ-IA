@@ -2,13 +2,44 @@
 title: "CHANGELOG · Academ'IA"
 description: "Histórico de versões da Academ'IA · HUB de Conhecimento & Sabedoria"
 tags: [changelog, versionamento, historico, academia]
-version: 1.7.6
-last_updated: 2026-07-31
+version: 1.7.7
+last_updated: 2026-08-04
 ---
 
 # 📜 CHANGELOG · Academ'IA
 
 > Histórico de versões do HUB Academ'IA — Nexus Affil'IA'te. Segue **Semantic Versioning**: MAJOR (breaking), MINOR (compatível, novo asset), PATCH (correções, polish).
+
+---
+
+## [1.7.7] — 2026-08-04 · "3 novos materiais: apostila 48 (design thinking) + tutorial 34 (WebSockets) + prompt 07 (diagnóstico)"
+
+### 🆕 Adicionado (3 arquivos, ~56KB)
+
+Novos materiais cobrindo UX/Design e tempo real:
+
+- `apostilas/48-design-thinking-ia.md` (19KB) — Design thinking aplicado
+  a produtos IA: 5 estágios (empatia, definição, ideação, prototipagem,
+  teste), técnicas de pesquisa, JTBD, HMW, UX patterns para agentes
+  (streaming, citations, confidence), casos reais
+- `tutoriais/34-websockets-realtime.md` (27KB) — WebSockets escaláveis:
+  implementação FastAPI, autenticação JWT, rate limiting, rooms,
+  scaling horizontal com Redis Pub/Sub, presence (online/away/busy),
+  heartbeat, reconexão automática, métricas, stress test
+- `Lab-Nexus/prompts/analise/07-diagnostico-produto-completo.md` (9KB) —
+  Framework 360° de produto: market fit, value prop, pricing, growth,
+  retenção, UX, operação, riscos, com plano de ação priorizado (90d)
+
+### 📋 Contexto
+Esta versão foi criada por Mavis Agent após:
+1. `git fetch` → 4 commits remotos detectados (v1.7.6 + v1.7.7)
+2. Merge preservando nosso v1.7.5 + integrou v1.7.6/v1.7.7
+3. Identificados 3 gaps (design, real-time, prompt analítico)
+4. Criados 3 novos materiais (~56KB)
+5. CHANGELOG bumpado para v1.7.7
+
+**Zero sobrescrita, zero duplicação, zero exclusão** de conteúdo existente.
+Meus materiais v1.7.5 preservados + 4 commits do remote integrados.
 
 ---
 
