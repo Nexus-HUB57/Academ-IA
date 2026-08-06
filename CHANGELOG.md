@@ -2,13 +2,42 @@
 title: "CHANGELOG · Academ'IA"
 description: "Histórico de versões da Academ'IA · HUB de Conhecimento & Sabedoria"
 tags: [changelog, versionamento, historico, academia]
-version: 1.7.7
-last_updated: 2026-08-04
+version: 1.7.8
+last_updated: 2026-08-06
 ---
 
 # 📜 CHANGELOG · Academ'IA
 
 > Histórico de versões do HUB Academ'IA — Nexus Affil'IA'te. Segue **Semantic Versioning**: MAJOR (breaking), MINOR (compatível, novo asset), PATCH (correções, polish).
+
+---
+
+## [1.7.8] — 2026-08-06 · "3 novos materiais: apostila 49 (gestão produtos) + tutorial 35 (CQRS/ES) + WS-15 (growth loops)"
+
+### 🆕 Adicionado (3 arquivos, ~73KB)
+
+Novos materiais cobrindo gestão de produto, arquitetura avançada e growth:
+
+- `apostilas/49-gestao-produtos-digitais-2026.md` (24KB) — Guia completo
+  de Product Manager: 7 competências, discovery, strategy (RICE, OKR,
+  bets), delivery, métricas (NSM, HEART, AARRR, coorte), rituais, IA
+  no PM, carreira, frameworks (Kano, Cynefin), anti-patterns
+- `tutoriais/35-cqrs-event-sourcing.md` (30KB) — Padrões avançados:
+  Event Sourcing com PostgreSQL, aggregates, repository, projeções,
+  CQRS (command bus + query bus), saga pattern, outbox pattern,
+  comparação de padrões, quando usar cada um
+- `treinamentos/WS-15-oficina-crescimento-viral-loops.md` (18KB) —
+  Workshop hands-on de 3h: 4 growth loops (referral, content, UGC,
+  marketplace), K-factor, viral coefficient, anti-fraude, SEO, sitemap
+
+### 📋 Contexto
+Esta versão foi criada por Mavis Agent após:
+1. Estado limpo confirmado (refs 0/0, tip b0c002c)
+2. Identificados 3 gaps (gestão, arquitetura avançada, growth)
+3. Criados 3 novos materiais (~73KB)
+4. CHANGELOG bumpado para v1.7.8
+
+**Zero sobrescrita, zero duplicação, zero exclusão** de conteúdo existente.
 
 ---
 
